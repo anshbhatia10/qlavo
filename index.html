@@ -1,74 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qlavo | Enterprise AI Infrastructure</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Jersey+15&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Space Grotesk', 'Inter', 'sans-serif'],
-              pixel: ['"Jersey 15"', 'sans-serif'],
-            },
-            colors: {
-              walrus: {
-                purple: '#341A75',
-                dark: '#0B0B0F',
-                cyan: '#7EE7E7',
-                lime: '#CCF381',
-                lavender: '#E0CCF7'
-              }
-            },
-            animation: {
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-              'wing-flutter': 'wingFlutter 0.1s linear infinite alternate',
-              'wing-flutter-delayed': 'wingFlutter 0.1s linear infinite alternate-reverse',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              },
-              wingFlutter: {
-                '0%': { transform: 'scaleY(1) skewX(0deg)' },
-                '100%': { transform: 'scaleY(0.5) skewX(10deg)' },
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qlavo | Enterprise AI Infrastructure & Custom Solutions</title>
+  <meta name="description"
+    content="Qlavo transforms complex business challenges into scalable AI solutions. We are enterprise problem solvers specializing in robust AI infrastructure, custom LLM deployment, and high-performance data pipelines." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://qlavo.in" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://qlavo.in" />
+  <meta property="og:title" content="Qlavo | Enterprise AI Infrastructure & Custom Solutions" />
+  <meta property="og:description"
+    content="Qlavo transforms complex business challenges into scalable AI solutions. We are enterprise problem solvers specializing in robust AI infrastructure, custom LLM deployment, and high-performance data pipelines." />
+  <meta property="og:image" content="https://qlavo.in/logo.png" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Jersey+15&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Space Grotesk', 'Inter', 'sans-serif'],
+            pixel: ['"Jersey 15"', 'sans-serif'],
+          },
+          colors: {
+            walrus: {
+              purple: '#341A75',
+              dark: '#0B0B0F',
+              cyan: '#7EE7E7',
+              lime: '#CCF381',
+              lavender: '#E0CCF7'
             }
           },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'wing-flutter': 'wingFlutter 0.1s linear infinite alternate',
+            'wing-flutter-delayed': 'wingFlutter 0.1s linear infinite alternate-reverse',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            wingFlutter: {
+              '0%': { transform: 'scaleY(1) skewX(0deg)' },
+              '100%': { transform: 'scaleY(0.5) skewX(10deg)' },
+            }
+          }
         },
-      }
-    </script>
-    <style>
-      body {
-        background-color: #0B0B0F; /* Walrus Dark */
-        color: #ffffff;
-      }
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0B0B0F; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #341A75; 
-        border: 2px solid #0B0B0F;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #7EE7E7; 
-      }
-      
-      .pixel-grid {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-        background-size: 40px 40px;
-      }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0B0B0F;
+      /* Walrus Dark */
+      color: #ffffff;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0B0B0F;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #341A75;
+      border: 2px solid #0B0B0F;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7EE7E7;
+    }
+
+    .pixel-grid {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -80,10 +106,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

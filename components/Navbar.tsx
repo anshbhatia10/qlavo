@@ -17,14 +17,14 @@ export const Navbar: React.FC = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50">
             <div className="flex items-center justify-between w-full px-6 md:px-12 py-4 bg-[#0B0B0F]/80 backdrop-blur-md border-b border-white/10">
-                
+
                 {/* Logo Section - Clean SVG Qlavo Logo */}
-                <div className="flex items-center gap-3 relative z-10 flex-shrink-0">
+                <div className="flex items-center gap-3 relative z-10 flex-shrink-0" aria-label="Qlavo Logo">
                     <div className="w-10 h-10 md:w-12 md:h-12 relative flex items-center justify-center">
                         <svg viewBox="0 0 120 120" className="w-full h-full text-white" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="45" stroke="currentColor" strokeWidth="12"/>
-                            <rect x="52" y="52" width="24" height="24" fill="currentColor"/>
-                            <path d="M74 74L96 96" stroke="currentColor" strokeWidth="12" strokeLinecap="square"/>
+                            <circle cx="60" cy="60" r="45" stroke="currentColor" strokeWidth="12" />
+                            <rect x="52" y="52" width="24" height="24" fill="currentColor" />
+                            <path d="M74 74L96 96" stroke="currentColor" strokeWidth="12" strokeLinecap="square" />
                         </svg>
                     </div>
                     <span className="text-3xl font-sans font-bold tracking-tight text-white">
@@ -50,10 +50,10 @@ export const Navbar: React.FC = () => {
 
                 {/* Right CTA */}
                 <div className="hidden md:flex items-center gap-4 relative z-10 flex-shrink-0">
-                     <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-xs font-bold uppercase tracking-widest hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
+                    <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-xs font-bold uppercase tracking-widest hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
                         Contact Us <ArrowUpRight size={14} />
                     </a>
-                    <GlassButton 
+                    <GlassButton
                         className="text-xs px-5 py-2"
                         href={`mailto:info@qlavo.in?subject=${auditEmailSubject}&body=${auditEmailBody}`}
                     >
