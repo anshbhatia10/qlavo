@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
 
                 {/* Mobile Menu Toggle */}
                 <button 
-                    className="md:hidden text-white relative z-50 p-2"
+                    className="md:hidden text-white relative z-[70] p-2"
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
@@ -77,20 +77,20 @@ export const Navbar: React.FC = () => {
 
                 {/* Mobile Menu Overlay */}
                 {isMenuOpen && (
-                    <div className="fixed inset-0 bg-[#0B0B0F] z-40 flex flex-col items-center justify-center space-y-8 md:hidden">
-                        <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                    <div className="fixed inset-0 bg-[#0B0B0F]/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center space-y-8 md:hidden h-dvh w-screen">
+                        <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
                             Automation
                         </a>
-                        <a href="#process" onClick={(e) => handleScroll(e, 'process')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                        <a href="#process" onClick={(e) => handleScroll(e, 'process')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
                             How It Works
                         </a>
-                        <a href="#work" onClick={(e) => handleScroll(e, 'work')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                        <a href="#work" onClick={(e) => handleScroll(e, 'work')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
                             Latest Work
                         </a>
-                        <a href="#pricing" onClick={(e) => handleScroll(e, 'pricing')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                        <a href="#pricing" onClick={(e) => handleScroll(e, 'pricing')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
                             Pricing
                         </a>
-                        <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                        <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
                             Contact Us
                         </a>
                     </div>
