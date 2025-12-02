@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GlassButton } from './ui/GlassButton';
-import { Menu, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
+            setIsMenuOpen(false);
         }
     };
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     const auditEmailSubject = encodeURIComponent("Request for AI Audit - [Your Company Name]");
     const auditEmailBody = encodeURIComponent("Hi Qlavo Team,\n\nI am interested in a free AI audit for my business.\n\nName:\nCompany:\nPhone:\n\nBest regards,");
@@ -61,10 +66,35 @@ export const Navbar: React.FC = () => {
                     </GlassButton>
                 </div>
 
-                {/* Mobile Menu */}
-                <button className="md:hidden text-white relative z-10">
-                    <Menu size={28} />
+                {/* Mobile Menu Toggle */}
+                <button 
+                    className="md:hidden text-white relative z-50 p-2"
+                    onClick={toggleMenu}
+                    aria-label="Toggle menu"
+                >
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
+
+                {/* Mobile Menu Overlay */}
+                {isMenuOpen && (
+                    <div className="fixed inset-0 bg-[#0B0B0F] z-40 flex flex-col items-center justify-center space-y-8 md:hidden">
+                        <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                            Automation
+                        </a>
+                        <a href="#process" onClick={(e) => handleScroll(e, 'process')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                            How It Works
+                        </a>
+                        <a href="#work" onClick={(e) => handleScroll(e, 'work')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                            Latest Work
+                        </a>
+                        <a href="#pricing" onClick={(e) => handleScroll(e, 'pricing')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                            Pricing
+                        </a>
+                        <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-2xl font-bold text-white tracking-widest uppercase font-mono hover:text-[#7EE7E7] transition-colors">
+                            Contact Us
+                        </a>
+                    </div>
+                )}
             </div>
         </nav>
     );

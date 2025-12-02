@@ -33,7 +33,7 @@ const App: React.FC = () => {
             <main>
 
                 {/* --- HERO SECTION (Dark Blue Gradient) --- */}
-                <section className="relative pt-60 pb-32 overflow-hidden">
+                <section className="relative pt-32 md:pt-60 pb-32 overflow-hidden">
                     {/* Background Gradient - Updated to Dark Blue */}
                     <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-[#172554] to-[#0B0B0F] z-0" />
 
@@ -44,7 +44,7 @@ const App: React.FC = () => {
 
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal font-sans text-white mb-8 leading-tight tracking-tight">
                             Qlavo <span className="text-[#7EE7E7]">Automates</span> Your<br />
-                            Enterprise <span className="text-[#E0CCF7]">AI</span>
+                            Business <span className="text-[#E0CCF7]">Operations</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mb-12 font-light">
@@ -74,14 +74,14 @@ const App: React.FC = () => {
                             <VeloMascot className="animate-float" />
 
                             {/* Floating Elements */}
-                            <div className="absolute top-20 left-10 md:left-20 animate-float" style={{ animationDelay: '0.5s' }}>
-                                <div className="w-24 h-24 bg-[#CCF381] border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)]">
-                                    <span className="font-pixel text-4xl text-black font-bold tracking-tighter">AI</span>
+                            <div className="absolute top-0 -left-4 md:top-20 md:left-20 animate-float" style={{ animationDelay: '0.5s' }}>
+                                <div className="w-16 h-16 md:w-24 md:h-24 bg-[#CCF381] border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)]">
+                                    <span className="font-pixel text-2xl md:text-4xl text-black font-bold tracking-tighter">AI</span>
                                 </div>
                             </div>
-                            <div className="absolute top-40 right-10 md:right-20 animate-float" style={{ animationDelay: '1.5s' }}>
-                                <div className="w-32 h-24 bg-[#7EE7E7] -rotate-12 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)]">
-                                    <Database size={40} className="text-black" />
+                            <div className="absolute top-10 -right-4 md:top-40 md:right-20 animate-float" style={{ animationDelay: '1.5s' }}>
+                                <div className="w-20 h-16 md:w-32 md:h-24 bg-[#7EE7E7] -rotate-12 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)]">
+                                    <Database size={24} className="text-black md:w-10 md:h-10" />
                                 </div>
                             </div>
                         </div>
