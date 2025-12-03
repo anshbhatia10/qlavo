@@ -4,7 +4,7 @@ import { GlassButton } from './components/ui/GlassButton';
 import { GlassCard } from './components/ui/GlassCard';
 import { LiquidCursor } from './components/ui/LiquidCursor';
 import { VeloMascot } from './components/ui/VeloMascot';
-import { Brain, ArrowUpRight, Zap, Search, TrendingUp, Rocket, Check, Mail, Phone, MapPin, Cuboid as Cube, BarChart3, Settings, Lightbulb, ClipboardList, Code2, Presentation, Bot, Database, Linkedin } from 'lucide-react';
+import { Brain, ArrowUpRight, Zap, Search, TrendingUp, Rocket, Check, Mail, Phone, MapPin, Cuboid as Cube, BarChart3, Settings, Lightbulb, ClipboardList, Code2, Presentation, Bot, Database, Linkedin, Wallet, Bell, Shield } from 'lucide-react';
 
 const App: React.FC = () => {
 
@@ -254,32 +254,154 @@ const App: React.FC = () => {
                     </div>
                 </section>
 
-                {/* --- CASE STUDIES SECTION --- */}
-                <section id="work" className="py-32 bg-[#0B0B0F] border-b border-white/10">
-                    <div className="max-w-5xl mx-auto px-6 text-center">
-                        <h2 className="text-5xl md:text-7xl font-pixel text-white mb-16">Latest Work</h2>
-
-                        {/* Retro Monitor Container for Embed */}
-                        <div className="relative inline-block p-4 bg-[#121217] border-2 border-white/20 rounded-lg shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)]">
-                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 bg-[#0B0B0F] border border-white/20 text-[#7EE7E7] font-mono text-sm tracking-widest">
-                                CASE_STUDY_01.EMBED
-                            </div>
-                            <div className="overflow-hidden rounded-sm bg-black">
-                                <iframe
-                                    src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398619152770387968?compact=1"
-                                    height="399"
-                                    width="504"
-                                    frameBorder="0"
-                                    allowFullScreen
-                                    title="Embedded post"
-                                    className="max-w-full"
-                                ></iframe>
-                            </div>
+                {/* --- PRODUCTS SECTION --- */}
+                <section id="products" className="py-32 bg-[#0B0B0F] border-b border-white/10 relative overflow-hidden">
+                    <div className="max-w-[1400px] mx-auto px-6">
+                        <div className="text-center mb-24">
+                            <h2 className="text-5xl md:text-7xl font-pixel text-white mb-6 uppercase tracking-wide">
+                                Products
+                            </h2>
+                            <p className="text-white/60 font-mono text-lg max-w-3xl mx-auto">
+                                Innovation isn't just about using the newest AI. It's about using the perfect tool for the job.
+                            </p>
                         </div>
 
-                        <p className="mt-8 text-white/60 font-mono">
-                            See how we're transforming businesses with real-world AI implementation.
-                        </p>
+                        <div className="bg-[#121217] border border-white/20 p-8 md:p-12 relative overflow-hidden group hover:border-[#7EE7E7] transition-colors">
+                            <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                                <Wallet size={200} className="text-white" />
+                            </div>
+                            
+                            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                                <div>
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#7EE7E7]/10 border border-[#7EE7E7] text-[#7EE7E7] font-mono text-sm mb-6">
+                                        <Zap size={14} /> NEW PRODUCT
+                                    </div>
+                                    <h3 className="text-4xl md:text-5xl font-pixel text-white mb-6">
+                                        Digital Wallet Infrastructure
+                                    </h3>
+                                    <p className="text-white/60 text-lg leading-relaxed mb-8">
+                                        We built a system that issues a "VIP Pass" to your customer's Google or Apple Wallet. It's not just a static card—it's a direct communication channel.
+                                    </p>
+                                    
+                                    <div className="space-y-6 mb-8">
+                                        <div className="flex items-start gap-4">
+                                            <div className="p-2 bg-[#1e3a8a] rounded-lg text-[#7EE7E7]">
+                                                <Bell size={24} />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-white font-bold text-xl mb-1">Lock Screen Push</h4>
+                                                <p className="text-white/60">Instantly trigger native notifications on the customer's phone. No app download needed.</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="p-2 bg-[#1e3a8a] rounded-lg text-[#CCF381]">
+                                                <Shield size={24} />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-white font-bold text-xl mb-1">Zero Risk</h4>
+                                                <p className="text-white/60">Avoid WhatsApp bans and expensive SMS costs. 100% compliant and secure.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col sm:flex-row gap-4 items-center">
+                                        <GlassButton
+                                            className="w-full sm:w-auto"
+                                            href="#contact"
+                                            onClick={(e) => handleScroll(e, 'contact')}
+                                        >
+                                            Get Started
+                                        </GlassButton>
+                                        <span className="text-white/40 font-mono text-sm">
+                                            Available for a small monthly subscription
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="relative h-full min-h-[300px] bg-black/50 border border-white/10 rounded-xl flex items-center justify-center p-8">
+                                    {/* Abstract Visual Representation */}
+                                    <div className="relative w-64 h-96 bg-gradient-to-br from-[#1e3a8a] to-black rounded-3xl border-4 border-[#333] shadow-2xl flex flex-col items-center pt-8 overflow-hidden">
+                                        <div className="w-16 h-1 bg-white/20 rounded-full mb-8" />
+                                        <div className="w-full px-6">
+                                            <div className="text-center mb-8">
+                                                <div className="text-6xl text-white mb-2">9:41</div>
+                                                <div className="text-white/60 text-sm">Tuesday, 12 September</div>
+                                            </div>
+                                            
+                                            {/* Notification Item */}
+                                            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10 animate-pulse">
+                                                <div className="flex items-center gap-3 mb-2">
+                                                    <div className="w-5 h-5 bg-[#7EE7E7] rounded-sm flex items-center justify-center">
+                                                        <Zap size={12} className="text-black" />
+                                                    </div>
+                                                    <span className="text-xs font-bold text-white/80 uppercase">VIP PASS • NOW</span>
+                                                </div>
+                                                <p className="text-sm text-white font-medium">
+                                                    Exclusive Event Invitation! Tap to view your pass.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* --- CASE STUDIES SECTION --- */}
+                <section id="work" className="py-32 bg-[#0B0B0F] border-b border-white/10">
+                    <div className="max-w-[1400px] mx-auto px-6 text-center">
+                        <h2 className="text-5xl md:text-7xl font-pixel text-white mb-16">Latest Work</h2>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            {/* Case Study 1 */}
+                            <div className="flex flex-col items-center">
+                                {/* Retro Monitor Container for Embed */}
+                                <div className="relative inline-block p-4 bg-[#121217] border-2 border-white/20 rounded-lg shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] w-full max-w-[550px]">
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 bg-[#0B0B0F] border border-white/20 text-[#7EE7E7] font-mono text-sm tracking-widest">
+                                        CASE_STUDY_01.EMBED
+                                    </div>
+                                    <div className="overflow-hidden rounded-sm bg-black flex justify-center">
+                                        <iframe
+                                            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398619152770387968?compact=1"
+                                            height="399"
+                                            width="504"
+                                            frameBorder="0"
+                                            allowFullScreen
+                                            title="Embedded post"
+                                            className="max-w-full"
+                                        ></iframe>
+                                    </div>
+                                </div>
+                                <p className="mt-8 text-white/60 font-mono">
+                                    Transforming businesses with real-world AI implementation.
+                                </p>
+                            </div>
+
+                            {/* Case Study 2 */}
+                            <div className="flex flex-col items-center">
+                                {/* Retro Monitor Container for Embed */}
+                                <div className="relative inline-block p-4 bg-[#121217] border-2 border-white/20 rounded-lg shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] w-full max-w-[550px]">
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 bg-[#0B0B0F] border border-white/20 text-[#CCF381] font-mono text-sm tracking-widest">
+                                        CASE_STUDY_02.EMBED
+                                    </div>
+                                    <div className="overflow-hidden rounded-sm bg-black flex justify-center">
+                                        <iframe 
+                                            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7401888610763018240?collapsed=1" 
+                                            height="399" 
+                                            width="504" 
+                                            frameBorder="0" 
+                                            allowFullScreen 
+                                            title="Embedded post"
+                                            className="max-w-full"
+                                        ></iframe>
+                                    </div>
+                                </div>
+                                <p className="mt-8 text-white/60 font-mono">
+                                    Digital Wallet Infrastructure for direct customer engagement.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

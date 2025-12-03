@@ -42,6 +42,9 @@ export const Navbar: React.FC = () => {
                     <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
                         Automation
                     </a>
+                    <a href="#products" onClick={(e) => handleScroll(e, 'products')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
+                        Products
+                    </a>
                     <a href="#process" onClick={(e) => handleScroll(e, 'process')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
                         How It Works
                     </a>
@@ -80,6 +83,9 @@ export const Navbar: React.FC = () => {
                     <div className="fixed inset-0 bg-[#0B0B0F]/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center space-y-8 md:hidden h-dvh w-screen">
                         <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
                             Automation
+                        </a>
+                        <a href="#products" onClick={(e) => handleScroll(e, 'products')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
+                            Products
                         </a>
                         <a href="#process" onClick={(e) => handleScroll(e, 'process')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
                             How It Works
