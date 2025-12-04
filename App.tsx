@@ -270,7 +270,7 @@ const App: React.FC = () => {
                             <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
                                 <Wallet size={200} className="text-white" />
                             </div>
-                            
+
                             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                                 <div>
                                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#7EE7E7]/10 border border-[#7EE7E7] text-[#7EE7E7] font-mono text-sm mb-6">
@@ -282,7 +282,7 @@ const App: React.FC = () => {
                                     <p className="text-white/60 text-lg leading-relaxed mb-8">
                                         We built a system that issues a "VIP Pass" to your customer's Google or Apple Wallet. It's not just a static card—it's a direct communication channel.
                                     </p>
-                                    
+
                                     <div className="space-y-6 mb-8">
                                         <div className="flex items-start gap-4">
                                             <div className="p-2 bg-[#1e3a8a] rounded-lg text-[#7EE7E7]">
@@ -313,7 +313,7 @@ const App: React.FC = () => {
                                             Get Started
                                         </GlassButton>
                                         <span className="text-white/40 font-mono text-sm">
-                                            Available for a small monthly subscription
+                                            Beta version available for a limited number of businesses
                                         </span>
                                     </div>
                                 </div>
@@ -327,7 +327,7 @@ const App: React.FC = () => {
                                                 <div className="text-6xl text-white mb-2">9:41</div>
                                                 <div className="text-white/60 text-sm">Tuesday, 12 September</div>
                                             </div>
-                                            
+
                                             {/* Notification Item */}
                                             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10 animate-pulse">
                                                 <div className="flex items-center gap-3 mb-2">
@@ -386,12 +386,12 @@ const App: React.FC = () => {
                                         CASE_STUDY_02.EMBED
                                     </div>
                                     <div className="overflow-hidden rounded-sm bg-black flex justify-center">
-                                        <iframe 
-                                            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7401888610763018240?collapsed=1" 
-                                            height="399" 
-                                            width="504" 
-                                            frameBorder="0" 
-                                            allowFullScreen 
+                                        <iframe
+                                            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7401888610763018240?collapsed=1"
+                                            height="399"
+                                            width="504"
+                                            frameBorder="0"
+                                            allowFullScreen
                                             title="Embedded post"
                                             className="max-w-full"
                                         ></iframe>
@@ -407,54 +407,61 @@ const App: React.FC = () => {
 
                 {/* --- PRICING --- */}
                 <section id="pricing" className="py-32 bg-[#0B0B0F] border-b border-white/10">
-                    <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="max-w-[1400px] mx-auto px-6">
+                        <div className="text-center mb-24">
+                            <h2 className="text-5xl md:text-7xl font-pixel text-white mb-6 uppercase tracking-wide">
+                                Pricing
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                        {/* Card Left: Audit */}
-                        <div className="border border-white/20 bg-[#121217] p-12 hover:border-[#CCF381] transition-colors relative group">
-                            <h3 className="text-4xl font-pixel text-white mb-2">Free Audit</h3>
-                            <div className="text-6xl font-pixel text-[#CCF381] mb-8">₹0</div>
-                            <p className="text-white/60 mb-8 font-mono">Understand what can be automated.</p>
+                            {/* Card Left: Audit */}
+                            <div className="border border-white/20 bg-[#121217] p-12 hover:border-[#CCF381] transition-colors relative group">
+                                <h3 className="text-4xl font-pixel text-white mb-2">Free Audit</h3>
+                                <div className="text-6xl font-pixel text-[#CCF381] mb-8">₹0</div>
+                                <p className="text-white/60 mb-8 font-mono">Understand what can be automated.</p>
 
-                            <div className="space-y-4 mb-12">
-                                {['Identify Manual Bottlenecks', 'Data Readiness Check', 'Automation Roadmap Call'].map(item => (
-                                    <div key={item} className="flex items-center gap-4 text-lg">
-                                        <Check className="text-[#CCF381]" /> {item}
-                                    </div>
-                                ))}
+                                <div className="space-y-4 mb-12">
+                                    {['Identify Manual Bottlenecks', 'Data Readiness Check', 'Automation Roadmap Call'].map(item => (
+                                        <div key={item} className="flex items-center gap-4 text-lg">
+                                            <Check className="text-[#CCF381]" /> {item}
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <GlassButton
+                                    className="w-full bg-[#CCF381] hover:bg-[#bce66d] text-black"
+                                    href={`mailto:info@qlavo.in?subject=${auditEmailSubject}&body=${auditEmailBody}`}
+                                >
+                                    Get Free Audit
+                                </GlassButton>
                             </div>
 
-                            <GlassButton
-                                className="w-full bg-[#CCF381] hover:bg-[#bce66d] text-black"
-                                href={`mailto:info@qlavo.in?subject=${auditEmailSubject}&body=${auditEmailBody}`}
-                            >
-                                Get Free Audit
-                            </GlassButton>
-                        </div>
+                            {/* Card Right: Implementation */}
+                            <div className="border border-white/20 bg-[#1e3a8a] p-12 hover:border-[#7EE7E7] transition-colors relative overflow-hidden">
+                                <div className="absolute inset-0 pixel-grid opacity-10 pointer-events-none" />
+                                <h3 className="text-4xl font-pixel text-white mb-2">Custom Build</h3>
+                                <div className="text-5xl font-pixel text-[#7EE7E7] mb-8 mt-2">Custom Quote</div>
+                                <p className="text-white/60 mb-8 font-mono">For building your specific solution.</p>
 
-                        {/* Card Right: Implementation */}
-                        <div className="border border-white/20 bg-[#1e3a8a] p-12 hover:border-[#7EE7E7] transition-colors relative overflow-hidden">
-                            <div className="absolute inset-0 pixel-grid opacity-10 pointer-events-none" />
-                            <h3 className="text-4xl font-pixel text-white mb-2">Custom Build</h3>
-                            <div className="text-5xl font-pixel text-[#7EE7E7] mb-8 mt-2">Custom Quote</div>
-                            <p className="text-white/60 mb-8 font-mono">For building your specific solution.</p>
+                                <div className="space-y-4 mb-12 relative z-10">
+                                    {['Custom AI Agents', 'Live Analytics Dashboards', 'Full System Integration'].map(item => (
+                                        <div key={item} className="flex items-center gap-4 text-lg text-white">
+                                            <Check className="text-[#7EE7E7]" /> {item}
+                                        </div>
+                                    ))}
+                                </div>
 
-                            <div className="space-y-4 mb-12 relative z-10">
-                                {['Custom AI Agents', 'Live Analytics Dashboards', 'Full System Integration'].map(item => (
-                                    <div key={item} className="flex items-center gap-4 text-lg text-white">
-                                        <Check className="text-[#7EE7E7]" /> {item}
-                                    </div>
-                                ))}
+                                <GlassButton
+                                    variant="primary"
+                                    className="w-full bg-[#7EE7E7] hover:bg-[#6bd6d6] text-black relative z-10"
+                                    href={`mailto:info@qlavo.in?subject=${quoteEmailSubject}&body=${quoteEmailBody}`}
+                                >
+                                    Request Quote
+                                </GlassButton>
                             </div>
 
-                            <GlassButton
-                                variant="primary"
-                                className="w-full bg-[#7EE7E7] hover:bg-[#6bd6d6] text-black relative z-10"
-                                href={`mailto:info@qlavo.in?subject=${quoteEmailSubject}&body=${quoteEmailBody}`}
-                            >
-                                Request Quote
-                            </GlassButton>
                         </div>
-
                     </div>
                 </section>
 
