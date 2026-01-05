@@ -45,10 +45,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-6 tracking-tight">Solutions</h4>
             <ul className="space-y-4">
-              <li><Link to="/point-one" className="text-zinc-400 hover:text-white text-sm transition-colors">PointOne Time-Tracking</Link></li>
-              <li><Link to="/in-house-ai" className="text-zinc-400 hover:text-white text-sm transition-colors">Sovereign In-House AI</Link></li>
-              <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Custom Automation</Link></li>
-              <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Book a Call</Link></li>
+            <li><Link to="/point-one" className="text-zinc-400 hover:text-white text-sm transition-colors">PointOne Time Tracking</Link></li>
+            <li><Link to="/in-house-ai" className="text-zinc-400 hover:text-white text-sm transition-colors">Qore 1.0 (Flagship Model)</Link></li>
+            <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Request Audit</Link></li>
             </ul>
           </div>
         </div>

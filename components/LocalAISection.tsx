@@ -12,15 +12,15 @@ const LocalAISection: React.FC = () => {
         <div className="flex-1 w-full">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-[10px] md:text-xs tracking-widest uppercase mb-6">
             <Lock className="w-3 h-3" />
-            Sovereign Intelligence
+            Qore 1.0 / Flagship Model
           </div>
           <h2 className="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6 leading-tight">
-            Bring the AI <br/>
-            <span className="text-zinc-500">inside your firewall.</span>
+            Our base model. <br/>
+            <span className="text-zinc-500">Fine-tuned for you.</span>
           </h2>
           <p className="text-base md:text-lg text-zinc-400 font-light mb-8 leading-relaxed">
-            Law requires absolute confidentiality. You cannot paste sensitive case files into public cloud models. 
-            We build fully local, air-gapped AI infrastructure tailored to your firm's specific corpus of data.
+            Meet <strong>Qore 1.0</strong>, our flagship open-weight foundation model. We don't just give you a generic chatbot; we take Qore 1.0 and strictly fine-tune it on your firm's specific history.
+            The result is a bespoke intelligence that speaks your language, deployed entirely inside your firewall.
           </p>
 
           <div className="space-y-6">
@@ -39,8 +39,8 @@ const LocalAISection: React.FC = () => {
                 <Server className="w-5 h-5 text-zinc-300" />
               </div>
               <div>
-                <h4 className="text-white font-medium mb-1">On-Premise Hardware</h4>
-                <p className="text-zinc-500 text-sm">We spec and deploy the necessary GPU compute to run open-weight models (Llama, Mistral) locally.</p>
+                <h4 className="text-white font-medium mb-1">Qore 1.0 Foundation</h4>
+                <p className="text-zinc-500 text-sm">Built on top-tier open-weight architecture (Llama/Mistral), Qore 1.0 provides the reasoning capabilities of a senior partner.</p>
               </div>
             </div>
 
@@ -63,8 +63,8 @@ const LocalAISection: React.FC = () => {
               
               <div className="w-3/4 h-3/4 rounded-full border border-white/10 flex items-center justify-center bg-zinc-900/50 backdrop-blur-sm">
                 <div className="text-center">
-                    <div className="text-3xl md:text-5xl font-bold text-white mb-2">Local</div>
-                    <div className="text-[10px] md:text-sm text-zinc-500 tracking-widest uppercase px-4">Deployment</div>
+                    <div className="text-3xl md:text-5xl font-bold text-white mb-2">Qore 1.0</div>
+                    <div className="text-[10px] md:text-sm text-zinc-500 tracking-widest uppercase px-4">Flagship Model</div>
                 </div>
               </div>
 

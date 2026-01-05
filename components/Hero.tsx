@@ -15,10 +15,9 @@ const Hero: React.FC = () => {
           <span className="text-gradient">Legal Intelligence.</span>
         </h1>
 
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-zinc-400 font-light mb-10 md:mb-12 leading-relaxed px-4 opacity-90">
-          We replace manual drudgery with intelligent agents. 
-          From automated time-tracking with <strong>PointOne</strong> to sovereign in-house AI, we build the infrastructure 
-          modern law firms need to scale.
+        <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
+          From automated time-tracking with <strong>PointOne</strong> to <strong>Qore 1.0</strong>, our flagship sovereign AI model, we build the infrastructure
+          top firms use to dominate.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 w-full sm:w-auto">

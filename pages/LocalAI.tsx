@@ -12,13 +12,13 @@ const LocalAI: React.FC = () => {
         
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h2 className="text-xl md:text-4xl font-bold text-white mb-4 md:mb-6 tracking-tight">In-House AI</h2>
+            <h2 className="text-xl md:text-4xl font-bold text-white mb-4 md:mb-6 tracking-tight">Qore 1.0</h2>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-white tracking-tighter mb-6 md:mb-8 leading-tight">
-              Your firm's personal <br/>
-              <span className="text-zinc-500 font-light">Intelligence.</span>
+              The flagship model <br/>
+              <span className="text-zinc-500 font-light">built for your firm.</span>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-400 font-light leading-relaxed mb-10">
-              The power of ChatGPT, deployed inside your own firewall. Use your firm's entire history of briefs, contracts, and research to generate new work in seconds—without ever sending data to the cloud.
+              Qore 1.0 is our proprietary open-weight base model. We take this foundation and fine-tune it exclusively on your firm's history of briefs and contracts. The result is a personalized intelligence that runs entirely inside your firewall.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-center">
@@ -32,14 +32,14 @@ const LocalAI: React.FC = () => {
         </div>
       </section>
 
-      {/* The "Why In-House?" Section */}
+      {/* The "Why Qore?" Section */}
       <section className="py-20 md:py-24 border-t border-white/5 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">Why In-House?</h2>
+              <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">Why Qore 1.0?</h2>
               <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-8">
-                Public AI models like ChatGPT are a liability for law firms. Every prompt you enter could be used to train future models, potentially leaking client secrets. 
+                Generic public models don't know your firm. Qore 1.0 does. We personalize our base model to understand your specific clauses, preferred arguments, and internal style guide—all while keeping your data sovereign.
               </p>
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -48,7 +48,7 @@ const LocalAI: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-medium mb-1">Zero Data Leakage</h4>
-                    <p className="text-zinc-500 text-sm">Your data never leaves your premises. We use open-weight models (Llama 3, Mistral) that run on your own hardware.</p>
+                    <p className="text-zinc-500 text-sm">Your data never leaves your premises. Qore 1.0 runs strictly on your own hardware, ensuring client confidentiality.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -74,7 +74,7 @@ const LocalAI: React.FC = () => {
                   <p className="text-sm text-zinc-300 italic">"Find all indemnity clauses we've used in SaaS contracts for New York clients that include a 30-day notice period."</p>
                 </div>
                 <div className="p-4 bg-white/10 rounded-2xl border border-white/10">
-                  <p className="text-[10px] text-zinc-400 mb-1 uppercase tracking-wider">In-House AI:</p>
+                  <p className="text-[10px] text-zinc-400 mb-1 uppercase tracking-wider">Qore 1.0:</p>
                   <p className="text-sm text-zinc-200 font-light leading-relaxed">"Found 14 instances. The most common variation is in the [Client Name] 2023 agreement. Would you like me to draft a new version based on those standards?"</p>
                 </div>
               </div>
@@ -153,7 +153,7 @@ const LocalAI: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                    <div className="text-center">
                       <Lock className="w-12 h-12 text-white mx-auto mb-4 opacity-50 md:opacity-100" />
-                      <div className="text-[10px] md:text-sm text-zinc-500 uppercase tracking-widest">Sovereign AI</div>
+                      <div className="text-[10px] md:text-sm text-zinc-500 uppercase tracking-widest">Qore 1.0</div>
                    </div>
                 </div>
               </div>

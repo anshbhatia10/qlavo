@@ -62,9 +62,12 @@ const ServicesSection: React.FC = () => {
         {/* Custom Tools Callout */}
         <div className="mt-24 p-12 bg-zinc-900/30 border border-white/5 rounded-3xl text-center">
             <h4 className="text-2xl font-semibold text-white mb-4">Need something specific?</h4>
-            <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
-                Beyond PointOne and In-House AI, we build custom dashboards, document automation pipelines, and client portals tailored to your practice area.
-            </p>
+      <div className="max-w-7xl mx-auto px-6 mt-20 md:mt-32 border-t border-white/5 pt-12">
+        <p className="text-zinc-500 text-sm md:text-base text-center max-w-3xl mx-auto leading-relaxed">
+          Beyond PointOne and Qore 1.0, we build custom dashboards, document automation pipelines, and client portals tailored to your practice area.
+          We don't just sell software; we re-engineer your firm's operating system.
+        </p>
+      </div>
             <Link to="/contact" className="inline-block px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-zinc-200 transition-colors">
                 Request Custom Quote
             </Link>

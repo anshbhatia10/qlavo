@@ -12,8 +12,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const location = useLocation();
 
   const navLinks = [
+    { name: 'Services', href: '/#services' },
+    { name: 'Qore 1.0', href: '/in-house-ai' },
     { name: 'PointOne', href: '/point-one' },
-    { name: 'In-House AI', href: '/in-house-ai' },
   ];
 
   const closeMenu = () => setMobileMenuOpen(false);
