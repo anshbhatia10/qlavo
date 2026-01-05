@@ -1,107 +1,130 @@
-import React, { useState } from 'react';
-import { GlassButton } from './ui/GlassButton';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Logo } from './Logo';
+import { Menu, X } from 'lucide-react';
 
-export const Navbar: React.FC = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface NavbarProps {
+  scrolled: boolean;
+}
 
-    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-        e.preventDefault();
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsMenuOpen(false);
-        }
+const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { name: 'PointOne', href: '/point-one' },
+    { name: 'In-House AI', href: '/in-house-ai' },
+  ];
+
+  const closeMenu = () => setMobileMenuOpen(false);
+
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
     };
+  }, [mobileMenuOpen]);
 
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  return (
+    <header 
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b ${
+        scrolled || mobileMenuOpen
+          ? 'bg-black/95 backdrop-blur-xl border-white/5 py-4' 
+          : 'bg-transparent border-transparent py-6'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
+        <Link to="/" onClick={closeMenu} className="flex items-center gap-3 group cursor-pointer relative z-[110]">
+          <Logo className="w-8 h-8 text-white group-hover:text-zinc-300 transition-colors" />
+          <span className="text-xl font-medium tracking-tight text-white">Qlavo</span>
+        </Link>
 
-    const auditEmailSubject = encodeURIComponent("Request for AI Audit - [Your Company Name]");
-    const auditEmailBody = encodeURIComponent("Hi Qlavo Team,\n\nI am interested in a free AI audit for my business.\n\nName:\nCompany:\nPhone:\n\nBest regards,");
-
-    return (
-        <nav className="fixed top-0 left-0 right-0 z-50">
-            <div className="flex items-center justify-between w-full px-6 md:px-12 py-4 bg-[#0B0B0F]/80 backdrop-blur-md border-b border-white/10">
-
-                {/* Logo Section - Clean SVG Qlavo Logo */}
-                <div className="flex items-center gap-3 relative z-10 flex-shrink-0" aria-label="Qlavo Logo">
-                    <div className="w-10 h-10 md:w-12 md:h-12 relative flex items-center justify-center">
-                        <svg viewBox="0 0 120 120" className="w-full h-full text-white" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="60" r="45" stroke="currentColor" strokeWidth="12" />
-                            <rect x="52" y="52" width="24" height="24" fill="currentColor" />
-                            <path d="M74 74L96 96" stroke="currentColor" strokeWidth="12" strokeLinecap="square" />
-                        </svg>
-                    </div>
-                    <span className="text-3xl font-sans font-bold tracking-tight text-white">
-                        Qlavo
-                    </span>
-                </div>
-
-                {/* Desktop Links - FLEX SPACED (Natural Center between Left and Right) */}
-                <div className="hidden md:flex flex-1 justify-center items-center gap-8 text-xs font-bold text-white tracking-widest uppercase font-mono px-4">
-                    <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
-                        Automation
-                    </a>
-                    <a href="#products" onClick={(e) => handleScroll(e, 'products')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
-                        Products
-                    </a>
-                    <a href="#process" onClick={(e) => handleScroll(e, 'process')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
-                        How It Works
-                    </a>
-                    <a href="#work" onClick={(e) => handleScroll(e, 'work')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
-                        Latest Work
-                    </a>
-                    <a href="#pricing" onClick={(e) => handleScroll(e, 'pricing')} className="hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
-                        Pricing
-                    </a>
-                </div>
-
-                {/* Right CTA */}
-                <div className="hidden md:flex items-center gap-4 relative z-10 flex-shrink-0">
-                    <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-xs font-bold uppercase tracking-widest hover:text-[#7EE7E7] transition-colors flex items-center gap-1">
-                        Contact Us <ArrowUpRight size={14} />
-                    </a>
-                    <GlassButton
-                        className="text-xs px-5 py-2"
-                        href={`mailto:info@qlavo.in?subject=${auditEmailSubject}&body=${auditEmailBody}`}
-                    >
-                        Get Audit <ArrowUpRight size={14} />
-                    </GlassButton>
-                </div>
-
-                {/* Mobile Menu Toggle */}
-                <button 
-                    className="md:hidden text-white relative z-[70] p-2"
-                    onClick={toggleMenu}
-                    aria-label="Toggle menu"
-                >
-                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
-
-                {/* Mobile Menu Overlay */}
-                {isMenuOpen && (
-                    <div className="fixed inset-0 bg-[#0B0B0F]/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center space-y-8 md:hidden h-dvh w-screen">
-                        <a href="#services" onClick={(e) => handleScroll(e, 'services')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
-                            Automation
-                        </a>
-                        <a href="#products" onClick={(e) => handleScroll(e, 'products')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
-                            Products
-                        </a>
-                        <a href="#process" onClick={(e) => handleScroll(e, 'process')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
-                            How It Works
-                        </a>
-                        <a href="#work" onClick={(e) => handleScroll(e, 'work')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
-                            Latest Work
-                        </a>
-                        <a href="#pricing" onClick={(e) => handleScroll(e, 'pricing')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
-                            Pricing
-                        </a>
-                        <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-3xl font-bold text-white tracking-widest uppercase font-pixel hover:text-[#7EE7E7] transition-colors">
-                            Contact Us
-                        </a>
-                    </div>
-                )}
-            </div>
+        {/* Desktop Nav - Hidden until Large screens (1024px) */}
+        <nav className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.name} 
+              to={link.href}
+              className={`text-sm font-light tracking-wide transition-colors ${
+                location.pathname === link.href ? 'text-white' : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <Link 
+            key="contact-desktop"
+            to="/contact"
+            className={`text-sm font-light tracking-wide transition-colors ${
+              location.pathname === '/contact' ? 'text-white' : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            Contact
+          </Link>
+          <Link 
+            to="/contact"
+            className="px-5 py-2 text-sm font-medium text-black bg-white hover:bg-zinc-200 transition-colors rounded-full"
+          >
+            Book a Call
+          </Link>
         </nav>
-    );
+
+        {/* Mobile Toggle - Only visible below lg */}
+        <button 
+          className="lg:hidden relative z-[110] text-white p-2 focus:outline-none"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
+        {/* Mobile Menu Overlay - Fully Covers Screen */}
+        <div 
+          className={`fixed inset-0 h-dvh w-full bg-black z-[100] flex flex-col items-center justify-center gap-10 transition-all duration-500 ease-in-out lg:hidden ${
+            mobileMenuOpen 
+              ? 'translate-y-0 opacity-100' 
+              : '-translate-y-full opacity-0'
+          }`}
+        >
+          <div className="flex flex-col items-center gap-8">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                to={link.href}
+                onClick={closeMenu}
+                className="text-3xl font-light text-white tracking-wide hover:text-zinc-400 transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link 
+              key="contact-mobile"
+              to="/contact"
+              onClick={closeMenu}
+              className="text-3xl font-light text-white tracking-wide hover:text-zinc-400 transition-colors"
+            >
+              Contact
+            </Link>
+          </div>
+          
+          <div className="w-full px-12 mt-4">
+            <Link 
+              to="/contact"
+              onClick={closeMenu}
+              className="block w-full text-center px-10 py-5 text-xl font-medium text-black bg-white rounded-full transition-transform active:scale-95 shadow-2xl"
+            >
+              Book a Call
+            </Link>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 };
+
+export default Navbar;

@@ -1,19 +1,19 @@
-import React from 'react';
+import { LucideIcon } from "lucide-react";
 
-export interface Message {
-    role: 'user' | 'model';
-    text: string;
+export interface Feature {
+  title: string;
+  description: string;
+  icon: LucideIcon;
 }
 
-export interface ServiceCardProps {
-    title: string;
-    description: string;
-    icon: React.ReactNode;
+export interface ServiceStep {
+  number: string;
+  title: string;
+  description: string;
 }
 
-export interface TestimonialProps {
-    name: string;
-    role: string;
-    company: string;
-    quote: string;
+export interface AuditField {
+  label: string;
+  placeholder: string;
+  type: 'text' | 'email' | 'textarea';
 }
