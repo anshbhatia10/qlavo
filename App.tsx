@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import PointOne from './pages/PointOne';
 import LocalAI from './pages/LocalAI';
 import Contact from './pages/Contact';
+import Pricing from './pages/Pricing';
+import ROICalculator from './pages/ROICalculator';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -46,6 +48,8 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/point-one" element={<PointOne />} />
           <Route path="/in-house-ai" element={<LocalAI />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/roi-calculator" element={<ROICalculator />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
