@@ -11,11 +11,11 @@ const PointOne: React.FC = () => {
           <div className="max-w-3xl">
             <h2 className="text-xl md:text-4xl font-bold text-white mb-4 md:mb-6 tracking-tight">PointOne</h2>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-white tracking-tighter mb-6 md:mb-8 leading-tight">
-              Bill more. <br/>
-              <span className="text-zinc-500">Track less.</span>
+              Time tracking without <br/>
+              <span className="text-zinc-500">cloud surveillance.</span>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-400 font-light leading-relaxed mb-10">
-              PointOne is a lightweight desktop application that uses integrated AI to capture your work automatically. It helps lawyers recover up to 15 hours of lost billable time every month by recording what you forget.
+              PointOne captures your billable time automatically—on your machine, with on-device AI. No cloud sync. No API calls to OpenAI. Your client data never leaves your desk.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-center">
@@ -32,7 +32,7 @@ const PointOne: React.FC = () => {
       {/* The 3-Step Process */}
       <section className="py-20 md:py-24 border-t border-white/5 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-medium text-white mb-12 md:mb-16">The simplest way to track time</h2>
+          <h2 className="text-2xl md:text-3xl font-medium text-white mb-12 md:mb-16">How it works</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
             {/* Step 1 */}
@@ -53,9 +53,9 @@ const PointOne: React.FC = () => {
               <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
                 <PenTool className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-medium text-white">AI Drafting</h3>
+              <h3 className="text-xl md:text-2xl font-medium text-white">Local AI Drafting</h3>
               <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-                Our local AI processes your activity and drafts professional billing narratives for every task, saving you from the "end-of-month" manual reconstruction headache.
+                On-device AI drafts professional billing narratives for every task—entirely offline. No data sent to external servers. Your activity logs stay encrypted on your machine.
               </p>
             </div>
 
@@ -83,26 +83,26 @@ const PointOne: React.FC = () => {
                 <ShieldCheck className="w-10 h-10 md:w-12 md:h-12 text-zinc-500" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Your data is 100% safe and local.</h2>
+                <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Why firms that rejected cloud AI use PointOne</h2>
                 <p className="text-zinc-400 leading-relaxed mb-6 text-sm md:text-base">
-                  Confidentiality is your priority, so it's ours too. PointOne is built to be "local-first." All AI processing happens on your machine. We never upload your document titles or email logs to the cloud. Your secrets never leave your desk.
+                  Tools like Clio Duo, Billables AI, and MagicTime send your activity data to their cloud. PointOne doesn't. Everything runs on your machine—AI inference, data storage, narrative generation. Client confidentiality is never compromised.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12px] md:text-sm text-zinc-300">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-zinc-600" />
-                    <span>Works without internet</span>
+                    <span>No external API calls</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-zinc-600" />
-                    <span>No cloud storage used</span>
+                    <span>Encrypted SQLite storage</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-zinc-600" />
-                    <span>Private AI processing</span>
+                    <span>Works offline</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-zinc-600" />
-                    <span>Physically secure data</span>
+                    <span>On-device AI (Ollama)</span>
                   </div>
                 </div>
               </div>

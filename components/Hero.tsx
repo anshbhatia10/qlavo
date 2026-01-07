@@ -11,13 +11,13 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 text-center z-10 flex flex-col items-center justify-center h-full">
         
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tighter text-white mb-6 md:mb-8 leading-[1.05] animate-fade-in-up">
-          Autonomous <br />
-          <span className="text-gradient">Legal Intelligence.</span>
+          AI that stays <br />
+          <span className="text-gradient">inside your firm.</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-          From automated time-tracking with <strong>PointOne</strong> to <strong>Qore 1.0</strong>, our flagship sovereign AI model, we build the infrastructure
-          top firms use to dominate.
+          <strong>PointOne</strong> tracks time locally with on-device AI. <strong>Qore 1.0</strong> runs behind your firewall.
+          Zero cloud dependency. Complete data sovereignty.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 w-full sm:w-auto">

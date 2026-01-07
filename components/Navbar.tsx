@@ -15,6 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     { name: 'Qore 1.0', href: '/in-house-ai' },
     { name: 'PointOne', href: '/point-one' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
   ];
 
   const closeMenu = () => setMobileMenuOpen(false);

@@ -31,33 +31,42 @@ const Pricing: React.FC = () => {
               </div>
 
               <div className="mb-8">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl md:text-5xl font-bold text-white">$49</span>
-                  <span className="text-zinc-400 text-sm md:text-base">/ seat / month</span>
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl md:text-5xl font-bold text-white">£29</span>
+                    <span className="text-zinc-400 text-sm md:text-base">/ user / month</span>
+                  </div>
+                  <p className="text-zinc-500 text-sm mt-2">No commitment</p>
                 </div>
-                <p className="text-zinc-500 text-sm mt-2">Billed monthly. Cancel anytime.</p>
+                <div className="pt-6 border-t border-white/5">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl md:text-4xl font-bold text-white">£24</span>
+                    <span className="text-zinc-400 text-sm md:text-base">/ user / month</span>
+                  </div>
+                  <p className="text-zinc-500 text-sm mt-2">£288/year · 17% discount, paid upfront</p>
+                </div>
               </div>
 
               <div className="space-y-4 mb-10 flex-grow">
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Automatic activity capture</span>
+                  <span className="text-zinc-300 text-sm md:text-base">Zero cloud sync—all data stays on your machine</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">AI-drafted billing narratives</span>
+                  <span className="text-zinc-300 text-sm md:text-base">On-device AI—no API calls to external servers</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">100% local processing</span>
+                  <span className="text-zinc-300 text-sm md:text-base">Automatic time capture & AI billing narratives</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
+                  <span className="text-zinc-300 text-sm md:text-base">Encrypted SQLite storage</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
                   <span className="text-zinc-300 text-sm md:text-base">Export to existing billing software</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Priority email support</span>
                 </div>
               </div>
 
@@ -92,7 +101,19 @@ const Pricing: React.FC = () => {
               <div className="space-y-4 mb-10 flex-grow">
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Private, on-premise deployment</span>
+                  <span className="text-zinc-300 text-sm md:text-base">Behind your firewall—zero external data calls</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
+                  <span className="text-zinc-300 text-sm md:text-base">Air-gapped deployment available</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
+                  <span className="text-zinc-300 text-sm md:text-base">Fine-tuned on your firm's corpus</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
+                  <span className="text-zinc-300 text-sm md:text-base">Full data sovereignty—your hardware, your data</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
@@ -100,19 +121,7 @@ const Pricing: React.FC = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Custom model parameters & fine-tuning</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Full data sovereignty</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Dedicated implementation support</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">SLA & ongoing maintenance</span>
+                  <span className="text-zinc-300 text-sm md:text-base">SLA & dedicated support</span>
                 </div>
               </div>
 
@@ -159,16 +168,16 @@ const Pricing: React.FC = () => {
 
           <div className="space-y-8">
             <div className="border-b border-white/10 pb-8">
-              <h3 className="text-lg font-medium text-white mb-3">What's included in PointOne?</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Does my data leave my machine with PointOne?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                PointOne includes automatic time tracking, AI-generated billing narratives, and seamless export to your existing billing software. Everything runs locally on your machine for maximum privacy.
+                No. PointOne runs entirely on your device. The AI processes your activity logs locally using on-device models—no cloud sync, no API calls to OpenAI or third parties. Your client data never leaves your machine.
               </p>
             </div>
 
             <div className="border-b border-white/10 pb-8">
-              <h3 className="text-lg font-medium text-white mb-3">How is Qore 1.0 priced?</h3>
+              <h3 className="text-lg font-medium text-white mb-3">How is Qore 1.0 different from ChatGPT or other cloud AI?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                Qore 1.0 pricing depends on your deployment preferences—whether you rent or purchase GPU hardware, the model parameters you need, and your support requirements. Contact us for a custom quote.
+                Qore 1.0 deploys behind your firewall on your own hardware. It's air-gapped by default—no data sent to external servers. Cloud AI tools like ChatGPT, Claude, and competing legal AI platforms route your queries through their infrastructure. With Qore, you have complete data sovereignty.
               </p>
             </div>
 
@@ -180,9 +189,9 @@ const Pricing: React.FC = () => {
             </div>
 
             <div className="pb-8">
-              <h3 className="text-lg font-medium text-white mb-3">Is there a minimum commitment?</h3>
+              <h3 className="text-lg font-medium text-white mb-3">What's the commitment?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                PointOne is billed monthly with no long-term commitment—cancel anytime. Qore 1.0 typically involves a longer engagement due to the infrastructure setup, which we'll discuss during your consultation.
+                PointOne has monthly and annual plans—no long-term lock-in. Qore 1.0 typically involves a longer engagement due to infrastructure setup and model fine-tuning on your firm's data.
               </p>
             </div>
           </div>

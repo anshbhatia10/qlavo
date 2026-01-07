@@ -14,11 +14,11 @@ const LocalAI: React.FC = () => {
           <div className="max-w-3xl">
             <h2 className="text-xl md:text-4xl font-bold text-white mb-4 md:mb-6 tracking-tight">Qore 1.0</h2>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-white tracking-tighter mb-6 md:mb-8 leading-tight">
-              The flagship model <br/>
-              <span className="text-zinc-500 font-light">built for your firm.</span>
+              Legal AI that never <br/>
+              <span className="text-zinc-500 font-light">touches the internet.</span>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-400 font-light leading-relaxed mb-10">
-              Qore 1.0 is our proprietary open-weight base model. We take this foundation and fine-tune it exclusively on your firm's history of briefs and contracts. The result is a personalized intelligence that runs entirely inside your firewall.
+              Qore 1.0 is deployed behind your firewall, on your hardware. We fine-tune it on your firm's corpus—briefs, contracts, research memos. Air-gapped by default. Zero data leakage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-center">
@@ -37,9 +37,9 @@ const LocalAI: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">Why Qore 1.0?</h2>
+              <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">Why firms choose Qore over cloud AI</h2>
               <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-8">
-                Generic public models don't know your firm. Qore 1.0 does. We personalize our base model to understand your specific clauses, preferred arguments, and internal style guide—all while keeping your data sovereign.
+                ChatGPT, Claude, and legal-specific tools like Harvey route your queries through their servers. Qore 1.0 runs inside your infrastructure. Your client data, case strategy, and research never leave your network.
               </p>
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -47,8 +47,8 @@ const LocalAI: React.FC = () => {
                     <Shield className="w-5 h-5 text-zinc-300" />
                   </div>
                   <div>
-                    <h4 className="text-white font-medium mb-1">Zero Data Leakage</h4>
-                    <p className="text-zinc-500 text-sm">Your data never leaves your premises. Qore 1.0 runs strictly on your own hardware, ensuring client confidentiality.</p>
+                    <h4 className="text-white font-medium mb-1">Air-Gapped Deployment</h4>
+                    <p className="text-zinc-500 text-sm">Runs on your on-premise servers. No outbound internet connection required. Complete isolation from external networks.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -56,8 +56,8 @@ const LocalAI: React.FC = () => {
                     <Brain className="w-5 h-5 text-zinc-300" />
                   </div>
                   <div>
-                    <h4 className="text-white font-medium mb-1">Firm-Specific Brain</h4>
-                    <p className="text-zinc-500 text-sm">Our AI is "grounded" in your firm's specific corpus of past work, so it drafts in your voice and knows your preferred clauses.</p>
+                    <h4 className="text-white font-medium mb-1">Trained on Your Corpus</h4>
+                    <p className="text-zinc-500 text-sm">Fine-tuned exclusively on your firm's work product. Understands your style, preferred clauses, and internal precedents.</p>
                   </div>
                 </div>
               </div>
@@ -124,22 +124,22 @@ const LocalAI: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             <div className="flex-1 w-full order-2 lg:order-1">
-              <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">Sovereign Deployment</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">Complete Data Sovereignty</h2>
               <p className="text-zinc-400 leading-relaxed mb-6 text-sm md:text-base">
-                We don't just give you a login. We build the infrastructure. This includes specifying the hardware (GPUs), installing the local LLM software, and creating the secure interface for your team.
+                Qore 1.0 isn't a SaaS login. It's infrastructure deployed on your premises. We handle hardware provisioning, model deployment, and fine-tuning—all behind your firewall. You own the servers. You control the data.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-3 text-zinc-300 text-sm md:text-base">
                   <Server className="w-5 h-5 text-zinc-500" />
-                  On-Premise Server setup
+                  On-premise or private cloud deployment
                 </li>
                 <li className="flex items-center gap-3 text-zinc-300 text-sm md:text-base">
                   <Lock className="w-5 h-5 text-zinc-500" />
-                  End-to-end encryption
+                  Air-gapped network option
                 </li>
                 <li className="flex items-center gap-3 text-zinc-300 text-sm md:text-base">
                   <Brain className="w-5 h-5 text-zinc-500" />
-                  Custom model fine-tuning
+                  Fine-tuned on your firm's data
                 </li>
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-zinc-200 transition-all text-sm md:text-base">
@@ -165,8 +165,8 @@ const LocalAI: React.FC = () => {
       {/* CTA */}
       <section className="py-24 md:py-32 text-center">
         <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6 tracking-tight">Your knowledge, amplified.</h2>
-          <p className="text-zinc-400 mb-10 text-base md:text-lg font-light">Stop worrying about AI security and start using it to win cases.</p>
+          <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6 tracking-tight">AI without the privacy trade-off.</h2>
+          <p className="text-zinc-400 mb-10 text-base md:text-lg font-light">Built for firms that won't send privileged data to the cloud.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-12 py-5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.05] text-sm md:text-base">
             Book a Call <ArrowRight className="w-5 h-5" />
           </Link>
