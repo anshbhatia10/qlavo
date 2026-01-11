@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-6 tracking-tight">Solutions</h4>
             <ul className="space-y-4">
             <li><Link to="/point-one" className="text-zinc-400 hover:text-white text-sm transition-colors">PointOne Time Tracking</Link></li>
-            <li><Link to="/in-house-ai" className="text-zinc-400 hover:text-white text-sm transition-colors">Qore 1.0 (Flagship Model)</Link></li>
+            <li><Link to="/in-house-ai" className="text-zinc-400 hover:text-white text-sm transition-colors">Donna (Flagship Model)</Link></li>
             <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Request Audit</Link></li>
             </ul>
           </div>

@@ -78,14 +78,14 @@ const Pricing: React.FC = () => {
               </Link>
             </div>
 
-            {/* Qore 1.0 Card */}
+            {/* Donna Card */}
             <div className="glass-panel rounded-3xl p-8 md:p-10 border border-white/20 flex flex-col relative overflow-hidden">
               {/* Accent border */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-white/0 via-white/50 to-white/0"></div>
 
               <div className="mb-8">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-xl md:text-2xl font-semibold text-white">Qore 1.0</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold text-white">Donna</h3>
                   <span className="px-3 py-1 text-xs font-medium bg-white/10 text-white rounded-full">Enterprise</span>
                 </div>
                 <p className="text-zinc-400 text-sm md:text-base">Sovereign AI infrastructure for your firm</p>
@@ -175,23 +175,23 @@ const Pricing: React.FC = () => {
             </div>
 
             <div className="border-b border-white/10 pb-8">
-              <h3 className="text-lg font-medium text-white mb-3">How is Qore 1.0 different from ChatGPT or other cloud AI?</h3>
+              <h3 className="text-lg font-medium text-white mb-3">How is Donna different from ChatGPT or other cloud AI?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                Qore 1.0 deploys behind your firewall on your own hardware. It's air-gapped by default—no data sent to external servers. Cloud AI tools like ChatGPT, Claude, and competing legal AI platforms route your queries through their infrastructure. With Qore, you have complete data sovereignty.
+                Donna deploys behind your firewall on your own hardware. It's air-gapped by default—no data sent to external servers. Cloud AI tools like ChatGPT, Claude, and competing legal AI platforms route your queries through their infrastructure. With Donna, you have complete data sovereignty.
               </p>
             </div>
 
             <div className="border-b border-white/10 pb-8">
               <h3 className="text-lg font-medium text-white mb-3">Can I try before I buy?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                Yes. We offer a pilot program for both PointOne and Qore 1.0. Book a call with our team to discuss a trial that fits your firm's needs.
+                Yes. We offer a pilot program for both PointOne and Donna. Book a call with our team to discuss a trial that fits your firm's needs.
               </p>
             </div>
 
             <div className="pb-8">
               <h3 className="text-lg font-medium text-white mb-3">What's the commitment?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                PointOne has monthly and annual plans—no long-term lock-in. Qore 1.0 typically involves a longer engagement due to infrastructure setup and model fine-tuning on your firm's data.
+                PointOne has monthly and annual plans—no long-term lock-in. Donna typically involves a longer engagement due to infrastructure setup and model fine-tuning on your firm's data.
               </p>
             </div>
           </div>

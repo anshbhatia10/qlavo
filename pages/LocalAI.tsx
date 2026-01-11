@@ -12,13 +12,13 @@ const LocalAI: React.FC = () => {
         
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
-            <h2 className="text-xl md:text-4xl font-bold text-white mb-4 md:mb-6 tracking-tight">Qore 1.0</h2>
+            <h2 className="text-xl md:text-4xl font-bold text-white mb-4 md:mb-6 tracking-tight">Donna</h2>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-white tracking-tighter mb-6 md:mb-8 leading-tight">
               Legal AI that never <br/>
               <span className="text-zinc-500 font-light">touches the internet.</span>
             </h1>
             <p className="text-lg md:text-2xl text-zinc-400 font-light leading-relaxed mb-10">
-              Qore 1.0 is deployed behind your firewall, on your hardware. We fine-tune it on your firm's corpus—briefs, contracts, research memos. Air-gapped by default. Zero data leakage.
+              Donna is deployed behind your firewall, on your hardware. We fine-tune it on your firm's corpus—briefs, contracts, research memos. Air-gapped by default. Zero data leakage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact" className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-center">
@@ -32,14 +32,14 @@ const LocalAI: React.FC = () => {
         </div>
       </section>
 
-      {/* The "Why Qore?" Section */}
+      {/* The "Why Donna?" Section */}
       <section className="py-20 md:py-24 border-t border-white/5 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">Why firms choose Qore over cloud AI</h2>
+              <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">Why firms choose Donna over cloud AI</h2>
               <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-8">
-                ChatGPT, Claude, and legal-specific tools like Harvey route your queries through their servers. Qore 1.0 runs inside your infrastructure. Your client data, case strategy, and research never leave your network.
+                ChatGPT, Claude, and legal-specific tools like Harvey route your queries through their servers. Donna runs inside your infrastructure. Your client data, case strategy, and research never leave your network.
               </p>
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -74,7 +74,7 @@ const LocalAI: React.FC = () => {
                   <p className="text-sm text-zinc-300 italic">"Find all indemnity clauses we've used in SaaS contracts for New York clients that include a 30-day notice period."</p>
                 </div>
                 <div className="p-4 bg-white/10 rounded-2xl border border-white/10">
-                  <p className="text-[10px] text-zinc-400 mb-1 uppercase tracking-wider">Qore 1.0:</p>
+                  <p className="text-[10px] text-zinc-400 mb-1 uppercase tracking-wider">Donna:</p>
                   <p className="text-sm text-zinc-200 font-light leading-relaxed">"Found 14 instances. The most common variation is in the [Client Name] 2023 agreement. Would you like me to draft a new version based on those standards?"</p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ const LocalAI: React.FC = () => {
             <div className="flex-1 w-full order-2 lg:order-1">
               <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">Complete Data Sovereignty</h2>
               <p className="text-zinc-400 leading-relaxed mb-6 text-sm md:text-base">
-                Qore 1.0 isn't a SaaS login. It's infrastructure deployed on your premises. We handle hardware provisioning, model deployment, and fine-tuning—all behind your firewall. You own the servers. You control the data.
+                Donna isn't a SaaS login. It's infrastructure deployed on your premises. We handle hardware provisioning, model deployment, and fine-tuning—all behind your firewall. You own the servers. You control the data.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-3 text-zinc-300 text-sm md:text-base">
@@ -153,7 +153,7 @@ const LocalAI: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                    <div className="text-center">
                       <Lock className="w-12 h-12 text-white mx-auto mb-4 opacity-50 md:opacity-100" />
-                      <div className="text-[10px] md:text-sm text-zinc-500 uppercase tracking-widest">Qore 1.0</div>
+                      <div className="text-[10px] md:text-sm text-zinc-500 uppercase tracking-widest">Donna</div>
                    </div>
                 </div>
               </div>

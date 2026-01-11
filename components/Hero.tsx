@@ -16,13 +16,13 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-          <strong>PointOne</strong> tracks time locally with on-device AI. <strong>Qore 1.0</strong> runs behind your firewall.
+          <strong>PointOne</strong> tracks time locally with on-device AI. <strong>Donna</strong> runs behind your firewall.
           Zero cloud dependency. Complete data sovereignty.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 w-full sm:w-auto">
           <Link to="/in-house-ai" className="w-full sm:w-auto px-10 py-5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
-            Discover Qore 1.0 <ArrowRight className="w-4 h-4" />
+            Discover Donna <ArrowRight className="w-4 h-4" />
           </Link>
           <Link to="/contact" className="w-full sm:w-auto px-10 py-5 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all">
             Consulting & Audits
