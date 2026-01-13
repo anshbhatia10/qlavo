@@ -8,7 +8,7 @@ const GuardrailSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="max-w-3xl mb-12 md:mb-16">
-          <h2 className="text-xl md:text-3xl font-bold text-white mb-4 tracking-tight">Qlavo Guardrail</h2>
+          <h2 className="text-xl md:text-3xl font-bold text-white mb-4 tracking-tight">Guardrail</h2>
           <h3 className="text-3xl md:text-6xl font-semibold text-white tracking-tight mb-6 md:mb-8 leading-[1.2] md:leading-[1.1]">
             Prevent billing mistakes. <br/>
             <span className="text-zinc-500 text-2xl md:text-5xl font-light">Before they cost you.</span>
