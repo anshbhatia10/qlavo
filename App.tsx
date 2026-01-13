@@ -6,7 +6,6 @@ import Guardrail from './pages/Guardrail';
 import LocalAI from './pages/LocalAI';
 import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
-import ROICalculator from './pages/ROICalculator';
 import About from './pages/About';
 import Footer from './components/Footer';
 
@@ -50,7 +49,6 @@ const App: React.FC = () => {
           <Route path="/guardrail" element={<Guardrail />} />
           <Route path="/in-house-ai" element={<LocalAI />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/roi-calculator" element={<ROICalculator />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

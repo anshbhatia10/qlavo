@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ArrowRight, Calculator } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Pricing: React.FC = () => {
@@ -129,31 +129,8 @@ const Pricing: React.FC = () => {
         </div>
       </section>
 
-      {/* ROI Calculator CTA */}
-      <section className="py-16 md:py-20 px-6 border-t border-white/5">
-        <div className="max-w-4xl mx-auto">
-          <div className="glass-panel rounded-3xl p-8 md:p-12 border border-white/10 text-center">
-            <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Calculator className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              Calculate your potential savings
-            </h2>
-            <p className="text-zinc-400 text-sm md:text-base mb-8 max-w-xl mx-auto">
-              See how much time and risk Guardrail could save your firm. Understand the ROI of preventing billing mistakes before they happen.
-            </p>
-            <Link
-              to="/roi-calculator"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.02]"
-            >
-              Try the Calculator <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
-      <section className="py-16 md:py-20 px-6">
+      <section className="py-16 md:py-20 px-6 border-t border-white/5">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-semibold text-white mb-12 text-center">
             Frequently asked questions
