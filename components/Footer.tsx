@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
               <span className="text-xl font-medium tracking-tight text-white">Qlavo</span>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 pr-4 max-w-md">
-              Automating legal practice with automatic time-tracking and sovereign, air-gapped AI infrastructure.
-              We replace manual drudgery with intelligent agents.
+              Billing safety and sovereign AI infrastructure for law firms.
+              We build tools that augment judgement without compromising privacy.
             </p>
             <div className="flex gap-4">
               <a

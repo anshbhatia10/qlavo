@@ -6,8 +6,8 @@ const StatsGrid: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           <div className="text-center group">
-            <h3 className="text-3xl md:text-5xl font-semibold text-white tracking-tighter group-hover:text-zinc-300 transition-colors">0.1h</h3>
-            <p className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-[0.3em] mt-3">Precision Billing</p>
+            <h3 className="text-3xl md:text-5xl font-semibold text-white tracking-tighter group-hover:text-zinc-300 transition-colors">Pre-flight</h3>
+            <p className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-[0.3em] mt-3">Safety Checks</p>
           </div>
           <div className="text-center group">
             <h3 className="text-3xl md:text-5xl font-semibold text-white tracking-tighter group-hover:text-zinc-300 transition-colors">100%</h3>
