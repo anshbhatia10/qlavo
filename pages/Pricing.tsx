@@ -23,50 +23,43 @@ const Pricing: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-            {/* PointOne Card */}
+            {/* Guardrail Card */}
             <div className="glass-panel rounded-3xl p-8 md:p-10 border border-white/10 flex flex-col">
               <div className="mb-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">PointOne</h3>
-                <p className="text-zinc-400 text-sm md:text-base">Automatic time tracking for lawyers</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">Guardrail</h3>
+                <p className="text-zinc-400 text-sm md:text-base">Billing & trust safety for law firms</p>
               </div>
 
               <div className="mb-8">
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl md:text-5xl font-bold text-white">£29</span>
-                    <span className="text-zinc-400 text-sm md:text-base">/ user / month</span>
+                    <span className="text-4xl md:text-5xl font-bold text-white">£49</span>
+                    <span className="text-zinc-400 text-sm md:text-base">/ firm / month</span>
                   </div>
-                  <p className="text-zinc-500 text-sm mt-2">No commitment</p>
-                </div>
-                <div className="pt-6 border-t border-white/5">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl md:text-4xl font-bold text-white">£24</span>
-                    <span className="text-zinc-400 text-sm md:text-base">/ user / month</span>
-                  </div>
-                  <p className="text-zinc-500 text-sm mt-2">£288/year · 17% discount, paid upfront</p>
+                  <p className="text-zinc-500 text-sm mt-2">No per-user pricing. No lock-ins.</p>
                 </div>
               </div>
 
               <div className="space-y-4 mb-10 flex-grow">
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Zero cloud sync—all data stays on your machine</span>
+                  <span className="text-zinc-300 text-sm md:text-base">Pre-flight billing & trust checks</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">On-device AI—no API calls to external servers</span>
+                  <span className="text-zinc-300 text-sm md:text-base">Plain-English explanations—no cryptic errors</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Automatic time capture & AI billing narratives</span>
+                  <span className="text-zinc-300 text-sm md:text-base">Immutable audit trail for all actions</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Encrypted SQLite storage</span>
+                  <span className="text-zinc-300 text-sm md:text-base">Works alongside Clio and similar systems</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-white mt-0.5 shrink-0" />
-                  <span className="text-zinc-300 text-sm md:text-base">Export to existing billing software</span>
+                  <span className="text-zinc-300 text-sm md:text-base">UK & Australia compliance presets</span>
                 </div>
               </div>
 
@@ -74,7 +67,7 @@ const Pricing: React.FC = () => {
                 to="/contact"
                 className="w-full px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-center"
               >
-                Get Started
+                Request a Demo
               </Link>
             </div>
 
@@ -144,10 +137,10 @@ const Pricing: React.FC = () => {
               <Calculator className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
-              Calculate your ROI
+              Calculate your potential savings
             </h2>
             <p className="text-zinc-400 text-sm md:text-base mb-8 max-w-xl mx-auto">
-              See how much revenue you could recover with PointOne. Our calculator shows you the potential return based on your firm's billing rate and team size.
+              See how much time and risk Guardrail could save your firm. Understand the ROI of preventing billing mistakes before they happen.
             </p>
             <Link
               to="/roi-calculator"
@@ -168,9 +161,9 @@ const Pricing: React.FC = () => {
 
           <div className="space-y-8">
             <div className="border-b border-white/10 pb-8">
-              <h3 className="text-lg font-medium text-white mb-3">Does my data leave my machine with PointOne?</h3>
+              <h3 className="text-lg font-medium text-white mb-3">Does Guardrail replace my billing software?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                No. PointOne runs entirely on your device. The AI processes your activity logs locally using on-device models—no cloud sync, no API calls to OpenAI or third parties. Your client data never leaves your machine.
+                No. Guardrail works alongside Clio and similar systems, adding a safety and compliance layer. It doesn't process payments or hold client funds—it just helps you catch mistakes before they become problems.
               </p>
             </div>
 
@@ -184,14 +177,14 @@ const Pricing: React.FC = () => {
             <div className="border-b border-white/10 pb-8">
               <h3 className="text-lg font-medium text-white mb-3">Can I try before I buy?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                Yes. We offer a pilot program for both PointOne and Donna. Book a call with our team to discuss a trial that fits your firm's needs.
+                Yes. We offer a pilot program for both Guardrail and Donna. Book a call with our team to discuss a trial that fits your firm's needs.
               </p>
             </div>
 
             <div className="pb-8">
               <h3 className="text-lg font-medium text-white mb-3">What's the commitment?</h3>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                PointOne has monthly and annual plans—no long-term lock-in. Donna typically involves a longer engagement due to infrastructure setup and model fine-tuning on your firm's data.
+                Guardrail has flexible monthly plans—no long-term lock-in. Donna typically involves a longer engagement due to infrastructure setup and model fine-tuning on your firm's data.
               </p>
             </div>
           </div>

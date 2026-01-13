@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-          <strong>PointOne</strong> tracks time locally with on-device AI. <strong>Donna</strong> runs behind your firewall.
+          <strong>Guardrail</strong> prevents billing mistakes before they happen. <strong>Donna</strong> runs behind your firewall.
           Zero cloud dependency. Complete data sovereignty.
         </p>
 

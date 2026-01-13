@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import PointOne from './pages/PointOne';
+import Guardrail from './pages/Guardrail';
 import LocalAI from './pages/LocalAI';
 import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
@@ -47,7 +47,7 @@ const App: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/point-one" element={<PointOne />} />
+          <Route path="/guardrail" element={<Guardrail />} />
           <Route path="/in-house-ai" element={<LocalAI />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/roi-calculator" element={<ROICalculator />} />

@@ -22,7 +22,7 @@ const About: React.FC = () => {
             </p>
 
             <p>
-              We're building tools that bring AI to law firms without the privacy trade-off. <strong className="text-white">PointOne</strong> tracks time locally with on-device AI. <strong className="text-white">Donna</strong> deploys behind your firewall for research and drafting. We also build custom solutions for firms with specific workflow problems.
+              We're building tools that bring AI to law firms without the privacy trade-off. <strong className="text-white">Guardrail</strong> prevents billing mistakes before they happen. <strong className="text-white">Donna</strong> deploys behind your firewall for research and drafting. We also build custom solutions for firms with specific workflow problems.
             </p>
 
             <div className="pt-8 border-t border-white/10">

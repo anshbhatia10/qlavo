@@ -14,7 +14,7 @@ const ServicesSection: React.FC = () => {
       id: "02",
       icon: Code2,
       title: "Automate & Build",
-      desc: "We build custom agents, dashboards, or deploy PointOne. We handle integration with your existing Case Management Software."
+      desc: "We build custom agents, dashboards, or deploy Guardrail. We handle integration with your existing Case Management Software."
     },
     {
       id: "03",
@@ -63,7 +63,7 @@ const ServicesSection: React.FC = () => {
         <div className="mt-24 p-8 md:p-16 bg-zinc-900/30 border border-white/5 rounded-[32px] text-center">
             <h4 className="text-2xl md:text-3xl font-semibold text-white mb-6">Need something specific?</h4>
             <p className="text-zinc-500 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
-              Beyond PointOne and Donna, we build custom dashboards, document automation pipelines, and client portals tailored to your practice area.
+              Beyond Guardrail and Donna, we build custom dashboards, document automation pipelines, and client portals tailored to your practice area.
               We don't just sell software; we re-engineer your firm's operating system.
             </p>
             <Link to="/contact" className="inline-block px-10 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.05]">
