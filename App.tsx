@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Guardrail from './pages/Guardrail';
-import LocalAI from './pages/LocalAI';
 import Contact from './pages/Contact';
-import Pricing from './pages/Pricing';
 import About from './pages/About';
+import AIVisibility from './pages/AIVisibility';
+import Forecasting from './pages/Forecasting';
+import AIIntegration from './pages/AIIntegration';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -46,11 +46,11 @@ const App: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/guardrail" element={<Guardrail />} />
-          <Route path="/in-house-ai" element={<LocalAI />} />
-          <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/ai-visibility" element={<AIVisibility />} />
+          <Route path="/forecasting" element={<Forecasting />} />
+          <Route path="/ai-integration" element={<AIIntegration />} />
         </Routes>
       </Layout>
     </HashRouter>

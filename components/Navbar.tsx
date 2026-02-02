@@ -12,9 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const location = useLocation();
 
   const navLinks = [
-    { name: 'Donna', href: '/in-house-ai' },
-    { name: 'Guardrail', href: '/guardrail' },
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'Services', href: '/#services' },
     { name: 'About', href: '/about' },
   ];
 
@@ -33,12 +31,11 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   }, [mobileMenuOpen]);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b ${
-        scrolled || mobileMenuOpen
-          ? 'bg-black/95 backdrop-blur-xl border-white/5 py-4' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b ${scrolled || mobileMenuOpen
+          ? 'bg-black/95 backdrop-blur-xl border-white/5 py-4'
           : 'bg-transparent border-transparent py-6'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         <Link to="/" onClick={closeMenu} className="flex items-center gap-3 group cursor-pointer relative z-[110]">
@@ -49,26 +46,24 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
         {/* Desktop Nav - Hidden until Large screens (1024px) */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               to={link.href}
-              className={`text-sm font-light tracking-wide transition-colors ${
-                location.pathname === link.href ? 'text-white' : 'text-zinc-400 hover:text-white'
-              }`}
+              className={`text-sm font-light tracking-wide transition-colors ${location.pathname === link.href ? 'text-white' : 'text-zinc-400 hover:text-white'
+                }`}
             >
               {link.name}
             </Link>
           ))}
-          <Link 
+          <Link
             key="contact-desktop"
             to="/contact"
-            className={`text-sm font-light tracking-wide transition-colors ${
-              location.pathname === '/contact' ? 'text-white' : 'text-zinc-400 hover:text-white'
-            }`}
+            className={`text-sm font-light tracking-wide transition-colors ${location.pathname === '/contact' ? 'text-white' : 'text-zinc-400 hover:text-white'
+              }`}
           >
             Contact
           </Link>
-          <Link 
+          <Link
             to="/contact"
             className="px-5 py-2 text-sm font-medium text-black bg-white hover:bg-zinc-200 transition-colors rounded-full"
           >
@@ -77,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
         </nav>
 
         {/* Mobile Toggle - Only visible below lg */}
-        <button 
+        <button
           className="lg:hidden relative z-[110] text-white p-2 focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
@@ -86,17 +81,16 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
         </button>
 
         {/* Mobile Menu Overlay - Fully Covers Screen */}
-        <div 
-          className={`fixed inset-0 h-dvh w-full bg-black z-[100] flex flex-col items-center justify-center gap-10 transition-all duration-500 ease-in-out lg:hidden ${
-            mobileMenuOpen 
-              ? 'translate-y-0 opacity-100' 
+        <div
+          className={`fixed inset-0 h-dvh w-full bg-black z-[100] flex flex-col items-center justify-center gap-10 transition-all duration-500 ease-in-out lg:hidden ${mobileMenuOpen
+              ? 'translate-y-0 opacity-100'
               : '-translate-y-full opacity-0'
-          }`}
+            }`}
         >
           <div className="flex flex-col items-center gap-8">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
+              <Link
+                key={link.name}
                 to={link.href}
                 onClick={closeMenu}
                 className="text-3xl font-light text-white tracking-wide hover:text-zinc-400 transition-colors"
@@ -104,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
                 {link.name}
               </Link>
             ))}
-            <Link 
+            <Link
               key="contact-mobile"
               to="/contact"
               onClick={closeMenu}
@@ -113,9 +107,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
               Contact
             </Link>
           </div>
-          
+
           <div className="w-full px-12 mt-4">
-            <Link 
+            <Link
               to="/contact"
               onClick={closeMenu}
               className="block w-full text-center px-10 py-5 text-xl font-medium text-black bg-white rounded-full transition-transform active:scale-95 shadow-2xl"

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black pt-20 pb-10 border-t border-zinc-900 font-sans">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-2">
@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
               <span className="text-xl font-medium tracking-tight text-white">Qlavo</span>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 pr-4 max-w-md">
-              Billing safety and sovereign AI infrastructure for law firms.
-              We build tools that augment judgement without compromising privacy.
+              AI visibility, custom forecasting, and intelligent automation.
+              We build the systems that give forward-thinking businesses an unfair advantage.
             </p>
             <div className="flex gap-4">
               <a
@@ -41,13 +41,13 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Solutions */}
+          {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-6 tracking-tight">Solutions</h4>
+            <h4 className="text-white font-semibold mb-6 tracking-tight">Services</h4>
             <ul className="space-y-4">
-            <li><Link to="/guardrail" className="text-zinc-400 hover:text-white text-sm transition-colors">Guardrail Trust Safety</Link></li>
-            <li><Link to="/in-house-ai" className="text-zinc-400 hover:text-white text-sm transition-colors">Donna (Flagship Model)</Link></li>
-            <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Request Audit</Link></li>
+              <li><Link to="/ai-visibility" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Visibility</Link></li>
+              <li><Link to="/forecasting" className="text-zinc-400 hover:text-white text-sm transition-colors">Forecasting Models</Link></li>
+              <li><Link to="/ai-integration" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Integration</Link></li>
             </ul>
           </div>
 
@@ -55,9 +55,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-6 tracking-tight">Company</h4>
             <ul className="space-y-4">
-            <li><Link to="/about" className="text-zinc-400 hover:text-white text-sm transition-colors">About</Link></li>
-            <li><Link to="/pricing" className="text-zinc-400 hover:text-white text-sm transition-colors">Pricing</Link></li>
-            <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Contact</Link></li>
+              <li><Link to="/about" className="text-zinc-400 hover:text-white text-sm transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>

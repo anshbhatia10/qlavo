@@ -14,15 +14,19 @@ const About: React.FC = () => {
 
           <div className="space-y-8 text-lg md:text-xl text-zinc-400 font-light leading-relaxed">
             <p>
-              Law firms are sitting out the AI revolution because every tool on the market requires them to send client data to external servers. That's not paranoia—it's professional responsibility. Client confidentiality isn't a feature request, it's the job.
+              The way customers discover businesses is changing. ChatGPT, Gemini, and Claude are becoming the new search engines—and most businesses aren't prepared. Meanwhile, growth teams are still making decisions based on gut feel when they could have forecasting systems that actually work.
             </p>
 
             <p>
-              We believe the future of legal AI is sovereign. Models that run inside the firm, trained on the firm's own data, with zero dependency on external infrastructure. Not because cloud is bad, but because for legal work, local is the only option that makes sense.
+              We started Qlavo to solve these problems. Our mission is simple: give forward-thinking businesses the AI-powered infrastructure they need to stay ahead of their competition. Not generic AI advice—actual systems that deliver measurable results.
             </p>
 
             <p>
-              We're building tools that bring AI to law firms without the privacy trade-off. <strong className="text-white">Guardrail</strong> prevents billing mistakes before they happen. <strong className="text-white">Donna</strong> deploys behind your firewall for research and drafting. We also build custom solutions for firms with specific workflow problems.
+              <strong className="text-white">AI Visibility</strong> ensures you're found when customers ask AI assistants for recommendations. <strong className="text-white">Forecasting Systems</strong> turn your data into accurate booking and revenue predictions. <strong className="text-white">AI Integration</strong> brings tools like Claude and ChatGPT into your daily workflows as intelligent coworkers.
+            </p>
+
+            <p>
+              We don't just consult—we build. Every engagement produces real systems that work for you long after we're gone.
             </p>
 
             <div className="pt-8 border-t border-white/10">
@@ -39,7 +43,7 @@ const About: React.FC = () => {
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6">Let's talk about what you're building.</h2>
           <p className="text-zinc-400 mb-10 text-base md:text-lg font-light">
-            Whether it's billing safety, on-premise AI, or a custom workflow tool—we're here to help.
+            Whether it's AI visibility, revenue forecasting, or full AI integration—we're here to help.
           </p>
           <Link
             to="/contact"
