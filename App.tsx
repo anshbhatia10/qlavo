@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -41,7 +41,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <Layout>
         <Routes>
@@ -53,7 +53,7 @@ const App: React.FC = () => {
           <Route path="/ai-integration" element={<AIIntegration />} />
         </Routes>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

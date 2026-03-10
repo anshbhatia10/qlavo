@@ -30,9 +30,28 @@ const About: React.FC = () => {
             </p>
 
             <div className="pt-8 border-t border-white/10">
-              <p className="text-base md:text-lg text-zinc-500">
-                <strong className="text-white">Ansh Bhatia</strong>, Founder
-              </p>
+              <div className="flex items-start gap-5">
+                <img
+                  src="/ansh.jpg"
+                  alt="Ansh Bhatia"
+                  className="w-16 h-16 rounded-full object-cover border border-white/10 shrink-0"
+                />
+                <div>
+                  <p className="text-white font-medium text-lg">Ansh Bhatia</p>
+                  <p className="text-zinc-500 text-sm mb-2">Founder & Director</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-3">
+                    Previously ran a social media marketing agency handling paid campaigns for B2C clients. Now building AI infrastructure that gives ambitious businesses an unfair advantage.
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/ansh-bhatia-290665281/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-500 hover:text-white text-sm transition-colors inline-flex items-center gap-1"
+                  >
+                    Connect on LinkedIn <ArrowRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

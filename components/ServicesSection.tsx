@@ -124,9 +124,9 @@ const ServicesSection: React.FC = () => {
 
         {/* CTA */}
         <div className="mt-24 p-8 md:p-16 bg-zinc-900/30 border border-white/5 rounded-[32px] text-center">
-          <h4 className="text-2xl md:text-3xl font-semibold text-white mb-6">Ready to future-proof your growth?</h4>
+          <h4 className="text-2xl md:text-3xl font-semibold text-white mb-6">The businesses that move first will win.</h4>
           <p className="text-zinc-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
-            Whether you need AI visibility, custom forecasting, or full AI integration—we'll build the systems that give you an unfair advantage.
+            AI visibility, custom forecasting, or full workflow automation — we build the systems that compound your advantage over time.
           </p>
           <Link to="/contact" className="inline-block px-10 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.05]">
             Book a Strategy Call

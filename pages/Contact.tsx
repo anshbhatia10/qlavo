@@ -18,11 +18,29 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setStatus('submitting');
 
-    // Simulate API call
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', company: '', needs: '' });
-    }, 1500);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '8c21485b-e2e3-40b2-936f-0fa8dc4003cb',
+          from_name: 'Qlavo Website',
+          subject: `New inquiry from ${formData.name} (${formData.company || 'No company'})`,
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.needs,
+        }),
+      });
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', company: '', needs: '' });
+      } else {
+        setStatus('idle');
+      }
+    } catch {
+      setStatus('idle');
+    }
   };
 
   return (
@@ -40,7 +58,7 @@ const Contact: React.FC = () => {
 
           {/* Left Column: Calendar */}
           <div className="flex flex-col gap-6 md:gap-8">
-            <div className="glass-panel p-2 rounded-2xl overflow-hidden border border-white/10 bg-black/50 min-h-[500px] md:min-h-0">
+            <div className="rounded-2xl overflow-hidden border border-white/10 min-h-[500px] md:min-h-0" style={{ filter: 'invert(1) hue-rotate(180deg)' }}>
               <iframe
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0m67cc7T8yNqwjlHdpaDMR5f80tLImiXQXgFS3QCxL8X24WietLa6HHJBSJqoha2gJWRtOAB_d?gv=true"
                 style={{ border: 0, minHeight: '600px' }}
@@ -157,6 +175,23 @@ const Contact: React.FC = () => {
           </div>
 
         </div>
+
+        {/* Trust strip */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="p-4">
+            <p className="text-white font-medium text-sm mb-1">24-hour response</p>
+            <p className="text-zinc-500 text-xs">Every inquiry gets a personal reply within one business day.</p>
+          </div>
+          <div className="p-4">
+            <p className="text-white font-medium text-sm mb-1">Free discovery call</p>
+            <p className="text-zinc-500 text-xs">30 minutes to understand your business. No pitch. No pressure.</p>
+          </div>
+          <div className="p-4">
+            <p className="text-white font-medium text-sm mb-1">No retainers or lock-in</p>
+            <p className="text-zinc-500 text-xs">Project-based engagements. You pay for results, not hours.</p>
+          </div>
+        </div>
+
       </div>
     </section>
   );

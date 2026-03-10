@@ -39,6 +39,20 @@ const Footer: React.FC = () => {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
+            <a
+              href="https://www.producthunt.com/products/qlavo?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-qlavo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-block"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1094562&theme=dark&t=1773159513400"
+                alt="Qlavo - AI Visibility & Revenue Forecasting | Product Hunt"
+                width="250"
+                height="54"
+                style={{ width: '200px', height: 'auto' }}
+              />
+            </a>
           </div>
 
           {/* Services */}
@@ -64,11 +78,6 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-zinc-600 text-sm">© 2026 Qlavo Inc. All rights reserved.</p>
-          <div className="flex gap-8">
-            <Link to="/contact" className="text-zinc-600 hover:text-white text-sm transition-colors">Terms</Link>
-            <Link to="/contact" className="text-zinc-600 hover:text-white text-sm transition-colors">Privacy</Link>
-            <Link to="/contact" className="text-zinc-600 hover:text-white text-sm transition-colors">Cookies</Link>
-          </div>
         </div>
       </div>
     </footer>

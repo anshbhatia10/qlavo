@@ -16,9 +16,9 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-          AI visibility optimization for the era of ChatGPT and Gemini.
-          Custom forecasting models that turn guesswork into strategy.
-          AI integration that transforms how you work.
+          We make your brand visible inside ChatGPT, Gemini, and Claude.
+          We build forecasting systems that replace gut feeling with data.
+          We automate the work your team shouldn't be doing manually.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 w-full sm:w-auto">
@@ -28,6 +28,18 @@ const Hero: React.FC = () => {
           <Link to="/contact" className="w-full sm:w-auto px-10 py-5 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all">
             Book a Strategy Call
           </Link>
+        </div>
+
+        {/* Trust Signals */}
+        <div className="mt-12 md:mt-16 flex flex-col items-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
+          <span className="text-[10px] text-zinc-600 uppercase tracking-[0.2em]">As featured on</span>
+          <div className="flex items-center gap-6 text-zinc-500 text-xs font-medium tracking-wide">
+            <span className="hover:text-zinc-300 transition-colors">Product Hunt</span>
+            <span className="text-zinc-800">·</span>
+            <span className="hover:text-zinc-300 transition-colors">Crunchbase</span>
+            <span className="text-zinc-800">·</span>
+            <span className="hover:text-zinc-300 transition-colors">Clutch</span>
+          </div>
         </div>
       </div>
     </section>
