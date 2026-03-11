@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import StatsGrid from '../components/StatsGrid';
 import ServicesSection from '../components/ServicesSection';
+import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 
 const Home: React.FC = () => {
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
       <Hero />
       <StatsGrid />
       <ServicesSection />
+      <FAQSection />
       <ContactSection />
     </>
   );

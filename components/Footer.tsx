@@ -62,6 +62,7 @@ const Footer: React.FC = () => {
               <li><Link to="/ai-visibility" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Visibility</Link></li>
               <li><Link to="/forecasting" className="text-zinc-400 hover:text-white text-sm transition-colors">Forecasting Models</Link></li>
               <li><Link to="/ai-integration" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Integration</Link></li>
+              <li><Link to="/geo-resources" className="text-zinc-400 hover:text-white text-sm transition-colors">GEO Resources</Link></li>
             </ul>
           </div>
 
@@ -71,6 +72,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li><Link to="/about" className="text-zinc-400 hover:text-white text-sm transition-colors">About</Link></li>
               <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Contact</Link></li>
+              <li><Link to="/geo-resources" className="text-zinc-400 hover:text-white text-sm transition-colors">What is GEO?</Link></li>
             </ul>
           </div>
         </div>
