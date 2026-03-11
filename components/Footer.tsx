@@ -74,6 +74,7 @@ const Footer: React.FC = () => {
               <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Contact</Link></li>
               <li><Link to="/geo-resources" className="text-zinc-400 hover:text-white text-sm transition-colors">What is GEO?</Link></li>
               <li><Link to="/ai-search-report-2026" className="text-zinc-400 hover:text-white text-sm transition-colors">2026 AI Search Report</Link></li>
+              <li><Link to="/ai-glossary" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Marketing Glossary</Link></li>
             </ul>
           </div>
         </div>
