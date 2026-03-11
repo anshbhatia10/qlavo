@@ -8,6 +8,7 @@ import AIVisibility from './pages/AIVisibility';
 import Forecasting from './pages/Forecasting';
 import AIIntegration from './pages/AIIntegration';
 import GEOResources from './pages/GEOResources';
+import AIReport2026 from './pages/AIReport2026';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -53,6 +54,7 @@ const App: React.FC = () => {
           <Route path="/forecasting" element={<Forecasting />} />
           <Route path="/ai-integration" element={<AIIntegration />} />
           <Route path="/geo-resources" element={<GEOResources />} />
+          <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
         </Routes>
       </Layout>
     </BrowserRouter>
