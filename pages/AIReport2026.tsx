@@ -5,6 +5,24 @@ import { Link } from 'react-router-dom';
 const AIReport2026: React.FC = () => {
   return (
     <div className="bg-black min-h-screen">
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          "headline": "Generative Engine Optimization (GEO): An Empirical Analysis of Brand Citation Signals in Large Language Model Search Results",
+          "author": {
+            "@type": "Person",
+            "name": "Ansh Bhatia"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Qlavo Research"
+          },
+          "datePublished": "2026-03-12",
+          "identifier": "https://doi.org/10.5281/zenodo.18980486",
+          "url": "https://qlavo.in/ai-search-report-2026"
+        })}
+      </script>
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24 px-6">
         <div className="max-w-4xl mx-auto">
@@ -25,10 +43,20 @@ const AIReport2026: React.FC = () => {
           <p className="text-sm text-zinc-600 font-light mb-2">
             Published by Qlavo Research • March 2026
           </p>
-          <div className="inline-block px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md">
-            <p className="text-xs text-zinc-500 font-mono">
-              *Note: Statistics represent internal Qlavo approximations based on industry-wide observation of LLM behavior, rather than peer-reviewed empirical data.
-            </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <div className="inline-block px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md">
+              <p className="text-xs text-zinc-500 font-mono">
+                *Note: Statistics represent internal Qlavo approximations based on industry-wide observation of LLM behavior, rather than peer-reviewed empirical data.
+              </p>
+            </div>
+            <a 
+              href="https://doi.org/10.5281/zenodo.18980486" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-zinc-400 hover:text-white transition-colors"
+            >
+              <FileText className="w-3 h-3" /> Formal Paper: DOI 10.5281/zenodo.18980486
+            </a>
           </div>
         </div>
       </section>
