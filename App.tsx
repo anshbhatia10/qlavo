@@ -10,6 +10,7 @@ import AIIntegration from './pages/AIIntegration';
 import GEOResources from './pages/GEOResources';
 import AIReport2026 from './pages/AIReport2026';
 import AIGlossary from './pages/AIGlossary';
+import GEOCalculator from './pages/GEOCalculator';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -57,6 +58,7 @@ const App: React.FC = () => {
           <Route path="/geo-resources" element={<GEOResources />} />
           <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
           <Route path="/ai-glossary" element={<AIGlossary />} />
+          <Route path="/geo-calculator" element={<GEOCalculator />} />
         </Routes>
       </Layout>
     </BrowserRouter>
