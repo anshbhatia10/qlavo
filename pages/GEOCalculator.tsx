@@ -70,6 +70,11 @@ const GEOCalculator: React.FC = () => {
             <Activity className="w-3 h-3 text-emerald-400" />
             LIVE AUDIT TOOL
           </div>
+          <div className="mb-6">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-medium font-mono">
+              Last Updated: March 13, 2026
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white tracking-tighter mb-6">
             GEO Readiness Calculator
           </h1>

@@ -14,6 +14,11 @@ const AIIntegration: React.FC = () => {
                         </div>
                         <span className="text-sm text-zinc-500 uppercase tracking-widest">Service</span>
                     </div>
+                    <div className="mb-6">
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-medium font-mono">
+                            Last Updated: March 13, 2026
+                        </span>
+                    </div>
 
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tighter mb-8 leading-tight">
                         AI Integration <br />for Business
