@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, BookOpen, Search, Zap, BarChart3, Globe, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, BookOpen, Search, Zap, BarChart3, Globe, MessageCircle, CheckCircle2, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const GEOResources: React.FC = () => {
@@ -19,9 +19,23 @@ const GEOResources: React.FC = () => {
             The Complete Guide to <br />Generative Engine Optimization
           </h1>
 
-          <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed mb-6">
+          <p className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed mb-8">
             Everything you need to know about getting your business recommended by AI assistants like ChatGPT, Google Gemini, Claude, and Perplexity.
           </p>
+
+          <div className="flex flex-wrap gap-4 mb-10">
+            <a 
+              href="https://huggingface.co/datasets/qlavo/geo-visibility-benchmarks-2026" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900/50 border border-white/10 rounded-lg text-zinc-400 hover:text-white hover:border-white/30 transition-all text-xs font-mono"
+            >
+              <Database className="w-3 h-3 text-emerald-500" /> 
+              <span>Resource: View our Benchmarks on Hugging Face</span>
+              <ArrowRight className="w-3 h-3 opacity-50" />
+            </a>
+          </div>
+
           <p className="text-sm text-zinc-600 font-light">
             Written by Qlavo • Last Updated: March 13, 2026
           </p>
