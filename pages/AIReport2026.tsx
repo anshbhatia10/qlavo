@@ -41,7 +41,7 @@ const AIReport2026: React.FC = () => {
             An analysis of 50 common B2B search queries across Perplexity, ChatGPT, and Google Gemini to uncover the exact signals that drive AI citations.
           </p>
           <p className="text-sm text-zinc-600 font-light mb-2">
-            Published by Qlavo Research • March 2026
+            Published by Qlavo Research • Last Updated: March 13, 2026
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <div className="inline-block px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-md">

@@ -68,11 +68,14 @@ const AIGlossary: React.FC = () => {
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24 px-6 border-b border-white/5">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="p-3 bg-zinc-900 rounded-xl border border-white/10">
-              <BookA className="w-6 h-6 text-white" />
+          <div className="flex flex-col items-center justify-center gap-3 mb-8">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-zinc-900 rounded-xl border border-white/10">
+                <BookA className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-sm text-zinc-500 uppercase tracking-widest">Qlavo Dictionary</span>
             </div>
-            <span className="text-sm text-zinc-500 uppercase tracking-widest">Qlavo Dictionary</span>
+            <span className="text-xs text-zinc-600 font-mono mt-2">Last Updated: March 13, 2026</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tighter mb-8 leading-tight">

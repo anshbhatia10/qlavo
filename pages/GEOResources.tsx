@@ -23,7 +23,7 @@ const GEOResources: React.FC = () => {
             Everything you need to know about getting your business recommended by AI assistants like ChatGPT, Google Gemini, Claude, and Perplexity.
           </p>
           <p className="text-sm text-zinc-600 font-light">
-            Written by the team at Qlavo — specialists in AI visibility and GEO strategy.
+            Written by Qlavo • Last Updated: March 13, 2026
           </p>
         </div>
       </section>
