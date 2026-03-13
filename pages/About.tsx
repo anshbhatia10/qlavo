@@ -27,6 +27,7 @@ const About: React.FC = () => {
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center md:text-left mb-16">
+            <h1 className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-4">About Qlavo & Founder</h1>
             <span className="text-[12px] uppercase tracking-[0.2em] text-zinc-500 font-medium font-mono">
               Last Updated: March 13, 2026
             </span>
@@ -44,12 +45,12 @@ const About: React.FC = () => {
             </div>
 
             <div className="w-full md:w-2/3">
-              <h1 className="text-4xl sm:text-5xl font-semibold text-white tracking-tighter mb-4 leading-tight">
+              <h2 className="text-4xl sm:text-5xl font-semibold text-white tracking-tighter mb-4 leading-tight">
                 Ansh Bhatia
-              </h1>
-              <h2 className="text-xl text-emerald-500 font-medium mb-8">
-                Founder, Qlavo | AI Visibility Strategist | New Delhi
               </h2>
+              <h3 className="text-xl text-emerald-500 font-medium mb-8">
+                Founder, Qlavo | AI Visibility Strategist | New Delhi
+              </h3>
               
               <div className="flex flex-col space-y-4 mb-10 text-sm text-zinc-400 font-mono">
                 <div className="flex items-center gap-2">
