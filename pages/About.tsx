@@ -20,7 +20,7 @@ const About: React.FC = () => {
         "sameAs": [
           "https://www.linkedin.com/in/ansh-bhatia-290665281/"
         ],
-        "description": "Founder of Qlavo, an AI Visibility Agency based in Dubai helping B2B brands optimize for Generative Engine Optimization (GEO)."
+        "description": "Founder of Qlavo, an AI Visibility Agency based in New Delhi helping brands optimize for Generative Engine Optimization (GEO)."
       }) }} />
 
       {/* Hero Section */}
@@ -48,7 +48,7 @@ const About: React.FC = () => {
                 Ansh Bhatia
               </h1>
               <h2 className="text-xl text-emerald-500 font-medium mb-8">
-                Founder, Qlavo | AI Visibility Strategist | Dubai
+                Founder, Qlavo | AI Visibility Strategist | New Delhi
               </h2>
               
               <div className="flex flex-col space-y-4 mb-10 text-sm text-zinc-400 font-mono">
@@ -62,7 +62,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-zinc-500" />
-                  <span>Location: Dubai, UAE</span>
+                  <span>Location: New Delhi, India</span>
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ const About: React.FC = () => {
                 </p>
 
                 <p>
-                  I built Qlavo because I saw mid-size B2B brands—companies doing $5M to $50M in revenue—disappearing entirely from AI search results simply because their data wasn't structured for LLMs. 
+                  I built Qlavo because I saw brands disappearing entirely from AI search results simply because their data wasn't structured for LLMs. 
                 </p>
 
                 <p>
@@ -105,7 +105,7 @@ const About: React.FC = () => {
           <h3 className="text-2xl font-semibold text-white mb-6">About Qlavo</h3>
           <div className="space-y-6 text-zinc-400 font-light leading-relaxed">
             <p>
-              Qlavo is our Dubai-based AI infrastructure and visibility agency. We don't just consult—we build. 
+              Qlavo is an AI infrastructure and visibility agency based in New Delhi. We don't just consult—we build. 
             </p>
             <p>
               Our flagship service is <strong>Generative Engine Optimization (GEO)</strong>, where we construct the exact schemas, citation chains, and semantic clusters required to force AI algorithms to cite our clients. Beyond visibility, we build custom AI forecasting tools that turn historical data into accurate revenue predictions, and develop custom AI agents that automate complex workflows.
