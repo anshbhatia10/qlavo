@@ -76,6 +76,7 @@ const Footer: React.FC = () => {
               <li><Link to="/geo-resources" className="text-zinc-400 hover:text-white text-sm transition-colors">What is GEO?</Link></li>
               <li><Link to="/ai-search-report-2026" className="text-zinc-400 hover:text-white text-sm transition-colors">2026 AI Search Report</Link></li>
               <li><Link to="/ai-glossary" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Marketing Glossary</Link></li>
+              <li><a href="https://anshbhatia2.substack.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm transition-colors font-medium">Substack: The GEO Brief</a></li>
             </ul>
           </div>
         </div>
