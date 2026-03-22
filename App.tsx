@@ -12,6 +12,7 @@ import AIReport2026 from './pages/AIReport2026';
 import AIGlossary from './pages/AIGlossary';
 import GEOCalculator from './pages/GEOCalculator';
 import GEOSignals from './pages/GEOSignals';
+import TopGEOAgencies from './pages/TopGEOAgencies';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -61,6 +62,7 @@ const App: React.FC = () => {
           <Route path="/ai-glossary" element={<AIGlossary />} />
           <Route path="/geo-calculator" element={<GEOCalculator />} />
           <Route path="/top-7-geo-signals-2026" element={<GEOSignals />} />
+          <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
         </Routes>
       </Layout>
     </BrowserRouter>
