@@ -17,7 +17,6 @@ const Hero: React.FC = () => {
 
         <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
           We get your business recommended in answers from ChatGPT, Perplexity, Gemini, and Claude.
-          Beyond visibility, we build custom AI tools and forecasting systems that save your team hundreds of hours.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 w-full sm:w-auto">

@@ -88,19 +88,19 @@ const GEOCalculator: React.FC = () => {
           <div className="max-w-2xl mx-auto">
             <form onSubmit={handleScan} className="relative group">
               <div className="absolute inset-0 bg-white/5 blur-xl rounded-2xl transition-all duration-500 group-hover:bg-white/10 pointer-events-none"></div>
-              <div className="relative flex items-center bg-zinc-900/80 border border-white/10 rounded-2xl p-2 backdrop-blur-sm">
-                <Globe className="w-6 h-6 text-zinc-500 ml-4 mr-2 shrink-0" />
+              <div className="relative flex flex-col sm:flex-row items-stretch sm:items-center bg-zinc-900/80 border border-white/10 rounded-2xl p-2 backdrop-blur-sm gap-2">
+                <Globe className="hidden sm:block w-6 h-6 text-zinc-500 ml-4 mr-2 shrink-0" />
                 <input
                   type="url"
                   placeholder="https://yourwebsite.com"
-                  className="flex-1 bg-transparent text-white placeholder:text-zinc-600 outline-none px-2 py-4 text-lg"
+                  className="flex-1 bg-transparent text-white placeholder:text-zinc-600 outline-none px-4 sm:px-2 py-4 text-lg"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-white text-black font-medium px-8 py-4 rounded-xl hover:bg-zinc-200 transition-all hover:scale-[1.02] flex items-center gap-2 shrink-0"
+                  className="bg-white text-black font-semibold px-8 py-4 rounded-xl hover:bg-zinc-200 transition-all hover:scale-[1.01] flex items-center justify-center gap-2 shrink-0 w-full sm:w-auto"
                 >
                   Analyze <Search className="w-4 h-4" />
                 </button>
