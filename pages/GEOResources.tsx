@@ -47,7 +47,7 @@ const GEOResources: React.FC = () => {
           </div>
 
           <p className="text-sm text-zinc-600 font-light">
-            Written by Qlavo • Last Updated: March 22, 2026
+            Written by Qlavo • Last Updated: March 29, 2026
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ const GEOResources: React.FC = () => {
               Unlike traditional Search Engine Optimization (SEO), which focuses on ranking your website in Google's list of blue links, GEO focuses on being <strong className="text-white">cited, referenced, and recommended</strong> in AI-generated answers. When a potential customer asks an AI assistant &ldquo;Who are the best [your service] providers in [your city]?&rdquo;, GEO determines whether your business appears in that answer.
             </p>
             <p>
-              The term emerged in 2024-2025 as AI assistants became a primary discovery channel for consumers and businesses. With ChatGPT reaching over 200 million weekly active users and Google integrating AI Overviews into the majority of search results, GEO has quickly become essential for any business that depends on being found online.
+              The term emerged in 2024-2025 as AI assistants became a primary discovery channel for consumers and businesses. With ChatGPT surpassing 500 million weekly active users as of early 2026 and Google integrating AI Overviews into the vast majority of search results, GEO has quickly become essential for any business that depends on being found online.
             </p>
           </div>
         </div>

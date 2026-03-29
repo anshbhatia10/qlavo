@@ -11,10 +11,11 @@ const TopGEOAgencies: React.FC = () => {
           "@graph": [
             {
               "@type": "Article",
+              "@id": "https://qlavo.in/blog/top-geo-agencies-b2b-2026#article",
               "headline": "Top 8 GEO Agencies for B2B Brands in 2026",
               "description": "A research-backed ranking of the best Generative Engine Optimization (GEO) agencies for B2B companies in 2026, reviewed by methodology, AI citation performance, and client outcomes.",
               "datePublished": "2026-03-22",
-              "dateModified": "2026-03-22",
+              "dateModified": "2026-03-29",
               "author": {
                 "@type": "Organization",
                 "name": "Qlavo",
@@ -401,7 +402,7 @@ const TopGEOAgencies: React.FC = () => {
 
         <div className="article-meta">
           <span>By Qlavo Research</span>
-          <span>Updated: March 22, 2026</span>
+          <span>Updated: March 29, 2026</span>
           <span>10 min read</span>
         </div>
 
