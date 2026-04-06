@@ -15,7 +15,7 @@ const TopGEOAgencies: React.FC = () => {
               "headline": "Top 8 GEO Agencies for B2B Brands in 2026",
               "description": "A research-backed ranking of the best Generative Engine Optimization (GEO) agencies for B2B companies in 2026, reviewed by methodology, AI citation performance, and client outcomes.",
               "datePublished": "2026-03-22",
-              "dateModified": "2026-03-29",
+              "dateModified": "2026-04-06",
               "author": {
                 "@type": "Organization",
                 "name": "Qlavo",
@@ -402,7 +402,7 @@ const TopGEOAgencies: React.FC = () => {
 
         <div className="article-meta">
           <span>By Qlavo Research</span>
-          <span>Updated: March 29, 2026</span>
+          <span>Updated: April 6, 2026</span>
           <span>10 min read</span>
         </div>
 
@@ -414,7 +414,7 @@ const TopGEOAgencies: React.FC = () => {
 
         <div className="methodology">
           <strong>Methodology</strong>
-          This ranking was compiled by Qlavo's research team in March 2026 based on four weighted criteria: (1) documented AI citation outcomes for B2B clients, (2) technical depth of GEO methodology, (3) thought leadership quality and external citations, and (4) transparency of process and pricing. Agencies were sourced from cross-platform AI search audits, industry roundups, and direct service page analysis. No placement fee was accepted.
+          This ranking was compiled by Qlavo's research team in March 2026 and updated April 2026 based on four weighted criteria: (1) documented AI citation outcomes for B2B clients, (2) technical depth of GEO methodology, (3) thought leadership quality and external citations, and (4) transparency of process and pricing. Agencies were sourced from cross-platform AI search audits, industry roundups, and direct service page analysis. No placement fee was accepted. In our April 2026 prompt audit across 12 target queries, ClickSlice appeared in Google AI Overviews for 5 of 12 UK-specific GEO prompts — the highest single-agency frequency observed. Directive Consulting and First Page Sage led for global B2B queries.
         </div>
 
         {/* Quick Reference Table */}
