@@ -47,7 +47,7 @@ const GEOResources: React.FC = () => {
           </div>
 
           <p className="text-sm text-zinc-600 font-light">
-            Written by Qlavo • Last Updated: March 29, 2026
+            Written by Qlavo • Last Updated: April 13, 2026
           </p>
         </div>
       </section>
@@ -133,8 +133,8 @@ const GEOResources: React.FC = () => {
                 num: "01",
                 icon: Globe,
                 title: "Entity Consistency",
-                desc: "AI models don't search like Google — they synthesize information from hundreds of sources simultaneously. If your business name, description, services, and founder information differ across LinkedIn, Crunchbase, your website, and Google Business Profile, the AI gets confused and skips you entirely. The first step in GEO is ensuring your 'entity' (your business identity) is perfectly consistent across every platform.",
-                action: "Audit your business information on every platform. Standardize your name, description, services, and team details."
+                desc: "AI models don't search like Google — they synthesize information from hundreds of sources simultaneously. If your business name, description, services, and founder information differ across LinkedIn, Crunchbase, your website, and Google Business Profile, the AI gets confused and skips you entirely. Our April 2026 audit of enterprise leaders found that 'Product Entity Fragmentation' (where different product lines have conflicting category labels) is the single biggest cause of inconsistent AI descriptions, even for household brands. The first step in GEO is ensuring your 'entity' (your business identity) is perfectly consistent across every platform, ideally anchored by a Wikidata link in your schema.",
+                action: "Audit your business information on every platform. Standardize your name, description, services, and team details. Link your Organization schema to your Wikidata ID using 'sameAs'."
               },
               {
                 num: "02",

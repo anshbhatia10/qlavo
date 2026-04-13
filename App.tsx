@@ -13,6 +13,7 @@ import AIGlossary from './pages/AIGlossary';
 import GEOCalculator from './pages/GEOCalculator';
 import GEOSignals from './pages/GEOSignals';
 import TopGEOAgencies from './pages/TopGEOAgencies';
+import HubSpotAudit from './pages/HubSpotAudit';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -63,6 +64,7 @@ const App: React.FC = () => {
           <Route path="/geo-calculator" element={<GEOCalculator />} />
           <Route path="/top-7-geo-signals-2026" element={<GEOSignals />} />
           <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
+          <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
         </Routes>
       </Layout>
     </BrowserRouter>
