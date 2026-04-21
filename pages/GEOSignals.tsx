@@ -3,7 +3,7 @@ import { ShieldCheck, Zap, Database, Globe, Network, Cpu, TextCursorInput, Arrow
 import { Link } from 'react-router-dom';
 
 const GEOSignals: React.FC = () => {
-  const publishDate = "2026-03-15";
+  const publishDate = "2026-04-21";
   const signals = [
     {
       id: "01",
@@ -53,6 +53,13 @@ const GEOSignals: React.FC = () => {
       title: "Multimodal Authority (OCR/ASR)",
       desc: "Modern models 'see' your images (OCR) and 'hear' your video transcripts (ASR). If your graphic text doesn't match your page copy, it creates an ontological mismatch that confuses the engine.",
       action: "Ensure all infographic text is identical to its adjacent HTML body copy."
+    },
+    {
+      id: "08",
+      icon: Network,
+      title: "Wikidata Entity Anchoring (sameAs)",
+      desc: "LLMs are trained heavily on Wikidata — one of the world's most authoritative structured knowledge graphs. Adding a 'sameAs' property to your Organization JSON-LD that points to your Wikidata Q-code tells AI models: 'I am the same verified entity that Wikidata has already catalogued.' Our April 2026 audit found that enterprise brands with this implemented receive more consistent, accurate descriptions in AI-generated answers.",
+      action: "Create or claim your brand's Wikidata entry. Copy your Q-code and add 'sameAs': 'https://www.wikidata.org/wiki/Q[YourID]' to your Organization JSON-LD."
     }
   ];
 
@@ -68,6 +75,10 @@ const GEOSignals: React.FC = () => {
     {
       q: "How fast do GEO changes take effect?",
       a: "Real-time engines like Perplexity or SearchGPT can reflect GEO optimizations in as little as 24-48 hours, while foundational models like Claude or the base GPT may take several months (until their next training cycle)."
+    },
+    {
+      q: "What is Wikidata sameAs and why does it matter for GEO?",
+      a: "The sameAs schema property links your Organization JSON-LD to your Wikidata entity ID. Since LLMs are trained extensively on Wikidata, this creates a direct corroboration bridge between your live website and a highly-trusted training source, increasing citation confidence and reducing hallucination risk."
     }
   ];
 
