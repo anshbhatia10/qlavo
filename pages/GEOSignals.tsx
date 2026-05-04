@@ -3,7 +3,7 @@ import { ShieldCheck, Zap, Database, Globe, Network, Cpu, TextCursorInput, Arrow
 import { Link } from 'react-router-dom';
 
 const GEOSignals: React.FC = () => {
-  const publishDate = "2026-04-21";
+  const publishDate = "2026-05-04";
   const signals = [
     {
       id: "01",

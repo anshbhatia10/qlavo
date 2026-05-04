@@ -16,7 +16,7 @@ const HubSpotAudit: React.FC = () => {
               "headline": "We Ran HubSpot Through a GEO Audit. Here's What We Found.",
               "description": "A technical Generative Engine Optimization (GEO) audit of HubSpot. Exploring AI crawler access, schema gaps, and entity consistency signals.",
               "datePublished": "2026-04-13",
-              "dateModified": "2026-04-13",
+              "dateModified": "2026-05-04",
               "author": {
                 "@type": "Organization",
                 "name": "Qlavo",
@@ -69,7 +69,7 @@ const HubSpotAudit: React.FC = () => {
 
         <article className="qlavo-article-wrapper">
           <div className="article-meta text-sm text-zinc-500 mb-4">
-            <span>By Qlavo Research</span> • <span>Published: April 13, 2026</span> • <span>7 min read</span>
+            <span>By Qlavo Research</span> • <span>Published: April 13, 2026</span> • <span>Updated: May 4, 2026</span> • <span>7 min read</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-8">

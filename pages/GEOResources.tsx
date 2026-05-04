@@ -47,7 +47,7 @@ const GEOResources: React.FC = () => {
           </div>
 
           <p className="text-sm text-zinc-600 font-light">
-            Written by Qlavo • Last Updated: April 13, 2026
+            Written by Qlavo • Last Updated: May 4, 2026
           </p>
         </div>
       </section>

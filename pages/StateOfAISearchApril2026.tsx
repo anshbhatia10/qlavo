@@ -16,7 +16,7 @@ const StateOfAISearchApril2026: React.FC = () => {
               "headline": "State of AI Search for GEO Agencies: April 2026 Data",
               "description": "A research-led audit of 22 target prompts across Google AI Overview and ChatGPT, documenting citation patterns, competitor dominance, and territorial gaps in the GEO space.",
               "datePublished": "2026-04-21",
-              "dateModified": "2026-04-28",
+              "dateModified": "2026-05-04",
               "author": {
                 "@type": "Organization",
                 "name": "Qlavo",
@@ -69,7 +69,7 @@ const StateOfAISearchApril2026: React.FC = () => {
 
         <article className="qlavo-article-wrapper">
           <div className="article-meta text-sm text-zinc-500 mb-4">
-            <span>By Qlavo Research</span> • <span>Published: April 21, 2026</span> • <span>6 min read</span>
+            <span>By Qlavo Research</span> • <span>Published: April 21, 2026</span> • <span>Updated: May 4, 2026</span> • <span>6 min read</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-8">
