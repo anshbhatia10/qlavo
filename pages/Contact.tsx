@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, CheckCircle, Loader2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle, Loader2, Clock, Phone, FileText } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    needs: ''
+    message: '',
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
@@ -29,12 +29,12 @@ const Contact: React.FC = () => {
           name: formData.name,
           email: formData.email,
           company: formData.company,
-          message: formData.needs,
+          message: formData.message,
         }),
       });
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', company: '', needs: '' });
+        setFormData({ name: '', email: '', company: '', message: '' });
       } else {
         setStatus('idle');
       }
@@ -46,19 +46,22 @@ const Contact: React.FC = () => {
   return (
     <section className="pt-28 md:pt-32 pb-20 bg-zinc-950 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="mb-12 md:mb-16 text-center">
-          <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4 md:mb-6 tracking-tight">Let's Talk.</h1>
+          <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4 md:mb-6 tracking-tight">
+            Let's Talk
+          </h1>
           <p className="text-zinc-400 max-w-2xl mx-auto text-base md:text-lg px-4 font-light">
-            Book a time directly on our calendar below, or send us a message. All inquiries are routed to <span className="text-white">info@qlavo.in</span>.
+            Book a time or send a message. We'll respond within 24 hours.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-
           {/* Left Column: Calendar */}
           <div className="flex flex-col gap-6 md:gap-8">
-            <div className="rounded-2xl overflow-hidden border border-white/10 min-h-[500px] md:min-h-0" style={{ filter: 'invert(1) hue-rotate(180deg)' }}>
+            <div
+              className="rounded-2xl overflow-hidden border border-white/10 min-h-[500px] md:min-h-0"
+              style={{ filter: 'invert(1) hue-rotate(180deg)' }}
+            >
               <iframe
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0m67cc7T8yNqwjlHdpaDMR5f80tLImiXQXgFS3QCxL8X24WietLa6HHJBSJqoha2gJWRtOAB_d?gv=true"
                 style={{ border: 0, minHeight: '600px' }}
@@ -67,14 +70,18 @@ const Contact: React.FC = () => {
                 frameBorder="0"
                 title="Book an appointment"
                 className="rounded-xl"
-              ></iframe>
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] text-zinc-500 uppercase tracking-widest">Direct Email</span>
-                <a href="mailto:info@qlavo.in" className="text-base md:text-lg text-white hover:text-zinc-300 transition-colors flex items-center gap-2 group truncate">
-                  info@qlavo.in <ArrowUpRight className="w-4 h-4 opacity-50 md:opacity-0 md:group-hover:opacity-100 transition-opacity shrink-0" />
+                <a
+                  href="mailto:info@qlavo.in"
+                  className="text-base md:text-lg text-white hover:text-zinc-300 transition-colors flex items-center gap-2 group truncate"
+                >
+                  info@qlavo.in{' '}
+                  <ArrowUpRight className="w-4 h-4 opacity-50 md:opacity-0 md:group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
               </div>
               <div className="flex flex-col gap-1">
@@ -91,7 +98,9 @@ const Contact: React.FC = () => {
                 <CheckCircle className="w-12 h-12 md:w-16 md:h-16 text-white mx-auto mb-6" />
                 <h3 className="text-xl md:text-2xl font-medium text-white mb-4">Message Sent</h3>
                 <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-                  Thank you for reaching out. We've received your inquiry and it has been sent to our team at <strong>info@qlavo.in</strong>. You can expect a response within 24 hours.
+                  Thank you for reaching out. We've received your inquiry and it has been sent
+                  to our team at <strong>info@qlavo.in</strong>. You can expect a response within
+                  24 hours.
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
@@ -106,7 +115,9 @@ const Contact: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="space-y-2">
-                      <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">Name</label>
+                      <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
+                        Name
+                      </label>
                       <input
                         type="text"
                         name="name"
@@ -118,7 +129,9 @@ const Contact: React.FC = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">Company</label>
+                      <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
+                        Company
+                      </label>
                       <input
                         type="text"
                         name="company"
@@ -131,7 +144,9 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">Email</label>
+                    <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
+                      Email
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -144,16 +159,18 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">How can we help?</label>
+                    <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
+                      What's your situation?
+                    </label>
                     <textarea
-                      name="needs"
-                      value={formData.needs}
+                      name="message"
+                      value={formData.message}
                       onChange={handleChange}
                       rows={4}
                       className="w-full bg-black/50 border border-zinc-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition-colors resize-none"
-                      placeholder="Tell us about what you're looking to build..."
+                      placeholder="Tell us what you're working on and what you need..."
                       required
-                    ></textarea>
+                    />
                   </div>
 
                   <button
@@ -166,32 +183,51 @@ const Contact: React.FC = () => {
                         <Loader2 className="w-5 h-5 animate-spin" /> Sending...
                       </>
                     ) : (
-                      'Send Request'
+                      'Send Message'
                     )}
                   </button>
                 </form>
               </>
             )}
           </div>
-
         </div>
 
-        {/* Trust strip */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="p-4">
-            <p className="text-white font-medium text-sm mb-1">24-hour response</p>
-            <p className="text-zinc-500 text-xs">Every inquiry gets a personal reply within one business day.</p>
+        {/* Trust Strip */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <Clock className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-white font-medium text-sm mb-1">24-hour response</p>
+              <p className="text-zinc-500 text-xs leading-relaxed">
+                Every inquiry gets a personal reply within one business day.
+              </p>
+            </div>
           </div>
-          <div className="p-4">
-            <p className="text-white font-medium text-sm mb-1">Free discovery call</p>
-            <p className="text-zinc-500 text-xs">30 minutes to understand your business. No pitch. No pressure.</p>
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <Phone className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-white font-medium text-sm mb-1">Free discovery call</p>
+              <p className="text-zinc-500 text-xs leading-relaxed">
+                30 minutes to understand your business. No pitch. No pressure.
+              </p>
+            </div>
           </div>
-          <div className="p-4">
-            <p className="text-white font-medium text-sm mb-1">No retainers or lock-in</p>
-            <p className="text-zinc-500 text-xs">Project-based engagements. You pay for results, not hours.</p>
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <FileText className="w-4 h-4 text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-white font-medium text-sm mb-1">No retainers or lock-in</p>
+              <p className="text-zinc-500 text-xs leading-relaxed">
+                Project-based engagements. You pay for results, not hours.
+              </p>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );

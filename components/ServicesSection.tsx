@@ -1,140 +1,206 @@
 import React from 'react';
-import { ArrowRight, Bot, TrendingUp, Zap, BarChart3, MessageSquare, Cpu } from 'lucide-react';
+import { ArrowRight, Search, FileText, Zap, Clock, MessageSquare, TrendingUp, BarChart3, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+const stats = [
+  {
+    value: '3 in 4',
+    label: 'consumers now use AI assistants to research before buying',
+    icon: TrendingUp,
+  },
+  {
+    value: '25%',
+    label: 'search volume drop predicted by 2026 as users turn to AI-powered answers',
+    icon: BarChart3,
+  },
+  {
+    value: '40+',
+    label: 'brands audited for AI visibility',
+    icon: Cpu,
+  },
+];
+
 const ServicesSection: React.FC = () => {
-  const services = [
-    {
-      id: "01",
-      icon: MessageSquare,
-      title: "AI Visibility & Answer Engine Optimization",
-      subtitle: "SEO for the AI Era",
-      desc: "Get found when customers ask ChatGPT, Gemini, or Claude for recommendations. We optimize your brand's presence in AI-generated answers.",
-      benefits: [
-        "Rank in AI-generated recommendations",
-        "Answer-engine content strategy",
-        "AI search performance tracking"
-      ],
-      link: "/ai-visibility"
-    },
-    {
-      id: "02",
-      icon: TrendingUp,
-      title: "Custom Forecasting Models",
-      subtitle: "Predict. Plan. Profit.",
-      desc: "Purpose-built forecasting systems tailored to your business. Turn historical data into accurate predictions with scenario planning capabilities.",
-      benefits: [
-        "Revenue & demand forecasting",
-        "Scenario planning dashboards",
-        "Data-driven decision support"
-      ],
-      link: "/forecasting"
-    },
-    {
-      id: "03",
-      icon: Cpu,
-      title: "AI Integration for Business",
-      subtitle: "Make AI Your Coworker",
-      desc: "Set up Claude, ChatGPT, Gemini for your team. Build custom agents and workflows that handle repetitive tasks, freeing your team to focus on what matters.",
-      benefits: [
-        "Claude for Work/Teams setup",
-        "Custom AI agent development",
-        "Workflow automation"
-      ],
-      link: "/ai-integration"
-    }
-  ];
-
   return (
-    <section id="services" className="py-32 bg-black border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div>
-            <h2 className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-4">Our Services</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold text-white tracking-tight">
-              Three ways to <br />outpace your competition.
-            </h3>
+    <>
+      {/* DATA — The market shift */}
+      <section className="bg-black border-y border-white/5 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-sm font-medium text-zinc-500 uppercase tracking-[0.2em]">The Shift</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
+              Search is changing. <span className="text-gradient-emerald">Fast.</span>
+            </h2>
           </div>
-          <div className="pb-2">
-            <Link to="/contact" className="group flex items-center gap-2 text-white border-b border-white pb-1 hover:text-zinc-300 hover:border-zinc-300 transition-colors">
-              Get started today <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {stats.map((stat, i) => {
+              const Icon = stat.icon;
+              return (
+                <div
+                  key={stat.value}
+                  className="bento-card p-8 md:p-10 text-center flex flex-col items-center gap-5"
+                  style={{ animationDelay: `${i * 0.15}s` }}
+                >
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-emerald-400" />
+                  </div>
+                  <div>
+                    <p className="stat-number mb-2">{stat.value}</p>
+                    <p className="text-sm text-zinc-400 font-light leading-relaxed max-w-[20ch] mx-auto">
+                      {stat.label}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
+      </section>
 
-        {/* Services Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <Link key={service.id} to={service.link} className="group relative bg-zinc-900/40 border border-white/5 rounded-[24px] p-8 hover:border-white/20 transition-all duration-500 hover:-translate-y-1 block">
-              {/* Service Number Badge */}
-              <div className="absolute -top-4 left-8 px-4 py-1 bg-white text-black text-sm font-semibold rounded-full">
-                {service.id}
-              </div>
+      {/* WHAT WE DO — GEO (single service, naturally) */}
+      <section id="services" className="py-28 md:py-36 bg-black border-t border-white/5 relative overflow-hidden">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-glow-emerald opacity-30 pointer-events-none" />
 
-              <div className="pt-4">
-                <div className="p-3 bg-zinc-800 rounded-xl w-fit mb-6 group-hover:bg-zinc-700 transition-colors">
-                  <service.icon className="w-6 h-6 text-white" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+          <div className="text-center mb-16 md:mb-20">
+            <span className="text-sm font-medium text-zinc-500 uppercase tracking-[0.2em]">What We Do</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 tracking-tight">
+              Generative Engine <span className="text-gradient-emerald">Optimization</span>
+            </h2>
+            <p className="text-zinc-400 text-base md:text-lg font-light mt-4 max-w-2xl mx-auto">
+              When someone asks ChatGPT, Gemini, or Perplexity to recommend a business like yours — do you show up? 
+              We make sure AI recommends you first.
+            </p>
+          </div>
+
+          {/* GEO Deep Dive */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bento-card p-8 md:p-12 relative">
+              <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+                <div className="flex-1">
+                  <div className="p-3 bg-emerald-500/10 rounded-xl w-fit mb-5">
+                    <MessageSquare className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight leading-tight">
+                    Get found in AI answers.<br />Not just Google.
+                  </h3>
+                  <p className="text-zinc-400 font-light leading-relaxed mb-6">
+                    GEO is the practice of optimizing your brand so AI assistants cite you in their responses. 
+                    It's not about keywords and backlinks — it's about entity authority, structured data, 
+                    and consistency across every platform AI trusts.
+                  </p>
+
+                  <ul className="space-y-3 mb-8">
+                    {[
+                      'Entity authority across 40+ platforms (LinkedIn, Crunchbase, and more)',
+                      'Structured data and schema markup AI can actually parse',
+                      'Content strategy optimized for citation, not just clicks',
+                      'Monthly AI visibility tracking with real benchmarks'
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm text-zinc-300">
+                        <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-2 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    to="/ai-visibility"
+                    className="inline-flex items-center gap-2 text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors group"
+                  >
+                    Learn how GEO works <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
 
-                <p className="text-zinc-400 text-sm font-medium mb-2">{service.subtitle}</p>
-                <h4 className="text-xl font-semibold text-white mb-4 leading-snug">{service.title}</h4>
-                <p className="text-zinc-400 font-light leading-relaxed mb-6">
-                  {service.desc}
-                </p>
-
-                {/* Benefits List */}
-                <ul className="space-y-3 mb-6">
-                  {service.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-sm text-zinc-300">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-
-                <span className="inline-flex items-center gap-2 text-sm text-white group-hover:underline">
-                  Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* How It Works */}
-        <div className="mt-24 pt-16 border-t border-white/5">
-          <h3 className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-12 text-center">How We Work</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { icon: BarChart3, step: "01", title: "Discovery", desc: "We analyze your current position, data infrastructure, and growth objectives to identify the highest-impact opportunities." },
-              { icon: Zap, step: "02", title: "Build & Deploy", desc: "We implement the systems—whether it's AI visibility optimization, forecasting models, or workflow automation." },
-              { icon: Bot, step: "03", title: "Scale & Support", desc: "We train your team and provide ongoing support to ensure you're maximizing value from every system we build." }
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="mx-auto w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center mb-6 border border-white/10">
-                  <item.icon className="w-7 h-7 text-white" />
+                <div className="hidden md:flex flex-col justify-center items-center gap-6 shrink-0 border-l border-white/5 pl-10">
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-gradient-emerald">100M+</p>
+                    <p className="text-xs text-zinc-500 mt-1 max-w-[16ch]">people search with AI every day</p>
+                  </div>
+                  <div className="w-12 h-px bg-white/5" />
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-white">40+</p>
+                    <p className="text-xs text-zinc-500 mt-1 max-w-[16ch]">platforms we audit and optimize across</p>
+                  </div>
                 </div>
-                <span className="text-5xl font-thin text-zinc-800 block mb-4">{item.step}</span>
-                <h4 className="text-lg font-medium text-white mb-3">{item.title}</h4>
-                <p className="text-zinc-400 text-sm leading-relaxed">{item.desc}</p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
 
-        {/* CTA */}
-        <div className="mt-24 p-8 md:p-16 bg-zinc-900/30 border border-white/5 rounded-[32px] text-center">
-          <h4 className="text-2xl md:text-3xl font-semibold text-white mb-6">The businesses that move first will win.</h4>
-          <p className="text-zinc-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
-            AI visibility, custom forecasting, or full workflow automation — we build the systems that compound your advantage over time.
-          </p>
-          <Link to="/contact" className="inline-block px-10 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.05]">
-            Book a Strategy Call
-          </Link>
-        </div>
+          {/* How It Works — 4 Steps */}
+          <div className="mt-28 pt-20 border-t border-white/5">
+            <div className="text-center mb-16">
+              <span className="text-sm font-medium text-zinc-500 uppercase tracking-[0.2em]">How It Works</span>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mt-4 tracking-tight">
+                From invisible to <span className="text-gradient-emerald">AI-recommended</span>.
+              </h3>
+            </div>
 
-      </div>
-    </section>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: Search,
+                  step: '01',
+                  title: 'Audit',
+                  desc: 'We scan every major AI platform to see where you stand. Baseline score. Gap analysis. Competitor comparison.'
+                },
+                {
+                  icon: FileText,
+                  step: '02',
+                  title: 'Structure',
+                  desc: 'We fix your entity signals — schema markup, structured data, citation consistency across the web.'
+                },
+                {
+                  icon: Zap,
+                  step: '03',
+                  title: 'Build',
+                  desc: 'We create and optimize the content, profiles, and references AI trusts enough to cite.'
+                },
+                {
+                  icon: Clock,
+                  step: '04',
+                  title: 'Monitor',
+                  desc: 'Monthly re-scans. Real numbers. You see exactly which citations are improving and where to double down.'
+                }
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.step} className="text-center group p-6 bg-zinc-900/40 border border-white/5 rounded-2xl hover:border-emerald-500/20 transition-all duration-300">
+                    <div className="mx-auto w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-5 group-hover:bg-emerald-500/20 transition-all duration-300">
+                      <Icon className="w-6 h-6 text-emerald-400" />
+                    </div>
+                    <span className="text-4xl font-thin text-zinc-800 block mb-4">{item.step}</span>
+                    <h4 className="text-lg font-semibold text-white mb-3">{item.title}</h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed max-w-xs mx-auto">{item.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* CTA Card */}
+          <div className="mt-28 p-8 md:p-14 relative overflow-hidden rounded-[28px] border border-white/5 bg-gradient-to-br from-zinc-900/80 to-black/80 backdrop-blur-xl text-center">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-glow-emerald opacity-10 pointer-events-none" />
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 tracking-tight leading-tight">
+                The businesses that act now will own AI search.
+              </h3>
+              <p className="text-zinc-400 text-base md:text-lg font-light max-w-xl mx-auto mb-10 leading-relaxed">
+                Every month you wait, more competitors get visible. Let's make sure you're ahead — not catching up.
+              </p>
+              <Link
+                to="/contact"
+                className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold hover:brightness-110 transition-all"
+              >
+                Get Your Free Audit <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </>
   );
 };
 

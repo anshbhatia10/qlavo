@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Linkedin, Instagram, Search, ArrowRight } from 'lucide-react';
 import { Logo } from './Logo';
-import { Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -9,16 +9,18 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          {/* Brand Column */}
+
+          {/* ── Column 1: Brand (spans 2 cols) ── */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6 group">
               <Logo className="w-8 h-8 text-white group-hover:text-zinc-300 transition-colors" />
               <span className="text-xl font-medium tracking-tight text-white">Qlavo</span>
             </Link>
+
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 pr-4 max-w-md">
-              AI visibility, custom forecasting, and intelligent automation.
-              We build the systems that give forward-thinking businesses an unfair advantage.
+              AI visibility for businesses that need to be found when customers ask AI.
             </p>
+
             <div className="flex gap-4">
               <a
                 href="https://www.linkedin.com/company/qlavo/"
@@ -39,6 +41,7 @@ const Footer: React.FC = () => {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
+
             <a
               href="https://www.producthunt.com/products/qlavo?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-qlavo"
               target="_blank"
@@ -55,35 +58,84 @@ const Footer: React.FC = () => {
             </a>
           </div>
 
-          {/* Services */}
+          {/* ── Column 2: Services ── */}
           <div>
             <h4 className="text-white font-semibold mb-6 tracking-tight">Services</h4>
             <ul className="space-y-4">
-              <li><Link to="/ai-visibility" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Visibility</Link></li>
-              <li><Link to="/forecasting" className="text-zinc-400 hover:text-white text-sm transition-colors">Forecasting Models</Link></li>
-              <li><Link to="/ai-integration" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Integration</Link></li>
-              <li><Link to="/geo-resources" className="text-zinc-400 hover:text-white text-sm transition-colors">GEO Resources</Link></li>
-              <li><Link to="/geo-calculator" className="text-emerald-400 hover:text-emerald-300 text-sm transition-colors font-medium">GEO Audit Calculator</Link></li>
+              <li>
+                <Link to="/ai-visibility" className="text-zinc-400 hover:text-white text-sm transition-colors">
+                  AI Visibility
+                </Link>
+              </li>
+              <li>
+                <Link to="/geo-resources" className="text-zinc-400 hover:text-white text-sm transition-colors">
+                  GEO Resources
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/geo-calculator"
+                  className="text-emerald-400 hover:text-emerald-300 text-sm transition-colors font-medium"
+                >
+                  GEO Audit Calculator
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* ── Column 3: Company ── */}
           <div>
             <h4 className="text-white font-semibold mb-6 tracking-tight">Company</h4>
             <ul className="space-y-4">
-              <li><Link to="/about" className="text-zinc-400 hover:text-white text-sm transition-colors">About</Link></li>
-              <li><Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">Contact</Link></li>
-              <li><Link to="/top-7-geo-signals-2026" className="text-zinc-400 hover:text-white text-sm transition-colors">Top 7 GEO Signals</Link></li>
-              <li><Link to="/ai-search-report-2026" className="text-zinc-400 hover:text-white text-sm transition-colors">2026 AI Search Report</Link></li>
-              <li><Link to="/ai-glossary" className="text-zinc-400 hover:text-white text-sm transition-colors">AI Marketing Glossary</Link></li>
-              <li><a href="https://anshbhatia2.substack.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 text-sm transition-colors font-medium">Substack: The GEO Brief</a></li>
+              <li>
+                <Link to="/about" className="text-zinc-400 hover:text-white text-sm transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-zinc-400 hover:text-white text-sm transition-colors">
+                  Contact
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/blog" className="text-zinc-400 hover:text-white text-sm transition-colors">
+                  Blog
+                </Link>
+              </li>
             </ul>
+          </div>
+
+          {/* ── Column 4: Free Audit ── */}
+          <div className="glass-panel rounded-2xl p-6">
+            <h5 className="text-white font-semibold text-sm mb-4 tracking-tight">
+              Get Your Free AI Audit
+            </h5>
+            <div className="flex flex-col gap-3">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500 pointer-events-none" />
+                <input
+                  type="text"
+                  placeholder="Enter your website URL"
+                  className="audit-input pl-11"
+                />
+              </div>
+              <button className="btn-primary justify-center text-sm">
+                Check Score
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+            <p className="text-zinc-600 text-xs mt-3">
+              Free. Takes 30 seconds.
+            </p>
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* ── Bottom Bar ── */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-zinc-600 text-sm">© 2026 Qlavo Inc. All rights reserved.</p>
+          <p className="text-zinc-600 text-sm">
+            © 2026 Qlavo. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

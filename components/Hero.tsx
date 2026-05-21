@@ -1,44 +1,72 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Search, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const [url, setUrl] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleAudit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!url.trim()) return;
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      window.location.href = '/contact';
+    }, 1200);
+  };
+
   return (
-    <section className="relative h-dvh flex flex-col items-center justify-center pt-20 overflow-hidden">
-      {/* Background Ambience */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] md:w-[800px] h-[300px] md:h-[500px] bg-white/5 rounded-full blur-[80px] md:blur-[120px] -z-10 opacity-20" />
+    <section className="relative min-h-dvh flex flex-col items-center justify-center overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-grid -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[600px] bg-glow-emerald -z-10" />
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 text-center z-10 flex flex-col items-center justify-center h-full">
-
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tighter text-white mb-6 md:mb-8 leading-[1.05] animate-fade-in-up">
-          Get Found. <br />
-          <span className="text-gradient">Get Predicted. Get Ahead.</span>
+      <div className="max-w-4xl mx-auto px-6 text-center z-10 flex flex-col items-center justify-center h-full pt-28 pb-16">
+        {/* Headline */}
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-5 leading-[1.08] animate-fade-in-up"
+        >
+          100M people search with AI every day.{' '}
+          <span className="text-gradient-emerald">Are you in their answers?</span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-          We get your business recommended in answers from ChatGPT, Perplexity, Gemini, and Claude.
+        {/* Subheadline */}
+        <p
+          className="text-base sm:text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
+          style={{ animationDelay: '0.15s', opacity: 0 }}
+        >
+          When customers ask ChatGPT, Gemini, or Perplexity to recommend a business like yours — 
+          you should be the answer. We make sure you are.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 sm:px-0 w-full sm:w-auto">
-          <Link to="/#services" className="w-full sm:w-auto px-10 py-5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
-            Explore Services <ArrowRight className="w-4 h-4" />
+        {/* CTA Buttons */}
+        <div
+          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 animate-fade-in-up"
+          style={{ animationDelay: '0.3s', opacity: 0 }}
+        >
+          <Link
+            to="/contact"
+            className="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold"
+          >
+            Get a Free Audit <ArrowRight className="w-4 h-4" />
           </Link>
-          <Link to="/contact" className="w-full sm:w-auto px-10 py-5 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all">
-            Book a Strategy Call
-          </Link>
+          <a
+            href="#services"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium text-zinc-400 border border-white/10 rounded-2xl hover:border-white/20 hover:text-white transition-all"
+          >
+            How It Works
+          </a>
         </div>
 
-        {/* Trust Signals */}
-        <div className="mt-12 md:mt-16 flex flex-col items-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.4s', opacity: 0 }}>
-          <span className="text-[10px] text-zinc-600 uppercase tracking-[0.2em]">As featured on</span>
-          <div className="flex items-center gap-6 text-zinc-500 text-xs font-medium tracking-wide">
-            <span className="hover:text-zinc-300 transition-colors">Product Hunt</span>
-            <span className="text-zinc-800">·</span>
-            <span className="hover:text-zinc-300 transition-colors">Crunchbase</span>
-            <span className="text-zinc-800">·</span>
-            <span className="hover:text-zinc-300 transition-colors">Clutch</span>
-          </div>
-        </div>
+        {/* Featured on */}
+        <p
+          className="text-xs sm:text-sm text-zinc-500 mt-6 font-light tracking-wide animate-fade-in-up"
+          style={{ animationDelay: '0.45s', opacity: 0 }}
+        >
+          Featured on Product Hunt
+        </p>
       </div>
     </section>
   );

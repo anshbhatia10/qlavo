@@ -6,94 +6,159 @@ interface FAQItem {
   answer: string;
 }
 
-const faqs: FAQItem[] = [
+interface FAQCategory {
+  title: string;
+  items: FAQItem[];
+}
+
+const faqCategories: FAQCategory[] = [
   {
-    question: "What is Generative Engine Optimization (GEO)?",
-    answer: "Generative Engine Optimization (GEO) is the practice of optimizing your business's online presence so that AI assistants like ChatGPT, Google Gemini, Claude, and Perplexity recommend you in their responses. Unlike traditional SEO which focuses on ranking in search results, GEO focuses on being cited and recommended in AI-generated answers. This involves building entity consistency across platforms, creating structured content that AI models can easily parse, and establishing authority signals on high-domain-authority platforms."
+    title: 'GEO & AI Visibility',
+    items: [
+      {
+        question: 'What is GEO?',
+        answer: `Generative Engine Optimization (GEO) is the practice of optimizing your brand so AI assistants — ChatGPT, Gemini, Claude, Perplexity — recommend you in their answers. Think of it as SEO for the AI era. Instead of ranking on Google's tenth page, you're getting cited in the AI answer itself.`
+      },
+      {
+        question: 'How is it different from SEO?',
+        answer: `SEO gets you clicks on Google. GEO gets you cited in AI responses. SEO needs keywords and backlinks. GEO needs entity consistency, structured data, and authority signals across platforms. Both matter — but GEO is where search is heading. Gartner predicts search volume will drop 25% by 2026 as users turn to AI-powered answers.`
+      },
+      {
+        question: 'How long does it take to see results?',
+        answer: `Perplexity and Google Gemini update in near-real-time, so you can see changes in 1-2 weeks. ChatGPT and Claude update their knowledge less often — expect 30-90 days. We baseline your AI visibility score before we start, so you have numbers to track against from day one.`
+      },
+      {
+        question: 'How do you measure AI visibility?',
+        answer: `We audit how ChatGPT, Gemini, Claude, and Perplexity currently see your business. We test dozens of prompts relevant to your industry and track whether you're cited, how often, and in what context. That gives us a baseline visibility score. We re-run the same tests monthly to measure progress.`
+      }
+    ]
   },
   {
-    question: "How do I get my business recommended by ChatGPT, Gemini, or Perplexity?",
-    answer: "To get recommended by AI assistants, you need to build what we call 'entity authority.' This means ensuring your business information is consistent across all platforms (website, LinkedIn, Crunchbase, Google Business Profile), publishing expert content on high-authority platforms like Medium and Quora, adding structured FAQ data to your website, and building citations — mentions of your brand on credible third-party sources. At Qlavo, we handle this entire process through our AI Visibility service, typically delivering measurable improvements in AI recommendations within 30-60 days."
-  },
-  {
-    question: "What is the difference between SEO and GEO?",
-    answer: "SEO (Search Engine Optimization) focuses on ranking your website higher in Google's traditional search results. GEO (Generative Engine Optimization) focuses on getting your business recommended in AI-generated answers from ChatGPT, Gemini, Claude, and Perplexity. While SEO relies on keywords, backlinks, and page authority, GEO relies on entity consistency, structured data, content on high-authority platforms, and citation frequency. Both are important — SEO drives traffic from traditional search, while GEO captures the rapidly growing audience that uses AI assistants for discovery and recommendations."
-  },
-  {
-    question: "How does Qlavo help businesses with AI visibility?",
-    answer: "Qlavo provides end-to-end AI visibility services. We start with an AI audit — testing how ChatGPT, Gemini, Claude, and Perplexity currently perceive your business. Then we implement a GEO strategy: standardizing your entity data across platforms, creating optimized content on high-authority sites, adding structured schema markup to your website, and building citation networks. We also provide custom AI forecasting models and workflow automation. Our clients typically see their first AI recommendation improvements within 30 days."
-  },
-  {
-    question: "How does AI-powered revenue forecasting work?",
-    answer: "Our custom forecasting models analyze your historical revenue, booking, and operational data to predict future performance with significantly higher accuracy than spreadsheet-based methods. We build bespoke machine learning models tailored to your business — not generic templates. These models account for seasonality, market trends, and your specific growth patterns to deliver forecasts you can actually make decisions with. The models run continuously, improving their accuracy over time as they learn from new data."
-  },
-  {
-    question: "What kind of businesses does Qlavo work with?",
-    answer: "We work with growth-stage businesses in Dubai, the UK, and internationally — typically companies doing $500K-$50M in revenue that want to leverage AI before their competitors do. Our clients include hospitality brands, professional services firms, e-commerce companies, and B2B SaaS businesses. If you're a business owner who knows AI matters but isn't sure where to start, we're a good fit."
-  },
-  {
-    question: "How long does it take to see results from GEO?",
-    answer: "Results vary by platform. Perplexity and Google Gemini, which have real-time web access, can show improvements within 1-2 weeks as they discover new content and citations. Google's AI Overviews typically respond within 2-4 weeks. ChatGPT and Claude update their knowledge bases less frequently, so results there usually appear within 30-90 days. We provide a clear baseline audit at the start so you can measure progress against concrete benchmarks."
+    title: 'Working With Qlavo',
+    items: [
+      {
+        question: 'What kind of businesses do you work with?',
+        answer: `Growth-stage companies doing $500K to $50M in revenue — across hospitality, professional services, e-commerce, and B2B SaaS. Mostly based in Delhi, the UK, and internationally. If you know AI changes everything but don't know where to start, you're our kind of client.`
+      },
+      {
+        question: 'How much does it cost?',
+        answer: `Every engagement includes a free audit first — we don't talk money until we know we can actually help. Pricing varies based on scope and is agreed upfront.`
+      },
+      {
+        question: 'Do you offer a free audit?',
+        answer: `Yes. Enter your URL above and we'll run a full AI visibility audit. Within 24 hours, you get a breakdown of how ChatGPT, Gemini, Claude, and Perplexity see your business — plus a score and specific recommendations. No credit card. No sales pitch.`
+      },
+      {
+        question: 'What happens after the audit?',
+        answer: `If the numbers look good, great — you have a baseline. If there's room to grow (and for most companies, there is), we hop on a 30-minute call to walk through the findings. No pitch deck. Just the data and what we'd do about it.`
+      }
+    ]
   }
 ];
 
 const FAQSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  // Track open state per category and per item: categoryIndex-itemIndex
+  const [openItems, setOpenItems] = useState<Set<string>>(new Set(['0-0']));
 
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggle = (catIdx: number, itemIdx: number) => {
+    const key = `${catIdx}-${itemIdx}`;
+    setOpenItems(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) {
+        next.delete(key);
+      } else {
+        next.add(key);
+      }
+      return next;
+    });
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-black border-t border-white/5">
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-500 font-medium">
+    <section id="faq" className="py-28 md:py-36 bg-black border-t border-white/5 relative overflow-hidden">
+      {/* Background grid */}
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="text-sm font-medium text-zinc-500 uppercase tracking-[0.2em]">
             Frequently Asked Questions
           </span>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white mt-4 tracking-tight">
-            Everything you need to know about AI visibility
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
+            Quick answers about AI visibility.
           </h2>
-          <p className="text-zinc-500 mt-3 text-base font-light max-w-xl mx-auto">
-            The questions our clients ask before working with us — and the answers that matter.
+          <p className="text-zinc-400 text-base font-light mt-4 max-w-xl mx-auto">
+            No fluff. Just the stuff clients actually ask before working with us.
           </p>
         </div>
 
-        <div className="space-y-3">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-white/5 rounded-xl overflow-hidden transition-colors hover:border-white/10"
-            >
-              <button
-                onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                aria-expanded={openIndex === index}
-                id={`faq-question-${index}`}
-              >
-                <span className="text-white text-[15px] font-medium pr-4 leading-snug group-hover:text-zinc-200 transition-colors">
-                  {faq.question}
-                </span>
-                <ChevronDown
-                  className={`w-4 h-4 text-zinc-500 shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                }`}
-                role="region"
-                aria-labelledby={`faq-question-${index}`}
-              >
-                <p className="px-6 pb-5 text-zinc-400 text-sm font-light leading-relaxed">
-                  {faq.answer}
-                </p>
+        {/* Two-column FAQ layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+          {faqCategories.map((category, catIdx) => (
+            <div key={catIdx}>
+              <h3 className="text-lg font-semibold text-white mb-6 tracking-tight flex items-center gap-3">
+                <span className="w-1 h-5 bg-emerald-400 rounded-full" />
+                {category.title}
+              </h3>
+
+              <div className="space-y-2.5">
+                {category.items.map((item, itemIdx) => {
+                  const key = `${catIdx}-${itemIdx}`;
+                  const isOpen = openItems.has(key);
+
+                  return (
+                    <div
+                      key={itemIdx}
+                      className="glass-panel rounded-xl overflow-hidden transition-all duration-300"
+                    >
+                      <button
+                        onClick={() => toggle(catIdx, itemIdx)}
+                        className="w-full flex items-center justify-between px-5 py-4 text-left group"
+                        aria-expanded={isOpen}
+                        id={`faq-q-${catIdx}-${itemIdx}`}
+                      >
+                        <span className="text-white text-sm font-medium pr-4 leading-snug group-hover:text-zinc-200 transition-colors">
+                          {item.question}
+                        </span>
+                        <ChevronDown
+                          className={`w-4 h-4 text-zinc-500 shrink-0 transition-transform duration-300 ${
+                            isOpen ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                          isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                        role="region"
+                        aria-labelledby={`faq-q-${catIdx}-${itemIdx}`}
+                      >
+                        <p className="px-5 pb-5 text-zinc-400 text-sm font-light leading-relaxed">
+                          {item.answer}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <p className="text-zinc-500 text-sm font-light mb-4">
+            Still have questions?
+          </p>
+          <a
+            href="mailto:info@qlavo.in"
+            className="inline-flex items-center gap-2 text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors"
+          >
+            info@qlavo.in
+          </a>
+        </div>
+
       </div>
     </section>
   );

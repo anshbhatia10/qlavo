@@ -5,8 +5,6 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import AIVisibility from './pages/AIVisibility';
-import Forecasting from './pages/Forecasting';
-import AIIntegration from './pages/AIIntegration';
 import GEOResources from './pages/GEOResources';
 import AIReport2026 from './pages/AIReport2026';
 import AIGlossary from './pages/AIGlossary';
@@ -15,6 +13,7 @@ import GEOSignals from './pages/GEOSignals';
 import TopGEOAgencies from './pages/TopGEOAgencies';
 import HubSpotAudit from './pages/HubSpotAudit';
 import StateOfAISearchApril2026 from './pages/StateOfAISearchApril2026';
+import Pricing from './pages/Pricing';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -37,7 +36,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col antialiased selection:bg-white selection:text-black">
+    <div className="min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-black">
       <Navbar scrolled={scrolled} />
       <main className="flex-grow">
         {children}
@@ -56,9 +55,8 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/ai-visibility" element={<AIVisibility />} />
-          <Route path="/forecasting" element={<Forecasting />} />
-          <Route path="/ai-integration" element={<AIIntegration />} />
           <Route path="/geo-resources" element={<GEOResources />} />
           <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
           <Route path="/ai-glossary" element={<AIGlossary />} />
