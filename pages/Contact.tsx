@@ -1,62 +1,21 @@
-import React, { useState } from 'react';
-import { ArrowUpRight, CheckCircle, Loader2, Clock, Phone, FileText } from 'lucide-react';
+import React from 'react';
+import { ArrowUpRight, Clock, Phone, FileText, Calendar } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: '',
-  });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('submitting');
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: '8c21485b-e2e3-40b2-936f-0fa8dc4003cb',
-          from_name: 'Qlavo Website',
-          subject: `New inquiry from ${formData.name} (${formData.company || 'No company'})`,
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          message: formData.message,
-        }),
-      });
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', company: '', message: '' });
-      } else {
-        setStatus('idle');
-      }
-    } catch {
-      setStatus('idle');
-    }
-  };
-
   return (
     <section className="pt-28 md:pt-32 pb-20 bg-zinc-950 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12 md:mb-16 text-center">
           <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4 md:mb-6 tracking-tight">
-            Let's Talk
+            Book a Discovery Call
           </h1>
           <p className="text-zinc-400 max-w-2xl mx-auto text-base md:text-lg px-4 font-light">
-            Book a time or send a message. We'll respond within 24 hours.
+            30 minutes. No pitch deck. We look at your situation and tell you if — and how — we can help.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-          {/* Left Column: Calendar */}
+        <div className="max-w-3xl mx-auto">
+          {/* Calendar */}
           <div className="flex flex-col gap-6 md:gap-8">
             <div
               className="rounded-2xl overflow-hidden border border-white/10 min-h-[500px] md:min-h-0"
@@ -90,106 +49,6 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Right Column: Contact Form */}
-          <div className="glass-panel p-6 md:p-10 rounded-3xl border border-white/5 h-fit relative">
-            {status === 'success' ? (
-              <div className="py-12 md:py-20 text-center animate-fade-in">
-                <CheckCircle className="w-12 h-12 md:w-16 md:h-16 text-white mx-auto mb-6" />
-                <h3 className="text-xl md:text-2xl font-medium text-white mb-4">Message Sent</h3>
-                <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-                  Thank you for reaching out. We've received your inquiry and it has been sent
-                  to our team at <strong>info@qlavo.in</strong>. You can expect a response within
-                  24 hours.
-                </p>
-                <button
-                  onClick={() => setStatus('idle')}
-                  className="mt-8 text-zinc-500 hover:text-white transition-colors underline underline-offset-4 text-sm"
-                >
-                  Send another message
-                </button>
-              </div>
-            ) : (
-              <>
-                <h3 className="text-xl md:text-2xl font-medium text-white mb-6">Send a Message</h3>
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="space-y-2">
-                      <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full bg-black/50 border border-zinc-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition-colors"
-                        placeholder="Your name"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full bg-black/50 border border-zinc-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition-colors"
-                        placeholder="Your company"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full bg-black/50 border border-zinc-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition-colors"
-                      placeholder="you@company.com"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-[10px] md:text-xs text-zinc-400 uppercase tracking-widest">
-                      What's your situation?
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      className="w-full bg-black/50 border border-zinc-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition-colors resize-none"
-                      placeholder="Tell us what you're working on and what you need..."
-                      required
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={status === 'submitting'}
-                    className="w-full bg-white text-black font-semibold py-4 rounded-lg hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 disabled:opacity-50 text-sm"
-                  >
-                    {status === 'submitting' ? (
-                      <>
-                        <Loader2 className="w-5 h-5 animate-spin" /> Sending...
-                      </>
-                    ) : (
-                      'Send Message'
-                    )}
-                  </button>
-                </form>
-              </>
-            )}
-          </div>
         </div>
 
         {/* Trust Strip */}
@@ -207,7 +66,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="flex flex-col items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-              <Phone className="w-4 h-4 text-emerald-400" />
+              <Calendar className="w-4 h-4 text-emerald-400" />
             </div>
             <div>
               <p className="text-white font-medium text-sm mb-1">Free discovery call</p>

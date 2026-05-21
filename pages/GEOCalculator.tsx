@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
-  Search, ArrowRight, Globe, Loader2, FileJson, Link,
+  Search, ArrowRight, Globe, Loader2, FileJson, Link as LinkIcon,
   RefreshCw, MessageSquare, BarChart3, AlertTriangle,
   Eye, Share2, FileText, Layout, Lock, Zap,
-  Award, Mail, ChevronDown, ChevronUp,
+  Award, ChevronDown, ChevronUp, Calendar,
 } from 'lucide-react';
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -70,7 +71,7 @@ function getCategoryIcon(key: string): React.ReactNode {
     content: <FileText className="w-4 h-4" />,
     headings: <Layout className="w-4 h-4" />,
     ssl: <Lock className="w-4 h-4" />,
-    links: <Link className="w-4 h-4" />,
+    links: <LinkIcon className="w-4 h-4" />,
     brand: <Award className="w-4 h-4" />,
     performance: <Zap className="w-4 h-4" />,
   };
@@ -99,11 +100,9 @@ function getCategoryLabel(key: string): string {
 
 const GEOCalculator: React.FC = () => {
   const [url, setUrl] = useState('');
-  const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'scanning' | 'results' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [data, setData] = useState<ScanResponse | null>(null);
-  const [showEmailGate, setShowEmailGate] = useState(false);
   const [expandedCat, setExpandedCat] = useState<string | null>(null);
 
   const handleScan = async (e: React.FormEvent) => {
@@ -113,7 +112,6 @@ const GEOCalculator: React.FC = () => {
     setStatus('scanning');
     setErrorMsg('');
     setData(null);
-    setShowEmailGate(false);
 
     try {
       const response = await fetch('/api/audit', {
@@ -146,15 +144,7 @@ const GEOCalculator: React.FC = () => {
     setUrl('');
     setData(null);
     setErrorMsg('');
-    setShowEmailGate(false);
     setExpandedCat(null);
-  };
-
-  const handleEmailSubmit = () => {
-    // In production: send to backend or email service
-    setShowEmailGate(false);
-    setEmail('');
-    resetScan();
   };
 
   // ── Render ──────────────────────────────────────────────────────────────
@@ -417,40 +407,12 @@ const GEOCalculator: React.FC = () => {
               >
                 <RefreshCw className="w-4 h-4" /> Scan Another URL
               </button>
-
-              {!showEmailGate ? (
-                <button
-                  onClick={() => setShowEmailGate(true)}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.02] text-sm"
-                >
-                  <Mail className="w-4 h-4" /> Get Your Full Report
-                </button>
-              ) : (
-                <div className="animate-fade-in">
-                  <div className="flex flex-col sm:flex-row gap-3 items-center">
-                    <input
-                      type="email"
-                      placeholder="you@company.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1 min-w-[200px] bg-black/50 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-white/30 transition-colors"
-                      required
-                    />
-                    <button
-                      onClick={handleEmailSubmit}
-                      className="bg-emerald-500 text-black font-semibold px-6 py-3 rounded-xl hover:bg-emerald-400 transition-all shrink-0 text-sm flex items-center justify-center gap-2"
-                    >
-                      Send Report <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                  <button
-                    onClick={() => setShowEmailGate(false)}
-                    className="mt-2 text-zinc-600 hover:text-zinc-400 text-xs transition-colors underline underline-offset-2"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              )}
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-500 text-black font-semibold rounded-full hover:bg-emerald-400 transition-all hover:scale-[1.02] text-sm"
+              >
+                <Calendar className="w-4 h-4" /> Book a Discovery Call
+              </Link>
             </div>
           </div>
         )}
@@ -501,7 +463,7 @@ const GEOCalculator: React.FC = () => {
               { icon: MessageSquare, label: 'LLMs.txt', desc: 'Dedicated llms.txt file for LLM context with sections and links.' },
               { icon: Layout, label: 'Content & Headings', desc: 'H1-H6 hierarchy, 300+ words, proper structure with lists and paragraphs.' },
               { icon: Lock, label: 'SSL / HTTPS', desc: 'Secure connection via HTTPS for trust and ranking signals.' },
-              { icon: Link, label: 'Internal & External Links', desc: 'Navigation links, external rel attributes, anchor text quality.' },
+              { icon: LinkIcon, label: 'Internal & External Links', desc: 'Navigation links, external rel attributes, anchor text quality.' },
               { icon: Award, label: 'Brand Presence', desc: 'LinkedIn, Twitter, Crunchbase, Wikipedia, GitHub profiles via sameAs.' },
               { icon: Zap, label: 'Performance', desc: 'Page size, gzip compression, lazy loading, server timing.' },
               { icon: Globe, label: 'Platform Presence', desc: 'Cross-referencing your brand across 11+ knowledge graph sources.' },

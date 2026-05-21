@@ -10,6 +10,7 @@ import AIReport2026 from './pages/AIReport2026';
 import AIGlossary from './pages/AIGlossary';
 import GEOCalculator from './pages/GEOCalculator';
 import GEOSignals from './pages/GEOSignals';
+import BlogIndex from './pages/BlogIndex';
 import TopGEOAgencies from './pages/TopGEOAgencies';
 import HubSpotAudit from './pages/HubSpotAudit';
 import StateOfAISearchApril2026 from './pages/StateOfAISearchApril2026';
@@ -61,6 +62,7 @@ const App: React.FC = () => {
           <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
           <Route path="/ai-glossary" element={<AIGlossary />} />
           <Route path="/geo-calculator" element={<GEOCalculator />} />
+          <Route path="/blog" element={<BlogIndex />} />
           <Route path="/top-7-geo-signals-2026" element={<GEOSignals />} />
           <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
           <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
