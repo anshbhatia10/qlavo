@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
           style={{ animationDelay: '0.3s', opacity: 0 }}
         >
           <Link
-            to="/contact"
+            to="/geo-calculator"
             className="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold"
           >
             Get a Free Audit <ArrowRight className="w-4 h-4" />

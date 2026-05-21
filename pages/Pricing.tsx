@@ -200,7 +200,7 @@ const Pricing: React.FC = () => {
             We'll run a free AI visibility audit and recommend the right plan — no pitch, no pressure.
           </p>
           <Link
-            to="/contact"
+            to="/geo-calculator"
             className="inline-flex items-center gap-2 px-10 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.05]"
           >
             Book a Free Audit <ArrowRight className="w-5 h-5" />

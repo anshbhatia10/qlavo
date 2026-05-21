@@ -48,7 +48,7 @@ const ContactSection: React.FC = () => {
                 <div className="relative flex-1">
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500 pointer-events-none" />
                   <input
-                    type="url"
+                    type="text"
                     placeholder="yourwebsite.com"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}

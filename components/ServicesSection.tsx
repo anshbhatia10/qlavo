@@ -190,7 +190,7 @@ const ServicesSection: React.FC = () => {
                 Every month you wait, more competitors get visible. Let's make sure you're ahead — not catching up.
               </p>
               <Link
-                to="/contact"
+                to="/geo-calculator"
                 className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold hover:brightness-110 transition-all"
               >
                 Get Your Free Audit <ArrowRight className="w-4 h-4" />

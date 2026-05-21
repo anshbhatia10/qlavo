@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             Contact
           </Link>
           <Link
-            to="/contact"
+            to="/geo-calculator"
             className="btn-primary text-sm px-5 py-2.5 flex items-center gap-2"
           >
             Free Audit <Zap className="w-3.5 h-3.5" />
@@ -110,7 +110,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
           <div className="w-full px-12 mt-2">
             <Link
-              to="/contact"
+              to="/geo-calculator"
               onClick={closeMenu}
               className="btn-primary w-full justify-center text-lg px-10 py-4"
             >

@@ -13,7 +13,7 @@ const AIVisibility: React.FC = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      window.location.href = '/contact';
+      window.location.href = '/geo-calculator';
     }, 1200);
   };
 
@@ -70,7 +70,7 @@ const AIVisibility: React.FC = () => {
             <div className="relative flex-1">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500 pointer-events-none" />
               <input
-                type="url"
+                type="text"
                 placeholder="Enter your website URL..."
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
@@ -353,7 +353,7 @@ const AIVisibility: React.FC = () => {
             <div className="relative flex-1">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500 pointer-events-none" />
               <input
-                type="url"
+                type="text"
                 placeholder="Your website URL..."
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Instagram, Search, ArrowRight } from 'lucide-react';
+import { Linkedin, Instagram, ArrowRight } from 'lucide-react';
 import { Logo } from './Logo';
 
 const Footer: React.FC = () => {
@@ -112,18 +112,13 @@ const Footer: React.FC = () => {
               Get Your Free AI Audit
             </h5>
             <div className="flex flex-col gap-3">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500 pointer-events-none" />
-                <input
-                  type="text"
-                  placeholder="Enter your website URL"
-                  className="audit-input pl-11"
-                />
-              </div>
-              <button className="btn-primary justify-center text-sm">
-                Check Score
+              <Link
+                to="/geo-calculator"
+                className="btn-primary justify-center text-sm"
+              >
+                Check Your Score
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
             <p className="text-zinc-600 text-xs mt-3">
               Free. Takes 30 seconds.
