@@ -14,7 +14,11 @@ import BlogIndex from './pages/BlogIndex';
 import TopGEOAgencies from './pages/TopGEOAgencies';
 import HubSpotAudit from './pages/HubSpotAudit';
 import StateOfAISearchApril2026 from './pages/StateOfAISearchApril2026';
+<<<<<<< HEAD
 import Pricing from './pages/Pricing';
+=======
+import GEOAgencyIndia from './pages/GEOAgencyIndia';
+>>>>>>> 1cfe87e (Add GEO agency Delhi/India page + location schema optimization)
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -67,6 +71,7 @@ const App: React.FC = () => {
           <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
           <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
           <Route path="/blog/state-of-ai-search-april-2026" element={<StateOfAISearchApril2026 />} />
+          <Route path="/geo-agency-delhi-india" element={<GEOAgencyIndia />} />
         </Routes>
       </Layout>
     </BrowserRouter>
