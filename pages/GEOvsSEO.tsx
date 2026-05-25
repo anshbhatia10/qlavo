@@ -12,6 +12,73 @@ const GEOvsSEO: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
+      {/* Schema: Article + FAQPage */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://qlavo.in/geo-vs-seo-vs-aeo-differences#article",
+              "headline": "GEO vs SEO vs AEO — What's the Difference?",
+              "description": "GEO vs SEO vs AEO explained with examples. Learn the difference between Generative Engine Optimization, Search Engine Optimization, and Answer Engine Optimization.",
+              "datePublished": "2026-05-26",
+              "dateModified": "2026-05-26",
+              "author": {
+                "@type": "Organization",
+                "name": "Qlavo",
+                "url": "https://qlavo.in"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Qlavo",
+                "url": "https://qlavo.in"
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://qlavo.in/geo-vs-seo-vs-aeo-differences"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "If I have good SEO, do I also have good GEO?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. SEO and GEO optimize for different things. You can rank number one on Google for your keyword and be completely invisible in ChatGPT. Many businesses discover this the hard way."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does GEO replace SEO?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. GEO builds on top of SEO. AI systems still rely on well-structured, authoritative content. But GEO adds an entirely new layer of optimization that SEO does not cover."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Which one should I start with?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If you have no SEO foundation, start there. If your SEO is solid but you are invisible in AI answers, add GEO. The order matters — SEO first, then GEO."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I measure all three the same way?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. SEO is measured in rankings and traffic. AEO is measured in snippet ownership. GEO is measured in AI citation rate — how often your brand appears in AI-generated answers for relevant prompts. Different metrics for different jobs."
+                  }
+                }
+              ]
+            }
+          ]
+        })}
+      </script>
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
         <div className="max-w-4xl mx-auto">

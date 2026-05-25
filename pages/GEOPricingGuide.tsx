@@ -71,6 +71,73 @@ const GEOPricingGuide: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
+      {/* Schema: Article + FAQPage */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://qlavo.in/geo-pricing-cost-guide-2026#article",
+              "headline": "How Much Does GEO Cost in 2026? — GEO Agency Pricing Guide",
+              "description": "A transparent breakdown of what Generative Engine Optimization actually costs, what you get at each level, and what determines the price.",
+              "datePublished": "2026-05-26",
+              "dateModified": "2026-05-26",
+              "author": {
+                "@type": "Organization",
+                "name": "Qlavo",
+                "url": "https://qlavo.in"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Qlavo",
+                "url": "https://qlavo.in"
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://qlavo.in/geo-pricing-cost-guide-2026"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Is there a minimum commitment?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most agencies require 3 months minimum. That is the shortest realistic timeframe to move AI citation rates. Month-to-month after that."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What if I stop after one month?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You will have a baseline audit and some initial optimization. But AI citation improvements compound over time. One month is enough to know your starting position, not enough to change it."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is GEO more expensive than SEO?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For equivalent scope, GEO is slightly more expensive because it is newer and more labor-intensive. The gap will narrow as tools and processes mature."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I do GEO for a single city?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Local GEO is actually simpler and cheaper. It relies heavily on Google Business Profile, local directories, and city-specific content."
+                  }
+                }
+              ]
+            }
+          ]
+        })}
+      </script>
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
         <div className="max-w-4xl mx-auto">

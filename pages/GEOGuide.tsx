@@ -100,6 +100,81 @@ The baseline is your starting citation rate. The target is month-over-month impr
 
   return (
     <div className="bg-black min-h-screen">
+      {/* Schema: Article + FAQPage */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://qlavo.in/what-is-generative-engine-optimization#article",
+              "headline": "What is Generative Engine Optimization (GEO)? — 2026 Guide",
+              "description": "Generative Engine Optimization (GEO) explained in plain English. How to get your brand cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews. A complete 2026 guide.",
+              "datePublished": "2026-05-26",
+              "dateModified": "2026-05-26",
+              "author": {
+                "@type": "Organization",
+                "name": "Qlavo",
+                "url": "https://qlavo.in"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Qlavo",
+                "url": "https://qlavo.in"
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://qlavo.in/what-is-generative-engine-optimization"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Is GEO the same as SEO?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. SEO gets you clicks on Google. GEO gets you cited inside AI answers. They work together — a strong SEO foundation helps GEO — but they optimize for different things."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does GEO take to work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It depends on the platform. Perplexity and Google Gemini update in near-real-time, so changes can appear within 1-2 weeks. ChatGPT and Claude update their underlying knowledge less often — expect 30-90 days. Google AI Overviews falls somewhere in between, typically 2-4 weeks."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I still need SEO if I do GEO?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. GEO builds on top of SEO. AI systems still rely on well-structured, authoritative content. Dropping SEO for GEO would be like building a second floor before the ground floor is finished."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Who needs GEO most right now?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "B2B companies, agencies, consultants, and any business where buyers research using AI tools before purchasing. If your customers open ChatGPT before they open Google, you need GEO."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do you actually measure GEO?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "By running a fixed set of prompts across ChatGPT, Perplexity, Gemini, and Google AI Overviews, and tracking whether your brand appears in each response. You measure your baseline, then track changes month over month. This is called an AI visibility audit."
+                  }
+                }
+              ]
+            }
+          ]
+        })}
+      </script>
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
         <div className="max-w-4xl mx-auto">

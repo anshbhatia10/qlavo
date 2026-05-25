@@ -20,6 +20,31 @@ const Home: React.FC = () => {
 
   return (
     <>
+      {/* Schema: Organization with SameAs */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://qlavo.in#organization",
+          "name": "Qlavo",
+          "url": "https://qlavo.in",
+          "description": "Qlavo is a Delhi-based Generative Engine Optimization (GEO) agency helping businesses get recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews.",
+          "foundingDate": "2025",
+          "founder": {
+            "@type": "Person",
+            "name": "Ansh Bhatia"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Delhi",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/qlavo",
+            "https://crunchbase.com/organization/qlavo"
+          ]
+        })}
+      </script>
       {/* HERO — Problem-focused headline */}
       <Hero />
 
