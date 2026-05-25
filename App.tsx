@@ -19,6 +19,7 @@ import GEOAgencyIndia from './pages/GEOAgencyIndia';
 import GEOGuide from './pages/GEOGuide';
 import GEOPricingGuide from './pages/GEOPricingGuide';
 import GEOvsSEO from './pages/GEOvsSEO';
+import GEOStatistics from './pages/GEOStatistics';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -75,6 +76,7 @@ const App: React.FC = () => {
           <Route path="/what-is-generative-engine-optimization" element={<GEOGuide />} />
           <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
           <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />
+          <Route path="/geo-statistics-2026" element={<GEOStatistics />} />
         </Routes>
       </Layout>
     </BrowserRouter>
