@@ -14,11 +14,11 @@ import BlogIndex from './pages/BlogIndex';
 import TopGEOAgencies from './pages/TopGEOAgencies';
 import HubSpotAudit from './pages/HubSpotAudit';
 import StateOfAISearchApril2026 from './pages/StateOfAISearchApril2026';
-<<<<<<< HEAD
 import Pricing from './pages/Pricing';
-=======
 import GEOAgencyIndia from './pages/GEOAgencyIndia';
->>>>>>> 1cfe87e (Add GEO agency Delhi/India page + location schema optimization)
+import GEOGuide from './pages/GEOGuide';
+import GEOPricingGuide from './pages/GEOPricingGuide';
+import GEOvsSEO from './pages/GEOvsSEO';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -72,6 +72,9 @@ const App: React.FC = () => {
           <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
           <Route path="/blog/state-of-ai-search-april-2026" element={<StateOfAISearchApril2026 />} />
           <Route path="/geo-agency-delhi-india" element={<GEOAgencyIndia />} />
+          <Route path="/what-is-generative-engine-optimization" element={<GEOGuide />} />
+          <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
+          <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />
         </Routes>
       </Layout>
     </BrowserRouter>

@@ -13,6 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
   const navLinks = [
     { name: 'Services', href: '/#services' },
+    { name: 'What is GEO', href: '/what-is-generative-engine-optimization' },
     { name: 'GEO Agency', href: '/geo-agency-delhi-india' },
     { name: 'About', href: '/about' },
   ];
