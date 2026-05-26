@@ -14,6 +14,15 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    title: '7 Signals That Tell AI Engines Your Brand Exists',
+    slug: '/blog/7-signals-ai-engines-brand-exists',
+    excerpt:
+      'We audited 15 common business queries across ChatGPT and Google AI Overviews. The pattern was clear: the brands that appear share seven specific signals. Here they are.',
+    date: 'May 26, 2026',
+    readTime: '7 min read',
+    category: 'Industry Research',
+  },
+  {
     title: 'We Ran HubSpot Through a GEO Audit. Here\u2019s What We Found.',
     slug: '/blog/hubspot-geo-audit-2026',
     excerpt:
