@@ -32,7 +32,8 @@ const Home: React.FC = () => {
           "foundingDate": "2025",
           "founder": {
             "@type": "Person",
-            "name": "Ansh Bhatia"
+            "name": "Ansh Bhatia",
+            "sameAs": "https://www.wikidata.org/wiki/Q139925819"
           },
           "address": {
             "@type": "PostalAddress",
@@ -40,6 +41,7 @@ const Home: React.FC = () => {
             "addressCountry": "IN"
           },
           "sameAs": [
+            "https://www.wikidata.org/wiki/Q139925808",
             "https://www.linkedin.com/company/qlavo",
             "https://crunchbase.com/organization/qlavo"
           ]

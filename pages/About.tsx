@@ -24,6 +24,7 @@ const About: React.FC = () => {
         },
         "url": "https://qlavo.in/about",
         "sameAs": [
+          "https://www.wikidata.org/wiki/Q139925819",
           "https://www.linkedin.com/in/ansh-bhatia-290665281/"
         ],
         "description": "Founder of Qlavo, an AI Visibility Agency based in New Delhi helping brands optimize for Generative Engine Optimization (GEO)."
