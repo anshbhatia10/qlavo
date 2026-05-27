@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { BookA, Search, Hash } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 
 const GEOAgencyIndia: React.FC = () => {
-  useEffect(() => {
-    document.title = 'GEO Agency Delhi, India — Qlavo | Generative Engine Optimization';
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute('content', 'Qlavo is Delhi, India\'s leading Generative Engine Optimization (GEO) agency. We get your business recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews. Expert GEO services in India.');
-    }
-  }, []);
+
 
   const stats = [
     { value: '30-60', label: 'Days to first AI citation' },
@@ -72,6 +67,11 @@ const GEOAgencyIndia: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#050505] text-[#f4f4f5]">
+      <SEOMeta
+        title="GEO Agency Delhi, India — Generative Engine Optimization Services | Qlavo"
+        description="Qlavo is Delhi's leading Generative Engine Optimization (GEO) agency. We help Indian businesses get recommended by ChatGPT, Gemini, and Perplexity. Based in New Delhi."
+        path="/geo-agency-delhi-india"
+      />
       {/* Hero Section */}
       <section className="relative px-6 pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.03)_0%,transparent_60%)]" />

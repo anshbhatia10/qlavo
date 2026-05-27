@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { Link } from 'react-router-dom';
 import { BarChart3, AlertTriangle, TrendingDown, Globe, Search, Zap, Cpu, Database, ShieldAlert, Bot } from 'lucide-react';
 
@@ -103,21 +104,15 @@ const faqs = [
 ];
 
 const GEOStatistics: React.FC = () => {
-  useEffect(() => {
-    document.title = 'GEO Statistics 2026: Key Data Every Marketer Should Know | Qlavo';
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute('content', 'Real statistics from 2025-2026 research on Generative Engine Optimization: AI citation trends, brand visibility data, and the metrics that matter for marketers navigating the AI search revolution.');
-    } else {
-      const m = document.createElement('meta');
-      m.name = 'description';
-      m.content = 'Real statistics from 2025-2026 research on Generative Engine Optimization: AI citation trends, brand visibility data, and the metrics that matter for marketers navigating the AI search revolution.';
-      document.head.appendChild(m);
-    }
-  }, []);
+
 
   return (
     <div className="bg-black min-h-screen text-white">
+      <SEOMeta
+        title="GEO Statistics 2026 — Key Data Every Business Should Know | Qlavo"
+        description="Essential GEO statistics for 2026. Data on AI search adoption, ChatGPT usage, citation rates, and Generative Engine Optimization effectiveness for businesses."
+        path="/geo-statistics-2026"
+      />
       {/* JSON-LD Schema */}
       <script type="application/ld+json">
         {JSON.stringify({

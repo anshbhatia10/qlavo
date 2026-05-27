@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { ShieldCheck, Zap, Database, Globe, Network, Cpu, TextCursorInput, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

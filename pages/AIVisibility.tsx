@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { ArrowRight, Check, Search, Loader2, FileText, Layers, Globe, Star, Clock, MessageSquare, Target, Award, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { Link } from 'react-router-dom';
 import { TrendingUp, HelpCircle } from 'lucide-react';
 
 const GEOPricingGuide: React.FC = () => {
-  useEffect(() => {
-    document.title = 'How Much Does GEO Cost? — 2026 GEO Agency Pricing Guide | Qlavo';
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute('content', 'Transparent GEO pricing guide for 2026. How much Generative Engine Optimization costs, what affects pricing, and what you get at each tier. From essentials to enterprise GEO packages.');
-    }
-  }, []);
+
 
   const tiers = [
     {

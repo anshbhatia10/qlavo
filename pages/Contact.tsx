@@ -1,9 +1,15 @@
 import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { ArrowUpRight, Clock, Phone, FileText, Calendar } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
     <section className="pt-28 md:pt-32 pb-20 bg-zinc-950 min-h-screen">
+      <SEOMeta
+        title="Book a Discovery Call — Qlavo GEO Agency Delhi"
+        description="Book a 30-minute discovery call with Qlavo. We'll look at your situation and tell you if — and how — we can help with your AI search visibility."
+        path="/contact"
+      />
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12 md:mb-16 text-center">
           <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4 md:mb-6 tracking-tight">

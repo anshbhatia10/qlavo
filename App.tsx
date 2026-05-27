@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -55,33 +56,35 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/ai-visibility" element={<AIVisibility />} />
-          <Route path="/geo-resources" element={<GEOResources />} />
-          <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
-          <Route path="/ai-glossary" element={<AIGlossary />} />
-          <Route path="/geo-calculator" element={<GEOCalculator />} />
-          <Route path="/blog" element={<BlogIndex />} />
-          <Route path="/top-7-geo-signals-2026" element={<GEOSignals />} />
-          <Route path="/blog/7-signals-ai-engines-brand-exists" element={<GEOSignals7 />} />
-          <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
-          <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
-          <Route path="/blog/state-of-ai-search-april-2026" element={<StateOfAISearchApril2026 />} />
-          <Route path="/geo-agency-delhi-india" element={<GEOAgencyIndia />} />
-          <Route path="/what-is-generative-engine-optimization" element={<GEOGuide />} />
-          <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
-          <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />
-          <Route path="/geo-statistics-2026" element={<GEOStatistics />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/ai-visibility" element={<AIVisibility />} />
+            <Route path="/geo-resources" element={<GEOResources />} />
+            <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
+            <Route path="/ai-glossary" element={<AIGlossary />} />
+            <Route path="/geo-calculator" element={<GEOCalculator />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/top-7-geo-signals-2026" element={<GEOSignals />} />
+            <Route path="/blog/7-signals-ai-engines-brand-exists" element={<GEOSignals7 />} />
+            <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
+            <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
+            <Route path="/blog/state-of-ai-search-april-2026" element={<StateOfAISearchApril2026 />} />
+            <Route path="/geo-agency-delhi-india" element={<GEOAgencyIndia />} />
+            <Route path="/what-is-generative-engine-optimization" element={<GEOGuide />} />
+            <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
+            <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />
+            <Route path="/geo-statistics-2026" element={<GEOStatistics />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 };
 

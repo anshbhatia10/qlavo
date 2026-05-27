@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 const GEOResources: React.FC = () => {
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="GEO Resources — AI Search & Generative Engine Optimization Guides | Qlavo"
+        description="Explore Qlavo's GEO resources library. Guides, research, and tools for Generative Engine Optimization and AI search visibility."
+        path="/geo-resources"
+      />
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24 px-6">
         <div className="max-w-4xl mx-auto">

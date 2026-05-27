@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { Search, MessageCircle, Mic, HelpCircle } from 'lucide-react';
 
 const GEOvsSEO: React.FC = () => {
-  useEffect(() => {
-    document.title = 'GEO vs SEO vs AEO — What\'s the Difference? | Qlavo';
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute('content', 'GEO vs SEO vs AEO explained with examples. Learn the difference between Generative Engine Optimization, Search Engine Optimization, and Answer Engine Optimization — and why you need all three.');
-    }
-  }, []);
+
 
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="GEO vs SEO vs AEO — Key Differences Explained | Qlavo"
+        description="GEO vs SEO vs AEO explained with examples. Learn the difference between Generative Engine Optimization, Search Engine Optimization, and Answer Engine Optimization — and why you need all three."
+        path="/geo-vs-seo-vs-aeo-differences"
+      />
       {/* Schema: Article + FAQPage */}
       <script type="application/ld+json">
         {JSON.stringify({

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { Link } from 'react-router-dom';
 import {
   Search, ArrowRight, Globe, Loader2, FileJson, Link as LinkIcon,

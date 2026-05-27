@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { ArrowRight, MapPin, Building, Briefcase, BarChart3, TrendingUp, Users, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -11,6 +12,11 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="About Qlavo — Delhi's Generative Engine Optimization Agency"
+        description="Learn about Qlavo, Delhi's leading GEO agency. We help businesses get recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews through AI search optimization."
+        path="/about"
+      />
       {/* JSON-LD Schema for Founder Entity Corroboration */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",

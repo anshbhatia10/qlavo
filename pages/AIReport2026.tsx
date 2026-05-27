@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 const AIReport2026: React.FC = () => {
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="AI Search Report 2026 — State of AI Search & GEO | Qlavo"
+        description="The definitive 2026 AI Search report. Data on ChatGPT, Gemini, Perplexity adoption, GEO effectiveness, and what it means for businesses."
+        path="/ai-search-report-2026"
+      />
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",

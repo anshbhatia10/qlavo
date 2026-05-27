@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEOMeta from '../components/SEOMeta';
 import Hero from '../components/Hero';
 import ServicesSection from '../components/ServicesSection';
 import FAQSection from '../components/FAQSection';
@@ -20,6 +21,11 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <SEOMeta
+        title="Qlavo | Generative Engine Optimization (GEO) Agency — Delhi, India"
+        description="Qlavo is a Delhi-based Generative Engine Optimization (GEO) agency. Get your business recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews. India's trusted GEO agency for AI search visibility."
+        path="/"
+      />
 
       {/* HERO — Problem-focused headline */}
       <Hero />

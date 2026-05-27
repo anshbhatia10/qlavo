@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOMeta from '../components/SEOMeta';
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight, HelpCircle } from 'lucide-react';
 
