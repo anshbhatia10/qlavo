@@ -316,7 +316,33 @@ const GEOGuide: React.FC = () => {
           </div>
         </section>
 
-        {/* Bottom — Not a CTA */}
+        {/* Related Guides */}
+      <section className="py-16 md:py-20 px-6 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-semibold text-white tracking-tight mb-8 text-center">
+            Related Guides
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <a href="/geo-vs-seo-vs-aeo-differences"
+               className="glass-panel rounded-2xl p-6 border border-white/5 hover:border-emerald-500/20 transition-colors group">
+              <p className="text-xs text-emerald-500 uppercase tracking-wider mb-2">Comparison</p>
+              <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">GEO vs SEO vs AEO — Key Differences</p>
+            </a>
+            <a href="/geo-pricing-cost-guide-2026"
+               className="glass-panel rounded-2xl p-6 border border-white/5 hover:border-emerald-500/20 transition-colors group">
+              <p className="text-xs text-emerald-500 uppercase tracking-wider mb-2">Pricing</p>
+              <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">How Much Does GEO Cost? — 2026 Pricing Guide</p>
+            </a>
+            <a href="/geo-statistics-2026"
+               className="glass-panel rounded-2xl p-6 border border-white/5 hover:border-emerald-500/20 transition-colors group">
+              <p className="text-xs text-emerald-500 uppercase tracking-wider mb-2">Data</p>
+              <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">GEO Statistics 2026 — Key Data</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom — Not a CTA */}
         <section className="py-20 md:py-28 px-6 border-t border-white/5">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-6">

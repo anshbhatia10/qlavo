@@ -291,6 +291,32 @@ const GEOStatistics: React.FC = () => {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-16 md:py-20 px-6 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-semibold text-white tracking-tight mb-8 text-center">
+            Related Guides
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <a href="/what-is-generative-engine-optimization"
+               className="glass-panel rounded-2xl p-6 border border-white/5 hover:border-emerald-500/20 transition-colors group">
+              <p className="text-xs text-emerald-500 uppercase tracking-wider mb-2">Guide</p>
+              <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">What is GEO? Complete Guide 2026</p>
+            </a>
+            <a href="/geo-vs-seo-vs-aeo-differences"
+               className="glass-panel rounded-2xl p-6 border border-white/5 hover:border-emerald-500/20 transition-colors group">
+              <p className="text-xs text-emerald-500 uppercase tracking-wider mb-2">Comparison</p>
+              <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">GEO vs SEO vs AEO — Key Differences</p>
+            </a>
+            <a href="/geo-pricing-cost-guide-2026"
+               className="glass-panel rounded-2xl p-6 border border-white/5 hover:border-emerald-500/20 transition-colors group">
+              <p className="text-xs text-emerald-500 uppercase tracking-wider mb-2">Pricing</p>
+              <p className="text-white font-medium group-hover:text-emerald-400 transition-colors">How Much Does GEO Cost? — 2026 Pricing Guide</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Final Challenge Section — Orwellian Style, No CTA */}
       <section className="py-28 px-6 border-t border-white/5 relative overflow-hidden">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-emerald-500/5 blur-[120px] -z-10 rounded-full" />
