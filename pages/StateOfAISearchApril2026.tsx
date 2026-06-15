@@ -16,7 +16,7 @@ const StateOfAISearchApril2026: React.FC = () => {
               "headline": "State of AI Search for GEO Agencies: April 2026 Data",
               "description": "A research-led audit of 22 target prompts across Google AI Overview and ChatGPT, documenting citation patterns, competitor dominance, and territorial gaps in the GEO space.",
               "datePublished": "2026-04-21",
-              "dateModified": "2026-05-04",
+              "dateModified": "2026-06-15",
               "author": {
                 "@type": "Organization",
                 "name": "Qlavo",
@@ -69,7 +69,12 @@ const StateOfAISearchApril2026: React.FC = () => {
 
         <article className="qlavo-article-wrapper">
           <div className="article-meta text-sm text-zinc-500 mb-4">
-            <span>By Qlavo Research</span> • <span>Published: April 21, 2026</span> • <span>Updated: May 4, 2026</span> • <span>6 min read</span>
+            <span>By Qlavo Research</span> • <span>Published: April 21, 2026</span> • <span>Updated: June 15, 2026</span> • <span>8 min read</span>
+          </div>
+
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8 text-sm">
+            <strong className="text-amber-800">🔄 June 15, 2026 Update:</strong>
+            <span className="text-amber-700"> This article now includes Google I/O 2026 data. AI Mode hit <strong>1 billion monthly users</strong> in its first year — faster than any Search feature in history. Queries are <strong>doubling every quarter</strong>. See the new section below.</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-8">
@@ -153,6 +158,23 @@ const StateOfAISearchApril2026: React.FC = () => {
                 <AlertCircle className="w-6 h-6 text-red-600 shrink-0 mt-1" />
                 <p className="text-red-900 text-sm italic leading-relaxed">
                   "When we asked ChatGPT about Qlavo, it returned info on a branding studio called QLO. Why? Because they had a corroborated Clutch profile and we didn't. AI defaults to the entity with the most verifiable structured data."
+                </p>
+              </div>
+            </section>
+
+            <section className="mt-12">
+              <h2 className="text-2xl font-bold text-black mb-4">🆕 Google I/O 2026: What Changed</h2>
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 mb-6">
+                <p className="text-emerald-900 text-sm leading-relaxed mb-4">
+                  Google I/O 2026 (May) confirmed three shifts that reshape the GEO landscape since this article was first published:
+                </p>
+                <ol className="list-decimal list-inside space-y-3 text-emerald-900 text-sm">
+                  <li><strong>AI Mode hit 1 billion monthly users</strong> in its first year — faster adoption than any Search feature in history. This isn't a beta anymore; it's a primary search surface.</li>
+                  <li><strong>Search queries in AI Mode are doubling every quarter.</strong> If the data from this article showed AI search growing, the I/O numbers show it accelerating.</li>
+                  <li><strong>Google is rebuilding Search around conversational AI</strong> for the first time in 25 years. The distinction between "search" and "AI chat" is disappearing.</li>
+                </ol>
+                <p className="text-emerald-900 text-sm mt-4">
+                  <strong>Implication for GEO:</strong> The window for first-mover advantage in AI citations is shrinking. Brands that establish entity footprints, structured data, and citation pools in 2026 will be the ones AI models cite when these platforms fully converge.
                 </p>
               </div>
             </section>
