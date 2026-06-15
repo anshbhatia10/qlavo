@@ -38,43 +38,6 @@ const GEOvsSEO: React.FC = () => {
                 "@type": "WebPage",
                 "@id": "https://qlavo.in/geo-vs-seo-vs-aeo-differences"
               }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "If I have good SEO, do I also have good GEO?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. SEO and GEO optimize for different things. You can rank number one on Google for your keyword and be completely invisible in ChatGPT. Many businesses discover this the hard way."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does GEO replace SEO?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. GEO builds on top of SEO. AI systems still rely on well-structured, authoritative content. But GEO adds an entirely new layer of optimization that SEO does not cover."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Which one should I start with?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "If you have no SEO foundation, start there. If your SEO is solid but you are invisible in AI answers, add GEO. The order matters — SEO first, then GEO."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can I measure all three the same way?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. SEO is measured in rankings and traffic. AEO is measured in snippet ownership. GEO is measured in AI citation rate — how often your brand appears in AI-generated answers for relevant prompts. Different metrics for different jobs."
-                  }
-                }
-              ]
             }
           ]
         })}

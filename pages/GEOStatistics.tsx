@@ -144,18 +144,6 @@ const GEOStatistics: React.FC = () => {
                 "name": "Generative Engine Optimization Statistics"
               },
               "keywords": "GEO statistics, AI search trends, generative engine optimization, brand citation, AI visibility, GEO data 2026"
-            },
-            {
-              "@type": "FAQPage",
-              "@id": "https://qlavo.in/geo-statistics-2026#faq",
-              "mainEntity": faqs.map(f => ({
-                "@type": "Question",
-                "name": f.q,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": f.a
-                }
-              }))
             }
           ]
         })}

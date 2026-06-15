@@ -117,18 +117,6 @@ const GEOSignals: React.FC = () => {
                 "name": s.title,
                 "description": s.desc
               }))
-            },
-            {
-              "@type": "FAQPage",
-              "@id": "https://qlavo.in/top-7-geo-signals-2026#faq",
-              "mainEntity": faqs.map(f => ({
-                "@type": "Question",
-                "name": f.q,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": f.a
-                }
-              }))
             }
           ]
         })}

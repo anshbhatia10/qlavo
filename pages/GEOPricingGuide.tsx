@@ -92,43 +92,6 @@ const GEOPricingGuide: React.FC = () => {
                 "@type": "WebPage",
                 "@id": "https://qlavo.in/geo-pricing-cost-guide-2026"
               }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Is there a minimum commitment?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Most agencies require 3 months minimum. That is the shortest realistic timeframe to move AI citation rates. Month-to-month after that."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What if I stop after one month?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You will have a baseline audit and some initial optimization. But AI citation improvements compound over time. One month is enough to know your starting position, not enough to change it."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is GEO more expensive than SEO?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "For equivalent scope, GEO is slightly more expensive because it is newer and more labor-intensive. The gap will narrow as tools and processes mature."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can I do GEO for a single city?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. Local GEO is actually simpler and cheaper. It relies heavily on Google Business Profile, local directories, and city-specific content."
-                  }
-                }
-              ]
             }
           ]
         })}

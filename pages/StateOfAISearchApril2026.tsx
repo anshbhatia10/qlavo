@@ -35,27 +35,6 @@ const StateOfAISearchApril2026: React.FC = () => {
                 "@type": "WebPage",
                 "@id": "https://qlavo.in/blog/state-of-ai-search-april-2026"
               }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How often should you run a GEO prompt audit?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Monthly is the minimum for a brand actively building citation authority. Weekly is appropriate if you are in a competitive category where AI Overviews are actively forming."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Which AI platform is best for measuring GEO progress?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Perplexity is the fastest feedback loop — it indexes fresh content in near real-time and cites sources directly. Google AI Overviews are the highest priority for volume but slower to update."
-                  }
-                }
-              ]
             }
           ]
         })}

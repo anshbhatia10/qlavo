@@ -35,27 +35,6 @@ const HubSpotAudit: React.FC = () => {
                 "@type": "WebPage",
                 "@id": "https://qlavo.in/blog/hubspot-geo-audit-2026"
               }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Is HubSpot optimized for GEO?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Partially. HubSpot scores approximately 76% on Qlavo's GEO audit framework. Their crawler access and third-party authority are excellent, but their schema stacking has notable gaps."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What is a GEO audit?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "A GEO audit is an assessment of how well a website and brand entity are structured to be discovered, extracted, and cited by AI-powered answer engines like ChatGPT, Perplexity, and Google Gemini."
-                  }
-                }
-              ]
             }
           ]
         })}

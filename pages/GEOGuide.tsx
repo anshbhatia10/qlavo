@@ -171,9 +171,10 @@ const GEOGuide: React.FC = () => {
                 ]
               }
             ]
-          })}
-        </script>
-        {/* Hero */}
+            })}
+            </script>
+
+            {/* Hero */}
         <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
