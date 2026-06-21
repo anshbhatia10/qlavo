@@ -24,12 +24,20 @@ const Hero: React.FC = () => {
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-4xl mx-auto px-6 text-center z-10 flex flex-col items-center justify-center h-full pt-28 pb-16">
+        {/* Eyebrow — Positioning Badge */}
+        <p
+          className="text-xs sm:text-sm font-bold tracking-widest text-emerald-400 uppercase mb-4 animate-fade-in-up"
+          style={{ animationDelay: '0.05s', opacity: 0 }}
+        >
+          India's Only GEO Agency
+        </p>
+
         {/* Headline */}
         <h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-5 leading-[1.08] animate-fade-in-up"
         >
-          India's Only{' '}
-          <span className="text-gradient-emerald">Dedicated GEO Agency</span>
+          100M people search with AI every day.{' '}
+          <span className="text-gradient-emerald">Are you in their answers?</span>
         </h1>
 
         {/* Subheadline */}
@@ -37,9 +45,8 @@ const Hero: React.FC = () => {
           className="text-base sm:text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
           style={{ animationDelay: '0.15s', opacity: 0 }}
         >
-          Every other agency added GEO as a service line. We were built for it.
-          Get your business recommended by ChatGPT, Gemini, and Perplexity —
-          because AI search is all that matters.
+          When customers ask ChatGPT, Gemini, or Perplexity to recommend a business like yours — 
+          you should be the answer. We make sure you are.
         </p>
 
         {/* CTA Buttons */}
