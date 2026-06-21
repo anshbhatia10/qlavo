@@ -22,8 +22,8 @@ const Home: React.FC = () => {
   return (
     <>
       <SEOMeta
-        title="Qlavo | Generative Engine Optimization (GEO) Agency — Delhi, India"
-        description="Qlavo is a Delhi-based Generative Engine Optimization (GEO) agency. Get your business recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews. India's trusted GEO agency for AI search visibility."
+        title="Qlavo | India's Only Dedicated GEO Agency — Delhi, India"
+        description="Qlavo is India's only dedicated GEO agency (not a rebranded full-service shop). Get your business recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews. Built for AI search from day one."
         path="/"
       />
 

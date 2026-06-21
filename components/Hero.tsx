@@ -28,8 +28,8 @@ const Hero: React.FC = () => {
         <h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-5 leading-[1.08] animate-fade-in-up"
         >
-          100M people search with AI every day.{' '}
-          <span className="text-gradient-emerald">Are you in their answers?</span>
+          India's Only{' '}
+          <span className="text-gradient-emerald">Dedicated GEO Agency</span>
         </h1>
 
         {/* Subheadline */}
@@ -37,8 +37,9 @@ const Hero: React.FC = () => {
           className="text-base sm:text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
           style={{ animationDelay: '0.15s', opacity: 0 }}
         >
-          When customers ask ChatGPT, Gemini, or Perplexity to recommend a business like yours — 
-          you should be the answer. We make sure you are.
+          Every other agency added GEO as a service line. We were built for it.
+          Get your business recommended by ChatGPT, Gemini, and Perplexity —
+          because AI search is all that matters.
         </p>
 
         {/* CTA Buttons */}

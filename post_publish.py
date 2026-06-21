@@ -79,14 +79,11 @@ if __name__ == "__main__":
     print("📋 Qlavo Post-Publish Checklist")
     print("=" * 50)
     
-    # Step 1: Verify pages are live
-    urls = sys.argv[1:] if len(sys.argv) > 1 else []
-    if not urls:
-        print("\nUsage: python3 post_publish.py <url1> [url2] ...")
-        print("   Or: python3 post_publish.py --check  (run infrastructure checks)")
-        print("   Or: python3 post_publish.py --all    (submit all sitemap + check)\n")
-        
-        # Infrastructure check mode
+    args = [a for a in sys.argv[1:] if a != "--check" and a != "--all"]
+    do_check = "--check" in sys.argv
+    do_all = "--all" in sys.argv
+    
+    if do_check and not do_all and not args:
         print("🔍 Running infrastructure checks...")
         check_llms_txt()
         
@@ -108,8 +105,7 @@ if __name__ == "__main__":
         print("  □ Run weekly prompt audit and log in competitor-tracker-template.md")
         sys.exit(0)
     
-    if "--all" in sys.argv:
-        # Fetch sitemap URLs
+    elif do_all:
         try:
             with urllib.request.urlopen(f"https://{HOST}/sitemap.xml", timeout=15) as resp:
                 content = resp.read().decode()
@@ -117,8 +113,8 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"❌ Sitemap fetch failed: {e}")
             urls = []
-    else:
-        urls = [u if u.startswith("http") else f"https://{HOST}{u}" for u in urls if u != "--all"]
+    elif args:
+        urls = [u if u.startswith("http") else f"https://{HOST}{u}" for u in args]
     
     print(f"\n📤 Submitting {len(urls)} URLs to IndexNow...")
     submit_indexnow(urls)
