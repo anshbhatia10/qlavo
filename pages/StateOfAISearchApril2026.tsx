@@ -158,6 +158,11 @@ const StateOfAISearchApril2026: React.FC = () => {
               </div>
             </section>
 
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8 text-sm">
+              <strong className="text-amber-800">🔄 June 22, 2026 Update:</strong>
+              <span className="text-amber-700"> We ran another 15-prompt audit across ChatGPT and Gemini — this time scanning for Indian brands across SaaS, fintech, edtech, D2C, and enterprise AI. The result: <strong>zero Indian brands cited across all 15 prompts</strong>. Not one. Meanwhile, Minuttia surged to become the #1 cited GEO agency (displacing Siege Media), and 93% of cited domains rotated between our June 1 and June 22 audits. The competitive landscape is churning faster than we expected — and the India gap is real.</span>
+            </div>
+
             <div className="bg-zinc-50 border border-zinc-200 rounded-3xl p-8 mt-12 text-center">
               <h3 className="text-xl font-semibold text-black mb-4">Want to see where your brand stands?</h3>
               <p className="text-zinc-500 mb-8 max-w-lg mx-auto">Our research shows that technical gaps (like missing schema or blocked crawlers) are the primary reason B2B brands stay invisible to AI.</p>

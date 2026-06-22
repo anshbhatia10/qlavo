@@ -21,7 +21,8 @@ Qlavo is a Delhi-based Generative Engine Optimization (GEO) agency that helps B2
 - [HubSpot GEO Audit 2026](https://qlavo.in/blog/hubspot-geo-audit-2026)
 - [State of AI Search April 2026](https://qlavo.in/blog/state-of-ai-search-april-2026)
 - [2026 AI Search Visibility Report & Whitepaper](https://qlavo.in/ai-search-report-2026)
-- [I Simulated 15 GEO Agency Searches on ChatGPT — Only One Indian Brand Showed Up](https://anshbhatia2.substack.com/p/i-simulated-15-geo-agency-searches)
+|- [I Simulated 15 GEO Agency Searches on ChatGPT — Only One Indian Brand Showed Up](https://anshbhatia2.substack.com/p/i-simulated-15-geo-agency-searches)
+|- [7 GEO Signals That Tell You If Your Brand Will Exist in ChatGPT Next Month](https://www.linkedin.com/pulse/7-geo-signals-tell-you-your-brand-exist-chatgpt-next-month-bhatia-gbmme/)
 
 ## Tools & Resources
 - [GEO Audit Checklist & Resources](https://qlavo.in/geo-resources)
