@@ -17,6 +17,10 @@ The mechanics are different from SEO. Search engines rank pages. AI systems retr
 GEO is not a replacement for SEO. It is a new layer on top of it. The brands that win in AI search will be the ones that build both.`,
   },
   {
+    type: 'callout',
+    content: `📊 **Latest research:** A 10-week audit of 15 ChatGPT buyer-intent queries found that **93% of cited GEO agencies churn week-over-week**. Only 2 of 30+ agencies maintained persistent visibility. Source: Qlavo W8 Prompt Audit, July 2026.`,
+  },
+  {
     icon: <Brain className="w-5 h-5" />,
     title: 'How GEO Works — The Retrieval Layer',
     content: `When you ask ChatGPT a question, it does not scan the live web the way Google does. It generates an answer from what it already knows — its training data — supplemented by real-time retrieval from Bing and other sources.
