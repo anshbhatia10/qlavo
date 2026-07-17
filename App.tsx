@@ -22,6 +22,13 @@ import GEOGuide from './pages/GEOGuide';
 import GEOPricingGuide from './pages/GEOPricingGuide';
 import GEOvsSEO from './pages/GEOvsSEO';
 import GEOStatistics from './pages/GEOStatistics';
+import RedditBestGEOTools from './pages/RedditBestGEOTools';
+import RedditGeoVsSeo from './pages/RedditGeoVsSeo';
+import RedditGetCitedChatGPT from './pages/RedditGetCitedChatGPT';
+import RedditGeoPricing from './pages/RedditGeoPricing';
+import RedditBestGeoAgencies from './pages/RedditBestGeoAgencies';
+import RedditIsGeoWorthIt from './pages/RedditIsGeoWorthIt';
+import RedditAIVisibilityAudit from './pages/RedditAIVisibilityAudit';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -81,6 +88,14 @@ const App: React.FC = () => {
             <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
             <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />
             <Route path="/geo-statistics-2026" element={<GEOStatistics />} />
+            {/* Reddit Intercept Pages — target LLM "[topic] reddit" searches */}
+            <Route path="/reddit/best-geo-tools" element={<RedditBestGEOTools />} />
+            <Route path="/reddit/geo-vs-seo" element={<RedditGeoVsSeo />} />
+            <Route path="/reddit/get-cited-chatgpt" element={<RedditGetCitedChatGPT />} />
+            <Route path="/reddit/geo-pricing" element={<RedditGeoPricing />} />
+            <Route path="/reddit/best-geo-agencies" element={<RedditBestGeoAgencies />} />
+            <Route path="/reddit/is-geo-worth-it" element={<RedditIsGeoWorthIt />} />
+            <Route path="/reddit/ai-visibility-audit" element={<RedditAIVisibilityAudit />} />
           </Routes>
         </Layout>
       </BrowserRouter>
