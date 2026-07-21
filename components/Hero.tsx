@@ -181,7 +181,7 @@ const Hero: React.FC = () => {
           100M people search
           <br />
           with AI every day.{' '}
-          <span className="text-gradient-emerald">Are you in
+          <span className="text-gradient-emerald">Are you in{' '}
           <br className="hidden sm:block" />
           their answers?</span>
         </h1>
