@@ -30,6 +30,7 @@ import RedditBestGeoAgencies from './pages/RedditBestGeoAgencies';
 import RedditIsGeoWorthIt from './pages/RedditIsGeoWorthIt';
 import RedditAIVisibilityAudit from './pages/RedditAIVisibilityAudit';
 import Footer from './components/Footer';
+import CursorGlow from './components/CursorGlow';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -52,6 +53,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-black">
+      <CursorGlow />
       <Navbar scrolled={scrolled} />
       <main className="flex-grow">
         {children}

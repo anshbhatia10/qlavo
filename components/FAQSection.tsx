@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import useScrollReveal from '../hooks/useScrollReveal';
 
 interface FAQItem {
   question: string;
@@ -57,7 +58,7 @@ const faqCategories: FAQCategory[] = [
 ];
 
 const FAQSection: React.FC = () => {
-  // Track open state per category and per item: categoryIndex-itemIndex
+  useScrollReveal();
   const [openItems, setOpenItems] = useState<Set<string>>(new Set(['0-0']));
 
   const toggle = (catIdx: number, itemIdx: number) => {
@@ -74,18 +75,20 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-28 md:py-36 bg-black border-t border-white/5 relative overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+    <section id="faq" className="py-28 md:py-36 bg-[#030303] border-t border-white/5 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid opacity-20" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-emerald-500/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
 
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-sm font-medium text-zinc-500 uppercase tracking-[0.2em]">
+        <div className="text-center mb-16 reveal">
+          <span className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 uppercase tracking-[0.25em] mb-4">
+            <span className="w-6 h-px bg-emerald-400/40" />
             Frequently Asked Questions
+            <span className="w-6 h-px bg-emerald-400/40" />
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
+          <h2 className="font-grotesk text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
             Quick answers about AI visibility.
           </h2>
           <p className="text-zinc-400 text-base font-light mt-4 max-w-xl mx-auto">
@@ -96,13 +99,13 @@ const FAQSection: React.FC = () => {
         {/* Two-column FAQ layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           {faqCategories.map((category, catIdx) => (
-            <div key={catIdx}>
-              <h3 className="text-lg font-semibold text-white mb-6 tracking-tight flex items-center gap-3">
+            <div key={catIdx} className={catIdx === 0 ? 'reveal-left' : 'reveal-right'}>
+              <h3 className="font-grotesk text-lg font-semibold text-white mb-6 tracking-tight flex items-center gap-3">
                 <span className="w-1 h-5 bg-emerald-400 rounded-full" />
                 {category.title}
               </h3>
 
-              <div className="space-y-2.5">
+              <div className="space-y-3">
                 {category.items.map((item, itemIdx) => {
                   const key = `${catIdx}-${itemIdx}`;
                   const isOpen = openItems.has(key);
@@ -110,7 +113,7 @@ const FAQSection: React.FC = () => {
                   return (
                     <div
                       key={itemIdx}
-                      className="glass-panel rounded-xl overflow-hidden transition-all duration-300"
+                      className={`glass-panel rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-emerald-500/20' : ''}`}
                     >
                       <button
                         onClick={() => toggle(catIdx, itemIdx)}
@@ -118,19 +121,16 @@ const FAQSection: React.FC = () => {
                         aria-expanded={isOpen}
                         id={`faq-q-${catIdx}-${itemIdx}`}
                       >
-                        <span className="text-white text-sm font-medium pr-4 leading-snug group-hover:text-zinc-200 transition-colors">
+                        <span className={`text-sm font-medium pr-4 leading-snug transition-colors ${isOpen ? 'text-white' : 'text-zinc-300 group-hover:text-white'}`}>
                           {item.question}
                         </span>
-                        <ChevronDown
-                          className={`w-4 h-4 text-zinc-500 shrink-0 transition-transform duration-300 ${
-                            isOpen ? 'rotate-180' : ''
-                          }`}
-                        />
+                        <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen ? 'bg-emerald-500/20 rotate-180' : 'bg-white/5'}`}>
+                          <ChevronDown className={`w-3.5 h-3.5 transition-colors ${isOpen ? 'text-emerald-400' : 'text-zinc-500'}`} />
+                        </div>
                       </button>
                       <div
-                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                          isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
-                        }`}
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
                         role="region"
                         aria-labelledby={`faq-q-${catIdx}-${itemIdx}`}
                       >
@@ -138,6 +138,10 @@ const FAQSection: React.FC = () => {
                           {item.answer}
                         </p>
                       </div>
+                      {/* Bottom glow line when open */}
+                      {isOpen && (
+                        <div className="h-[1px] bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent mx-5" />
+                      )}
                     </div>
                   );
                 })}
@@ -147,7 +151,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center reveal">
           <p className="text-zinc-500 text-sm font-light mb-4">
             Still have questions?
           </p>
