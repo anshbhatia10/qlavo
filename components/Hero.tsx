@@ -222,19 +222,12 @@ const Hero: React.FC = () => {
           <p className="text-xs text-zinc-500 font-light tracking-wide">
             Featured on Product Hunt
           </p>
-          <div className="hidden sm:block w-px h-4 bg-white/10" />
           <div className="flex items-center gap-6">
             <div className="text-center">
               <span className="text-emerald-400 font-grotesk font-bold text-sm">
                 <AnimatedNumber target={40} suffix="+" />
               </span>
               <p className="text-[10px] text-zinc-600 uppercase tracking-wider">Brands Audited</p>
-            </div>
-            <div className="text-center">
-              <span className="text-emerald-400 font-grotesk font-bold text-sm">
-                <AnimatedNumber target={40} suffix="+" />
-              </span>
-              <p className="text-[10px] text-zinc-600 uppercase tracking-wider">AI Platforms</p>
             </div>
           </div>
         </div>
