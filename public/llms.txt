@@ -38,3 +38,5 @@ Qlavo is a Delhi-based Generative Engine Optimization (GEO) agency that helps B2
 - [Blog](https://qlavo.in/blog)
 - [The GEO Brief Substack](https://anshbhatia2.substack.com/)
 - [I Ran 15 GEO Agency Searches on Gemini — The Citation Economy Is More Concentrated Than ChatGPT](https://www.linkedin.com/pulse/i-ran-15-geo-agency-searches-gemini-citation-economy-more-ansh-bhatia-lacac/)
+---W10 article to llms.txt---
+- [Gemini Just Started Recommending Indian Agencies — The GEO Window Is Closing](https://www.linkedin.com/pulse/gemini-just-started-recommending-indian-agencies-geo-window-bhatia-lbudc/)
