@@ -206,12 +206,12 @@ const Hero: React.FC = () => {
           >
             Get a Free Audit <ArrowRight className="w-4 h-4" />
           </Link>
-          <a
-            href="#services"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium text-zinc-400 border border-white/10 rounded-2xl hover:border-emerald-500/30 hover:text-white hover:bg-emerald-500/5 transition-all duration-300"
           >
-            How It Works
-          </a>
+            Book a Call
+          </Link>
         </div>
 
         {/* Featured on + mini stats */}

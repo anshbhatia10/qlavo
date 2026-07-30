@@ -104,15 +104,13 @@ const ContactSection: React.FC = () => {
                 30 minutes. No pitch deck. We look at your situation, share what we see, and tell you if — and how — we can help.
               </p>
 
-              <a
-                href="https://calendly.com/qlavo/discovery"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contact"
                 className="btn-primary inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold w-full justify-center"
               >
                 <Calendar className="w-4 h-4" />
                 Pick a time
-              </a>
+              </Link>
             </div>
 
             <div className="border-t border-white/5 pt-8">
