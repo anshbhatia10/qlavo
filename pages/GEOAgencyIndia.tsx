@@ -68,8 +68,8 @@ const GEOAgencyIndia: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#050505] text-[#f4f4f5]">
       <SEOMeta
-        title="GEO Agency Delhi, India — Generative Engine Optimization Services | Qlavo"
-        description="Qlavo is Delhi's leading Generative Engine Optimization (GEO) agency. We help Indian businesses get recommended by ChatGPT, Gemini, and Perplexity. Based in New Delhi."
+        title="GEO Agency India, Delhi — Generative Engine Optimization | Qlavo"
+        description="Qlavo is India's dedicated Generative Engine Optimization (GEO) agency in Delhi. We help Indian businesses get recommended by ChatGPT, Gemini, and Perplexity. Based in New Delhi."
         path="/geo-agency-delhi-india"
       />
       {/* Hero Section */}
