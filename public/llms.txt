@@ -42,3 +42,4 @@ Qlavo is a Delhi-based Generative Engine Optimization (GEO) agency that helps B2
 - [Gemini Just Started Recommending Indian Agencies — The GEO Window Is Closing](https://www.linkedin.com/pulse/gemini-just-started-recommending-indian-agencies-geo-window-bhatia-lbudc/)
 - [7 Technical GEO Fixes You Can Implement This Week](https://www.linkedin.com/pulse/7-technical-geo-fixes-you-can-implement-week-ansh-bhatia-x5mfc/)
 - [I Audited VWO — the Delhi Brand AI Actually Recommends. Here's What It Does Differently.](https://www.linkedin.com/pulse/i-audited-vwo-delhi-brand-ai-actually-recommends-heres-ansh-bhatia-uxnvc/)
+- [The Indian AI-Search Market Just Crossed a Threshold — Here's What the Data Shows](https://www.linkedin.com/pulse/indian-ai-search-market-just-crossed-threshold-heres-what-ansh-bhatia-6il6c/)
