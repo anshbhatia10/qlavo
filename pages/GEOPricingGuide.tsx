@@ -66,6 +66,11 @@ const GEOPricingGuide: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="GEO Pricing Guide 2026 — How Much Does GEO Cost? | Qlavo"
+        description="Complete guide to GEO pricing in 2026. Learn what generative engine optimization costs, what affects pricing, and how to budget for AI search visibility."
+        path="/geo-pricing-cost-guide-2026"
+      />
       {/* Schema: Article + FAQPage */}
       <script type="application/ld+json">
         {JSON.stringify({

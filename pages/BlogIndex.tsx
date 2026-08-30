@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, BookOpen } from 'lucide-react';
+import SEOMeta from '../components/SEOMeta';
 
 interface BlogPost {
   title: string;
@@ -64,6 +65,11 @@ const BlogIndex: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="Modern SEO & AI Search Blog — Insights from Qlavo | Delhi"
+        description="Read the latest insights on modern SEO, Generative Engine Optimization, AI search visibility, and Google's official AI optimization guidance from Qlavo."
+        path="/blog"
+      />
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
         <div className="max-w-5xl mx-auto">

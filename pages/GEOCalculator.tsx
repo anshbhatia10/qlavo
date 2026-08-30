@@ -152,6 +152,11 @@ const GEOCalculator: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen pt-28 md:pt-32 pb-24 px-6 relative overflow-hidden">
+      <SEOMeta
+        title="Free AI Visibility Audit — Check Your GEO Score | Qlavo"
+        description="Run a free GEO audit to see how your business appears in ChatGPT, Gemini, and Perplexity. Get your AI visibility score instantly."
+        path="/geo-calculator"
+      />
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-500/[0.04] blur-[150px] rounded-full pointer-events-none" />
 

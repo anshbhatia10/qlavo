@@ -66,6 +66,11 @@ const AIGlossary: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="AI Search & GEO Glossary — Key Terms Explained | Qlavo"
+        description="A comprehensive glossary of AI search, GEO, and generative engine optimization terms. From entity authority to citation building — explained simply."
+        path="/ai-glossary"
+      />
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24 px-6 border-b border-white/5">
         <div className="max-w-4xl mx-auto text-center">

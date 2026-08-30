@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText, ArrowRight, Search, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOMeta from '../components/SEOMeta';
 
 const AIReport2026: React.FC = () => {
   return (

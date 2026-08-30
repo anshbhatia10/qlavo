@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Search, Zap, BarChart3, Globe, MessageCircle, CheckCircle2, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOMeta from '../components/SEOMeta';
 
 const GEOResources: React.FC = () => {
   return (
