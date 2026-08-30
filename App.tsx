@@ -63,43 +63,52 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
+/** Route tree shared by the browser app and the build-time prerender. */
+export const AppRoutes: React.FC = () => {
+  return (
+    <>
+      <ScrollToTop />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/ai-visibility" element={<AIVisibility />} />
+          <Route path="/geo-resources" element={<GEOResources />} />
+          <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
+          <Route path="/ai-glossary" element={<AIGlossary />} />
+          <Route path="/geo-calculator" element={<GEOCalculator />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/top-7-geo-signals-2026" element={<GEOSignals />} />
+          <Route path="/blog/7-signals-ai-engines-brand-exists" element={<GEOSignals7 />} />
+          <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
+          <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
+          <Route path="/blog/state-of-ai-search-april-2026" element={<StateOfAISearchApril2026 />} />
+          <Route path="/geo-agency-delhi-india" element={<GEOAgencyIndia />} />
+          <Route path="/what-is-generative-engine-optimization" element={<GEOGuide />} />
+          <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
+          <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />
+          <Route path="/geo-statistics-2026" element={<GEOStatistics />} />
+          {/* Reddit Intercept Pages — target LLM "[topic] reddit" searches */}
+          <Route path="/reddit/best-geo-tools" element={<RedditBestGEOTools />} />
+          <Route path="/reddit/geo-vs-seo" element={<RedditGeoVsSeo />} />
+          <Route path="/reddit/get-cited-chatgpt" element={<RedditGetCitedChatGPT />} />
+          <Route path="/reddit/geo-pricing" element={<RedditGeoPricing />} />
+          <Route path="/reddit/best-geo-agencies" element={<RedditBestGeoAgencies />} />
+          <Route path="/reddit/is-geo-worth-it" element={<RedditIsGeoWorthIt />} />
+          <Route path="/reddit/ai-visibility-audit" element={<RedditAIVisibilityAudit />} />
+        </Routes>
+      </Layout>
+    </>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <ScrollToTop />
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/ai-visibility" element={<AIVisibility />} />
-            <Route path="/geo-resources" element={<GEOResources />} />
-            <Route path="/ai-search-report-2026" element={<AIReport2026 />} />
-            <Route path="/ai-glossary" element={<AIGlossary />} />
-            <Route path="/geo-calculator" element={<GEOCalculator />} />
-            <Route path="/blog" element={<BlogIndex />} />
-            <Route path="/top-7-geo-signals-2026" element={<GEOSignals />} />
-            <Route path="/blog/7-signals-ai-engines-brand-exists" element={<GEOSignals7 />} />
-            <Route path="/blog/top-geo-agencies-b2b-2026" element={<TopGEOAgencies />} />
-            <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
-            <Route path="/blog/state-of-ai-search-april-2026" element={<StateOfAISearchApril2026 />} />
-            <Route path="/geo-agency-delhi-india" element={<GEOAgencyIndia />} />
-            <Route path="/what-is-generative-engine-optimization" element={<GEOGuide />} />
-            <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
-            <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />
-            <Route path="/geo-statistics-2026" element={<GEOStatistics />} />
-            {/* Reddit Intercept Pages — target LLM "[topic] reddit" searches */}
-            <Route path="/reddit/best-geo-tools" element={<RedditBestGEOTools />} />
-            <Route path="/reddit/geo-vs-seo" element={<RedditGeoVsSeo />} />
-            <Route path="/reddit/get-cited-chatgpt" element={<RedditGetCitedChatGPT />} />
-            <Route path="/reddit/geo-pricing" element={<RedditGeoPricing />} />
-            <Route path="/reddit/best-geo-agencies" element={<RedditBestGeoAgencies />} />
-            <Route path="/reddit/is-geo-worth-it" element={<RedditIsGeoWorthIt />} />
-            <Route path="/reddit/ai-visibility-audit" element={<RedditAIVisibilityAudit />} />
-          </Routes>
-        </Layout>
+        <AppRoutes />
       </BrowserRouter>
     </HelmetProvider>
   );

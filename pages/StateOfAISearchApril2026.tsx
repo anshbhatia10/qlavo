@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, BarChart3, Search, Zap, Globe, AlertCircle, CheckCircle2 } from 'lucide-react';
+import SEOMeta from '../components/SEOMeta';
 
 const StateOfAISearchApril2026: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pt-20">
+      <SEOMeta
+        title="State of AI Search — April 2026 Report | Qlavo Blog"
+        description="Monthly analysis of the AI search landscape. Changes in ChatGPT, Gemini, Perplexity citations, and what they mean for your GEO strategy."
+        path="/blog/state-of-ai-search-april-2026"
+      />
       {/* Schema Stacking */}
       <script type="application/ld+json">
         {JSON.stringify({

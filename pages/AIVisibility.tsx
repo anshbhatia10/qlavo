@@ -43,6 +43,11 @@ const AIVisibility: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="AI Visibility Audit — Check Your GEO Score | Qlavo"
+        description="Run a free AI visibility audit to see how ChatGPT, Gemini, and Perplexity perceive your brand. Qlavo's GEO audit tool analyzes your AI search presence."
+        path="/ai-visibility"
+      />
 
       {/* ===== HERO ===== */}
       <section className="relative pt-32 md:pt-40 pb-20 md:pb-28 px-6 overflow-hidden">

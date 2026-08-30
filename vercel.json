@@ -1,6 +1,214 @@
 {
   "rewrites": [
     {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/about/",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing/index.html"
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/pricing/index.html"
+    },
+    {
+      "source": "/ai-visibility",
+      "destination": "/ai-visibility/index.html"
+    },
+    {
+      "source": "/ai-visibility/",
+      "destination": "/ai-visibility/index.html"
+    },
+    {
+      "source": "/geo-resources",
+      "destination": "/geo-resources/index.html"
+    },
+    {
+      "source": "/geo-resources/",
+      "destination": "/geo-resources/index.html"
+    },
+    {
+      "source": "/ai-search-report-2026",
+      "destination": "/ai-search-report-2026/index.html"
+    },
+    {
+      "source": "/ai-search-report-2026/",
+      "destination": "/ai-search-report-2026/index.html"
+    },
+    {
+      "source": "/ai-glossary",
+      "destination": "/ai-glossary/index.html"
+    },
+    {
+      "source": "/ai-glossary/",
+      "destination": "/ai-glossary/index.html"
+    },
+    {
+      "source": "/geo-calculator",
+      "destination": "/geo-calculator/index.html"
+    },
+    {
+      "source": "/geo-calculator/",
+      "destination": "/geo-calculator/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/top-7-geo-signals-2026",
+      "destination": "/top-7-geo-signals-2026/index.html"
+    },
+    {
+      "source": "/top-7-geo-signals-2026/",
+      "destination": "/top-7-geo-signals-2026/index.html"
+    },
+    {
+      "source": "/blog/7-signals-ai-engines-brand-exists",
+      "destination": "/blog/7-signals-ai-engines-brand-exists/index.html"
+    },
+    {
+      "source": "/blog/7-signals-ai-engines-brand-exists/",
+      "destination": "/blog/7-signals-ai-engines-brand-exists/index.html"
+    },
+    {
+      "source": "/blog/top-geo-agencies-b2b-2026",
+      "destination": "/blog/top-geo-agencies-b2b-2026/index.html"
+    },
+    {
+      "source": "/blog/top-geo-agencies-b2b-2026/",
+      "destination": "/blog/top-geo-agencies-b2b-2026/index.html"
+    },
+    {
+      "source": "/blog/hubspot-geo-audit-2026",
+      "destination": "/blog/hubspot-geo-audit-2026/index.html"
+    },
+    {
+      "source": "/blog/hubspot-geo-audit-2026/",
+      "destination": "/blog/hubspot-geo-audit-2026/index.html"
+    },
+    {
+      "source": "/blog/state-of-ai-search-april-2026",
+      "destination": "/blog/state-of-ai-search-april-2026/index.html"
+    },
+    {
+      "source": "/blog/state-of-ai-search-april-2026/",
+      "destination": "/blog/state-of-ai-search-april-2026/index.html"
+    },
+    {
+      "source": "/geo-agency-delhi-india",
+      "destination": "/geo-agency-delhi-india/index.html"
+    },
+    {
+      "source": "/geo-agency-delhi-india/",
+      "destination": "/geo-agency-delhi-india/index.html"
+    },
+    {
+      "source": "/what-is-generative-engine-optimization",
+      "destination": "/what-is-generative-engine-optimization/index.html"
+    },
+    {
+      "source": "/what-is-generative-engine-optimization/",
+      "destination": "/what-is-generative-engine-optimization/index.html"
+    },
+    {
+      "source": "/geo-pricing-cost-guide-2026",
+      "destination": "/geo-pricing-cost-guide-2026/index.html"
+    },
+    {
+      "source": "/geo-pricing-cost-guide-2026/",
+      "destination": "/geo-pricing-cost-guide-2026/index.html"
+    },
+    {
+      "source": "/geo-vs-seo-vs-aeo-differences",
+      "destination": "/geo-vs-seo-vs-aeo-differences/index.html"
+    },
+    {
+      "source": "/geo-vs-seo-vs-aeo-differences/",
+      "destination": "/geo-vs-seo-vs-aeo-differences/index.html"
+    },
+    {
+      "source": "/geo-statistics-2026",
+      "destination": "/geo-statistics-2026/index.html"
+    },
+    {
+      "source": "/geo-statistics-2026/",
+      "destination": "/geo-statistics-2026/index.html"
+    },
+    {
+      "source": "/reddit/best-geo-tools",
+      "destination": "/reddit/best-geo-tools/index.html"
+    },
+    {
+      "source": "/reddit/best-geo-tools/",
+      "destination": "/reddit/best-geo-tools/index.html"
+    },
+    {
+      "source": "/reddit/geo-vs-seo",
+      "destination": "/reddit/geo-vs-seo/index.html"
+    },
+    {
+      "source": "/reddit/geo-vs-seo/",
+      "destination": "/reddit/geo-vs-seo/index.html"
+    },
+    {
+      "source": "/reddit/get-cited-chatgpt",
+      "destination": "/reddit/get-cited-chatgpt/index.html"
+    },
+    {
+      "source": "/reddit/get-cited-chatgpt/",
+      "destination": "/reddit/get-cited-chatgpt/index.html"
+    },
+    {
+      "source": "/reddit/geo-pricing",
+      "destination": "/reddit/geo-pricing/index.html"
+    },
+    {
+      "source": "/reddit/geo-pricing/",
+      "destination": "/reddit/geo-pricing/index.html"
+    },
+    {
+      "source": "/reddit/best-geo-agencies",
+      "destination": "/reddit/best-geo-agencies/index.html"
+    },
+    {
+      "source": "/reddit/best-geo-agencies/",
+      "destination": "/reddit/best-geo-agencies/index.html"
+    },
+    {
+      "source": "/reddit/is-geo-worth-it",
+      "destination": "/reddit/is-geo-worth-it/index.html"
+    },
+    {
+      "source": "/reddit/is-geo-worth-it/",
+      "destination": "/reddit/is-geo-worth-it/index.html"
+    },
+    {
+      "source": "/reddit/ai-visibility-audit",
+      "destination": "/reddit/ai-visibility-audit/index.html"
+    },
+    {
+      "source": "/reddit/ai-visibility-audit/",
+      "destination": "/reddit/ai-visibility-audit/index.html"
+    },
+    {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
     }

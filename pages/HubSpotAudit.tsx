@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, AlertCircle, Info, ExternalLink } from 'lucide-react';
+import SEOMeta from '../components/SEOMeta';
 
 const HubSpotAudit: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pt-20">
+      <SEOMeta
+        title="HubSpot GEO Audit 2026 — AI Visibility Analysis | Qlavo Blog"
+        description="A detailed GEO audit of HubSpot's AI search presence. See how a major B2B brand performs in ChatGPT, Gemini, and Perplexity."
+        path="/blog/hubspot-geo-audit-2026"
+      />
       {/* Schema Stacking */}
       <script type="application/ld+json">
         {JSON.stringify({

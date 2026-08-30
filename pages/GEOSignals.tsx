@@ -85,6 +85,11 @@ const GEOSignals: React.FC = () => {
 
   return (
     <div className="bg-black min-h-screen text-white">
+      <SEOMeta
+        title="7 GEO Signals That Prove Your Brand Exists to AI | Qlavo"
+        description="The 7 key signals that determine whether AI engines like ChatGPT, Gemini, and Perplexity know your brand exists. A practical GEO guide."
+        path="/top-7-geo-signals-2026"
+      />
       {/* JSON-LD Stacking */}
       <script type="application/ld+json">
         {JSON.stringify({

@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEOMeta from '../components/SEOMeta';
 
 const TopGEOAgencies: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pt-20">
+      <SEOMeta
+        title="Top GEO Agencies for B2B Brands in 2026 | Qlavo"
+        description="A curated list of the top GEO agencies for B2B brands in 2026. Compare providers, pricing, and approaches to generative engine optimization."
+        path="/blog/top-geo-agencies-b2b-2026"
+      />
       {/* Schema Stacking */}
       <script type="application/ld+json">
         {JSON.stringify({

@@ -71,6 +71,11 @@ const faqs = [
 const Pricing: React.FC = () => {
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="Modern SEO & GEO Pricing — Qlavo Plans & Packages | Delhi, India"
+        description="Transparent SEO and GEO pricing from Qlavo. Modern search optimization packages for businesses in Delhi, India, Dubai, and the UK. Rank on Google. Get cited by AI."
+        path="/pricing"
+      />
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
         <div className="max-w-7xl mx-auto">

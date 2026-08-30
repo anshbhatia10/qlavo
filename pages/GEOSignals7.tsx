@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import SEOMeta from '../components/SEOMeta';
 
 const GEOSignals7: React.FC = () => {
   return (
     <div className="bg-black min-h-screen">
+      <SEOMeta
+        title="7 Signals AI Engines Use to Know Your Brand Exists | Qlavo Blog"
+        description="Deep dive into the 7 entity signals AI engines check to verify your brand exists. A technical guide for GEO practitioners."
+        path="/blog/7-signals-ai-engines-brand-exists"
+      />
       {/* Navigation back */}
       <div className="pt-24 md:pt-28 px-6 max-w-3xl mx-auto">
         <Link
