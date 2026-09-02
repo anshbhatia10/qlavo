@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 pr-4 max-w-md">
               Worldwide B2B GEO retainers. Get cited when buyers ask ChatGPT, Gemini, or Perplexity.
               Headquartered in New Delhi. Public email:{' '}
-              <a href="mailto:hello@qlavo.in" className="text-emerald-400 hover:text-emerald-300">hello@qlavo.in</a>
+              <a href="mailto:info@qlavo.in" className="text-emerald-400 hover:text-emerald-300">info@qlavo.in</a>
             </p>
 
             <div className="flex gap-3 mb-6">

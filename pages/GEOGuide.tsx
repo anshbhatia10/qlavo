@@ -359,7 +359,7 @@ const GEOGuide: React.FC = () => {
             </p>
             <p className="text-zinc-500 text-sm font-light">
               We wrote this guide because we believe clear information about how AI search works
-              helps everyone make better decisions. Qlavo is a GEO agency based in Delhi, India.
+              helps everyone make better decisions. Qlavo is a worldwide B2B GEO agency headquartered in New Delhi.
               We help brands get cited by AI. But the principles in this guide apply whether you
               work with us or not.
             </p>

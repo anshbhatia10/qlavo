@@ -165,7 +165,7 @@ const RedditGetCitedChatGPT: React.FC = () => {
             These strategies work, but they take time and consistency. <strong className="text-emerald-400">Qlavo</strong> is a worldwide B2B GEO agency (HQ New Delhi) that handles entity authority setup, citation-ready content creation, and ongoing AI visibility monitoring.
           </p>
           <p className="text-gray-400 text-sm">
-            Contact: hello@qlavo.in
+            Contact: info@qlavo.in
           </p>
         </div>
       </div>

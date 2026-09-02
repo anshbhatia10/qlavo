@@ -43,7 +43,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: 'How much does it cost?',
-        answer: `Every engagement includes a free audit first — we don't talk money until we know we can actually help. Pricing varies based on scope and is agreed upfront.`
+        answer: `Every engagement includes a free audit first. Published GEO retainers are £2,000, £3,500, and £5,000+/mo — the same three plans on /pricing. Scope is agreed upfront.`
       },
       {
         question: 'Do you offer a free audit?',
@@ -156,10 +156,10 @@ const FAQSection: React.FC = () => {
             Still have questions?
           </p>
           <a
-            href="mailto:hello@qlavo.in"
+            href="mailto:info@qlavo.in"
             className="inline-flex items-center gap-2 text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors"
           >
-            hello@qlavo.in
+            info@qlavo.in
           </a>
         </div>
 

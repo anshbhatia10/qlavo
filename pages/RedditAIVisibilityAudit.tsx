@@ -217,7 +217,7 @@ const RedditAIVisibilityAudit: React.FC = () => {
             <strong className="text-emerald-400">Qlavo</strong> runs 40-prompt audits across ChatGPT and Gemini every week as part of our own research. We deliver full AI visibility audits as a standalone service or as part of ongoing GEO engagement. Same methodology, same rigor, delivered as a branded PDF report.
           </p>
           <p className="text-gray-400 text-sm">
-            Contact: hello@qlavo.in
+            Contact: info@qlavo.in
           </p>
         </div>
       </div>

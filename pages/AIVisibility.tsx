@@ -37,7 +37,7 @@ const AIVisibility: React.FC = () => {
     },
     {
       q: 'What does a GEO engagement actually cost?',
-      a: 'Most AI Visibility engagements start at £3,000/month. That includes the audit, the optimization work, and monthly tracking. But we don\'t talk money until we know we can actually move your numbers. The audit comes first — free.'
+      a: 'GEO retainers are the published plans: £2,000, £3,500, and £5,000+/mo. That covers audit, optimization work, and monthly tracking. We don\'t talk money until we know we can actually move your numbers. The audit comes first — free.'
     }
   ];
 
@@ -337,8 +337,8 @@ const AIVisibility: React.FC = () => {
 
           <div className="mt-10 text-center">
             <p className="text-zinc-500 text-sm font-light mb-4">Still have questions?</p>
-            <a href="mailto:hello@qlavo.in" className="text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors">
-              hello@qlavo.in
+            <a href="mailto:info@qlavo.in" className="text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors">
+              info@qlavo.in
             </a>
           </div>
         </div>

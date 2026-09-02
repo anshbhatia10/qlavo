@@ -42,10 +42,10 @@ const Contact: React.FC = () => {
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] text-zinc-500 uppercase tracking-widest">Direct Email</span>
                 <a
-                  href="mailto:hello@qlavo.in"
+                  href="mailto:info@qlavo.in"
                   className="text-base md:text-lg text-white hover:text-zinc-300 transition-colors flex items-center gap-2 group truncate"
                 >
-                  hello@qlavo.in{' '}
+                  info@qlavo.in{' '}
                   <ArrowUpRight className="w-4 h-4 opacity-50 md:opacity-0 md:group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
               </div>

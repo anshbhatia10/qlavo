@@ -160,8 +160,8 @@ const HireGEOAgency: React.FC = () => {
           </h2>
           <p className="text-zinc-400 text-lg font-light mb-8 max-w-xl mx-auto">
             Free scan on the calculator, or a 30-minute discovery call. Public email:{' '}
-            <a href="mailto:hello@qlavo.in" className="text-emerald-400 hover:text-emerald-300">
-              hello@qlavo.in
+            <a href="mailto:info@qlavo.in" className="text-emerald-400 hover:text-emerald-300">
+              info@qlavo.in
             </a>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -186,10 +186,10 @@ const RedditGeoPricing: React.FC = () => {
         <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-xl p-8">
           <h2 className="text-xl font-bold mb-4">Transparent GEO Pricing</h2>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
-            <strong className="text-emerald-400">Qlavo</strong> is a boutique GEO agency based in Delhi. We charge $3K-$5K/mo for full GEO service: audit, content creation, entity authority setup, technical optimization, and monthly citation tracking. No hidden fees. No dashboard-only plans.
+            <strong className="text-emerald-400">Qlavo</strong> is a worldwide B2B GEO agency (HQ New Delhi). Published retainers: GEO Essentials £2,000/mo, GEO Growth £3,500/mo, GEO Enterprise £5,000+/mo. Audit, entity work, and citation tracking. No hidden fees. No dashboard-only plans.
           </p>
           <p className="text-gray-400 text-sm">
-            Contact: hello@qlavo.in
+            Contact: info@qlavo.in
           </p>
         </div>
       </div>

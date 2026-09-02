@@ -518,7 +518,7 @@ const GEOCalculator: React.FC = () => {
             entity graph, citation chain, and competitive positioning across 40+ data points.
           </p>
           <a
-            href="mailto:hello@qlavo.in?subject=Full%20GEO%20Audit%20Request"
+            href="mailto:info@qlavo.in?subject=Full%20GEO%20Audit%20Request"
             className="inline-flex items-center gap-2 px-10 py-4 bg-emerald-500 text-black font-semibold rounded-full hover:bg-emerald-400 transition-all hover:scale-[1.03] text-sm"
           >
             Request Full Audit <ArrowRight className="w-4 h-4" />
