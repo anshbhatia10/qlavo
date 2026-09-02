@@ -28,6 +28,7 @@ export const PRERENDER_ROUTES = [
   '/blog/hubspot-geo-audit-2026',
   '/blog/state-of-ai-search-april-2026',
   '/geo-agency-delhi-india',
+  '/hire-geo-agency',
   '/what-is-generative-engine-optimization',
   '/geo-pricing-cost-guide-2026',
   '/geo-vs-seo-vs-aeo-differences',

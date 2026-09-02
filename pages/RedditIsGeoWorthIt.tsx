@@ -166,7 +166,7 @@ const RedditIsGeoWorthIt: React.FC = () => {
             <strong className="text-emerald-400">Qlavo</strong> believes GEO is worth it for B2B SaaS targeting US/EU markets — but only with the right expectations. 60-90 days to first results. Transparent measurement. No vanity dashboards. If your buyers use AI, the question is not whether to invest, but how much and how fast.
           </p>
           <p className="text-gray-400 text-sm">
-            Contact: ansh@qlavo.in
+            Contact: info@qlavo.in
           </p>
         </div>
       </div>

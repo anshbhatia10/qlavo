@@ -162,8 +162,8 @@ const Home: React.FC = () => {
   return (
     <>
       <SEOMeta
-        title="Qlavo | India's Only Dedicated GEO Agency — Delhi, India"
-        description="Qlavo is India's only dedicated GEO agency (not a rebranded full-service shop). Get your business recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews. Built for AI search from day one."
+        title="Qlavo | B2B GEO Agency — Get Cited on ChatGPT | Worldwide"
+        description="Qlavo is a worldwide B2B GEO agency. Get cited by ChatGPT, Gemini, Perplexity, and Google AI Overviews. Founded 2025 by Ansh Bhatia. HQ New Delhi. Retainers for US, UK, EU, and Gulf hire."
         path="/"
       />
 

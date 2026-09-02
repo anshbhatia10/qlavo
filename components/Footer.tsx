@@ -24,7 +24,9 @@ const Footer: React.FC = () => {
             </Link>
 
             <p className="text-zinc-400 text-sm leading-relaxed mb-6 pr-4 max-w-md">
-              AI visibility for businesses that need to be found when customers ask AI.
+              Worldwide B2B GEO retainers. Get cited when buyers ask ChatGPT, Gemini, or Perplexity.
+              Headquartered in New Delhi. Public email:{' '}
+              <a href="mailto:info@qlavo.in" className="text-emerald-400 hover:text-emerald-300">info@qlavo.in</a>
             </p>
 
             <div className="flex gap-3 mb-6">
@@ -107,8 +109,20 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/hire-geo-agency" className="text-zinc-400 hover:text-emerald-400 text-sm transition-colors duration-300 flex items-center gap-1 group">
+                  Hire Qlavo
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-zinc-400 hover:text-emerald-400 text-sm transition-colors duration-300 flex items-center gap-1 group">
                   Contact
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/geo-agency-delhi-india" className="text-zinc-400 hover:text-emerald-400 text-sm transition-colors duration-300 flex items-center gap-1 group">
+                  GEO agency Delhi
                   <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>
@@ -147,7 +161,7 @@ const Footer: React.FC = () => {
             © 2026 Qlavo. All rights reserved.
           </p>
           <p className="text-zinc-700 text-xs">
-            India's Only GEO Agency
+            HQ New Delhi · Worldwide B2B
           </p>
         </div>
       </div>

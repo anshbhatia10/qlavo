@@ -39,11 +39,11 @@ const faqCategories: FAQCategory[] = [
     items: [
       {
         question: 'What kind of businesses do you work with?',
-        answer: `Growth-stage companies doing $500K to $50M in revenue — across hospitality, professional services, e-commerce, and B2B SaaS. Mostly based in Delhi, the UK, and internationally. If you know AI changes everything but don't know where to start, you're our kind of client.`
+        answer: `Growth-stage B2B companies — hospitality, professional services, e-commerce, and SaaS — hiring from the US, UK, EU, and Gulf. Headquarters is New Delhi. If you know AI changes discovery but don't know where to start, you're our kind of client.`
       },
       {
         question: 'How much does it cost?',
-        answer: `Every engagement includes a free audit first — we don't talk money until we know we can actually help. Pricing varies based on scope and is agreed upfront.`
+        answer: `Every engagement includes a free audit first. Published GEO retainers are £2,000, £3,500, and £5,000+/mo — the same three plans on /pricing. Scope is agreed upfront.`
       },
       {
         question: 'Do you offer a free audit?',

@@ -18,6 +18,7 @@ import HubSpotAudit from './pages/HubSpotAudit';
 import StateOfAISearchApril2026 from './pages/StateOfAISearchApril2026';
 import Pricing from './pages/Pricing';
 import GEOAgencyIndia from './pages/GEOAgencyIndia';
+import HireGEOAgency from './pages/HireGEOAgency';
 import GEOGuide from './pages/GEOGuide';
 import GEOPricingGuide from './pages/GEOPricingGuide';
 import GEOvsSEO from './pages/GEOvsSEO';
@@ -86,6 +87,7 @@ export const AppRoutes: React.FC = () => {
           <Route path="/blog/hubspot-geo-audit-2026" element={<HubSpotAudit />} />
           <Route path="/blog/state-of-ai-search-april-2026" element={<StateOfAISearchApril2026 />} />
           <Route path="/geo-agency-delhi-india" element={<GEOAgencyIndia />} />
+          <Route path="/hire-geo-agency" element={<HireGEOAgency />} />
           <Route path="/what-is-generative-engine-optimization" element={<GEOGuide />} />
           <Route path="/geo-pricing-cost-guide-2026" element={<GEOPricingGuide />} />
           <Route path="/geo-vs-seo-vs-aeo-differences" element={<GEOvsSEO />} />

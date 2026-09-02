@@ -37,7 +37,7 @@ const AIVisibility: React.FC = () => {
     },
     {
       q: 'What does a GEO engagement actually cost?',
-      a: 'Most AI Visibility engagements start at £3,000/month. That includes the audit, the optimization work, and monthly tracking. But we don\'t talk money until we know we can actually move your numbers. The audit comes first — free.'
+      a: 'GEO retainers are the published plans: £2,000, £3,500, and £5,000+/mo. That covers audit, optimization work, and monthly tracking. We don\'t talk money until we know we can actually move your numbers. The audit comes first — free.'
     }
   ];
 

@@ -209,6 +209,14 @@
       "destination": "/reddit/ai-visibility-audit/index.html"
     },
     {
+      "source": "/hire-geo-agency",
+      "destination": "/hire-geo-agency/index.html"
+    },
+    {
+      "source": "/hire-geo-agency/",
+      "destination": "/hire-geo-agency/index.html"
+    },
+    {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
