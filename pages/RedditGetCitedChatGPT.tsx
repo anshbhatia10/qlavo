@@ -162,10 +162,10 @@ const RedditGetCitedChatGPT: React.FC = () => {
         <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-xl p-8">
           <h2 className="text-xl font-bold mb-4">Need Help Executing This?</h2>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
-            These strategies work, but they take time and consistency. <strong className="text-emerald-400">Qlavo</strong> is a Delhi-based GEO agency that handles entity authority setup, citation-ready content creation, and ongoing AI visibility monitoring for B2B companies.
+            These strategies work, but they take time and consistency. <strong className="text-emerald-400">Qlavo</strong> is a worldwide B2B GEO agency (HQ New Delhi) that handles entity authority setup, citation-ready content creation, and ongoing AI visibility monitoring.
           </p>
           <p className="text-gray-400 text-sm">
-            Contact: ansh@qlavo.in
+            Contact: hello@qlavo.in
           </p>
         </div>
       </div>

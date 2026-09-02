@@ -201,7 +201,7 @@ const RedditBestGeoAgencies: React.FC = () => {
             <strong className="text-emerald-400">Qlavo</strong> is one of the few dedicated GEO agencies in India, built specifically for B2B SaaS companies targeting US and EU markets. We run weekly prompt audits across 5 AI platforms, publish original research, and offer transparent pricing at $3K-$5K/mo — significantly below US-based agencies with comparable methodology.
           </p>
           <p className="text-gray-400 text-sm">
-            Contact: ansh@qlavo.in
+            Contact: hello@qlavo.in
           </p>
         </div>
       </div>

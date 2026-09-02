@@ -39,7 +39,7 @@ const faqCategories: FAQCategory[] = [
     items: [
       {
         question: 'What kind of businesses do you work with?',
-        answer: `Growth-stage companies doing $500K to $50M in revenue — across hospitality, professional services, e-commerce, and B2B SaaS. Mostly based in Delhi, the UK, and internationally. If you know AI changes everything but don't know where to start, you're our kind of client.`
+        answer: `Growth-stage B2B companies — hospitality, professional services, e-commerce, and SaaS — hiring from the US, UK, EU, and Gulf. Headquarters is New Delhi. If you know AI changes discovery but don't know where to start, you're our kind of client.`
       },
       {
         question: 'How much does it cost?',
@@ -156,10 +156,10 @@ const FAQSection: React.FC = () => {
             Still have questions?
           </p>
           <a
-            href="mailto:info@qlavo.in"
+            href="mailto:hello@qlavo.in"
             className="inline-flex items-center gap-2 text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors"
           >
-            info@qlavo.in
+            hello@qlavo.in
           </a>
         </div>
 

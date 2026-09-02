@@ -72,8 +72,8 @@ const Pricing: React.FC = () => {
   return (
     <div className="bg-black min-h-screen">
       <SEOMeta
-        title="Modern SEO & GEO Pricing — Qlavo Plans & Packages | Delhi, India"
-        description="Transparent SEO and GEO pricing from Qlavo. Modern search optimization packages for businesses in Delhi, India, Dubai, and the UK. Rank on Google. Get cited by AI."
+        title="GEO Pricing — Qlavo Plans from £2,000/mo | Worldwide B2B"
+        description="Transparent GEO retainers from Qlavo: £2,000, £3,500, and £5,000+/mo. Worldwide B2B hire. Headquartered in New Delhi. Rank on Google. Get cited by AI."
         path="/pricing"
       />
       {/* Hero */}

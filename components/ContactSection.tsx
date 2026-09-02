@@ -119,10 +119,10 @@ const ContactSection: React.FC = () => {
                 <span className="text-zinc-400 text-sm font-light">Or email us directly</span>
               </div>
               <a
-                href="mailto:info@qlavo.in"
+                href="mailto:hello@qlavo.in"
                 className="text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors"
               >
-                info@qlavo.in
+                hello@qlavo.in
               </a>
             </div>
           </div>

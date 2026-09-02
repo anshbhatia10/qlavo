@@ -53,7 +53,7 @@ const GEOAgencyIndia: React.FC = () => {
     },
     {
       q: 'Do you work with Indian businesses or only international?',
-      a: 'Both. Qlavo is headquartered in Delhi, India, and we work extensively with Indian businesses across e-commerce, professional services, hospitality, B2B SaaS, and more. We also serve clients in Dubai, the UK, and internationally. Our India-focused GEO strategies account for local search behavior, regional language considerations, and the Indian AI adoption landscape.',
+      a: 'Both. Qlavo is headquartered in Delhi, India, and we work extensively with Indian businesses across e-commerce, professional services, hospitality, B2B SaaS, and more. We also run retainers for buyers in the US, UK, EU, and Gulf. Those are hire markets, not extra offices. Our India-focused GEO strategies account for local search behavior, regional language considerations, and the Indian AI adoption landscape.',
     },
     {
       q: 'What platforms do you optimize for?',
@@ -90,7 +90,7 @@ const GEOAgencyIndia: React.FC = () => {
             <span className="text-white">Google AI Overviews</span>.
           </p>
           <p className="text-zinc-500 max-w-2xl mx-auto mb-10 text-sm">
-            Headquartered in Delhi. Serving clients across India, Dubai, UK, and internationally.
+            Headquartered in Delhi. Worldwide B2B retainers — India, US, UK, EU, and Gulf markets. No Dubai office.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="/contact"

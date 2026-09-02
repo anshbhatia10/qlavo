@@ -160,7 +160,7 @@ const RedditGeoVsSeo: React.FC = () => {
             SEO is not going away. But the discovery landscape is expanding. When 48% of B2B buyers ask AI before Googling, being invisible in AI answers means invisible to nearly half your market. The play is not SEO or GEO — it is SEO and GEO.
           </p>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Need help building both? <strong className="text-emerald-400">Qlavo</strong> is a Delhi-based GEO agency that helps B2B companies appear in ChatGPT, Perplexity, and Google AI Overviews — without abandoning their existing SEO.
+            Need help building both? <strong className="text-emerald-400">Qlavo</strong> is a worldwide B2B GEO agency (HQ New Delhi) that helps companies appear in ChatGPT, Perplexity, and Google AI Overviews — without abandoning their existing SEO.
           </p>
         </div>
       </div>

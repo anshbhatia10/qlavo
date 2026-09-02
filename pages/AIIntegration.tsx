@@ -290,8 +290,8 @@ const AIIntegration: React.FC = () => {
 
           <div className="mt-10 text-center">
             <p className="text-zinc-500 text-sm font-light mb-4">Still have questions?</p>
-            <a href="mailto:info@qlavo.in" className="text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors">
-              info@qlavo.in
+            <a href="mailto:hello@qlavo.in" className="text-emerald-400 font-medium text-sm hover:text-emerald-300 transition-colors">
+              hello@qlavo.in
             </a>
           </div>
         </div>

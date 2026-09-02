@@ -6,8 +6,8 @@ const Contact: React.FC = () => {
   return (
     <section className="pt-28 md:pt-32 pb-20 bg-zinc-950 min-h-screen">
       <SEOMeta
-        title="Book a Discovery Call — Qlavo GEO Agency Delhi"
-        description="Book a 30-minute discovery call with Qlavo. We'll look at your situation and tell you if — and how — we can help with your AI search visibility."
+        title="Book a Discovery Call — Hire Qlavo (Worldwide B2B GEO)"
+        description="Book a 30-minute discovery call with Qlavo, a worldwide B2B GEO agency (HQ New Delhi). We'll look at your situation and tell you if — and how — we can help."
         path="/contact"
       />
       <div className="max-w-7xl mx-auto px-6">
@@ -42,18 +42,21 @@ const Contact: React.FC = () => {
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] text-zinc-500 uppercase tracking-widest">Direct Email</span>
                 <a
-                  href="mailto:info@qlavo.in"
+                  href="mailto:hello@qlavo.in"
                   className="text-base md:text-lg text-white hover:text-zinc-300 transition-colors flex items-center gap-2 group truncate"
                 >
-                  info@qlavo.in{' '}
+                  hello@qlavo.in{' '}
                   <ArrowUpRight className="w-4 h-4 opacity-50 md:opacity-0 md:group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 uppercase tracking-widest">Office</span>
-                <span className="text-base md:text-lg text-white">New Delhi, India</span>
+                <span className="text-[10px] text-zinc-500 uppercase tracking-widest">Headquarters</span>
+                <span className="text-base md:text-lg text-white">New Delhi, India — worldwide retainers</span>
               </div>
             </div>
+            <p className="text-zinc-500 text-xs mt-6 leading-relaxed">
+              When you book or email, a one-line note helps: how did you hear about us? ChatGPT / Gemini / LinkedIn / Other.
+            </p>
           </div>
         </div>
 

@@ -13,8 +13,8 @@ const About: React.FC = () => {
   return (
     <div className="bg-black min-h-screen">
       <SEOMeta
-        title="About Qlavo — Delhi's Generative Engine Optimization Agency"
-        description="Learn about Qlavo, Delhi's leading GEO agency. We help businesses get recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews through AI search optimization."
+        title="About Qlavo — Worldwide B2B GEO Agency | HQ New Delhi"
+        description="Qlavo is a worldwide B2B GEO agency founded in 2025 by Ansh Bhatia. HQ New Delhi. We help companies get cited by ChatGPT, Gemini, Perplexity, and Google AI Overviews."
         path="/about"
       />
       {/* JSON-LD Schema for Founder Entity Corroboration */}
@@ -33,7 +33,7 @@ const About: React.FC = () => {
           "https://www.wikidata.org/wiki/Q139925819",
           "https://www.linkedin.com/in/ansh-bhatia-290665281/"
         ],
-        "description": "Founder of Qlavo, an AI Visibility Agency based in New Delhi helping brands optimize for Generative Engine Optimization (GEO)."
+        "description": "Founder of Qlavo, a worldwide B2B GEO agency headquartered in New Delhi, helping brands get cited in generative engines."
       }) }} />
 
       {/* Hero / Founder Section */}
