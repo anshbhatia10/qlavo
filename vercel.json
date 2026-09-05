@@ -1,6 +1,22 @@
 {
   "rewrites": [
     {
+      "source": "/partners",
+      "destination": "/partners/index.html"
+    },
+    {
+      "source": "/partners/",
+      "destination": "/partners/index.html"
+    },
+    {
+      "source": "/sample-deliverable",
+      "destination": "/sample-deliverable/index.html"
+    },
+    {
+      "source": "/sample-deliverable/",
+      "destination": "/sample-deliverable/index.html"
+    },
+    {
       "source": "/about",
       "destination": "/about/index.html"
     },

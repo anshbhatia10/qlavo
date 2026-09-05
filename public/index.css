@@ -1,0 +1,94 @@
+/* Commercial pages are self-contained: no runtime CSS framework required. */
+:root { --pilot-paper:#f6f5ef; --pilot-ink:#152d27; --pilot-muted:#4d6259; --pilot-green:#185a43; --pilot-rule:#cad3c8; }
+html { scroll-padding-top:6rem; }
+body { margin:0; }
+*, *::before, *::after { box-sizing:border-box; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible { outline:3px solid #dd9b28!important; outline-offset:5px; }
+.site-layout { min-height:100vh; display:flex; flex-direction:column; }
+#main-content { flex:1; }
+.site-header { position:relative; z-index:100; background:var(--pilot-paper); color:var(--pilot-ink); border-bottom:1px solid var(--pilot-rule); font-family:Arial, sans-serif; }
+.site-nav-wrap { max-width:1280px; min-height:88px; margin:auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; }
+.site-wordmark { font:bold 34px/1 Georgia,serif; color:inherit; text-decoration:none; letter-spacing:-2px; }
+.site-wordmark span { color:#2a7552; }
+.site-navigation { display:flex; align-items:center; gap:25px; }
+.site-navigation>a { font-size:14px; font-weight:600; text-decoration:none; color:var(--pilot-ink); padding:12px 0; }
+.site-navigation>a:hover, .site-navigation>a[aria-current] { text-decoration:underline; text-underline-offset:6px; }
+.site-navigation>a.pilot-button { color:white; padding:14px 18px; }
+.site-menu-toggle { display:none; min-height:44px; padding:8px 14px; font:inherit; border:1px solid var(--pilot-ink); border-radius:3px; background:transparent; color:inherit; cursor:pointer; }
+.skip-link { position:absolute; left:16px; top:-100px; background:var(--pilot-ink); color:white; padding:14px; z-index:200; }
+.skip-link:focus { top:12px; }
+.pilot-site { background:var(--pilot-paper); color:var(--pilot-ink); font:17px/1.7 Arial,sans-serif; }
+.pilot-container { width:min(1200px,100% - 80px); margin-inline:auto; }
+.pilot-site p { margin:0 0 20px; }
+.pilot-site h1, .pilot-site h2, .pilot-site h3 { color:var(--pilot-ink); font-weight:400; }
+.pilot-site h1 { font:clamp(40px,4.6vw,66px)/1.08 Georgia,serif; letter-spacing:-2px; margin:0 0 28px; text-wrap:balance; }
+.pilot-site h1 em { color:var(--pilot-green); font-weight:400; }
+.pilot-site h2 { font:clamp(30px,3.1vw,44px)/1.16 Georgia,serif; letter-spacing:-1px; margin:0 0 24px; text-wrap:balance; }
+.pilot-site h3 { font:600 20px/1.35 Arial,sans-serif; margin:0 0 12px; }
+.pilot-site .pilot-eyebrow, .pilot-eyebrow { font:600 12px/1.5 Arial,sans-serif; letter-spacing:1.6px; text-transform:uppercase; margin:0 0 24px; color:var(--pilot-green); }
+.pilot-hero { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr); gap:70px; padding-block:88px 80px; align-items:start; }
+.pilot-site .pilot-lede { font-size:20px; line-height:1.6; color:var(--pilot-muted); max-width:650px; }
+.pilot-actions { display:flex; flex-wrap:wrap; gap:18px 24px; align-items:center; margin-top:30px; }
+.pilot-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; background:var(--pilot-green); color:#fff; border:1px solid transparent; border-radius:3px; padding:16px 22px; font:600 15px/1.4 Arial,sans-serif; text-decoration:none; min-height:48px; }
+.pilot-button:hover { background:#103e2e; }
+.pilot-text-link { color:var(--pilot-green); text-decoration:underline; text-underline-offset:5px; font-weight:600; font-size:15px; display:inline-block; padding-block:8px; }
+.pilot-text-link:hover { color:#102b21; }
+.pilot-sample-link { margin-top:22px; }
+.pilot-summary { background:#e9ede3; padding:32px; border-top:3px solid var(--pilot-green); }
+.pilot-summary h2 { font-size:30px; }
+.pilot-summary p { font-size:15px; }
+.pilot-summary .pilot-price { font:36px/1.2 Georgia,serif; margin-bottom:16px; }
+.pilot-price span { font:14px Arial,sans-serif; display:inline-block; }
+.pilot-summary dl { margin:24px 0 16px; }
+.pilot-summary dl>div { border-top:1px solid #becbbd; padding:16px 0; }
+.pilot-summary dt { font-size:13px; font-weight:bold; margin-bottom:4px; }
+.pilot-summary dd { margin:0; font-size:15px; line-height:1.5; }
+.pilot-section { padding:72px 0; border-top:1px solid var(--pilot-rule); }
+.pilot-section-heading { max-width:720px; margin-bottom:40px; }
+.pilot-section p { color:var(--pilot-muted); }
+.pilot-deliverables { list-style:none; margin:0; padding:0; }
+.pilot-deliverables li { display:grid; grid-template-columns:100px 1fr; padding:28px 0; border-top:1px solid var(--pilot-rule); }
+.pilot-deliverables p { max-width:820px; margin:0; }
+.pilot-index { font:italic 28px Georgia,serif; color:var(--pilot-green); }
+.pilot-two-col { display:grid; grid-template-columns:1fr 1fr; gap:64px; }
+.pilot-two-col h3:not(:first-child) { margin-top:30px; }
+.pilot-note { background:#e9ede3; padding:24px; margin-top:24px!important; font-size:16px; }
+.pilot-faq { max-width:880px; }
+.pilot-faq details { border-top:1px solid var(--pilot-rule); padding-block:20px; }
+.pilot-faq summary { cursor:pointer; font-weight:600; padding:5px 0; min-height:44px; }
+.pilot-faq details p { margin:16px 0 0; }
+.pilot-contact { background:#173e30; color:#f6f5ef; padding:72px 0; }
+.pilot-site .pilot-contact h2 { color:#f6f5ef; }
+.pilot-contact .pilot-eyebrow { color:#b4d4ac; }
+.pilot-contact p { max-width:680px; }
+.pilot-contact .pilot-text-link { color:#e6eedf; }
+.pilot-contact .pilot-button { background:#d7e8cb; color:#163b2b; }
+.pilot-contact .pilot-button:hover { background:white; }
+.pilot-site .pilot-small { font-size:14px; margin:24px 0 0; }
+.pilot-page-head { padding:76px 0 56px; max-width:900px; }
+.pilot-page-head h1 { max-width:850px; }
+.pilot-founder { display:grid; grid-template-columns:300px 1fr; gap:64px; align-items:start; }
+.pilot-founder img { display:block; width:100%; height:auto; border-radius:3px; }
+.pilot-checklist { padding-left:22px; }
+.pilot-checklist li { padding:6px 0 6px 4px; }
+.pilot-example { border:1px solid var(--pilot-rule); padding:28px; margin:24px 0; background:#fffdf7; }
+.pilot-example pre { white-space:pre-wrap; overflow-wrap:anywhere; font:15px/1.65 monospace; }
+.pilot-table-wrap { overflow-x:auto; }
+.pilot-site table { width:100%; border-collapse:collapse; font-size:14px; }
+.pilot-site th, .pilot-site td { text-align:left; padding:14px; border:1px solid var(--pilot-rule); vertical-align:top; }
+.pilot-site th { background:#e9ede3; }
+.site-footer { background:#10291f; color:#d6dfd5; font:15px/1.7 Arial,sans-serif; padding:56px 0 24px; }
+.site-footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:60px; }
+.site-footer .site-wordmark { color:#f6f5ef; display:inline-block; margin-bottom:20px; }
+.site-footer p { margin:0 0 20px; }
+.site-footer a { color:inherit; text-underline-offset:4px; }
+.site-footer a:hover { color:white; text-decoration:underline; }
+.site-footer nav a { display:block; padding:7px 0; text-decoration:none; }
+.site-footer h2 { font:600 13px Arial,sans-serif; text-transform:uppercase; letter-spacing:1px; color:white; margin:0 0 18px; }
+.site-footer-bottom { display:flex; justify-content:space-between; gap:24px; border-top:1px solid #375043; margin-top:44px; padding-top:24px; font-size:13px; }
+@media(max-width:1050px) { .site-nav-wrap { padding-inline:24px; gap:20px; } .site-navigation { gap:16px; } .site-navigation>a { font-size:13px; } .pilot-hero { gap:36px; } }
+@media(max-width:900px) { .site-nav-wrap { flex-wrap:wrap; min-height:76px; } .site-menu-toggle { display:block; } .site-navigation { display:none; width:100%; flex-direction:column; align-items:stretch; gap:0; padding-bottom:12px; } .site-navigation.is-open { display:flex; } .site-navigation>a { font-size:16px; padding:12px; } .site-navigation .pilot-button { margin-top:12px; } .pilot-hero { grid-template-columns:1fr; gap:44px; padding-block:56px; } .pilot-summary { max-width:600px; } }
+@media(max-width:600px) { .pilot-container { width:calc(100% - 40px); } .pilot-site h1 { letter-spacing:-1.3px; } .pilot-hero { padding-block:44px; } .pilot-site .pilot-lede { font-size:18px; } .pilot-section { padding:44px 0; } .pilot-two-col, .pilot-founder, .site-footer-grid { grid-template-columns:1fr; gap:28px; } .pilot-founder img { max-width:280px; } .pilot-deliverables li { grid-template-columns:44px 1fr; } .pilot-summary { padding:24px; } .pilot-contact { padding:48px 0; } .pilot-page-head { padding:44px 0; } .site-footer-bottom { flex-direction:column; gap:8px; } }
+@media(prefers-reduced-motion:reduce) { *, *::before, *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+/* Existing educational pages must remain readable without reveal scripts. */
+.reveal, .reveal-left, .reveal-right, .reveal-scale { opacity:1!important; transform:none!important; }

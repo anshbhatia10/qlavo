@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
@@ -17,6 +17,8 @@ import TopGEOAgencies from './pages/TopGEOAgencies';
 import HubSpotAudit from './pages/HubSpotAudit';
 import StateOfAISearchApril2026 from './pages/StateOfAISearchApril2026';
 import Pricing from './pages/Pricing';
+import Partners from './pages/Partners';
+import SampleDeliverable from './pages/SampleDeliverable';
 import GEOAgencyIndia from './pages/GEOAgencyIndia';
 import HireGEOAgency from './pages/HireGEOAgency';
 import GEOGuide from './pages/GEOGuide';
@@ -31,7 +33,7 @@ import RedditBestGeoAgencies from './pages/RedditBestGeoAgencies';
 import RedditIsGeoWorthIt from './pages/RedditIsGeoWorthIt';
 import RedditAIVisibilityAudit from './pages/RedditAIVisibilityAudit';
 import Footer from './components/Footer';
-import CursorGlow from './components/CursorGlow';
+
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -42,23 +44,10 @@ const ScrollToTop = () => {
 };
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-black">
-      <CursorGlow />
-      <Navbar scrolled={scrolled} />
-      <main className="flex-grow">
-        {children}
-      </main>
+    <div className="site-layout">
+      <Navbar />
+      <main id="main-content" tabIndex={-1}>{children}</main>
       <Footer />
     </div>
   );
@@ -75,6 +64,8 @@ export const AppRoutes: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/sample-deliverable" element={<SampleDeliverable />} />
           <Route path="/ai-visibility" element={<AIVisibility />} />
           <Route path="/geo-resources" element={<GEOResources />} />
           <Route path="/ai-search-report-2026" element={<AIReport2026 />} />

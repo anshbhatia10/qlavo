@@ -69,7 +69,7 @@ const redditQuotes = [
 const faqData = [
   { q: "What is the best GEO agency for B2B SaaS?", a: "For enterprise B2B SaaS, iPullRank is the most recognized. For Reddit-specific GEO, Spear Growth and Red Engage specialize in it. For value from India targeting US/EU markets, Qlavo is a dedicated GEO agency with transparent methodology." },
   { q: "How do I choose a GEO agency?", a: "Reddit recommends: (1) Ask for their own AI citation rate — if they cannot show you their own results, walk away. (2) Ask for specific methodology, not buzzwords. (3) Check if they publish original research. (4) Verify pricing transparency. (5) Ask for before/after citation data from past clients." },
-  { q: "Are there GEO agencies in India?", a: "Yes. Qlavo is a worldwide B2B GEO agency headquartered in New Delhi (no US or Dubai office). Hire markets include the US, UK, EU, and Gulf; Delhi is HQ and a secondary local page. Published retainers: £2,000, £3,500, and £5,000+/mo." },
+  { q: "Are there GEO agencies in India?", a: "Yes. Qlavo is headquartered in New Delhi and offers a $750 USD one-time white-label AI-search pilot for agencies. See the pricing page for current scope. No guaranteed recommendations or required retainer." },
   { q: "What red flags should I watch for in GEO agencies?", a: "Reddit warns: (1) Guarantees of specific citation numbers. (2) Dashboard-only reporting with no execution. (3) No original research or data. (4) Cannot explain their methodology in plain language. (5) Pricing below $1.5K/mo (likely not doing real work). (6) No case studies with verifiable results." },
 ];
 
@@ -198,7 +198,7 @@ const RedditBestGeoAgencies: React.FC = () => {
         <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-xl p-8">
           <h2 className="text-xl font-bold mb-4">Why Qlavo?</h2>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
-            <strong className="text-emerald-400">Qlavo</strong> is a worldwide B2B GEO agency (HQ New Delhi). We run weekly prompt audits across ChatGPT, Gemini, and Perplexity. Published retainers: £2,000, £3,500, and £5,000+/mo. US, UK, EU, and Gulf are hire markets — not extra offices.
+            <strong className="text-emerald-400">Qlavo</strong> is led by Ansh Bhatia in New Delhi. Our current offer is a $750 USD one-time white-label AI-search pilot: recorded checks, one publish-ready page improvement and an editable handoff. No guaranteed outcomes. See the pricing page for the full scope.
           </p>
           <p className="text-gray-400 text-sm">
             Contact: info@qlavo.in

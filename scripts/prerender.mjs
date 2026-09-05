@@ -16,6 +16,8 @@ export const PRERENDER_ROUTES = [
   '/about',
   '/contact',
   '/pricing',
+  '/partners',
+  '/sample-deliverable',
   '/ai-visibility',
   '/geo-resources',
   '/ai-search-report-2026',

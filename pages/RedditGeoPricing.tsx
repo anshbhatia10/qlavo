@@ -186,7 +186,7 @@ const RedditGeoPricing: React.FC = () => {
         <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-xl p-8">
           <h2 className="text-xl font-bold mb-4">Transparent GEO Pricing</h2>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
-            <strong className="text-emerald-400">Qlavo</strong> is a worldwide B2B GEO agency (HQ New Delhi). Published retainers: GEO Essentials £2,000/mo, GEO Growth £3,500/mo, GEO Enterprise £5,000+/mo. Audit, entity work, and citation tracking. No hidden fees. No dashboard-only plans.
+            <strong className="text-emerald-400">Qlavo</strong> is led by Ansh Bhatia in New Delhi. Our current offer is a $750 USD one-time white-label AI-search pilot: recorded checks, one publish-ready page improvement and an editable handoff. No guaranteed outcomes. See the pricing page for the full scope.
           </p>
           <p className="text-gray-400 text-sm">
             Contact: info@qlavo.in
