@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'vite';
+import { inject } from './html-shell.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -43,50 +44,6 @@ export const PRERENDER_ROUTES = [
   '/reddit/is-geo-worth-it',
   '/reddit/ai-visibility-audit',
 ];
-
-function stripTag(html, pattern) {
-  return html.replace(pattern, '');
-}
-
-function inject(template, appHtml, helmet) {
-  const rootOpen = template.indexOf('<div id="root">');
-  const bodyClose = template.lastIndexOf('</body>');
-  if (rootOpen === -1 || bodyClose === -1) {
-    throw new Error('Could not find #root or </body> in dist/index.html');
-  }
-  const rootClose = template.lastIndexOf('</div>', bodyClose);
-  if (rootClose === -1 || rootClose < rootOpen) {
-    throw new Error('Could not find closing </div> for #root in dist/index.html');
-  }
-  let html =
-    template.slice(0, rootOpen) +
-    `<div id="root">${appHtml}</div>` +
-    template.slice(rootClose + '</div>'.length);
-
-  // Drop homepage-only tags Helmet will replace so crawlers don't see duplicates.
-  html = stripTag(html, /<title>[\s\S]*?<\/title>/i);
-  html = stripTag(html, /<meta\s+name=["']description["'][^>]*>/i);
-  html = stripTag(html, /<link\s+rel=["']canonical["'][^>]*>/i);
-  html = stripTag(html, /<meta\s+property=["']og:url["'][^>]*>/i);
-  html = stripTag(html, /<meta\s+property=["']og:title["'][^>]*>/i);
-  html = stripTag(html, /<meta\s+property=["']og:description["'][^>]*>/i);
-  html = stripTag(html, /<meta\s+name=["']twitter:title["'][^>]*>/i);
-  html = stripTag(html, /<meta\s+name=["']twitter:description["'][^>]*>/i);
-  html = stripTag(html, /<meta\s+name=["']twitter:url["'][^>]*>/i);
-
-  const helmetHead = [
-    helmet?.title?.toString?.() ?? '',
-    helmet?.priority?.toString?.() ?? '',
-    helmet?.meta?.toString?.() ?? '',
-    helmet?.link?.toString?.() ?? '',
-    helmet?.script?.toString?.() ?? '',
-  ]
-    .filter(Boolean)
-    .join('\n    ');
-
-  html = html.replace(/<head([^>]*)>/i, `<head$1>\n    ${helmetHead}`);
-  return html;
-}
 
 function outFileFor(url) {
   if (url === '/') return path.join(dist, 'index.html');

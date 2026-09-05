@@ -1,38 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, FileText, Code2, BarChart3, ArrowUpRight } from 'lucide-react';
 import SEOMeta from '../components/SEOMeta';
+import './Commercial.css';
 
 const steps = [
-  { icon: Search, title: 'Record the answers', text: 'Agree the buyer questions, markets and engines to test. Keep the wording, date, response and cited sources, including checks where your brand is absent.' },
-  { icon: FileText, title: 'Improve the information', text: 'Review service and use-case pages, business descriptions and supporting sources. Prioritize clear, useful content grounded in facts your business can substantiate.' },
-  { icon: Code2, title: 'Address technical gaps', text: 'Review crawl access, page structure, relevant structured data and entity consistency. Agree implementation responsibilities before making changes.' },
-  { icon: BarChart3, title: 'Measure with context', text: 'Repeat agreed checks and report what changed. Separate observed mentions and citations from interpretation, and do not treat correlation as proof of impact.' },
+  { title: 'Define the question.', text: 'Agree buyer prompts, markets, languages and platforms. Include discovery, comparison and brand-specific questions where they are relevant, rather than choosing only prompts likely to mention you.' },
+  { title: 'Record the baseline.', text: 'Keep the response, brand presence or absence, description accuracy and available source links. Document the conditions and limits so another reviewer can understand what was checked.' },
+  { title: 'Prioritize the work.', text: 'Separate content gaps, inconsistent business facts and technical issues. Agree the page list, access, approvals and implementation responsibilities before changing anything.' },
+  { title: 'Repeat with context.', text: 'Compare repeated checks against the agreed sample. Report observations alongside the change log and platform variability; a later citation does not prove that an edit caused it.' },
 ];
 
 export default function AIVisibility() {
-  return <div className="bg-[#030303] min-h-screen text-white">
+  return <div className="cm-page">
     <SEOMeta title="AI Search Visibility & GEO Services | Qlavo" description="Qlavo helps brands improve AI-search visibility with recorded buyer-question research, content, entity clarity and technical optimization. Scope agreed before work starts." path="/ai-visibility" />
-    <section className="pt-32 md:pt-40 pb-20 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-      <div className="max-w-5xl mx-auto relative z-10">
-        <p className="text-xs font-medium text-emerald-400 uppercase tracking-[0.25em] mb-6">GEO & AI-search visibility</p>
-        <h1 className="font-grotesk text-4xl md:text-6xl font-bold tracking-tight mb-8">Help buyers find you.<br /><span className="text-gradient-emerald">Understand what AI actually says.</span></h1>
-        <p className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl mb-8">Qlavo is a GEO agency working with brands on how they appear in ChatGPT, Gemini, Perplexity and other AI-search experiences. We start with evidence, then agree the content, entity and technical work that fits your business.</p>
-        <a href="https://calendly.com/anshnb07/30min" className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold">Discuss your visibility <ArrowUpRight className="w-4 h-4" /></a>
-      </div>
+    <section className="q-container cm-hero">
+      <p className="q-eyebrow">GEO / AI-search visibility</p>
+      <h1 className="q-title">What does AI<br /><span className="cm-muted">say about you?</span></h1>
+      <div className="cm-hero-bottom"><p className="q-lede">AI visibility is about how your business appears in answers buyers may use to make decisions. Qlavo starts with recorded observations, not a score generated from your website’s HTML.</p><Link className="q-button" to="/contact">Discuss your visibility <span aria-hidden="true">↗</span></Link></div>
     </section>
-    <section className="border-t border-white/5 py-20 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="font-grotesk text-3xl md:text-4xl font-semibold mb-10">From observations to practical work.</h2>
-        <div className="grid md:grid-cols-2 gap-6">{steps.map(({icon: Icon,title,text}) => <article key={title} className="bento-card p-8"><Icon className="w-6 h-6 text-emerald-400 mb-5" /><h3 className="font-grotesk text-xl font-semibold mb-3">{title}</h3><p className="text-zinc-400 leading-relaxed">{text}</p></article>)}</div>
-      </div>
+    <section className="q-container q-section q-rule cm-split" aria-labelledby="measured-answers">
+      <div><p className="q-eyebrow">01 / Observed in answers</p><h2 className="q-section-heading" id="measured-answers">Measured answers.<br />A defined sample.</h2><p className="cm-muted">A real check records what a platform returned under particular conditions. It does not tell us what every buyer sees.</p></div>
+      <div className="cm-prose"><p>For each check, retain the prompt, platform, date, response and available cited sources. Note whether your brand appears, how it is described and which alternatives are mentioned. Keep negative and inconclusive observations too.</p><p>Agree which experiences to sample, such as ChatGPT, Gemini or Perplexity, based on your buyers and what can be tested reliably. Record the model or mode, language and session context where available.</p><p>If reporting a mention rate, show the underlying checks and sample size. A limited sample is not a visibility score for an entire platform, market or audience. Wording, time and personalization can change the answer.</p></div>
     </section>
-    <section className="border-t border-white/5 py-20 px-6">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-        <div><h2 className="font-grotesk text-2xl font-semibold mb-4">A snapshot, not a guarantee.</h2><p className="text-zinc-400 leading-relaxed">AI answers vary by engine, wording, time and personalization. A limited set of checks is not a universal visibility score. No guaranteed AI recommendations, rankings, leads or outcome deadlines.</p></div>
-        <div><h2 className="font-grotesk text-2xl font-semibold mb-4">Scope built around your needs.</h2><p className="text-zinc-400 leading-relaxed mb-6">Start with research, a defined implementation project or ongoing support. Deliverables, responsibilities, fees and timing are agreed before work starts.</p><Link to="/pricing" className="text-emerald-400 underline underline-offset-4">Explore engagement options →</Link><p className="text-zinc-400 mt-6">Managing this for a client? <Link to="/partners" className="text-emerald-400 underline underline-offset-4">White-label GEO for agencies →</Link></p></div>
-      </div>
+    <section className="q-container q-section q-rule cm-split" aria-labelledby="technical-signals">
+      <div><p className="q-eyebrow">02 / Reviewed on your website</p><h2 className="q-section-heading" id="technical-signals">Technical signals.<br />Not recommendations.</h2><p className="cm-muted">A website review identifies things you can improve. It cannot establish that an AI assistant recommends your business.</p></div>
+      <dl className="cm-scope-inputs"><div><dt>Accessibility</dt><dd>Review crawl permissions, indexability, rendered content and page structure. Accessible content is a foundation, not proof that a platform retrieved or used it.</dd></div><div><dt>Entity clarity</dt><dd>Check business names, descriptions, locations and relevant profiles for consistency. Structured data should accurately describe visible content; valid markup does not guarantee a citation.</dd></div><div><dt>Useful evidence</dt><dd>Improve service explanations, buyer questions and substantiated business facts. A content checklist or HTML scan is not a measurement of actual AI answers.</dd></div></dl>
     </section>
+    <section className="q-container q-section q-rule cm-split"><div><p className="q-eyebrow">From research to delivery</p><h2 className="q-section-heading">A repeatable process.<br />An honest report.</h2><p className="cm-muted">The handoff should distinguish recorded evidence, interpretation and proposed actions. Findings without their limits are not a useful baseline.</p></div><ol className="cm-editorial-list">{steps.map((step, index) => <li key={step.title}><span className="q-kicker">0{index + 1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></section>
+    <section className="q-container q-section q-rule cm-endnote"><p className="q-eyebrow">Scope before promises</p><h2 className="q-section-heading">Understand the baseline.<br />Then decide what’s next.</h2><p>Start with a baseline audit, a defined implementation project or ongoing support. Deliverables, responsibilities, fees and timing are agreed before work starts. We do not guarantee AI recommendations, rankings, leads or outcome deadlines.</p><div className="cm-actions"><a className="q-button" href="https://calendly.com/anshnb07/30min">Book a discovery call <span aria-hidden="true">↗</span></a><Link className="q-text-link" to="/pricing">Explore engagement options</Link><Link className="q-text-link" to="/partners">White-label GEO for agencies</Link></div><p className="cm-note">Looking for the GEO calculator? This page explains the work instead. A URL alone cannot produce a measured AI visibility result.</p></section>
   </div>;
 }

@@ -1,132 +1,142 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, FileText, ShieldCheck } from 'lucide-react';
 import SEOMeta from '../components/SEOMeta';
+import './Partners.css';
 
 const callUrl = 'https://calendly.com/anshnb07/30min';
-const focus = 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400';
-const services = [
-  { title: 'Baseline', description: 'Document how the client appears in agreed AI engines. Retain the prompts, dates, responses and cited sources, including misses and limitations.' },
-  { title: 'Prompt research', description: 'Map buyer questions to the client’s offering, audience and market. Agree the question set and testing conditions before checks begin.' },
-  { title: 'Content', description: 'Prepare evidence-led briefs or page revisions using approved brand facts. Your team reviews the copy and controls publication.' },
-  { title: 'Entity', description: 'Review the consistency of business facts, profiles and structured data. Recommend corrections backed by sources, not invented authority signals.' },
-  { title: 'Technical prioritization', description: 'Identify crawl, indexing and structured-data issues. Hand over a prioritized implementation brief; development is included only if explicitly scoped.' },
-  { title: 'Reporting', description: 'Provide an editable evidence log, work summary and next steps. Agree any repeat checks and reporting cadence, with observations separate from interpretation.' },
+const workstreams = [
+  ['Baseline', 'Know what is actually showing up.', 'An evidence log of agreed AI-engine checks: prompts, dates, responses, cited sources and misses.'],
+  ['Prompt research', 'Start with the buyer’s questions.', 'A question set mapped to the client’s offer, audience and market, with testing conditions agreed before research.'],
+  ['Content', 'Give useful answers a clear home.', 'Source-backed content briefs or page revisions, using approved brand facts. Your team reviews and controls publication.'],
+  ['Entity', 'Make the business facts consistent.', 'A review of profiles, business information and structured data, with sourced corrections rather than invented authority signals.'],
+  ['Technical prioritization', 'Separate the blockers from the backlog.', 'A prioritized brief covering crawl, indexing and structured-data issues. Development is included only when explicitly scoped.'],
+  ['Reporting', 'Show the work, and its limits.', 'An editable work summary, evidence and next steps. Repeat checks and reporting cadence are agreed; observations stay separate from interpretation.'],
 ];
 const faqs = [
-  { question: 'Who owns the client relationship?', answer: 'You own the client relationship, account strategy and commercial terms with your client. There is no direct client contact without agency consent. Any client-facing involvement must be agreed with you first.' },
-  { question: 'Can we present the work under our own brand?', answer: 'Yes. You receive editable, unbranded deliverables for your review and branding. We agree file formats and handoff requirements before work starts. Your agency approves what reaches the client.' },
-  { question: 'Can we start with a smaller project?', answer: 'An optional paid pilot can be discussed on the partner call. It is not a mandatory package: scope, fees, timing, required inputs and acceptance criteria are agreed before you decide to proceed.' },
-  { question: 'What outcomes can we promise our client?', answer: 'Promise the agreed work, not control of a search engine. We do not guarantee rankings, AI recommendations or editorial placements. AI responses can vary between runs; reports state the methods and limits of the evidence.' },
+  ['Who owns the client relationship?', 'You own the client relationship, account strategy and commercial terms. No direct client contact without agency consent. Any client-facing involvement is agreed with you first.'],
+  ['Can we put our brand on the work?', 'Yes. You receive editable, unbranded deliverables. We agree file formats and handoff requirements in advance; your agency reviews, brands and approves what reaches the client.'],
+  ['Can we start with one project?', 'Discuss an optional paid pilot on the partner call. It is a private, separately scoped first project, not a mandatory package. Fees, timing, inputs and acceptance criteria are agreed before you decide.'],
+  ['What can we promise the client?', 'Promise the agreed work, not an engine’s decisions. We do not guarantee rankings, AI recommendations or editorial placements. AI responses can vary between runs; reports state methods, evidence and limitations.'],
+  ['Who handles publishing and implementation?', 'Your agency coordinates approvals and publication unless implementation is explicitly scoped. We agree access, confidentiality, revision rounds and responsibilities before work begins.'],
 ];
 
 export default function Partners() {
   return (
-    <div className="bg-[#030303] min-h-screen text-white">
+    <div className="pt-page">
       <SEOMeta
         title="White-label GEO for Agency Partners | Qlavo"
-        description="Add white-label GEO delivery to your agency: research, content, entity and technical priorities, and editable reporting. You own the client relationship. Scope-based partner pricing."
+        description="White-label GEO delivery for agencies. Keep the client relationship; get editable, unbranded research, content and reporting. Private, scope-based partner quotes."
         path="/partners"
       />
-      <section aria-labelledby="partners-title" className="px-6 pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-3">
-            <p className="text-emerald-400 text-xs font-mono uppercase tracking-widest mb-6">For SEO, content & digital agencies</p>
-            <h1 id="partners-title" className="font-grotesk text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-6">
-              Your client. Your brand.<br /><span className="text-emerald-400">Our GEO delivery.</span>
-            </h1>
-            <p className="text-zinc-300 text-lg leading-relaxed max-w-xl mb-5">Bring AI-search expertise into your agency without handing over the account. We do the agreed behind-the-scenes work. You lead the relationship.</p>
-            <p className="text-zinc-400 leading-relaxed max-w-xl mb-8">Qlavo is a GEO agency; white-label is one of our services. This partnership is for agencies that want support with generative engine optimization under their own brand.</p>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <a href={callUrl} className={`btn-primary px-6 py-4 text-sm ${focus}`}>Book a partner call <ArrowRight className="w-4 h-4" aria-hidden="true" /></a>
-              <Link to="/sample-deliverable" className={`inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-emerald-400 ${focus}`}>View a sample deliverable <ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>
+      <section aria-labelledby="partners-title" className="pt-hero q-container">
+        <p className="q-eyebrow">Agency partnerships / White-label GEO</p>
+        <div className="pt-hero-grid">
+          <div>
+            <h1 id="partners-title" className="q-title">Add GEO delivery.<br /><span className="pt-muted">Keep the account.</span></h1>
+            <p className="q-lede">Your client is asking about AI search. Bring in a delivery partner, not another agency at the table.</p>
+            <div className="pt-actions">
+              <a href={callUrl} className="q-button">Discuss a client brief <span aria-hidden="true">↗</span></a>
+              <Link to="/sample-deliverable" className="q-text-link">Inspect the sample handoff <span aria-hidden="true">→</span></Link>
             </div>
           </div>
-          <aside aria-label="Partner commitments" className="lg:col-span-2 bento-card p-7 md:p-9 motion-reduce:transform-none motion-reduce:transition-none">
-            <ShieldCheck className="w-8 h-8 text-emerald-400 mb-6" aria-hidden="true" />
-            <h2 className="font-grotesk text-2xl font-medium mb-6">Built around your agency.</h2>
-            <ul className="space-y-5 text-zinc-300 leading-relaxed">
-              {['You own the client relationship.', 'No direct client contact without agency consent.', 'Editable, unbranded deliverables.', 'Scope agreed before work.'].map(item => (
-                <li key={item} className="flex gap-3"><Check className="w-5 h-5 text-emerald-400 shrink-0 mt-1" aria-hidden="true" /><span>{item}</span></li>
-              ))}
+          <aside className="pt-agreement" aria-label="Partner commitments">
+            <p className="q-eyebrow">The working agreement</p>
+            <ul>
+              <li>You own the client relationship.</li>
+              <li>No direct client contact without agency consent.</li>
+              <li>Editable, unbranded deliverables.</li>
+              <li>Scope agreed before work.</li>
             </ul>
+            <p className="pt-note">Qlavo is a GEO agency; white-label is one of our services. You lead the account. We do the agreed behind-the-scenes work.</p>
           </aside>
         </div>
+        <div className="pt-fitline"><span className="q-eyebrow">Built for</span><p>SEO, content and digital agencies that need delivery support—not another platform to manage.</p></div>
       </section>
 
-      <section aria-labelledby="partner-services" className="px-6 py-20 border-t border-white/10">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">Choose the work you need</p>
-          <h2 id="partner-services" className="font-grotesk text-3xl md:text-4xl tracking-tight mb-5">GEO support, not a one-size-fits-all bundle.</h2>
-          <p className="text-zinc-400 max-w-2xl leading-relaxed mb-10">These are possible workstreams, not automatic inclusions. Deliverables, volume, markets, engines, implementation and review rounds are agreed per scope.</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map(service => (
-              <article key={service.title} className="bento-card p-7 motion-reduce:transform-none motion-reduce:transition-none">
-                <h3 className="font-grotesk text-xl text-white mb-3">{service.title}</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">{service.description}</p>
+      <section aria-labelledby="partner-services" className="q-section q-rule">
+        <div className="q-container pt-editorial-grid">
+          <header className="pt-section-intro">
+            <p className="q-eyebrow">01 / The work</p>
+            <h2 id="partner-services" className="q-section-heading">A delivery team.<br />Not a fixed bundle.</h2>
+            <p>Bring us the gap in your team’s capacity. We scope the work around it.</p>
+            <p className="pt-note">Possible workstreams, not automatic inclusions. Deliverables, volume, markets, engines, review rounds and implementation are agreed per project.</p>
+          </header>
+          <div className="pt-workstreams">
+            {workstreams.map(([title, lead, description]) => (
+              <article key={title} className="pt-workstream">
+                <h3>{title}</h3>
+                <div><p className="pt-workstream-lead">{lead}</p><p>{description}</p></div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="partner-process" className="px-6 py-20 border-t border-white/10">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-          <div>
-            <p className="text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">A clear working agreement</p>
-            <h2 id="partner-process" className="font-grotesk text-3xl md:text-4xl tracking-tight mb-6">Agree the scope.<br />Keep control of the handoff.</h2>
-            <p className="text-zinc-400 leading-relaxed">A useful fit when you can provide approved brand information, coordinate reviews and arrange publishing. We clarify access, confidentiality and responsibilities before any client work begins.</p>
+      <section aria-labelledby="partner-handoff" className="pt-paper q-section">
+        <div className="q-container pt-editorial-grid">
+          <header className="pt-section-intro">
+            <p className="q-eyebrow">02 / The handoff</p>
+            <h2 id="partner-handoff" className="q-section-heading">Ready for your review.<br />Then your brand.</h2>
+            <p>No dashboard subscription to resell. No Qlavo-branded report to explain. An editable handoff your team can interrogate, adapt and present.</p>
+            <Link to="/sample-deliverable" className="q-text-link">Open the illustrative sample <span aria-hidden="true">→</span></Link>
+          </header>
+          <div className="pt-document-index">
+            <p className="pt-document-label">Anatomy of a handoff / Format preview</p>
+            <dl>
+              <div><dt>Research record</dt><dd>Questions, method, source references and retained evidence—including misses.</dd></div>
+              <div><dt>Recommended work</dt><dd>Priorities, editable briefs or drafts, and factual questions marked for approval.</dd></div>
+              <div><dt>Agency review</dt><dd>Responsibilities, limitations, revision notes and an agreed next step.</dd></div>
+            </dl>
+            <p className="pt-note">Illustrative components only. The agreed scope determines the actual files and work included.</p>
           </div>
-          <ol className="space-y-8">
-            {[
-              ['Discuss the client brief', 'Share the audience, market, site and objective. We discuss fit, required inputs and what your team will handle.'],
-              ['Agree the work in writing', 'Confirm deliverables, exclusions, fees, timing, revision rounds and acceptance criteria. Scope changes need agreement, not assumptions.'],
-              ['Review, brand and deliver', 'Qlavo prepares the agreed work. Your agency reviews the editable handoff, approves client communication and manages publication unless otherwise scoped.'],
-            ].map(([title, description], index) => (
-              <li key={title} className="flex gap-5">
-                <span className="text-emerald-400 font-mono text-sm mt-1" aria-hidden="true">0{index + 1}</span>
-                <div><h3 className="font-grotesk text-xl mb-2">{title}</h3><p className="text-zinc-400 text-sm leading-relaxed">{description}</p></div>
-              </li>
-            ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="partner-process" className="q-section">
+        <div className="q-container pt-editorial-grid">
+          <header className="pt-section-intro">
+            <p className="q-eyebrow">03 / Working together</p>
+            <h2 id="partner-process" className="q-section-heading">Start with the brief.<br />Agree the boundaries.</h2>
+            <p>A useful fit when your team can provide approved brand information, coordinate reviews and arrange publishing.</p>
+          </header>
+          <ol className="pt-process">
+            <li><span className="q-kicker" aria-hidden="true">01</span><div><h3>Bring the client context</h3><p>Share the audience, market, site and objective. We clarify fit, access, confidentiality and what your team will handle.</p></div></li>
+            <li><span className="q-kicker" aria-hidden="true">02</span><div><h3>Agree the work in writing</h3><p>Confirm deliverables, exclusions, fees, timing, revision rounds and acceptance criteria. Changes to the scope need agreement.</p></div></li>
+            <li><span className="q-kicker" aria-hidden="true">03</span><div><h3>Review, brand, deliver</h3><p>We prepare the agreed work. You review the editable handoff, approve client communication and manage publication unless otherwise scoped.</p></div></li>
           </ol>
         </div>
       </section>
 
-      <section aria-labelledby="partner-pricing" className="px-6 py-20 border-t border-white/10">
-        <div className="max-w-6xl mx-auto bento-card p-7 md:p-12 grid md:grid-cols-2 gap-8 items-start motion-reduce:transform-none motion-reduce:transition-none">
-          <div>
-            <p className="text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">Commercial terms</p>
-            <h2 id="partner-pricing" className="font-grotesk text-3xl md:text-4xl tracking-tight mb-5">Scope-based partner pricing.</h2>
-            <p className="text-zinc-300 leading-relaxed">Fees depend on the agreed deliverables, research depth, markets, technical involvement and reporting cadence. You set your own client pricing.</p>
-          </div>
-          <div className="space-y-5 text-zinc-400 leading-relaxed">
-            <p>Discuss an optional paid pilot on the partner call if you want to test the working relationship first. Its scope and price are agreed separately; there is no blanket fixed-price package.</p>
-            <p>A call is a scoping conversation, not a commitment to buy. We confirm fees and delivery terms before work starts.</p>
-            <Link to="/sample-deliverable" className={`inline-flex items-center gap-2 text-emerald-400 text-sm ${focus}`}><FileText className="w-4 h-4" aria-hidden="true" />Inspect the handoff format</Link>
+      <section aria-labelledby="partner-pricing" className="q-section q-rule">
+        <div className="q-container pt-editorial-grid">
+          <header className="pt-section-intro">
+            <p className="q-eyebrow">04 / Commercial terms</p>
+            <h2 id="partner-pricing" className="q-section-heading">A private quote.<br />Your client pricing.</h2>
+          </header>
+          <div className="pt-terms">
+            <p className="pt-large-copy">Scope-based partner pricing. You decide what to charge your client.</p>
+            <p>Our fees reflect the deliverables, research depth, markets, technical involvement and reporting cadence. There is no blanket fixed-price package.</p>
+            <p>Want to test the working relationship first? Discuss an optional paid pilot on the partner call. We agree its scope and price separately before work starts.</p>
+            <p className="pt-note">A call is a scoping conversation, not a commitment to buy.</p>
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="partner-faq" className="px-6 py-20 border-t border-white/10">
-        <div className="max-w-3xl mx-auto">
-          <h2 id="partner-faq" className="font-grotesk text-3xl md:text-4xl tracking-tight mb-8">Partner questions.</h2>
-          <div className="divide-y divide-white/10">
-            {faqs.map(faq => (
-              <details key={faq.question} className="py-5">
-                <summary className={`cursor-pointer text-lg font-medium rounded-sm ${focus}`}>{faq.question}</summary>
-                <p className="text-zinc-400 leading-relaxed pt-4">{faq.answer}</p>
-              </details>
+      <section aria-labelledby="partner-faq" className="q-section q-rule">
+        <div className="q-container pt-editorial-grid">
+          <header className="pt-section-intro"><p className="q-eyebrow">Before we begin</p><h2 id="partner-faq" className="q-section-heading">The practical<br />questions.</h2></header>
+          <div className="pt-faq">
+            {faqs.map(([question, answer]) => (
+              <details key={question}><summary>{question}</summary><p>{answer}</p></details>
             ))}
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="partner-call" className="px-6 py-20 md:py-28 border-t border-white/10 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 id="partner-call" className="font-grotesk text-3xl md:text-5xl tracking-tight mb-6">Have a client brief in mind?</h2>
-          <p className="text-zinc-400 leading-relaxed mb-8">Bring the context. We’ll discuss where Qlavo can support your team and what a sensible first scope could look like.</p>
-          <a href={callUrl} className={`btn-primary px-8 py-4 ${focus}`}>Book a partner call <ArrowRight className="w-4 h-4" aria-hidden="true" /></a>
-        </div>
+      <section aria-labelledby="partner-call" className="q-container q-section q-rule pt-closing">
+        <p className="q-eyebrow">Your next client brief</p>
+        <h2 id="partner-call" className="q-section-heading">You bring the relationship.<br />Let’s scope the delivery.</h2>
+        <div className="pt-closing-bottom"><p>Bring the site, the market and the question your client is asking. We’ll work out whether there’s a fit.</p><a href={callUrl} className="q-button">Book a partner call <span aria-hidden="true">↗</span></a></div>
       </section>
     </div>
   );

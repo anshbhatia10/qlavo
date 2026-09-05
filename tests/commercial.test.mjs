@@ -12,7 +12,7 @@ test('restored homepage presents GEO agency with original logo, not wholesale pi
   assert.match($('title').text(), /GEO Agency/i);
   assert.equal($('h1').length, 1);
   assert.ok($('header a[href="/"] svg').length, 'original logo SVG');
-  assert.ok($('main section[class*="bg-[#030303]"]').length, 'original dark sections');
+  assert.ok($('main section.q-hero').length, 'redesigned dark hero');
   assert.doesNotMatch(text, /\$750|\$375|White-label AI-search pilot/);
 });
 
@@ -29,7 +29,7 @@ test('partner service is linked from original navigation with keyboard access', 
 test('home keeps agency message without invented counters or simulated live findings', () => {
   const { text } = page('/');
   assert.doesNotMatch(text, /100M|Brands Audited|3 in 4|We make sure|Your business not found|Live|within 24 hours/);
-  assert.match(text, /Illustrative example/);
+  assert.match(text, /Illustrative format/);
 });
 
 test('AI visibility pages are dark agency services, not a pilot checkout or fake score', () => {

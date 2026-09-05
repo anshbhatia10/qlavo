@@ -1,113 +1,41 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SEOMeta from '../components/SEOMeta';
-import { ArrowUpRight, Clock, FileText, Calendar } from 'lucide-react';
+import './Commercial.css';
 
-const Contact: React.FC = () => {
-  return (
-    <section className="pt-28 md:pt-32 pb-20 bg-zinc-950 min-h-screen">
-      <SEOMeta
-        title="Book a Discovery Call — Hire Qlavo (Worldwide B2B GEO)"
-        description="Book a 30-minute discovery call with Qlavo, a worldwide B2B GEO agency (HQ New Delhi). We'll look at your situation and tell you if — and how — we can help."
-        path="/contact"
-      />
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12 md:mb-16 text-center">
-          <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4 md:mb-6 tracking-tight">
-            Book a Discovery Call
-          </h1>
-          <p className="text-zinc-400 max-w-2xl mx-auto text-base md:text-lg px-4 font-light">
-            30 minutes. No pitch deck. We look at your situation and tell you if — and how — we can help.
-          </p>
-        </div>
+const bookingUrl = 'https://calendly.com/anshnb07/30min?embed_domain=qlavo.in&embed_type=Inline&background_color=ffffff&text_color=111111&primary_color=333333';
 
-        <div className="max-w-3xl mx-auto">
-          {/* Calendar */}
-          <div className="flex flex-col gap-6 md:gap-8">
-            <div
-              className="rounded-2xl overflow-hidden border border-white/10 min-h-[500px] md:min-h-0"
-              style={{ filter: 'invert(1) hue-rotate(180deg)' }}
-            >
-              <iframe
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0m67cc7T8yNqwjlHdpaDMR5f80tLImiXQXgFS3QCxL8X24WietLa6HHJBSJqoha2gJWRtOAB_d?gv=true"
-                style={{ border: 0, minHeight: '600px' }}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                title="Book an appointment"
-                className="rounded-xl"
-              />
-            </div>
-
-            <a
-              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0m67cc7T8yNqwjlHdpaDMR5f80tLImiXQXgFS3QCxL8X24WietLa6HHJBSJqoha2gJWRtOAB_d?gv=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 text-sm hover:text-emerald-300 transition-colors"
-            >
-              Calendar not loading? Open the booking page directly.
-            </a>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-              <div className="flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 uppercase tracking-widest">Direct Email</span>
-                <a
-                  href="mailto:info@qlavo.in"
-                  className="text-base md:text-lg text-white hover:text-zinc-300 transition-colors flex items-center gap-2 group truncate"
-                >
-                  info@qlavo.in{' '}
-                  <ArrowUpRight className="w-4 h-4 opacity-50 md:opacity-0 md:group-hover:opacity-100 transition-opacity shrink-0" />
-                </a>
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-[10px] text-zinc-500 uppercase tracking-widest">Headquarters</span>
-                <span className="text-base md:text-lg text-white">New Delhi, India — worldwide B2B GEO agency</span>
-              </div>
-            </div>
-            <p className="text-zinc-500 text-xs mt-6 leading-relaxed">
-              When you book or email, a one-line note helps: how did you hear about us? ChatGPT / Gemini / LinkedIn / Other.
-            </p>
-          </div>
-        </div>
-
-        {/* Trust Strip */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-              <Clock className="w-4 h-4 text-emerald-400" />
-            </div>
-            <div>
-              <p className="text-white font-medium text-sm mb-1">Direct contact</p>
-              <p className="text-zinc-500 text-xs leading-relaxed">
-                Email your website, target market, and questions for Qlavo.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-              <Calendar className="w-4 h-4 text-emerald-400" />
-            </div>
-            <div>
-              <p className="text-white font-medium text-sm mb-1">Free discovery call</p>
-              <p className="text-zinc-500 text-xs leading-relaxed">
-                30 minutes to understand your business. No pitch. No pressure.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-              <FileText className="w-4 h-4 text-emerald-400" />
-            </div>
-            <div>
-              <p className="text-white font-medium text-sm mb-1">Agreed scope</p>
-              <p className="text-zinc-500 text-xs leading-relaxed">
-                Deliverables, fees, and terms are agreed before work begins.
-              </p>
-            </div>
-          </div>
-        </div>
+export default function Contact() {
+  return <div className="cm-page">
+    <SEOMeta title="Book a Discovery Call — Hire Qlavo (Worldwide B2B GEO)" description="Book a 30-minute discovery call with Qlavo, a worldwide B2B GEO agency (HQ New Delhi). Discuss your buyers, website and a practical scope for AI visibility work." path="/contact" />
+    <section className="q-container cm-hero cm-contact-hero">
+      <p className="q-eyebrow">Start a conversation / Qlavo</p>
+      <h1 className="q-title">A conversation.<br /><span className="cm-muted">A clearer next step.</span></h1>
+      <div className="cm-hero-bottom"><p className="q-lede">30 minutes with Ansh to understand your business, your buyers, and what you need to learn about AI search. Then we decide whether there is useful work to do.</p><a href="#booking" className="q-button">Find a time <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section className="q-container q-section q-rule cm-booking" id="booking" aria-labelledby="booking-heading">
+      <div className="cm-booking-brief">
+        <p className="q-eyebrow">Free discovery call / 30 minutes</p>
+        <h2 className="q-section-heading" id="booking-heading">Bring a question.<br />We’ll scope the work.</h2>
+        <p>You do not need a finished brief. A website and a sense of who you want to reach are enough to start.</p>
+        <ol className="cm-brief-list">
+          <li><span className="q-kicker">01 / Context</span><h3>Your website & buyers</h3><p>Which brand, service and market should we focus on?</p></li>
+          <li><span className="q-kicker">02 / Question</span><h3>What are you seeing?</h3><p>Share an AI answer you are unsure about, a competitor reference, or a gap you want to investigate.</p></li>
+          <li><span className="q-kicker">03 / Next step</span><h3>A scope, if it makes sense</h3><p>We discuss an audit, implementation or ongoing support. Deliverables, fees and terms are agreed before work begins.</p></li>
+        </ol>
+        <p className="cm-note">This is a scoping conversation, not an instant audit or a promise of AI recommendations.</p>
+      </div>
+      <div className="cm-calendar-area">
+        <div className="cm-calendar-caption"><span className="q-eyebrow">Choose your time</span><span className="cm-note">Hosted by Calendly</span></div>
+        <a className="q-quiet-link" href="https://calendly.com/anshnb07/30min" target="_blank" rel="noopener noreferrer" style={{marginBottom:16}}>Open directly in Calendly ↗</a>
+        <iframe className="cm-calendar" src={bookingUrl} title="Book a 30-minute discovery call with Ansh at Qlavo" loading="lazy" width="100%" height="780" />
+        <p className="cm-note">Calendar not loading? <a className="q-text-link" href="https://calendly.com/anshnb07/30min" target="_blank" rel="noopener noreferrer">Open the booking page directly <span aria-hidden="true">↗</span></a></p>
+        <p className="cm-note">Calendly handles availability and booking details. Your appointment is confirmed through Calendly, not by this page.</p>
       </div>
     </section>
-  );
-};
-
-export default Contact;
+    <section className="q-container q-section q-rule cm-split">
+      <div><p className="q-eyebrow">Prefer to write?</p><h2 className="q-section-heading">Start in your inbox.</h2><a className="cm-email q-text-link" href="mailto:info@qlavo.in">info@qlavo.in</a></div>
+      <div className="cm-prose"><p>Send your website, target market and the question you want to answer. If you found us through ChatGPT, Gemini, LinkedIn or somewhere else, we’d like to know.</p><p>New Delhi, India — working with B2B businesses worldwide.</p><p>Scoping this for a client? <Link className="q-text-link" to="/partners">Explore our white-label partner service.</Link></p></div>
+    </section>
+  </div>;
+}

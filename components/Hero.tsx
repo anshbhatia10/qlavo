@@ -1,198 +1,31 @@
-import React, { useEffect, useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { Logo } from './Logo';
 
-/* ─── Particle Neural Network Canvas ─── */
-const ParticleCanvas: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mouseRef = useRef({ x: -999, y: -999 });
-  const particlesRef = useRef<Array<{
-    x: number; y: number; vx: number; vy: number;
-    radius: number; opacity: number;
-  }>>([]);
-  const animRef = useRef<number>(0);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resize = () => {
-      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    };
-    resize();
-    window.addEventListener('resize', resize);
-
-    // Initialize particles
-    const count = Math.min(80, Math.floor(window.innerWidth / 15));
-    particlesRef.current = Array.from({ length: count }, () => ({
-      x: Math.random() * canvas.offsetWidth,
-      y: Math.random() * canvas.offsetHeight,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      radius: Math.random() * 2 + 0.5,
-      opacity: Math.random() * 0.5 + 0.2,
-    }));
-
-    const onMouse = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouseRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
-    };
-    canvas.addEventListener('mousemove', onMouse);
-    canvas.addEventListener('mouseleave', () => { mouseRef.current = { x: -999, y: -999 }; });
-
-    const CONNECTION_DIST = 150;
-    const MOUSE_DIST = 200;
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
-      const particles = particlesRef.current;
-      const mouse = mouseRef.current;
-
-      // Update + draw particles
-      particles.forEach((p) => {
-        // Mouse repulsion
-        const dx = p.x - mouse.x;
-        const dy = p.y - mouse.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < MOUSE_DIST && dist > 0) {
-          const force = (MOUSE_DIST - dist) / MOUSE_DIST * 0.02;
-          p.vx += (dx / dist) * force;
-          p.vy += (dy / dist) * force;
-        }
-
-        p.x += p.vx;
-        p.y += p.vy;
-
-        // Bounce off edges
-        if (p.x < 0 || p.x > canvas.offsetWidth) p.vx *= -1;
-        if (p.y < 0 || p.y > canvas.offsetHeight) p.vy *= -1;
-
-        // Dampen velocity
-        p.vx *= 0.99;
-        p.vy *= 0.99;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(52, 211, 153, ${p.opacity})`;
-        ctx.fill();
-      });
-
-      // Draw connections
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < CONNECTION_DIST) {
-            const opacity = (1 - dist / CONNECTION_DIST) * 0.15;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(52, 211, 153, ${opacity})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-      }
-
-      animRef.current = requestAnimationFrame(animate);
-    };
-
-    animRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      cancelAnimationFrame(animRef.current);
-      window.removeEventListener('resize', resize);
-      canvas.removeEventListener('mousemove', onMouse);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} id="particle-canvas" />;
-};
-
-/* ─── Hero Component ─── */
-const Hero: React.FC = () => {
-  return (
-    <section className="relative min-h-dvh flex flex-col items-center justify-center overflow-hidden">
-      {/* Particle Canvas Background */}
-      <ParticleCanvas />
-
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#030303] z-[1]" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[700px] z-[1]">
-        <div className="glow-orb w-[400px] h-[400px] bg-emerald-500/10 top-[10%] left-[20%]" />
-        <div className="glow-orb w-[300px] h-[300px] bg-emerald-400/8 top-[30%] right-[15%]" style={{ animationDelay: '2s' }} />
-      </div>
-
-      <div className="max-w-5xl mx-auto px-6 text-center z-10 flex flex-col items-center justify-center h-full pt-28 pb-16">
-        {/* Floating badge */}
-        <div
-          className="floating-badge inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8 animate-fade-in-up"
-          style={{ animationDelay: '0.05s', opacity: 0 }}
-        >
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-xs sm:text-sm font-medium text-emerald-400 tracking-widest uppercase">
-            Worldwide B2B GEO agency
-          </span>
+const Hero: React.FC = () => (
+  <section className="q-hero" aria-labelledby="hero-heading">
+    <div className="q-container q-hero-inner">
+      <div className="q-hero-topline"><span className="q-eyebrow">Independent GEO agency</span><span className="q-hero-location">New Delhi · Working worldwide</span></div>
+      <div className="q-hero-composition">
+        <div className="q-hero-copy">
+          <h1 id="hero-heading">Be the brand<br /><span>in the answer.</span></h1>
+          <p className="q-hero-description">When buyers ask AI who to trust, your brand should be part of the conversation.</p>
+          <p className="q-hero-detail">Qlavo helps businesses improve how they’re found and represented in AI search through generative engine optimization.</p>
+          <div className="q-actions"><Link to="/contact" className="q-button">Let’s talk about your brand <ArrowUpRight size={17} /></Link><a href="#approach" className="q-quiet-link">Explore our approach <ArrowDown size={15} /></a></div>
         </div>
-
-        {/* Headline */}
-        <h1
-          className="font-grotesk text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tighter text-white mb-6 leading-[1.05] animate-fade-in-up"
-          style={{ animationDelay: '0.1s', opacity: 0 }}
-        >
-          Your buyers search
-          <br />
-          with AI every day.{' '}
-          <span className="text-gradient-emerald">Are you in{' '}
-          <br className="hidden sm:block" />
-          their answers?</span>
-        </h1>
-
-        {/* Subheadline */}
-        <p
-          className="text-base sm:text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
-          style={{ animationDelay: '0.2s', opacity: 0 }}
-        >
-          When customers ask ChatGPT, Gemini, or Perplexity to recommend a business like yours —
-          Qlavo helps your brand become easier to find, understand and cite.
-        </p>
-
-        {/* CTA Buttons */}
-        <div
-          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8 animate-fade-in-up"
-          style={{ animationDelay: '0.35s', opacity: 0 }}
-        >
-          <Link
-            to="/contact"
-            className="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold"
-          >
-            Discuss Your GEO Strategy <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium text-zinc-400 border border-white/10 rounded-2xl hover:border-emerald-500/30 hover:text-white hover:bg-emerald-500/5 transition-all duration-300"
-          >
-            Book a Call
-          </Link>
-        </div>
-
-        <p className="text-xs text-zinc-400 tracking-wide">GEO strategy · Content · Entity clarity · Technical optimization</p>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-fade-in" style={{ animationDelay: '1s', opacity: 0 }}>
-        <div className="w-6 h-10 rounded-full border-2 border-white/10 flex justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-emerald-400 animate-bounce" />
+        <div className="q-hero-art" aria-hidden="true">
+          <div className="q-signal">
+            <div className="q-signal-orbit q-orbit-outer" /><div className="q-signal-orbit q-orbit-middle" /><div className="q-signal-orbit q-orbit-inner" />
+            <div className="q-signal-cross q-cross-x" /><div className="q-signal-cross q-cross-y" />
+            <div className="q-signal-core"><Logo className="q-signal-logo" /></div>
+            <span className="q-signal-point q-point-one" /><span className="q-signal-point q-point-two" /><span className="q-signal-point q-point-three" />
+            <span className="q-art-label q-label-one">A clear identity</span><span className="q-art-label q-label-two">Evidence that holds up</span><span className="q-art-coordinate">QL / GENERATIVE SEARCH</span>
+          </div>
         </div>
       </div>
-    </section>
-  );
-};
-
+      <div className="q-hero-bottom"><span>Built for the way discovery is changing.</span><span className="q-eyebrow">Clarity. Credibility. Discoverability.</span></div>
+    </div>
+  </section>
+);
 export default Hero;

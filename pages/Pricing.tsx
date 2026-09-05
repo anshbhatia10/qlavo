@@ -1,220 +1,40 @@
 import React from 'react';
-import SEOMeta from '../components/SEOMeta';
 import { Link } from 'react-router-dom';
-import { Check, ArrowRight, HelpCircle } from 'lucide-react';
+import SEOMeta from '../components/SEOMeta';
+import './Commercial.css';
 
-const tiers = [
-  {
-    name: 'Baseline audit',
-    price: 'Scoped quote',
-    period: '',
-    description: 'Understand how your brand appears in a defined sample of AI answers before choosing what to change.',
-    features: [
-      'Agree target markets, buyer prompts, and AI platforms',
-      'Record sampled answers, brand mentions, and available source links',
-      'Review website accessibility, entity consistency, and content gaps',
-      'Receive a baseline report with prioritized next steps and limitations',
-    ],
-    cta: 'Discuss an audit',
-    href: '/contact',
-    highlighted: false,
-  },
-  {
-    name: 'Implementation',
-    price: 'Scoped quote',
-    period: '',
-    description: 'Turn audit findings into an agreed set of website, content, and entity improvements.',
-    features: [
-      'Prioritize fixes against your baseline and business goals',
-      'Improve agreed pages for clarity, evidence, and buyer questions',
-      'Implement appropriate structured data and consistent business details',
-      'Check technical accessibility and document the changes delivered',
-      'Agree responsibilities, access requirements, and review checkpoints',
-    ],
-    cta: 'Discuss implementation',
-    href: '/contact',
-    highlighted: true,
-  },
-  {
-    name: 'Ongoing support',
-    price: 'Scoped quote',
-    period: '',
-    description: 'Review changes over time and decide which improvements to make next.',
-    features: [
-      'Repeat the agreed prompt sample on a defined reporting cadence',
-      'Compare brand mentions and citations with the recorded baseline',
-      'Review competitor references and relevant content opportunities',
-      'Maintain an agreed backlog of content and technical improvements',
-      'Document platform variability and limits of attribution',
-    ],
-    cta: 'Discuss ongoing support',
-    href: '/contact',
-    highlighted: false,
-  },
+const engagements = [
+  { name: 'Baseline audit', question: 'Where do we stand?', description: 'A defined starting point before you decide what to change.', outputs: ['Agreed buyer prompts, markets and AI platforms', 'Recorded answers, brand mentions and available source links', 'Review of content, entity consistency and technical accessibility', 'Prioritized findings with evidence and limitations'], cta: 'Scope an audit' },
+  { name: 'Implementation', question: 'What should we change?', description: 'A focused project to turn agreed findings into practical improvements.', outputs: ['An agreed page and technical worklist', 'Content improvements grounded in verifiable business facts', 'Appropriate structured data and consistent entity information', 'Documented changes, review checkpoints and handoff'], cta: 'Scope implementation' },
+  { name: 'Ongoing support', question: 'What happens next?', description: 'Repeated checks and an agreed backlog, with a cadence that fits the work.', outputs: ['Repeat checks against the agreed prompt sample', 'Comparison with the recorded baseline', 'A prioritized content and technical backlog', 'Reporting with platform variability and attribution limits'], cta: 'Scope ongoing support' },
+];
+const questions = [
+  { q: 'How is the quote determined?', a: 'Brands, markets, platforms, prompts and pages define the size of the work. Implementation complexity, access requirements and reporting cadence shape the rest. We agree these inputs before quoting.' },
+  { q: 'Do I have to commit to ongoing work?', a: 'An audit, implementation project and ongoing support can be scoped separately. Deliverables, timing, fees, billing and any ongoing terms are agreed in writing before work starts.' },
+  { q: 'What results can I expect?', a: 'You receive the deliverables in your agreed scope and evidence of the work completed. AI answers vary by prompt, platform, time and user context. We do not guarantee rankings, AI recommendations, citation counts, revenue or a date when visibility will improve.' },
 ];
 
-const faqs = [
-  {
-    q: "What's the commitment?",
-    a: 'Deliverables, timing, fees, billing, and any ongoing terms are agreed in a written scope before work starts. An audit, implementation project, and ongoing support can be scoped separately.',
-  },
-  {
-    q: 'How is pricing determined?',
-    a: 'We quote against the number of brands, markets, platforms, prompts, and pages involved, along with implementation complexity and reporting needs. There is no single public price for every business. Agency partner work is a separate white-label service.',
-  },
-  {
-    q: 'What results can I expect?',
-    a: 'You receive the deliverables in your agreed scope and evidence of the work completed. AI answers vary by prompt, platform, time, and user context. We do not guarantee rankings, AI recommendations, citation counts, revenue, or a date when visibility will improve.',
-  },
-];
-
-const Pricing: React.FC = () => {
-  return (
-    <div className="bg-black min-h-screen">
-      <SEOMeta
-        title="GEO Pricing — Scoped Engagements | Qlavo"
-        description="Scope-based quotes for baseline audits, GEO implementation, and ongoing support from Qlavo, a worldwide B2B GEO agency headquartered in New Delhi."
-        path="/pricing"
-      />
-      {/* Hero */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-xs font-medium text-emerald-500 uppercase tracking-[0.2em] mb-4">
-              Pricing
-            </p>
-            <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight mb-6">
-              Clear scope. <span className="text-gradient-emerald">Agreed pricing.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-zinc-400 font-light leading-relaxed">
-              GEO engagements built around your business, from an initial baseline to implementation and ongoing support. We agree the work and quote before starting.
-            </p>
-          </div>
-
-          {/* Pricing Tiers */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {tiers.map((tier) => (
-              <div
-                key={tier.name}
-                className={`bento-card p-8 flex flex-col relative ${
-                  tier.highlighted
-                    ? 'border-emerald-500/30 bg-emerald-500/[0.02]'
-                    : ''
-                }`}
-              >
-                {tier.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="text-[10px] uppercase tracking-[0.15em] font-semibold bg-emerald-500 text-black px-4 py-1.5 rounded-full">
-                      Put findings to work
-                    </span>
-                  </div>
-                )}
-
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-1">{tier.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-                      {tier.price}
-                    </span>
-                    <span className="text-zinc-500 text-sm">{tier.period}</span>
-                  </div>
-                  <p className="text-zinc-400 text-sm font-light leading-relaxed">
-                    {tier.description}
-                  </p>
-                </div>
-
-                <ul className="space-y-3 mb-8 flex-1">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <Check className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
-                      <span className="text-sm text-zinc-300 font-light leading-relaxed">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  to={tier.href}
-                  className={`inline-flex items-center justify-center gap-2 w-full py-4 rounded-full text-sm font-semibold transition-all ${
-                    tier.highlighted
-                      ? 'bg-emerald-500 text-black hover:bg-emerald-400 hover:scale-[1.02]'
-                      : 'border border-white/15 text-white hover:bg-white/5 hover:border-white/30'
-                  }`}
-                >
-                  {tier.cta} <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Fine Print */}
-          <p className="text-center text-xs text-zinc-600 mt-6 font-mono">
-            Fees and terms depend on the agreed scope. For agency delivery, see our{' '}
-            <Link to="/partners" className="text-emerald-400 hover:text-emerald-300">white-label partner service</Link>.
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 md:py-28 border-t border-white/5 bg-zinc-900/20">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-xs font-medium text-emerald-500 uppercase tracking-[0.2em] mb-4">
-              FAQ
-            </p>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight">
-              Questions? We've got <span className="text-gradient-emerald">answers.</span>
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <details
-                key={faq.q}
-                className="glass-panel rounded-2xl border border-white/5 overflow-hidden group"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer text-white font-medium text-base hover:bg-white/[0.01] transition-colors list-none">
-                  <span className="flex items-center gap-3">
-                    <HelpCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                    {faq.q}
-                  </span>
-                  <span className="text-zinc-600 group-open:rotate-180 transition-transform shrink-0">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                      <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </span>
-                </summary>
-                <div className="px-6 pb-5 pt-0">
-                  <p className="text-zinc-400 text-sm font-light leading-relaxed">
-                    {faq.a}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="py-20 md:py-28 text-center border-t border-white/5 px-6">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6 tracking-tight">
-            Not sure where to start?
-          </h2>
-          <p className="text-zinc-400 text-lg font-light mb-8 max-w-xl mx-auto">
-            Tell us about your business and target buyers. We can discuss whether an audit, implementation project, or ongoing support fits your needs.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.05]"
-          >
-            Discuss your scope <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default Pricing;
+export default function Pricing() {
+  return <div className="cm-page">
+    <SEOMeta title="GEO Pricing — Scoped Engagements | Qlavo" description="Scope-based quotes for baseline audits, GEO implementation, and ongoing support from Qlavo, a worldwide B2B GEO agency headquartered in New Delhi." path="/pricing" />
+    <section className="q-container cm-hero">
+      <p className="q-eyebrow">Pricing / Scope comes first</p>
+      <h1 className="q-title">Price the work.<br /><span className="cm-muted">Not the promise.</span></h1>
+      <div className="cm-hero-bottom"><p className="q-lede">A useful GEO engagement starts with a clear question and a defined body of work. We agree the deliverables, responsibilities and quote before starting.</p><Link className="q-button" to="/contact">Discuss your scope <span aria-hidden="true">↗</span></Link></div>
+    </section>
+    <section className="q-container q-section q-rule" aria-labelledby="engagements-heading">
+      <div className="cm-section-intro"><p className="q-eyebrow">Ways to work together</p><h2 className="q-section-heading" id="engagements-heading">Start where you are.</h2><p className="cm-muted">These are separately scoped engagements, not a mandatory package or a ladder of subscriptions.</p></div>
+      <div className="cm-engagements">{engagements.map((item, index) => <article className="cm-engagement" key={item.name}>
+        <div className="cm-engagement-name"><span className="q-kicker">0{index + 1}</span><h3>{item.name}</h3><p className="cm-note">Scope-based quote</p></div>
+        <div className="cm-engagement-body"><p className="cm-engagement-question">{item.question}</p><p className="cm-muted">{item.description}</p><ul className="cm-output-list">{item.outputs.map(output => <li key={output}>{output}</li>)}</ul></div>
+        <Link className="q-text-link cm-engagement-link" to="/contact">{item.cta} <span aria-hidden="true">↗</span></Link>
+      </article>)}</div>
+    </section>
+    <section className="q-container q-section q-rule cm-split">
+      <div><p className="q-eyebrow">The scope conversation</p><h2 className="q-section-heading">Less guesswork.<br />A better brief.</h2><p className="cm-muted">Send your website, the buyers you want to reach and the question you are trying to answer. We can work through the rest together.</p></div>
+      <dl className="cm-scope-inputs"><div><dt>Coverage</dt><dd>Brands, markets, languages, platforms and buyer prompts.</dd></div><div><dt>Delivery</dt><dd>Pages to review, changes to implement, access and approval responsibilities.</dd></div><div><dt>Review</dt><dd>Reporting cadence, evidence format and the decisions the work should inform.</dd></div></dl>
+    </section>
+    <section className="q-container q-section q-rule cm-split"><div><p className="q-eyebrow">Before we begin</p><h2 className="q-section-heading">The practical details.</h2></div><div className="cm-faq">{questions.map(item => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section>
+    <section className="q-container q-section q-rule cm-endnote"><p className="q-eyebrow">A separate service for agencies</p><h2 className="q-section-heading">Your client.<br />Our delivery support.</h2><p>Need white-label GEO work under your agency’s brand? Partner engagements have their own scope, deliverables and private quote.</p><div className="cm-actions"><Link className="q-button" to="/partners">Explore agency partnerships <span aria-hidden="true">↗</span></Link><Link className="q-text-link" to="/contact">Discuss a direct engagement</Link></div></section>
+  </div>;
+}

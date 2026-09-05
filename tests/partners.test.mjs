@@ -8,7 +8,12 @@ import { HelmetProvider } from 'react-helmet-async';
 import { createServer } from 'vite';
 import { load } from 'cheerio';
 
-const vite = await createServer({ server: { middlewareMode: true, hmr: false }, appType: 'custom', logLevel: 'error' });
+const vite = await createServer({
+  server: { middlewareMode: true, hmr: false },
+  optimizeDeps: { noDiscovery: true, include: [] },
+  appType: 'custom',
+  logLevel: 'error',
+});
 after(() => vite.close());
 
 async function page(name, path) {
@@ -22,11 +27,11 @@ async function page(name, path) {
 
 function assertPresentation({ $, html, context }, path) {
   assert.equal($('h1').length, 1);
-  assert.ok($('[class~="bg-[#030303]"]').length, 'Uses the original dark background');
-  assert.ok($('.bento-card').length, 'Uses original bento cards');
-  assert.ok($('.font-grotesk').length, 'Uses original display typography');
-  assert.match(html, /text-emerald-400/);
-  assert.ok($('a.btn-primary[href="https://calendly.com/anshnb07/30min"]').length, 'Working partner call CTA');
+  assert.ok($('.pt-page .q-container').length, 'Uses shared editorial layout contract');
+  assert.ok($('h1.q-title').length, 'Uses shared display hierarchy');
+  assert.equal($('.bento-card').length, 0, 'No generic feature tile layout');
+  assert.doesNotMatch(html, /emerald|gradient|backdrop-blur/);
+  assert.ok($('a.q-button[href="https://calendly.com/anshnb07/30min"], a.q-button[href="/contact"]').length, 'Working partner conversation CTA');
   assert.doesNotMatch(html, /pilot-site|pilot-container|\$\s*\d|£\s*\d/);
   const metadata = context.helmet?.link.toString() || html;
   assert.ok(metadata.includes(`https://qlavo.in${path}`), 'Canonical points to the page');
