@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
@@ -33,7 +33,7 @@ import RedditBestGeoAgencies from './pages/RedditBestGeoAgencies';
 import RedditIsGeoWorthIt from './pages/RedditIsGeoWorthIt';
 import RedditAIVisibilityAudit from './pages/RedditAIVisibilityAudit';
 import Footer from './components/Footer';
-
+import CursorGlow from './components/CursorGlow';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -44,10 +44,24 @@ const ScrollToTop = () => {
 };
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="site-layout">
-      <Navbar />
-      <main id="main-content" tabIndex={-1}>{children}</main>
+    <div className="min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-black">
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <CursorGlow />
+      <Navbar scrolled={scrolled} />
+      <main id="main-content" tabIndex={-1} className="flex-grow">
+        {children}
+      </main>
       <Footer />
     </div>
   );

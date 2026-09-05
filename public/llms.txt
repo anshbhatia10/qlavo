@@ -1,19 +1,20 @@
-# Qlavo — White-label AI-search delivery for agencies
+# Qlavo — GEO Agency
 
-Qlavo is led by Ansh Bhatia in New Delhi, India. We prepare fixed-scope AI-search work behind an agency's brand. The agency keeps the client relationship, approves the work and handles publication. Public contact: info@qlavo.in.
+Qlavo is a generative engine optimization (GEO) agency founded in 2025 by Ansh Bhatia. Headquartered in New Delhi, India, Qlavo works with businesses worldwide on AI-search visibility. Public contact: info@qlavo.in.
 
-## Current offer
+## Services
+GEO research and strategy, buyer-question visibility checks, entity consistency, content improvements, technical optimization and reporting. Scope, deliverables, timing and pricing are agreed before work starts. AI recommendations, rankings and leads are not guaranteed.
 
-White-label AI-search pilot: $750 USD one time for one client brand, site, market and language. Delivery is 10 business days after required inputs arrive; client delays pause delivery. Payment is $375 at kickoff and $375 on acceptance against the deliverable checklist. One revision is included.
-
-Deliverables: five agreed buyer questions across two engines with two fresh runs each (20 observations per snapshot); a prioritized issue/source memo; one publish-ready buyer/use-case page improvement; implementation checklist; repeat checks and editable reporting at handoff. Optional ongoing work is separately agreed. No guaranteed recommendations, rankings, leads or outcome deadlines. No automatic retainer.
+## Agency partnerships
+White-label GEO is a service offered by Qlavo, not a separate business or an exclusive company identity. Agency partners retain their client relationships and present agreed deliverables under their own brands. No direct client contact without agency consent. Partner pricing is scoped privately; a paid pilot can be discussed for a defined project.
 
 ## Primary pages
-- [Agency pilot](https://qlavo.in/partners)
-- [Scope, price and acceptance](https://qlavo.in/pricing)
-- [Self-initiated work example and blank measurement template](https://qlavo.in/sample-deliverable)
-- [About Ansh](https://qlavo.in/about)
+- [GEO agency](https://qlavo.in/)
+- [Services and engagement options](https://qlavo.in/pricing)
+- [White-label GEO for agencies](https://qlavo.in/partners)
+- [Illustrative deliverable format](https://qlavo.in/sample-deliverable)
+- [About Qlavo](https://qlavo.in/about)
 - [Contact](https://qlavo.in/contact)
-- [How we measure visibility](https://qlavo.in/ai-visibility)
+- [AI visibility approach](https://qlavo.in/ai-visibility)
 
-The work example is Qlavo's own website revision, not a client case study or proof of AI visibility improvement. Older educational articles do not define the current commercial scope or price.
+The sample deliverable is illustrative, not a client case study or measured client outcome. Historical educational articles are not current commercial quotes.
