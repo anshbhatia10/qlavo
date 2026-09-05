@@ -8,6 +8,7 @@ const {render}=await vite.ssrLoadModule('/entry-server.tsx');
 const page=()=>load(render('/',{}));
 test('hero leads with a complete, crawlable brand-in-answer proposition',()=>{
  const $=page();assert.equal($('h1').length,1);
+ assert.doesNotMatch($('.q-hero').text(), /Independent GEO agency/i);
  assert.match($('h1').text(),/Be the brand\s*in the answer\./);
  assert.match($('main').text(),/generative engine optimization/i);
  assert.ok($('.q-hero a[href="/contact"]').length);

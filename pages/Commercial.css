@@ -9,7 +9,11 @@
 .cm-muted { color: var(--q-muted, #a5a8ad); }
 .cm-hero-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; margin-top: 40px; }
 .cm-hero-bottom > .q-button { flex-shrink: 0; }
-.cm-booking { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr); gap: 72px; scroll-margin-top: 90px; }
+.cm-booking { padding-top: 104px; padding-bottom: 48px; scroll-margin-top: 90px; max-width: 1100px; }
+.cm-booking-intro h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 44px); font-weight: 500; line-height: 1.1; letter-spacing: -.04em; }
+.cm-booking-intro p { color: var(--q-muted, #a5a8ad); margin-top: 8px; font-size: 15px; }
+.cm-calendar-direct { font-size: 13px; margin: 12px 0; }
+.cm-booking-brief { max-width: 760px; }
 .cm-booking-brief > h2 { margin: 20px 0 24px; }
 .cm-booking-brief > p:not(.q-eyebrow) { color: var(--q-muted, #a5a8ad); }
 .cm-brief-list { list-style: none; padding: 0; margin: 36px 0; }
@@ -95,6 +99,7 @@
   .cm-hero { padding-top: 128px; padding-bottom: 56px; }
   .cm-hero-bottom { margin-top: 28px; }
   .cm-split { grid-template-columns: 1fr; gap: 32px; }
+  .cm-booking { padding-top: 88px; }
   .cm-calendar { height: 1040px; }
   .cm-calendar-caption { align-items: flex-start; flex-direction: column; gap: 4px; }
   .cm-prose { font-size: 16px; }

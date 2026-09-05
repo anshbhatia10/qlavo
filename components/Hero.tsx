@@ -6,7 +6,7 @@ import { Logo } from './Logo';
 const Hero: React.FC = () => (
   <section className="q-hero" aria-labelledby="hero-heading">
     <div className="q-container q-hero-inner">
-      <div className="q-hero-topline"><span className="q-eyebrow">Independent GEO agency</span><span className="q-hero-location">New Delhi · Working worldwide</span></div>
+      <div className="q-hero-topline"><span className="q-hero-location">New Delhi · Working worldwide</span></div>
       <div className="q-hero-composition">
         <div className="q-hero-copy">
           <h1 id="hero-heading">Be the brand<br /><span>in the answer.</span></h1>

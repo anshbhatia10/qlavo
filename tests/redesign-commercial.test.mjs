@@ -35,7 +35,11 @@ test('contact provides a real dark Calendly embed with accessible direct fallbac
   assert.equal(url.searchParams.get('embed_type'), 'Inline');
   assert.ok($('.cm-calendar-area > a[href="https://calendly.com/anshnb07/30min"]').length, 'direct fallback before frame');
   assert.match(frame.attr('title'), /book|schedule/i);
-  assert.equal(frame.attr('loading'), 'lazy');
+  assert.equal(frame.attr('loading'), 'eager');
+  assert.equal(url.searchParams.get('hide_event_type_details'), '1');
+  assert.equal($('main a[href="#booking"]').length, 0, 'no extra find-a-time step');
+  assert.equal($('.cm-page > section').first().find('iframe').length, 1, 'calendar is in the first section');
+  assert.ok($('main').html().indexOf('<iframe') < $('main').html().indexOf('cm-booking-brief'), 'calendar precedes the briefing on mobile and without CSS');
   assert.ok($('main a[href="https://calendly.com/anshnb07/30min"]').length);
   assert.ok($('main a[href="mailto:info@qlavo.in"]').length);
   assert.equal($('main form, main input').length, 0);
