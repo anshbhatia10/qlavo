@@ -33,6 +33,7 @@ export const marketingRoutes = [
   ['/blog/state-of-ai-search-april-2026', 'StateOfAISearchApril2026'],
   ['/geo-agency-delhi-india', 'GEOAgencyIndia'],
   ['/hire-geo-agency', 'HireGEOAgency'],
+  ['/best-geo-agencies-india', 'BestGEOAgenciesIndia'],
   ['/what-is-generative-engine-optimization', 'GEOGuide'],
   ['/geo-pricing-cost-guide-2026', 'GEOPricingGuide'],
   ['/geo-vs-seo-vs-aeo-differences', 'GEOvsSEO'],
@@ -41,7 +42,6 @@ export const marketingRoutes = [
   ['/reddit/geo-vs-seo', 'RedditGeoVsSeo'],
   ['/reddit/get-cited-chatgpt', 'RedditGetCitedChatGPT'],
   ['/reddit/geo-pricing', 'RedditGeoPricing'],
-  ['/reddit/best-geo-agencies', 'RedditBestGeoAgencies'],
   ['/reddit/is-geo-worth-it', 'RedditIsGeoWorthIt'],
   ['/reddit/ai-visibility-audit', 'RedditAIVisibilityAudit'],
 ] as const;
@@ -65,5 +65,5 @@ export async function preloadRoute(pathname: string): Promise<void> {
 
 export const editorialRoute = (pathname: string): boolean => ![
   '/', '/about', '/contact', '/pricing', '/partners', '/sample-deliverable',
-  '/ai-visibility', '/geo-calculator', '/geo-agency-delhi-india', '/hire-geo-agency',
+  '/ai-visibility', '/geo-calculator', '/geo-agency-delhi-india', '/hire-geo-agency', '/best-geo-agencies-india',
 ].includes(pathname.replace(/\/+$/, '') || '/');

@@ -201,14 +201,6 @@
       "destination": "/reddit/geo-pricing/index.html"
     },
     {
-      "source": "/reddit/best-geo-agencies",
-      "destination": "/reddit/best-geo-agencies/index.html"
-    },
-    {
-      "source": "/reddit/best-geo-agencies/",
-      "destination": "/reddit/best-geo-agencies/index.html"
-    },
-    {
       "source": "/reddit/is-geo-worth-it",
       "destination": "/reddit/is-geo-worth-it/index.html"
     },
@@ -233,8 +225,24 @@
       "destination": "/hire-geo-agency/index.html"
     },
     {
-      "source": "/((?!api/).*)",
-      "destination": "/index.html"
+      "source": "/best-geo-agencies-india",
+      "destination": "/best-geo-agencies-india/index.html"
+    },
+    {
+      "source": "/best-geo-agencies-india/",
+      "destination": "/best-geo-agencies-india/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/reddit/best-geo-agencies",
+      "destination": "/best-geo-agencies-india",
+      "permanent": true
+    },
+    {
+      "source": "/reddit/best-geo-agencies/",
+      "destination": "/best-geo-agencies-india",
+      "permanent": true
     }
   ]
 }

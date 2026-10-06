@@ -13,7 +13,7 @@ test('HTML shell and entity describe GEO agency with no price or global FAQ conf
   assert.match(fs.readFileSync('public/llms.txt','utf8'),/^# Qlavo — GEO Agency/);
 });
 test('retained articles do not advertise superseded Qlavo prices', () => {
-  for (const file of ['pages/RedditBestGeoAgencies.tsx','pages/RedditGeoPricing.tsx'])
+  for (const file of ['pages/RedditGeoPricing.tsx'])
     assert.doesNotMatch(fs.readFileSync(file,'utf8'), /\$750|\$375|Published retainers:|£2,000/,file);
 });
 test('dedicated partner routes retain prerender, sitemap and slash rewrites', () => {

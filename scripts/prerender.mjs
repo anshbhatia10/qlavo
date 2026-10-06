@@ -32,6 +32,7 @@ export const PRERENDER_ROUTES = [
   '/blog/state-of-ai-search-april-2026',
   '/geo-agency-delhi-india',
   '/hire-geo-agency',
+  '/best-geo-agencies-india',
   '/what-is-generative-engine-optimization',
   '/geo-pricing-cost-guide-2026',
   '/geo-vs-seo-vs-aeo-differences',
@@ -40,7 +41,6 @@ export const PRERENDER_ROUTES = [
   '/reddit/geo-vs-seo',
   '/reddit/get-cited-chatgpt',
   '/reddit/geo-pricing',
-  '/reddit/best-geo-agencies',
   '/reddit/is-geo-worth-it',
   '/reddit/ai-visibility-audit',
 ];
