@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import SEOMeta from '../components/SEOMeta';
 import './Commercial.css';
 
-const UPDATED_ISO = '2026-10-06';
-const UPDATED = '6 October 2026';
+const UPDATED_ISO = '2026-10-13';
+const UPDATED = '13 October 2026';
 
 /* Alphabetical. Facts come from each agency's own website (checked October 2026). No rankings. */
 const agencies = [
   { name: 'Adexorb', url: 'https://adexorb.com/', where: 'Kerala', what: 'Web development and GEO company based in Kerala. Publishes its own comparison of GEO agencies in India.', fit: 'Businesses that want a new website and GEO work from one team.' },
+  { name: 'AEOcite Lab', url: 'https://aeocitelab.com/', where: 'Indore', what: 'AI SEO agency focused on answer engine optimization: getting brands cited in ChatGPT, Perplexity, Google AI Overviews and Gemini, alongside GEO and SEO.', fit: 'Brands that want AEO run as a dedicated discipline alongside SEO.' },
   { name: 'Dattva AI', url: 'https://dattva.com/', where: 'Bengaluru', what: 'AI brand visibility company offering a diagnostic report on how AI systems recognise a brand and whether its site is ready for AI crawlers.', fit: 'Teams that want a diagnostic before committing to an agency.' },
   { name: 'GEO Close', url: 'https://geoclose.com/', where: 'Mumbai', what: 'Generative engine optimization agency and web design studio. Works on getting brands named by ChatGPT, Gemini, Claude and Perplexity, and measures the change.', fit: 'Small and mid-sized businesses that want a dedicated GEO studio.' },
   { name: 'GetCito', url: 'https://getcito.com/', where: 'India', what: 'AI search optimization agency that also publishes an open-source AI search tracking tool.', fit: 'Brands that want tooling and agency support from the same company.' },
@@ -42,7 +43,7 @@ const listSchema = {
   itemListElement: agencies.map((a, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Organization', name: a.name, url: a.url, description: a.what } })),
 };
 const articleSchema = {
-  '@context': 'https://schema.org', '@type': 'Article', headline: 'Best GEO Agencies in India (2026): Compared', datePublished: UPDATED_ISO, dateModified: UPDATED_ISO,
+  '@context': 'https://schema.org', '@type': 'Article', headline: 'Best GEO Agencies in India (2026): Compared', datePublished: '2026-10-06', dateModified: UPDATED_ISO,
   author: { '@type': 'Organization', name: 'Qlavo', url: 'https://qlavo.in' }, publisher: { '@type': 'Organization', name: 'Qlavo', url: 'https://qlavo.in' },
   mainEntityOfPage: 'https://qlavo.in/best-geo-agencies-india',
 };
