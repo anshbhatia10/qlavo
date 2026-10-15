@@ -35,5 +35,6 @@ test('navigation and footer offer a compact crawlable hierarchy',()=>{
  assert.ok($('button[aria-controls="mobile-navigation"][aria-expanded="false"]').length);
  assert.equal($('#mobile-navigation[hidden]').length,1);
  assert.ok($('footer a[href="/partners"]').length);
+ assert.equal($('footer a[href="https://geoagencies.com/agency/qlavo"] img[alt="Listed on GEO Agencies"]').length,1);
  assert.equal($('footer img[src*="producthunt"]').length,0);
 });
