@@ -82,7 +82,7 @@ const GEOPricingGuide: React.FC = () => {
               "headline": "How Much Does GEO Cost in 2026? — GEO Agency Pricing Guide",
               "description": "A transparent breakdown of what Generative Engine Optimization actually costs, what you get at each level, and what determines the price.",
               "datePublished": "2026-05-26",
-              "dateModified": "2026-05-26",
+              "dateModified": "2026-10-22",
               "author": {
                 "@type": "Organization",
                 "name": "Qlavo",
@@ -136,18 +136,13 @@ const GEOPricingGuide: React.FC = () => {
               The short answer
             </h2>
             <p className="text-zinc-300 font-light leading-relaxed mb-4">
-              GEO agency pricing in 2026 ranges from roughly <strong className="text-white">$2,000 to $7,000 per month</strong>, 
-              depending on scope. Most companies pay between 
-              {' '}<strong className="text-white">$2,500 and $5,000 per month</strong> for a comprehensive program.
+              Qlavo publishes fixed plans instead of an open-ended retainer: <strong className="text-white">three months for $900 or ₹90,000</strong>, or <strong className="text-white">six months for $1,500 or ₹1,50,000</strong>. The fee is agreed in writing before work starts.
             </p>
             <p className="text-zinc-300 font-light leading-relaxed mb-4">
-              The floor is lower if you do it yourself. The ceiling is higher if you need
-              full content production, multi-region entity management, and real-time monitoring
-              across every major AI platform.
+              Larger agencies quote monthly retainers that scale with content production, multi-region entity work and real-time monitoring. A fixed plan keeps the fee predictable while the scope stays explicit.
             </p>
             <p className="text-zinc-400 font-light leading-relaxed text-sm">
-              These figures come from publicly available rates across the agencies we track
-              in our weekly prompt audits. Exact pricing depends on your specific needs.
+              <Link className="text-emerald-400 hover:text-emerald-300" to="/pricing">See the plans and what each one includes →</Link>
             </p>
           </div>
 

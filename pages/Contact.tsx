@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOMeta from '../components/SEOMeta';
+import { BOOK_CALL_URL, BookCallButton, ENQUIRE_EMAIL, EnquireButton } from '../components/ContactCta';
 import './Commercial.css';
 
 const bookingUrl = 'https://calendly.com/anshnb07/30min?embed_domain=qlavo.in&embed_type=Inline&hide_event_type_details=1&background_color=ffffff&text_color=111111&primary_color=333333';
 
 export default function Contact() {
   return <div className="cm-page">
-    <SEOMeta title="Book a Discovery Call — Hire Qlavo (Worldwide B2B GEO)" description="Book a 30-minute discovery call with Qlavo, a worldwide B2B GEO agency (HQ New Delhi). Discuss your buyers, website and a practical scope for AI visibility work." path="/contact" />
+    <SEOMeta title="Contact Qlavo — Enquire by Email or Book a Call" description="Enquire about GEO work with Qlavo by email, or book a 30-minute call. A worldwide B2B GEO agency headquartered in New Delhi." path="/contact" />
     <section className="q-container cm-booking" id="booking" aria-labelledby="booking-heading">
       <div className="cm-booking-intro">
-        <h1 id="booking-heading">Let’s find a time.</h1>
-        <p>30 minutes with Ansh. Pick a day that works for you.</p>
+        <h1 id="booking-heading">Write. Or book a time.</h1>
+        <p>Send an enquiry and Ansh replies himself. Prefer to talk? Pick a 30-minute slot.</p>
+        <div className="cm-actions cm-contact-actions"><EnquireButton size={17} /><BookCallButton size={17} /></div>
       </div>
       <div className="cm-calendar-area">
-        <a className="q-quiet-link cm-calendar-direct" href="https://calendly.com/anshnb07/30min" target="_blank" rel="noopener noreferrer">Open directly in Calendly ↗</a>
+        <a className="q-quiet-link cm-calendar-direct" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">Open directly in Calendly ↗</a>
         <iframe className="cm-calendar" src={bookingUrl} title="Book a 30-minute discovery call with Ansh at Qlavo" loading="eager" width="100%" height="780" />
-        <p className="cm-note">Calendar not loading? <a className="q-text-link" href="https://calendly.com/anshnb07/30min" target="_blank" rel="noopener noreferrer">Open the booking page directly <span aria-hidden="true">↗</span></a></p>
+        <p className="cm-note">Calendar not loading? <a className="q-text-link" href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer">Open the booking page directly <span aria-hidden="true">↗</span></a></p>
         <p className="cm-note">Calendly handles availability and booking details. Your appointment is confirmed through Calendly, not by this page.</p>
       </div>
     </section>
@@ -34,7 +36,7 @@ export default function Contact() {
       </div>
     </section>
     <section className="q-container q-section q-rule cm-split">
-      <div><p className="q-eyebrow">Prefer to write?</p><h2 className="q-section-heading">Start in your inbox.</h2><a className="cm-email q-text-link" href="mailto:info@qlavo.in">info@qlavo.in</a></div>
+      <div><p className="q-eyebrow">Prefer to write?</p><h2 className="q-section-heading">Start in your inbox.</h2><a className="cm-email q-text-link" href={`mailto:${ENQUIRE_EMAIL}`}>{ENQUIRE_EMAIL}</a></div>
       <div className="cm-prose"><p>Send your website, target market and the question you want to answer. If you found us through ChatGPT, Gemini, LinkedIn or somewhere else, we’d like to know.</p><p>New Delhi, India — working with B2B businesses worldwide.</p><p>Scoping this for a client? <Link className="q-text-link" to="/partners">Explore our white-label partner service.</Link></p></div>
     </section>
   </div>;

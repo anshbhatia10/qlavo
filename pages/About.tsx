@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOMeta from '../components/SEOMeta';
+import { EnquireButton } from '../components/ContactCta';
 import './Commercial.css';
 
 const founder = {
@@ -39,6 +40,6 @@ export default function About() {
         <li><span className="q-kicker">03 / Review</span><h3>Keep the context attached.</h3><p>Compare repeated checks and document what changed. A mention is an observation, not proof that a particular edit caused it.</p></li>
       </ol>
     </section>
-    <section className="q-container q-section q-rule cm-endnote"><p className="q-eyebrow">Work with Qlavo</p><h2 className="q-section-heading">Let’s start with<br />your real questions.</h2><div className="cm-actions"><Link className="q-button" to="/contact">Meet Ansh <span aria-hidden="true">↗</span></Link><Link className="q-text-link" to="/ai-visibility">Explore the work</Link></div></section>
+    <section className="q-container q-section q-rule cm-endnote"><p className="q-eyebrow">Work with Qlavo</p><h2 className="q-section-heading">Let’s start with<br />your real questions.</h2><div className="cm-actions"><EnquireButton label="Meet Ansh" size={17} /><Link className="q-text-link" to="/ai-visibility">Explore the work</Link></div></section>
   </div>;
 }

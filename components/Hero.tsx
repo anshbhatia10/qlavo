@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { Logo } from './Logo';
+import { BookCallButton, EnquireButton } from './ContactCta';
 
 const Hero: React.FC = () => (
   <section className="q-hero" aria-labelledby="hero-heading">
@@ -12,7 +11,7 @@ const Hero: React.FC = () => (
           <h1 id="hero-heading">Be the brand<br /><span>in the answer.</span></h1>
           <p className="q-hero-description">When buyers ask AI who to trust, your brand should be part of the conversation.</p>
           <p className="q-hero-detail">Qlavo helps businesses improve how they’re found and represented in AI search through generative engine optimization.</p>
-          <div className="q-actions"><Link to="/contact" className="q-button">Let’s talk about your brand <ArrowUpRight size={17} /></Link><a href="#approach" className="q-quiet-link">Explore our approach <ArrowDown size={15} /></a></div>
+          <div className="q-actions"><EnquireButton size={17} /><BookCallButton size={17} /></div>
         </div>
         <div className="q-hero-art" aria-hidden="true">
           <div className="q-signal">

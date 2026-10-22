@@ -11,8 +11,8 @@ test('hero leads with a complete, crawlable brand-in-answer proposition',()=>{
  assert.doesNotMatch($('.q-hero').text(), /Independent GEO agency/i);
  assert.match($('h1').text(),/Be the brand\s*in the answer\./);
  assert.match($('main').text(),/generative engine optimization/i);
- assert.ok($('.q-hero a[href="/contact"]').length);
- assert.ok($('.q-hero a[href="#approach"]').length);
+ assert.ok($('.q-hero a[href^="mailto:ansh@qlavo.co.in"]').length);
+ assert.ok($('.q-hero a[href="https://calendly.com/anshnb07/30min"]').length);
  assert.equal($('.q-hero canvas, .q-hero video, .q-hero iframe').length,0);
  assert.equal($('.q-hero [aria-hidden="true"] .q-signal').length,1);
 });

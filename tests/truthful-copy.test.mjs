@@ -32,7 +32,7 @@ test('India agency page avoids invented market statistics, outcomes, and pricing
   assert.match(text, /quote/i);
   assert.match($('h1').text(), /GEO Agency.*Delhi, India/);
   assert.ok($('main a[href="/partners"]').length);
-  assert.ok($('main a[href="/contact"]').length);
+  assert.ok($('main a[href^="mailto:ansh@qlavo.co.in"]').length);
 });
 
 test('About preserves founder identity without proprietary statistics or default-citation claims', () => {
@@ -55,7 +55,7 @@ for (const route of ['/pricing', '/hire-geo-agency']) {
     assert.match(text, /quote/i);
     assert.match(text, /(?:cannot|do not|no).{0,25}guarantee/i);
     assert.ok($('main a[href="/partners"]').length, 'dedicated partner service');
-    assert.ok($('main a[href="/contact"]').length, 'real discovery contact');
+    assert.ok($('main a[href^="mailto:ansh@qlavo.co.in"]').length, 'real discovery contact');
     assert.ok($('main h2, main h3').length >= 3, 'scoped engagements remain structured');
     assert.match(metadata, /GEO/);
   });
@@ -66,8 +66,8 @@ test('contact section offers real email and booking instead of simulated audit s
   const contact = $('#contact');
   assert.equal(contact.length, 1);
   assert.equal(contact.find('form, input, button[type="submit"]').length, 0);
-  assert.ok(contact.find('a[href="mailto:info@qlavo.in"]').length);
-  assert.ok(contact.find('a[href="/contact"]').length);
+  assert.ok(contact.find('a[href^="mailto:ansh@qlavo.co.in"]').length);
+  assert.ok(contact.find('a[href="https://calendly.com/anshnb07/30min"]').length);
   assert.doesNotMatch(contact.text(), /free audit|within 24 hours|Audit submitted|24-hour response|No retainers or lock-in/i);
 });
 
@@ -78,7 +78,7 @@ test('contact page keeps an accessible real scheduler and direct fallback links 
   assert.match(frame.attr('title'), /book|schedule/i);
   assert.match(frame.attr('src'), /^https:\/\/(calendar\.google\.com\/calendar\/appointments\/schedules\/|calendly\.com\/)/);
   assert.ok($('main a[href="https://calendly.com/anshnb07/30min"]').length, 'direct Calendly fallback');
-  assert.ok($('main a[href="mailto:info@qlavo.in"]').length);
+  assert.ok($('main a[href^="mailto:ansh@qlavo.co.in"]').length);
   assert.equal($('main form').length, 0);
   assert.doesNotMatch(text, /24-hour response|within one business day|No retainers or lock-in|pay for results/i);
 });

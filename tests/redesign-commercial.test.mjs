@@ -41,7 +41,7 @@ test('contact provides a real dark Calendly embed with accessible direct fallbac
   assert.equal($('.cm-page > section').first().find('iframe').length, 1, 'calendar is in the first section');
   assert.ok($('main').html().indexOf('<iframe') < $('main').html().indexOf('cm-booking-brief'), 'calendar precedes the briefing on mobile and without CSS');
   assert.ok($('main a[href="https://calendly.com/anshnb07/30min"]').length);
-  assert.ok($('main a[href="mailto:info@qlavo.in"]').length);
+  assert.ok($('main a[href="mailto:ansh@qlavo.co.in"]').length);
   assert.equal($('main form, main input').length, 0);
   assert.equal($('h1').length, 1);
   assert.match(text, /website/i);
@@ -100,7 +100,7 @@ test('Hire GEO Agency gives a useful selection checklist and separates evidence 
   assert.match(text, /New Delhi/);
   assert.ok($('a[href="/pricing"]').length);
   assert.ok($('a[href="/partners"]').length);
-  assert.ok($('a[href="/contact"]').length);
+  assert.ok($('a[href^="mailto:ansh@qlavo.co.in"]').length);
   assert.equal($('h1').length, 1);
   assert.equal(metadata('link[rel="canonical"]').attr('href'), 'https://qlavo.in/hire-geo-agency');
   assert.equal($('.bento-card, .glass-panel, [class*="emerald"]').length, 0);
@@ -112,9 +112,9 @@ test('India route presents a real headquarters and explicit market scoping, not 
   assert.match($('h1').text(), /GEO Agency.*Delhi, India/);
   assert.match(text, /target markets, not additional offices/i);
   assert.match(text, /language/i);
-  assert.match(text, /scope-based quote/i);
+  assert.match(text, /fixed plans/i);
   assert.match(text, /do not guarantee/i);
-  assert.ok($('a[href="/contact"]').length);
+  assert.ok($('a[href^="mailto:ansh@qlavo.co.in"]').length);
   assert.ok($('a[href="/partners"]').length);
   assert.equal(metadata('link[rel="canonical"]').attr('href'), 'https://qlavo.in/geo-agency-delhi-india');
   assert.equal($('.bento-card, .glass-panel, [class*="gradient"], [class*="emerald"]').length, 0);
@@ -138,7 +138,8 @@ for (const route of ['/ai-visibility', '/geo-calculator']) {
     assert.match(text, /do not guarantee/i);
     assert.equal($('form, input, output, progress, [role="meter"]').length, 0);
     assert.equal($('.bento-card, .glass-panel, [class*="gradient"], [class*="emerald"]').length, 0);
-    for (const href of ['/contact', '/pricing', '/partners']) assert.ok($(`a[href="${href}"]`).length);
+    assert.ok($('a[href^="mailto:ansh@qlavo.co.in"]').length);
+    for (const href of ['/pricing', '/partners']) assert.ok($(`a[href="${href}"]`).length);
     assert.equal(metadata('link[rel="canonical"]').attr('href'), 'https://qlavo.in/ai-visibility');
   });
 }
