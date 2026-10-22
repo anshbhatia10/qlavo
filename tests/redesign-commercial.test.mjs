@@ -72,13 +72,15 @@ test('About presents a founder editorial with preserved biography, photo and Per
   assert.equal($('.bento-card, .glass-panel, [class*="emerald"]').length, 0);
 });
 
-test('Pricing scopes three engagement types as an editorial ledger without invented amounts', async () => {
+test('Pricing publishes two fixed plans and keeps the work scoped without invented proof', async () => {
   const { $, text, metadata } = await page('/pricing');
+  assert.equal($('.cm-plan').length, 2);
   assert.equal($('.cm-engagement').length, 3);
+  for (const price of ['$900', '₹90,000', '$1,500', '₹1,50,000']) assert.ok(text.includes(price), price);
   for (const name of ['Baseline audit', 'Implementation', 'Ongoing support']) assert.ok(text.includes(name));
-  assert.match(text, /scope-based quote/i);
+  assert.match(text, /fixed fee/i);
   assert.match(text, /do not guarantee/i);
-  assert.doesNotMatch(text, /[$£₹]|Most popular|margin|guaranteed results/i);
+  assert.doesNotMatch(text, /Most popular|margin|guaranteed results/i);
   assert.ok($('a[href="/contact"]').length);
   assert.ok($('a[href="/partners"]').length);
   assert.ok($('details > summary').length >= 3);
