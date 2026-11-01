@@ -26,7 +26,7 @@ test('homepage offers a readable methodology instead of simulated AI results',()
  assert.doesNotMatch(text,/Simulated AI Response|training data|Brands Audited/);
 });
 test('FAQ can be read and expanded without JavaScript',()=>{
- const $=page();assert.equal($('#faq details').length,6);assert.equal($('#faq summary').length,6);
+ const $=page();assert.equal($('#faq details').length,7);assert.equal($('#faq summary').length,7);
  assert.match($('#faq').text(),/cannot guarantee/i);assert.ok($('#faq a[href="/partners"]').length);
 });
 test('navigation and footer offer a compact crawlable hierarchy',()=>{

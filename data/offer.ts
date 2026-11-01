@@ -16,7 +16,7 @@ export const OFFER = {
 
 export const PRICE_LINE = `${OFFER.usd} ${OFFER.cadence}, or ${OFFER.inr}`;
 
-export const GUARANTEE_NAME = '30-day 2-prompt guarantee';
+export const GUARANTEE_NAME = '30&2 Guarantee';
 
 /** Short form for cards and page bands. The asterisk links to /terms. */
 export const GUARANTEE_SHORT =

@@ -31,7 +31,7 @@ export default function SampleDeliverable() {
             <p className="q-eyebrow">Read this first</p>
             <p><strong>Illustrative only.</strong> This is not a client case study. No measurements have been collected for this example.</p>
             <p className="pt-note">It does not demonstrate changes in rankings, AI recommendations, citations or revenue.</p>
-            <p className="pt-note">Our published plan is measured against the same kind of record: agreed questions, recorded answers, kept evidence. <Link className="q-text-link" to="/terms">How the guarantee works</Link>.</p>
+            <p className="pt-note">Our published plan is measured against the same kind of record: agreed questions, recorded answers, kept evidence. <Link className="q-text-link" to="/terms">How the 30&2 Guarantee works</Link>.</p>
           </aside>
         </div>
         <nav aria-label="Sample contents" className="pt-sample-nav">

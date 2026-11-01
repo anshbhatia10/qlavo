@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOMeta from '../components/SEOMeta';
 import { BookCallButton, EnquireButton, enquireHref } from '../components/ContactCta';
+import Guarantee30x2 from '../components/Guarantee30x2';
 import { OFFER, GUARANTEE_NAME, PRICE_LINE } from '../data/offer';
 import './Commercial.css';
 
@@ -22,7 +23,7 @@ const engagements = [
 const questions = [
   { q: 'What does it cost?', a: `${OFFER.usd} a month, or ${OFFER.inr}, billed monthly in advance. No setup fee and no success fee.` },
   { q: 'Is there a minimum term?', a: 'No. It is month to month. Cancel any time before your next billing date and no further invoice is raised.' },
-  { q: `What is the ${GUARANTEE_NAME}?`, a: `We agree ${OFFER.questions} buyer questions before you pay. If ChatGPT is not recommending you on at least two of them within ${OFFER.windowDays} days, we refund the first month and keep working at no charge until it does. The full wording is on the terms page.` },
+  { q: 'What is the 30&2 Guarantee?', a: `Our name for the offer: 30 days, 2 prompts. We agree ${OFFER.questions} buyer questions before you pay, and if ChatGPT is not recommending you on at least two of them within ${OFFER.windowDays} days, we refund the first month and keep working at no charge until it does. The full wording is on the terms page.` },
   { q: 'What counts as winning a question?', a: `ChatGPT names you as a recommended or suitable option in at least ${OFFER.winBar} of ${OFFER.runsPerQuestion} fresh chats, with no negative wording about you in those answers. A passing mention does not count.` },
   { q: 'When does the 30 days start?', a: 'On the later of payment and your week-one inputs — CMS or publishing access, or a named person who publishes approved pages. The clock pauses while approved pages wait on you.' },
   { q: 'Do you work on other AI engines?', a: 'Not at the moment. We work on ChatGPT only. One engine, measured properly, is worth more than five checked carelessly.' },
@@ -37,17 +38,12 @@ export default function Pricing() {
       description={`One GEO plan from Qlavo: ${PRICE_LINE}. Cancel any time. Ten agreed buyer questions, and if ChatGPT is not naming you on two of them within ${OFFER.windowDays} days, the first month is refunded.`}
       path="/pricing"
     />
-    <section className="q-container cm-hero cm-hero-guarantee">
+    <section className="q-container cm-hero">
       <p className="q-eyebrow">Pricing / One plan</p>
       <h1 className="q-title">Price the work.<br /><span className="cm-muted">Not the promise.</span></h1>
       <div className="cm-hero-bottom">
-        <p className="q-lede">One monthly plan, in dollars or rupees, cancel any time. The only outcome we put in writing is a guarantee you can measure yourself.</p>
+        <p className="q-lede">One monthly plan, in dollars or rupees. No setup fee, no separate retainer, cancel any time.</p>
         <div className="cm-actions"><EnquireButton size={17} /><BookCallButton size={17} /></div>
-      </div>
-      <div className="cm-guarantee-hero">
-        <p className="q-eyebrow">The {GUARANTEE_NAME}</p>
-        <p className="cm-guarantee-statement">Two of your ten buyer questions recommended by ChatGPT within {OFFER.windowDays}{'\u00A0'}days — or we <strong>refund the first month</strong> and keep working free until they are.<Link to="/terms" className="cm-asterisk" aria-label="Full terms">*</Link></p>
-        <p className="cm-fine">*Free work continues for up to {OFFER.freeWorkDays} further days. <Link to="/terms">Exact terms and measurement</Link>.</p>
       </div>
     </section>
     <section className="q-container q-section q-rule" aria-labelledby="plan-heading">
@@ -57,24 +53,15 @@ export default function Pricing() {
         <p className="cm-muted">Everything we do, in one monthly engagement. No tiers to compare and no separate retainer.</p>
       </div>
       <div className="cm-plans cm-plans-single">
-        <article className="cm-plan">
-          <div className="cm-plan-main">
-            <div className="cm-plan-top"><span className="q-kicker">01</span><h3>Monthly</h3></div>
-            <p className="cm-plan-price">{OFFER.usd}<span className="cm-plan-alt">or {OFFER.inr} {OFFER.cadence}</span></p>
-            <p className="cm-plan-summary cm-muted">We agree the questions, record the baseline, write and place the pages ChatGPT reads, and report against the same test each month.</p>
-          </div>
-          <div className="cm-plan-side">
-            <ul className="cm-plan-list">{included.map(item => <li key={item}>{item}</li>)}</ul>
-            <EnquireButton className="q-button cm-plan-button" label="Start with the questions" topic={`the ${OFFER.usd} monthly plan`} />
-          </div>
-          <div className="cm-guarantee">
-            <p className="q-eyebrow">How the guarantee works</p>
-            <p className="cm-guarantee-statement">A question is won when ChatGPT recommends you in at least five of ten fresh chats. Two won within {OFFER.windowDays}{'\u00A0'}days and the guarantee is met — otherwise we <strong>refund the first month</strong> and keep working free until it is.<Link to="/terms" className="cm-asterisk" aria-label="Full terms">*</Link></p>
-            <p className="cm-fine">*Free work continues for up to {OFFER.freeWorkDays} further days. <Link to="/terms">Full terms and measurement</Link>.</p>
-          </div>
+        <article className="cm-plan cm-plan-offer">
+          <div className="cm-plan-top"><span className="q-kicker">01</span><h3>Monthly</h3></div>
+          <p className="cm-plan-price">{OFFER.usd}<span className="cm-plan-alt">or {OFFER.inr} {OFFER.cadence}</span></p>
+          <Guarantee30x2 className="cm-plan-guarantee" />
+          <ul className="cm-plan-list">{included.map(item => <li key={item}>{item}</li>)}</ul>
+          <EnquireButton className="q-button cm-plan-button" label="Start with the questions" topic={`the ${OFFER.usd} monthly plan`} />
         </article>
       </div>
-      <p className="cm-note cm-plan-note">Before we invoice, we run all ten questions twice. If fewer than four look winnable, we tell you and decline the work. Prices are shown in USD or INR; scope and timing are agreed in writing before work starts. We do not guarantee rankings or citations — the 2-prompt guarantee is the only outcome commitment, and it is written down.</p>
+      <p className="cm-note cm-plan-note">Before we invoice, we run all ten questions twice. If fewer than four look winnable, we tell you and decline the work. Prices are shown in USD or INR; scope and timing are agreed in writing before work starts. We do not guarantee rankings or citations — the 30&2 Guarantee is the only outcome commitment, and it is written down.</p>
     </section>
     <section className="q-container q-section q-rule" aria-labelledby="engagements-heading">
       <div className="cm-section-intro"><p className="q-eyebrow">What the fee covers</p><h2 className="q-section-heading" id="engagements-heading">Start where you are.</h2><p className="cm-muted">Each month is built from the same three parts. They are stages of one engagement, not a ladder of subscriptions.</p></div>
