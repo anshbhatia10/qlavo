@@ -5,7 +5,7 @@ import { BookCallButton, EnquireButton } from '../components/ContactCta';
 import './Commercial.css';
 
 const criteria = [
-  { title: 'A defined question set.', ask: 'Which buyers, markets and prompts will you test?', answer: 'A relevant sample, with agreed platforms and repeatable wording. Not a single screenshot presented as your entire AI visibility.' },
+  { title: 'A defined question set.', ask: 'Which buyers, markets and prompts will you test?', answer: 'A relevant sample, with agreed questions and repeatable wording. Not a single screenshot presented as your entire AI visibility.' },
   { title: 'Evidence you can inspect.', ask: 'Can I see what the conclusions are based on?', answer: 'Recorded answers, dates, source links where available, and the checks where your brand is absent. Observations should be separate from interpretation.' },
   { title: 'A practical worklist.', ask: 'What changes will you actually deliver?', answer: 'Named pages, entity information, appropriate structured data and technical improvements. Clear access requirements, owners and review points.' },
   { title: 'Honest measurement.', ask: 'How will you report change without overstating it?', answer: 'Repeat the agreed sample. Explain platform variability and attribution limits. Deliverable milestones are not deadlines for AI recommendations.' },

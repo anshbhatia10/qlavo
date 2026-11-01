@@ -122,3 +122,31 @@
   .cm-calendar-caption { align-items: flex-start; flex-direction: column; gap: 4px; }
   .cm-prose { font-size: 16px; }
 }
+
+/* Single published plan + terms */
+.cm-plans-single { grid-template-columns: 1fr; }
+.cm-plans-single .cm-plan { padding: 44px 40px 40px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); column-gap: 64px; row-gap: 0; align-items: start; }
+.cm-plan-main { display: flex; flex-direction: column; align-items: flex-start; }
+.cm-plan-side { display: flex; flex-direction: column; align-items: flex-start; }
+.cm-plan-side .cm-plan-list { margin: 0; }
+.cm-plans-single .cm-plan-button { margin-top: 28px; }
+.cm-guarantee { grid-column: 1 / -1; margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--q-line, #2a2d31); }
+.cm-guarantee .q-eyebrow { margin-bottom: 14px; }
+.cm-guarantee > p:not(.q-eyebrow) { font-size: 15px; line-height: 1.8; color: #c7ccd2; margin: 0; max-width: 580px; }
+.cm-asterisk { color: #a8afb7; text-decoration: none; margin-left: 1px; font-size: .62em; position: relative; top: -.5em; line-height: 0; }
+.cm-fine { font-size: 11px !important; line-height: 1.7 !important; color: #8d959f !important; margin-top: 12px !important; }
+.cm-fine a { color: #8d959f; text-decoration: underline; text-underline-offset: 3px; }
+.cm-terms { border-top: 1px solid var(--q-line, #2a2d31); }
+.cm-term { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 28px; padding: 34px 0; border-bottom: 1px solid var(--q-line, #2a2d31); }
+.cm-term h3 { font-size: 22px; font-weight: 400; letter-spacing: -.03em; margin: 0 0 14px; }
+.cm-term p { color: var(--q-muted, #a5a8ad); font-size: 15px; line-height: 1.85; margin: 0 0 12px; max-width: 660px; }
+.cm-term .q-kicker { color: #b9bfc6; }
+.cm-term p:last-child { margin-bottom: 0; }
+@media (max-width: 640px) {
+  .cm-plans-single .cm-plan { padding: 30px 22px 28px; grid-template-columns: 1fr; row-gap: 22px; }
+  .cm-plan-side .cm-plan-list { margin-top: 0; }
+  .cm-guarantee { margin-top: 10px; padding-top: 24px; }
+  .cm-term { grid-template-columns: 1fr; gap: 10px; padding: 28px 0; }
+  .cm-term h3 { font-size: 20px; }
+  .cm-term p { font-size: 14px; }
+}

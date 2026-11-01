@@ -72,13 +72,18 @@ test('About presents a founder editorial with preserved biography, photo and Per
   assert.equal($('.bento-card, .glass-panel, [class*="emerald"]').length, 0);
 });
 
-test('Pricing publishes two fixed plans and keeps the work scoped without invented proof', async () => {
+test('Pricing publishes one monthly plan with a written test and no invented proof', async () => {
   const { $, text, metadata } = await page('/pricing');
-  assert.equal($('.cm-plan').length, 2);
+  assert.equal($('.cm-plan').length, 1);
   assert.equal($('.cm-engagement').length, 3);
-  for (const price of ['$900', '₹90,000', '$1,500', '₹1,50,000']) assert.ok(text.includes(price), price);
+  for (const price of ['$300', '₹30,000']) assert.ok(text.includes(price), price);
+  for (const old of ['$900', '$1,500', '₹90,000', '₹1,50,000']) assert.ok(!text.includes(old), old);
   for (const name of ['Baseline audit', 'Implementation', 'Ongoing support']) assert.ok(text.includes(name));
-  assert.match(text, /fixed fee/i);
+  assert.match(text, /\$300 a month/i);
+  assert.match(text, /cancel any time/i);
+  assert.match(text, /30-day test/i);
+  assert.match(text, /refund/i);
+  assert.ok($('a[href="/terms"]').length, 'terms linked from pricing');
   assert.match(text, /do not guarantee/i);
   assert.doesNotMatch(text, /Most popular|margin|guaranteed results/i);
   assert.ok($('a[href="/contact"]').length);

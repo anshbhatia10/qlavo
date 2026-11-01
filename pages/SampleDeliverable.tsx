@@ -76,7 +76,7 @@ export default function SampleDeliverable() {
           <header className="pt-section-intro">
             <p className="q-eyebrow">02 / Evidence log</p>
             <h2 id="sample-measurement" className="q-section-heading">An empty log.<br />An explicit method.</h2>
-            <p>Field descriptions, not observed results. Agree the prompts, engines, run count and reporting cadence before checks begin.</p>
+            <p>Field descriptions, not observed results. Agree the questions, run count and reporting cadence before checks begin.</p>
             <p>Keep evidence separate from interpretation. Preserve hits and misses, and note changing conditions when comparing snapshots.</p>
             <a href="/sample-baseline.csv" download className="q-button-secondary pt-download">Download empty CSV <span aria-hidden="true">↓</span></a>
             <p className="pt-note pt-download-note">Column headers only. No sample observations.</p>

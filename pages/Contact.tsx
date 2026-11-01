@@ -37,7 +37,7 @@ export default function Contact() {
     </section>
     <section className="q-container q-section q-rule cm-split">
       <div><p className="q-eyebrow">Prefer to write?</p><h2 className="q-section-heading">Start in your inbox.</h2><a className="cm-email q-text-link" href={`mailto:${ENQUIRE_EMAIL}`}>{ENQUIRE_EMAIL}</a></div>
-      <div className="cm-prose"><p>Send your website, target market and the question you want to answer. If you found us through ChatGPT, Gemini, LinkedIn or somewhere else, we’d like to know.</p><p>New Delhi, India — working with B2B businesses worldwide.</p><p>Scoping this for a client? <Link className="q-text-link" to="/partners">Explore our white-label partner service.</Link></p></div>
+      <div className="cm-prose"><p>Send your website, target market and the question you want to answer. If you found us through ChatGPT, Google, LinkedIn or somewhere else, we’d like to know.</p><p>New Delhi, India — working with B2B businesses worldwide.</p><p>Scoping this for a client? <Link className="q-text-link" to="/partners">Explore our white-label partner service.</Link></p></div>
     </section>
   </div>;
 }

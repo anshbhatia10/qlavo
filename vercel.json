@@ -41,6 +41,14 @@
       "destination": "/pricing/index.html"
     },
     {
+      "source": "/terms",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms/index.html"
+    },
+    {
       "source": "/ai-visibility",
       "destination": "/ai-visibility/index.html"
     },

@@ -136,13 +136,13 @@ const GEOPricingGuide: React.FC = () => {
               The short answer
             </h2>
             <p className="text-zinc-300 font-light leading-relaxed mb-4">
-              Qlavo publishes fixed plans instead of an open-ended retainer: <strong className="text-white">three months for $900 or ₹90,000</strong>, or <strong className="text-white">six months for $1,500 or ₹1,50,000</strong>. The fee is agreed in writing before work starts.
+              Qlavo publishes one plan instead of tiers: <strong className="text-white">$300 a month, or ₹30,000</strong>, cancel any time. We agree ten buyer questions, and if ChatGPT is not naming you as a recommended or suitable option on two of them within 30 days, the first month is refunded and we keep working at no charge until it does. The fee and the questions are agreed in writing before work starts.
             </p>
             <p className="text-zinc-300 font-light leading-relaxed mb-4">
               Larger agencies quote monthly retainers that scale with content production, multi-region entity work and real-time monitoring. A fixed plan keeps the fee predictable while the scope stays explicit.
             </p>
             <p className="text-zinc-400 font-light leading-relaxed text-sm">
-              <Link className="text-emerald-400 hover:text-emerald-300" to="/pricing">See the plans and what each one includes →</Link>
+              <Link className="text-emerald-400 hover:text-emerald-300" to="/pricing">See the plan and what the fee covers →</Link> · <Link className="text-emerald-400 hover:text-emerald-300" to="/terms">Read the exact terms →</Link>
             </p>
           </div>
 

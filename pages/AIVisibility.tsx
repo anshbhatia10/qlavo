@@ -5,7 +5,7 @@ import { BookCallButton, EnquireButton } from '../components/ContactCta';
 import './Commercial.css';
 
 const steps = [
-  { title: 'Define the question.', text: 'Agree buyer prompts, markets, languages and platforms. Include discovery, comparison and brand-specific questions where they are relevant, rather than choosing only prompts likely to mention you.' },
+  { title: 'Define the question.', text: 'Agree buyer questions, markets and languages. Include discovery, comparison and brand-specific questions where they are relevant, rather than choosing only questions likely to mention you.' },
   { title: 'Record the baseline.', text: 'Keep the response, brand presence or absence, description accuracy and available source links. Document the conditions and limits so another reviewer can understand what was checked.' },
   { title: 'Prioritize the work.', text: 'Separate content gaps, inconsistent business facts and technical issues. Agree the page list, access, approvals and implementation responsibilities before changing anything.' },
   { title: 'Repeat with context.', text: 'Compare repeated checks against the agreed sample. Report observations alongside the change log and platform variability; a later citation does not prove that an edit caused it.' },
@@ -13,15 +13,15 @@ const steps = [
 
 export default function AIVisibility() {
   return <div className="cm-page">
-    <SEOMeta title="AI Search Visibility & GEO Services | Qlavo" description="Qlavo helps brands improve AI-search visibility with recorded buyer-question research, content, entity clarity and technical optimization. Scope agreed before work starts." path="/ai-visibility" />
+    <SEOMeta title="ChatGPT Visibility & GEO Services | Qlavo" description="Qlavo helps brands improve how they appear in ChatGPT, with recorded buyer-question research, content, entity clarity and technical optimization. Scope agreed before work starts." path="/ai-visibility" />
     <section className="q-container cm-hero">
       <p className="q-eyebrow">GEO / AI-search visibility</p>
       <h1 className="q-title">What does AI<br /><span className="cm-muted">say about you?</span></h1>
-      <div className="cm-hero-bottom"><p className="q-lede">AI visibility is about how your business appears in answers buyers may use to make decisions. Qlavo starts with recorded observations, not a score generated from your website’s HTML.</p><div className="cm-actions"><EnquireButton label="Discuss your visibility" size={17} /><BookCallButton size={17} /></div></div>
+      <div className="cm-hero-bottom"><p className="q-lede">ChatGPT visibility is about how your business appears when buyers ask it questions. Qlavo starts with recorded observations, not a score generated from your website’s HTML.</p><div className="cm-actions"><EnquireButton label="Discuss your visibility" size={17} /><BookCallButton size={17} /></div></div>
     </section>
     <section className="q-container q-section q-rule cm-split" aria-labelledby="measured-answers">
       <div><p className="q-eyebrow">01 / Observed in answers</p><h2 className="q-section-heading" id="measured-answers">Measured answers.<br />A defined sample.</h2><p className="cm-muted">A real check records what a platform returned under particular conditions. It does not tell us what every buyer sees.</p></div>
-      <div className="cm-prose"><p>For each check, retain the prompt, platform, date, response and available cited sources. Note whether your brand appears, how it is described and which alternatives are mentioned. Keep negative and inconclusive observations too.</p><p>Agree which experiences to sample, such as ChatGPT, Gemini or Perplexity, based on your buyers and what can be tested reliably. Record the model or mode, language and session context where available.</p><p>If reporting a mention rate, show the underlying checks and sample size. A limited sample is not a visibility score for an entire platform, market or audience. Wording, time and personalization can change the answer.</p></div>
+      <div className="cm-prose"><p>For each check, retain the prompt, platform, date, response and available cited sources. Note whether your brand appears, how it is described and which alternatives are mentioned. Keep negative and inconclusive observations too.</p><p>Agree which buyer questions to sample, based on your buyers and what can be tested reliably. Record the model or mode, language and session context where available.</p><p>If reporting a mention rate, show the underlying checks and sample size. A limited sample is not a visibility score for an entire platform, market or audience. Wording, time and personalization can change the answer.</p></div>
     </section>
     <section className="q-container q-section q-rule cm-split" aria-labelledby="technical-signals">
       <div><p className="q-eyebrow">02 / Reviewed on your website</p><h2 className="q-section-heading" id="technical-signals">Technical signals.<br />Not recommendations.</h2><p className="cm-muted">A website review identifies things you can improve. It cannot establish that an AI assistant recommends your business.</p></div>
