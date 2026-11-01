@@ -97,12 +97,12 @@ const clauses = [
 export default function Terms() {
   return <div className="cm-page">
     <SEOMeta
-      title={`Terms — the ${OFFER.windowDays}-day test | Qlavo`}
-      description={`The exact terms behind Qlavo's ${OFFER.usd} a month plan: ${OFFER.questions} agreed questions, how a question is won, the ${OFFER.windowDays}-day measurement, the refund and the free-work period.`}
+      title={`Terms — the ${OFFER.windowDays}-day 2-prompt guarantee | Qlavo`}
+      description={`The exact terms behind Qlavo's ${OFFER.usd} a month plan and its ${OFFER.windowDays}-day 2-prompt guarantee: ${OFFER.questions} agreed questions, how a question is won, the measurement, the refund and the free-work period.`}
       path="/terms"
     />
     <section className="q-container cm-hero">
-      <p className="q-eyebrow">Terms / The published offer</p>
+      <p className="q-eyebrow">Terms / The 30-day 2-prompt guarantee</p>
       <h1 className="q-title">The exact terms.<br /><span className="cm-muted">Not the summary.</span></h1>
       <div className="cm-hero-bottom">
         <p className="q-lede">This is what we promise, how it is measured, and what happens if it is not met. The agreement you sign uses the same text.</p>

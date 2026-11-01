@@ -16,6 +16,8 @@ export const OFFER = {
 
 export const PRICE_LINE = `${OFFER.usd} ${OFFER.cadence}, or ${OFFER.inr}`;
 
+export const GUARANTEE_NAME = '30-day 2-prompt guarantee';
+
 /** Short form for cards and page bands. The asterisk links to /terms. */
 export const GUARANTEE_SHORT =
   `We agree ten buyer questions before you pay. If, within 30 days, ChatGPT names you as a recommended or suitable option on fewer than two of them, we refund the first month and keep working at no charge until it does.`;

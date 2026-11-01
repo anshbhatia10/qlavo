@@ -81,7 +81,7 @@ test('Pricing publishes one monthly plan with a written test and no invented pro
   for (const name of ['Baseline audit', 'Implementation', 'Ongoing support']) assert.ok(text.includes(name));
   assert.match(text, /\$300 a month/i);
   assert.match(text, /cancel any time/i);
-  assert.match(text, /30-day test/i);
+  assert.match(text, /30-day 2-prompt guarantee/i);
   assert.match(text, /refund/i);
   assert.ok($('a[href="/terms"]').length, 'terms linked from pricing');
   assert.match(text, /do not guarantee/i);
