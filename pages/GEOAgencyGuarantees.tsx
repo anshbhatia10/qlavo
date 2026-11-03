@@ -75,6 +75,7 @@ const GEOAgencyGuarantees: React.FC = () => (
 
     <header className="q-container cm-hero">
       <p className="q-eyebrow">Guide / GEO guarantees</p>
+      <p className="ed-posted">Posted on <time dateTime={CHECKED_AT}>3 November 2026</time></p>
       <h1 className="q-title">{H1}</h1>
       <p>We found fourteen GEO agencies that publish a results guarantee, including Qlavo, Citant.ai, GEOHATS, KKV Labs and CiteVantage. Nine state a pass mark you can check; five promise improvement without saying how much. Of the measurable guarantees, Qlavo's gives a verdict at 30 days, Citant.ai's at 9 weeks, and the rest at 90 days or later.</p>
     </header>

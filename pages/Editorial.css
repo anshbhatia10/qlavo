@@ -122,3 +122,13 @@
   .ed-editor-note { gap: 4px; padding-bottom: 44px; }
   .ed-closing { grid-template-columns: 1fr; gap: 12px; }
 }
+
+/* Dateline directly under the eyebrow, above the H1 */
+.ed-posted {
+  margin: 0 0 22px;
+  color: var(--q-muted, #a5a8ad);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.ed-posted time { color: inherit; }

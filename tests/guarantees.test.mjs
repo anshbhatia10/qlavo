@@ -55,6 +55,15 @@ test('the answer capsule is the first paragraph after the H1 and carries no link
   assert.equal(capsule.find('a').length, 0);
 });
 
+test('the posted date sits above the H1 with a machine-readable date', () => {
+  const posted = $('p.ed-posted').first();
+  assert.equal(posted.length, 1);
+  assert.equal(posted.text().replace(/\s+/g, ' ').trim(), 'Posted on 3 November 2026');
+  assert.equal(posted.find('time').attr('datetime'), '2026-11-03');
+  assert.equal($('p.q-eyebrow').first().nextAll('p.ed-posted').length > 0, true);
+  assert.equal(posted.nextAll('h1').length, 1);
+});
+
 test('measurable guarantees table is nine rows, soonest verdict first', () => {
   assert.equal($('thead th').length > 0, true);
   const rows = measurable.find('tbody tr').toArray();
