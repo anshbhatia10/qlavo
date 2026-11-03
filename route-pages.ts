@@ -39,6 +39,7 @@ export const marketingRoutes = [
   ['/geo-pricing-cost-guide-2026', 'GEOPricingGuide'],
   ['/geo-vs-seo-vs-aeo-differences', 'GEOvsSEO'],
   ['/geo-statistics-2026', 'GEOStatistics'],
+  ['/geo-agency-guarantees', 'GEOAgencyGuarantees'],
   ['/reddit/best-geo-tools', 'RedditBestGEOTools'],
   ['/reddit/geo-vs-seo', 'RedditGeoVsSeo'],
   ['/reddit/get-cited-chatgpt', 'RedditGetCitedChatGPT'],

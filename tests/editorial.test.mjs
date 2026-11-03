@@ -27,6 +27,7 @@ test('journal is an accessible dated editorial index with all retained articles'
   assert.equal($('.ed-hub').length, 1);
   assert.match($('h1').text(), /Qlavo Journal/);
   const retained = [
+    ['/geo-agency-guarantees', '2026-11-03', 'November 3, 2026'],
     ['/blog/7-signals-ai-engines-brand-exists', '2026-05-26', 'May 26, 2026'],
     ['/blog/hubspot-geo-audit-2026', '2026-04-13', 'April 13, 2026'],
     ['/blog/top-geo-agencies-b2b-2026', '2026-04-28', 'April 28, 2026'],

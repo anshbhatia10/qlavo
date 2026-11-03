@@ -5,6 +5,15 @@ import './Editorial.css';
 
 const posts = [
   {
+    title: 'GEO agency guarantees in 2026: which agencies offer a results guarantee',
+    slug: '/geo-agency-guarantees',
+    excerpt: '14 GEO agencies that publish a results guarantee, compared on the pass mark, days to a verdict, the remedy and what you pay before you find out.',
+    date: 'November 3, 2026',
+    dateTime: '2026-11-03',
+    readTime: '9 min read',
+    category: 'Industry Research',
+  },
+  {
     title: '7 Signals That Tell AI Engines Your Brand Exists',
     slug: '/blog/7-signals-ai-engines-brand-exists',
     excerpt: 'A framework for reviewing how a business is described, connected, and represented across the web. Seven signals to consider when planning an AI visibility review.',

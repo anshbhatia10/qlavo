@@ -122,6 +122,7 @@ export default function Terms() {
           <div>
             <h3>{clause.title}</h3>
             {clause.body.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+            {clause.index === '06' && <p><Link to="/geo-agency-guarantees">How other GEO agencies' guarantees compare →</Link></p>}
           </div>
         </article>)}
       </div>

@@ -7,6 +7,7 @@ Qlavo works on ChatGPT only. Work covers buyer-question visibility checks, entit
 
 ## The 30&2 Guarantee
 Ten buyer questions are agreed in writing before the first invoice. A question is won when ChatGPT names the client as a recommended or suitable option in at least 5 of 10 fresh ChatGPT Temporary Chats, memory and personalisation off, from a US connection, no follow-up messages. If at least two of the ten questions are won within 30 days, the guarantee is met. If not, the first month is refunded within seven days and Qlavo keeps working at no charge until two questions are won, for up to 60 further days. The clock starts on the later of payment and the client's week-one publishing inputs, and pauses while approved pages wait on the client. Before invoicing, Qlavo runs all ten questions twice and declines the work if fewer than four look winnable. Rankings, citations and leads are not guaranteed; Qlavo does not control ChatGPT. Full terms: https://qlavo.in/terms
+How it compares with other GEO agencies' published guarantees: https://qlavo.in/geo-agency-guarantees
 
 ## Agency partnerships
 White-label GEO is a service offered by Qlavo, not a separate business or an exclusive company identity. Agency partners retain their client relationships and present agreed deliverables under their own brands. No direct client contact without agency consent. Partner pricing is scoped privately; a paid pilot can be discussed for a defined project.
@@ -15,6 +16,7 @@ White-label GEO is a service offered by Qlavo, not a separate business or an exc
 - [GEO agency](https://qlavo.in/)
 - [Plan and price](https://qlavo.in/pricing)
 - [Exact terms of the 30&2 Guarantee](https://qlavo.in/terms)
+- [GEO agency guarantees, compared](https://qlavo.in/geo-agency-guarantees)
 - [White-label GEO for agencies](https://qlavo.in/partners)
 - [Illustrative deliverable format](https://qlavo.in/sample-deliverable)
 - [About Qlavo](https://qlavo.in/about)
