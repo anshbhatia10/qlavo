@@ -247,6 +247,14 @@
     {
       "source": "/best-geo-agencies-india/",
       "destination": "/best-geo-agencies-india/index.html"
+    },
+    {
+      "source": "/review",
+      "destination": "/review/index.html"
+    },
+    {
+      "source": "/review/",
+      "destination": "/review/index.html"
     }
   ],
   "redirects": [

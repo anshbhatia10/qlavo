@@ -45,6 +45,7 @@ export const PRERENDER_ROUTES = [
   '/reddit/geo-pricing',
   '/reddit/is-geo-worth-it',
   '/reddit/ai-visibility-audit',
+  '/review',
 ];
 
 function outFileFor(url) {

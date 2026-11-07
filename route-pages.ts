@@ -46,6 +46,7 @@ export const marketingRoutes = [
   ['/reddit/geo-pricing', 'RedditGeoPricing'],
   ['/reddit/is-geo-worth-it', 'RedditIsGeoWorthIt'],
   ['/reddit/ai-visibility-audit', 'RedditAIVisibilityAudit'],
+  ['/review', 'Review'],
 ] as const;
 
 export function pageComponent(name: string): ComponentType {

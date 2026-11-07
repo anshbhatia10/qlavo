@@ -30,7 +30,7 @@ test('nonhome pages are dynamic client chunks while all routes still render sync
   const { render } = await vite.ssrLoadModule('/entry-server.tsx');
   const script = fs.readFileSync('scripts/prerender.mjs', 'utf8');
   const routes = [...script.matchAll(/^  '(\/[^']*)',/gm)].map(match => match[1]);
-  assert.equal(routes.length, 32);
+  assert.equal(routes.length, 33);
   const rewrites = JSON.parse(fs.readFileSync('vercel.json', 'utf8')).rewrites;
   const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
   for (const path of routes) {
@@ -49,7 +49,8 @@ test('nonhome pages are dynamic client chunks while all routes still render sync
     assert.equal(head('link[rel="canonical"]').length, 1, path);
     assert.match(head('link[rel="canonical"]').attr('href'), /^https:\/\/qlavo\.in\//);
     if (path !== '/') {
-      assert.ok(sitemap.includes(`https://qlavo.in${path}</loc>`), path);
+      // Private noindex pages (client review form) stay out of the sitemap.
+      if (path !== '/review') assert.ok(sitemap.includes(`https://qlavo.in${path}</loc>`), path);
       for (const suffix of ['', '/']) assert.ok(rewrites.some(r => r.source === path + suffix), path + suffix);
     }
   }
