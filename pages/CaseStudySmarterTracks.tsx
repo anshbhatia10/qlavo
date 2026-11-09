@@ -21,8 +21,6 @@ const QUESTIONS: [string, string][] = [
 
 const CHECKS = [
   { date: '28 Sep', label: 'Baseline', where: 'India', h1: '0/10', h2: '0/10', other: '0/80', total: '0/100' },
-  { date: '22 Oct', label: 'Week 3', where: 'India', h1: '9/10', h2: '9/10', other: '0/80', total: '18/100' },
-  { date: '30 Oct', label: 'Week 4', where: 'US', h1: '6/10', h2: '2/10', other: '0/80', total: '8/100' },
   { date: '7 Nov', label: 'Final', where: 'US', h1: '7/10', h2: '7/10', other: '0/80', total: '14/100' },
 ];
 
@@ -93,9 +91,7 @@ export default function CaseStudySmarterTracks() {
               </table>
             </div>
             <ul className="cs-points">
-              <li>By week three, Smarter Tracks was in the top three in 9 of 10 answers to both HVAC questions.</li>
               <li>In the final check, every time ChatGPT named Smarter Tracks it ranked it first or second, and first in 13 of 14.</li>
-              <li>The numbers moved between checks. Week four dipped after a page change, and recovered after the pages were revised and re-indexed.</li>
             </ul>
           </div>
         </div>
