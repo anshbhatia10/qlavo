@@ -1,0 +1,39 @@
+.cs-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; border-top: 1px solid var(--q-line, #2a2d31); padding-top: 28px; }
+.cs-facts p { margin: 10px 0 0; font-size: 16px; color: var(--q-ink, #f1f0eb); }
+.cs-grid { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 56px; }
+.cs-h2 { font-size: clamp(28px, 3.2vw, 40px) !important; margin: 0; }
+.cs-body { max-width: 760px; }
+.cs-body > p { font-size: 17px; margin: 0 0 18px; }
+.cs-questions { list-style: none; padding: 0; margin: 26px 0 0; border-top: 1px solid var(--q-line, #2a2d31); }
+.cs-questions li { display: flex; justify-content: space-between; gap: 20px; padding: 11px 0; border-bottom: 1px solid var(--q-line, #2a2d31); font-size: 15px; }
+.cs-questions em { font-style: normal; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #74787d; white-space: nowrap; padding-top: 3px; }
+.cs-work { list-style: none; padding: 0; margin: 0; display: grid; gap: 30px; }
+.cs-work li { display: grid; grid-template-columns: 48px 1fr; gap: 12px; }
+.cs-work h3 { margin: 0 0 6px; }
+.cs-work p { margin: 0; }
+.cs-table-wrap { overflow-x: auto; margin: 10px 0 26px; }
+.cs-table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 520px; }
+.cs-table th, .cs-table td { text-align: left; padding: 13px 14px 13px 0; border-bottom: 1px solid var(--q-line, #2a2d31); vertical-align: top; }
+.cs-table thead th { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #74787d; font-weight: 400; }
+.cs-table tbody th { font-weight: 600; }
+.cs-table tbody th span { display: block; font-weight: 400; font-size: 13px; color: var(--q-muted, #a5a8ad); }
+.cs-table td { font-family: 'Space Grotesk', sans-serif; font-size: 18px; }
+.cs-table tbody tr:last-child td, .cs-table tbody tr:last-child th { color: var(--q-ink, #f1f0eb); }
+.cs-points { padding-left: 20px; margin: 0; display: grid; gap: 10px; font-size: 16px; color: var(--q-muted, #a5a8ad); }
+.cs-quote { margin: 0 0 28px; }
+.cs-quote blockquote { margin: 0; }
+.cs-quote p { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 3.4vw, 44px); letter-spacing: -.04em; line-height: 1.1; margin: 0; }
+.cs-quote figcaption { margin-top: 18px; color: var(--q-muted, #a5a8ad); }
+.cs-quote strong { color: var(--q-ink, #f1f0eb); }
+.cs-scores { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin: 0 0 18px; }
+.cs-scores div { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--q-line, #2a2d31); font-size: 15px; }
+.cs-scores dt { color: var(--q-muted, #a5a8ad); }
+.cs-scores dd { margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.cs-cta .q-button { margin-right: 22px; }
+.cs-mail { white-space: nowrap; }
+
+@media (max-width: 900px) {
+  .cs-facts { grid-template-columns: 1fr; gap: 18px; margin-top: 36px; }
+  .cs-grid { grid-template-columns: 1fr; gap: 22px; }
+  .cs-scores { grid-template-columns: 1fr; }
+}

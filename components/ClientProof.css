@@ -1,0 +1,18 @@
+.cp-inner { display: grid; grid-template-columns: 180px 1fr 260px; gap: 40px; align-items: start; }
+.cp-figure { margin: 0; }
+.cp-quote { margin: 0; }
+.cp-quote p { font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 52px); font-weight: 500; letter-spacing: -.045em; line-height: 1.08; color: var(--q-ink, #f1f0eb); margin: 0; }
+.cp-cite { display: flex; flex-direction: column; gap: 2px; margin-top: 26px; font-size: 15px; }
+.cp-name { color: var(--q-ink, #f1f0eb); font-weight: 600; }
+.cp-role { color: var(--q-muted, #a5a8ad); }
+.cp-side { border-left: 1px solid var(--q-line, #2a2d31); padding-left: 28px; }
+.cp-score { margin: 0; color: var(--q-muted, #a5a8ad); font-size: 15px; line-height: 1.45; }
+.cp-score span { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 44px; letter-spacing: -.05em; color: var(--q-ink, #f1f0eb); line-height: 1; margin-bottom: 8px; }
+.cp-note { margin: 18px 0 18px; font-size: 13px; }
+.cp-link { display: inline-flex; align-items: center; gap: 6px; }
+.cp-compact .cp-quote p { font-size: clamp(26px, 3vw, 40px); }
+
+@media (max-width: 900px) {
+  .cp-inner { grid-template-columns: 1fr; gap: 24px; }
+  .cp-side { border-left: 0; padding-left: 0; border-top: 1px solid var(--q-line, #2a2d31); padding-top: 22px; }
+}

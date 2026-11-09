@@ -8,6 +8,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import { Logo } from '../components/Logo';
 import Guarantee30x2 from '../components/Guarantee30x2';
+import ClientProof from '../components/ClientProof';
 import { OFFER } from '../data/offer';
 
 const steps=[
@@ -19,6 +20,7 @@ const Home:React.FC=()=> <>
  <SEOMeta title="Qlavo | GEO Agency for AI Search Visibility" description="Be the brand in the answer. Qlavo is an independent GEO agency helping businesses improve AI search visibility through research, content and technical work." path="/" />
  <Hero />
  <section className="q-engines" aria-label="The engine we work on"><div className="q-container q-engine-inner"><p>One engine.<br />Measured properly.</p><div className="q-engine-list"><span>ChatGPT</span></div></div></section>
+ <ClientProof />
  <section className="q-section"><div className="q-container q-split"><p className="q-eyebrow">The discovery shift</p><div><h2 className="q-statement">Your next customer might ask a question.<br /><span>And never see a search results page.</span></h2><p className="q-problem-copy">AI answers give buyers a different way to research, compare and choose. A well-ranked website is a useful foundation, but it doesn’t tell you how your brand appears in those answers.</p><p className="q-problem-copy">We help you understand that gap and work on what you can change: the clarity of your offer, the evidence behind it and the information search systems can access.</p><Link to="/what-is-generative-engine-optimization" className="q-quiet-link">What is generative engine optimization? <ArrowUpRight size={16} /></Link></div></div></section>
  <ServicesSection />
  <section id="approach" className="q-section q-method q-rule"><div className="q-container"><span className="q-eyebrow">How the work happens</span><h2 className="q-section-heading" style={{marginTop:20}}>Every finding.<br />Ready to inspect.</h2><div className="q-method-layout"><div>{steps.map(s=><div className="q-method-step" key={s.n}><span className="q-kicker">{s.n}</span><div><h3>{s.title}</h3><p>{s.text}</p></div></div>)}</div><aside className="q-evidence" aria-label="Illustrative research handoff format"><div className="q-evidence-header"><span className="q-brand"><Logo />Qlavo</span><span className="q-eyebrow">Format preview</span></div><h3>A handoff you can inspect.</h3><p>Useful research should show its working. Here’s the structure, before we discuss your scope.</p><dl><div><dt>Question set</dt><dd>Buyer intent, market and engine</dd></div><div><dt>Evidence</dt><dd>Recorded answers and cited sources</dd></div><div><dt>Next steps</dt><dd>Priorities, owners and review notes</dd></div></dl><p className="q-evidence-note">Illustrative format, not a client result or a live audit.</p><Link className="q-quiet-link" to="/sample-deliverable">Inspect the sample <ArrowUpRight size={16} /></Link></aside></div></div></section>

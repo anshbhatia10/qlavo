@@ -30,7 +30,7 @@ test('nonhome pages are dynamic client chunks while all routes still render sync
   const { render } = await vite.ssrLoadModule('/entry-server.tsx');
   const script = fs.readFileSync('scripts/prerender.mjs', 'utf8');
   const routes = [...script.matchAll(/^  '(\/[^']*)',/gm)].map(match => match[1]);
-  assert.equal(routes.length, 33);
+  assert.equal(routes.length, 34);
   const rewrites = JSON.parse(fs.readFileSync('vercel.json', 'utf8')).rewrites;
   const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
   for (const path of routes) {

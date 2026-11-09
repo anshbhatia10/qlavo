@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ClientProof from '../components/ClientProof';
 import SEOMeta from '../components/SEOMeta';
 import { BookCallButton, EnquireButton, enquireHref } from '../components/ContactCta';
 import Guarantee30x2 from '../components/Guarantee30x2';
@@ -64,6 +65,7 @@ export default function Pricing() {
       <p className="cm-note cm-plan-note">Before we invoice, we run all ten questions twice. If fewer than four look winnable, we tell you and decline the work. Prices are shown in USD or INR; scope and timing are agreed in writing before work starts. We do not guarantee rankings or citations — the 30&2 Guarantee is the only outcome commitment, and it is written down.</p>
       <p className="cm-note"><Link to="/geo-agency-guarantees">How other GEO agencies' guarantees compare →</Link></p>
     </section>
+    <ClientProof compact />
     <section className="q-container q-section q-rule" aria-labelledby="engagements-heading">
       <div className="cm-section-intro"><p className="q-eyebrow">What the fee covers</p><h2 className="q-section-heading" id="engagements-heading">Start where you are.</h2><p className="cm-muted">Each month is built from the same three parts. They are stages of one engagement, not a ladder of subscriptions.</p></div>
       <div className="cm-engagements">{engagements.map((item, index) => <article className="cm-engagement" key={item.name}>

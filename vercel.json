@@ -255,6 +255,14 @@
     {
       "source": "/review/",
       "destination": "/review/index.html"
+    },
+    {
+      "source": "/case-studies/smarter-tracks",
+      "destination": "/case-studies/smarter-tracks/index.html"
+    },
+    {
+      "source": "/case-studies/smarter-tracks/",
+      "destination": "/case-studies/smarter-tracks/index.html"
     }
   ],
   "redirects": [
