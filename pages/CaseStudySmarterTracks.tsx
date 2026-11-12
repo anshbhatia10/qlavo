@@ -127,7 +127,7 @@ export default function CaseStudySmarterTracks() {
           <h2 className="q-section-heading cs-h2">Want the same check for your questions?</h2>
           <div className="cs-body">
             <p className="cm-muted">We run your ten buyer questions before we invoice, and tell you if fewer than four look winnable.</p>
-            <p><Link className="q-button" to="/pricing">See the plan</Link> <a className="q-text-link cs-mail" href="mailto:ansh@qlavo.co.in?subject=GEO%20enquiry">ansh@qlavo.co.in</a></p>
+            <p><Link className="q-button" to="/contact">Talk to us</Link> <a className="q-text-link cs-mail" href="mailto:ansh@qlavo.co.in?subject=GEO%20enquiry">ansh@qlavo.co.in</a></p>
           </div>
         </div>
       </section>

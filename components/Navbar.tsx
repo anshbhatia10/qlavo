@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
 import { BOOK_CALL_URL, enquireHref } from './ContactCta';
-const links=[['Services','/#services'],['Approach','/#approach'],['For agencies','/partners'],['Pricing','/pricing'],['About','/about']];
+const links=[['Services','/#services'],['Approach','/#approach'],['For agencies','/partners'],['About','/about']];
 const Navbar:React.FC<{scrolled?:boolean}>=()=>{
  const [open,setOpen]=useState(false);const location=useLocation();const toggleRef=useRef<HTMLButtonElement>(null);const headerRef=useRef<HTMLElement>(null);
  useEffect(()=>setOpen(false),[location.pathname,location.hash]);

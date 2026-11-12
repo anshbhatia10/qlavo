@@ -39,8 +39,8 @@ export const QLAVO_ROW: GuaranteeRow = {
   verdictLabel: `${OFFER.windowDays} days`,
   verdictDays: OFFER.windowDays,
   remedy: `First month refunded within 7 days, plus up to ${OFFER.freeWorkDays} days of further work at no charge`,
-  price: `${OFFER.usd} ${OFFER.cadence}, cancel by email`,
-  priceSortUsd: Number(OFFER.usd.replace(/[^0-9]/g, '')),
+  price: 'Quoted on request, monthly, cancel by email',
+  priceSortUsd: null,
   group: 'measurable',
   isQlavo: true,
 };
@@ -181,7 +181,6 @@ export const MEASURABLE_GUARANTEES: GuaranteeRow[] =
 export const NO_PASS_MARK_GUARANTEES: GuaranteeRow[] = [...NO_PASS_MARK_ROWS].sort(byVerdictThenPrice);
 
 export const PAID_BEFORE_VERDICT: PaidBeforeVerdictRow[] = [
-  { agency: 'Qlavo', paid: `${OFFER.usd} (one month)`, paidSortUsd: 300, ifFails: 'Refunded' },
   { agency: 'CiteVantage', paid: '$1,497 (three months at $499, the minimum term)', paidSortUsd: 1497, ifFails: 'Free work, no refund' },
   { agency: 'GEOHATS', paid: 'From $6,000 (three months from $2,000)', paidSortUsd: 6000, ifFails: 'Refunded' },
   { agency: 'Citant.ai', paid: '$7,875 (the pilot)', paidSortUsd: 7875, ifFails: 'Refunded' },
@@ -208,6 +207,6 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: 'How much does a GEO engagement with a guarantee cost?',
-    answer: 'Published prices range from $300 a month at Qlavo to a $7,875 nine-week pilot at Citant.ai, with GEOHATS from $2,000 a month and Ekamoira from $3,000. CiteVantage starts at $499 a month with a 3-month minimum. Several agencies do not publish prices.',
+    answer: 'Published prices range from $499 a month at CiteVantage to a $7,875 nine-week pilot at Citant.ai, with GEOHATS from $2,000 a month and Ekamoira from $3,000. The CiteVantage price carries a 3-month minimum. Several agencies do not publish prices.',
   },
 ];

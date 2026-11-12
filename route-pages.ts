@@ -17,7 +17,6 @@ export const marketingRoutes = [
   ['/', 'Home'],
   ['/about', 'About'],
   ['/contact', 'Contact'],
-  ['/pricing', 'Pricing'],
   ['/terms', 'Terms'],
   ['/partners', 'Partners'],
   ['/sample-deliverable', 'SampleDeliverable'],
@@ -68,6 +67,6 @@ export async function preloadRoute(pathname: string): Promise<void> {
 }
 
 export const editorialRoute = (pathname: string): boolean => ![
-  '/', '/about', '/contact', '/pricing', '/partners', '/sample-deliverable',
+  '/', '/about', '/contact', '/partners', '/sample-deliverable',
   '/ai-visibility', '/geo-calculator', '/geo-agency-delhi-india', '/hire-geo-agency', '/best-geo-agencies-india',
 ].includes(pathname.replace(/\/+$/, '') || '/');

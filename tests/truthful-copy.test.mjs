@@ -46,7 +46,7 @@ test('About preserves founder identity without proprietary statistics or default
   assert.match(text, /(?:cannot|do not|no).{0,25}guarantee/i);
 });
 
-for (const route of ['/pricing', '/hire-geo-agency']) {
+for (const route of ['/hire-geo-agency']) {
   test(`${route} offers scoped GEO engagements, with partner work separate`, () => {
     const { $, text, metadata } = page(route);
     assert.doesNotMatch(text + metadata, /£|\$\s*(?:750|375)|Most clients see|Typical outcomes|minimum.{0,10}commitment|minimum 3-month|free.{0,20}(?:audit|scan)|Most Popular/i);

@@ -31,7 +31,7 @@ test('FAQ can be read and expanded without JavaScript',()=>{
 });
 test('navigation and footer offer a compact crawlable hierarchy',()=>{
  const $=page();assert.equal($('header.q-nav').length,1);
- assert.ok($('header nav[aria-label="Primary"] a[href="/pricing"]').length);
+ assert.equal($('a[href="/pricing"]').length,0);
  assert.ok($('button[aria-controls="mobile-navigation"][aria-expanded="false"]').length);
  assert.equal($('#mobile-navigation[hidden]').length,1);
  assert.ok($('footer a[href="/partners"]').length);

@@ -205,7 +205,7 @@ const GEOAgencyGuarantees: React.FC = () => (
     <section className="q-container q-section q-rule" aria-labelledby="checked-heading">
       <h2 className="q-section-heading" id="checked-heading">How we checked</h2>
       <p className="cm-muted">We read the guarantee, pricing, terms and FAQ pages of 28 GEO agencies on 3 November 2026 and quoted each guarantee from the agency's own site. Agencies that mention a guarantee without publishing its terms are not in the table. We will re-check these terms every quarter.</p>
-      <p className="cm-muted">Qlavo's full terms are on the <Link to="/terms">terms page</Link>, and the plan is on the <Link to="/pricing">pricing page</Link>.</p>
+      <p className="cm-muted">Qlavo's full terms are on the <Link to="/terms">terms page</Link>.</p>
     </section>
 
     <div className="q-container q-section q-rule">

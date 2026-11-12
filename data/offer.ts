@@ -3,9 +3,6 @@
  * so a price or term can never drift between pages again.
  */
 export const OFFER = {
-  usd: '$300',
-  inr: '₹30,000',
-  cadence: 'a month',
   questions: 10,
   runsPerQuestion: 10,
   winBar: 5,
@@ -14,7 +11,8 @@ export const OFFER = {
   freeWorkDays: 60,
 } as const;
 
-export const PRICE_LINE = `${OFFER.usd} ${OFFER.cadence}, or ${OFFER.inr}`;
+/** Qlavo does not publish prices: every engagement is scoped and quoted in writing. */
+export const PRICE_NOTE = 'Scoped to your business and agreed in writing before any work starts.';
 
 export const GUARANTEE_NAME = '30&2 Guarantee';
 

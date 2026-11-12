@@ -3,7 +3,7 @@
 Qlavo is a generative engine optimization (GEO) agency founded in 2025 by Ansh Bhatia. Headquartered in New Delhi, India, Qlavo works with businesses worldwide on how they appear in ChatGPT. Enquiries: ansh@qlavo.co.in.
 
 ## Services
-Qlavo works on ChatGPT only. Work covers buyer-question visibility checks, entity consistency, content improvements, technical optimization, and the pages ChatGPT reads when it answers. The published plan is $300 a month, or ₹30,000: in dollars or rupees, billed monthly in advance, cancel any time, no setup fee and no minimum term.
+Qlavo works on ChatGPT only. Work covers buyer-question visibility checks, entity consistency, content improvements, technical optimization, and the pages ChatGPT reads when it answers. Engagements are monthly, scoped and quoted in writing before work starts: cancel any time, no setup fee and no minimum term.
 
 ## The 30&2 Guarantee
 Ten buyer questions are agreed in writing before the first invoice. A question is won when ChatGPT names the client as a recommended or suitable option in at least 5 of 10 fresh ChatGPT Temporary Chats, memory and personalisation off, from a US connection, no follow-up messages. If at least two of the ten questions are won within 30 days, the guarantee is met. If not, the first month is refunded within seven days and Qlavo keeps working at no charge until two questions are won, for up to 60 further days. The clock starts on the later of payment and the client's week-one publishing inputs, and pauses while approved pages wait on the client. Before invoicing, Qlavo runs all ten questions twice and declines the work if fewer than four look winnable. Rankings, citations and leads are not guaranteed; Qlavo does not control ChatGPT. Full terms: https://qlavo.in/terms
@@ -17,7 +17,7 @@ White-label GEO is a service offered by Qlavo, not a separate business or an exc
 
 ## Primary pages
 - [GEO agency](https://qlavo.in/)
-- [Plan and price](https://qlavo.in/pricing)
+- [Contact](https://qlavo.in/contact)
 - [Exact terms of the 30&2 Guarantee](https://qlavo.in/terms)
 - [GEO agency guarantees, compared](https://qlavo.in/geo-agency-guarantees)
 - [White-label GEO for agencies](https://qlavo.in/partners)

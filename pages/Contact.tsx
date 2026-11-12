@@ -32,7 +32,7 @@ export default function Contact() {
           <li><span className="q-kicker">02 / Question</span><h3>What are you seeing?</h3><p>Share an AI answer you are unsure about, a competitor reference, or a gap you want to investigate.</p></li>
           <li><span className="q-kicker">03 / Next step</span><h3>A scope, if it makes sense</h3><p>We discuss an audit, implementation or ongoing support. Deliverables, fees and terms are agreed before work begins.</p></li>
         </ol>
-        <p className="cm-note">This is a scoping conversation, not an instant audit or a promise of AI recommendations. The published plan is $300 a month, cancel any time, with the <strong>30&2 Guarantee</strong>.</p>
+        <p className="cm-note">This is a scoping conversation, not an instant audit or a promise of AI recommendations. Plans are monthly and scoped to your business, cancel any time, with the <strong>30&2 Guarantee</strong>.</p>
       </div>
     </section>
     <section className="q-container q-section q-rule cm-split">

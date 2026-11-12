@@ -10,7 +10,7 @@ const clauses = [
     index: '01',
     title: 'The fee.',
     body: [
-      `${OFFER.usd} a month, or ${OFFER.inr}, invoiced monthly in advance. No minimum term and no lock-in: cancel any time before your next billing date and no further invoice is raised.`,
+      'The fee is agreed in writing before work starts and invoiced monthly in advance. No minimum term and no lock-in: cancel any time before your next billing date and no further invoice is raised.',
       'No setup fee and no success fee. Optional paid placements, such as sponsored listings or paid reviews, are never required, are paid by you directly only if you choose them, and do not change clause 06.',
       'You keep all the work produced — pages, copy, listings and outreach results — during the engagement and after it ends.',
     ],
@@ -98,7 +98,7 @@ export default function Terms() {
   return <div className="cm-page">
     <SEOMeta
       title={`Terms — the 30&2 Guarantee | Qlavo`}
-      description={`The exact terms behind Qlavo's ${OFFER.usd} a month plan and the 30&2 Guarantee: ${OFFER.questions} agreed questions, how a question is won, the measurement, the refund and the free-work period.`}
+      description={`The exact terms behind Qlavo's monthly plan and the 30&2 Guarantee: ${OFFER.questions} agreed questions, how a question is won, the measurement, the refund and the free-work period.`}
       path="/terms"
     />
     <section className="q-container cm-hero">
@@ -131,7 +131,7 @@ export default function Terms() {
 
     <section className="q-container q-section q-rule cm-split">
       <div><p className="q-eyebrow">The plan itself</p><h2 className="q-section-heading">What the fee buys.</h2><p className="cm-muted">The questions, the baseline, the pages and the monthly report — all in one monthly engagement.</p></div>
-      <div className="cm-actions"><Link className="q-button" to="/pricing">See the plan and price <span aria-hidden="true">↗</span></Link><EnquireButton className="q-button-secondary" label="Ask about a term" topic="the terms" /></div>
+      <div className="cm-actions"><Link className="q-button" to="/contact">Talk to us <span aria-hidden="true">↗</span></Link><EnquireButton className="q-button-secondary" label="Ask about a term" topic="the terms" /></div>
     </section>
   </div>;
 }

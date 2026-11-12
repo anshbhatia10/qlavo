@@ -11,7 +11,7 @@ const { renderToString } = await import('react-dom/server');
 const { StaticRouter } = await import('react-router-dom/server.js');
 const { HelmetProvider } = await import('react-helmet-async');
 HelmetProvider.canUseDOM = false;
-const routes = { '/contact': 'Contact', '/about': 'About', '/pricing': 'Pricing', '/hire-geo-agency': 'HireGEOAgency', '/geo-agency-delhi-india': 'GEOAgencyIndia', '/ai-visibility': 'AIVisibility', '/geo-calculator': 'AIVisibility' };
+const routes = { '/contact': 'Contact', '/about': 'About', '/hire-geo-agency': 'HireGEOAgency', '/geo-agency-delhi-india': 'GEOAgencyIndia', '/ai-visibility': 'AIVisibility', '/geo-calculator': 'AIVisibility' };
 async function page(path) {
   const context = {};
   const { default: Page } = await vite.ssrLoadModule(`/pages/${routes[path]}.tsx`);
@@ -72,26 +72,14 @@ test('About presents a founder editorial with preserved biography, photo and Per
   assert.equal($('.bento-card, .glass-panel, [class*="emerald"]').length, 0);
 });
 
-test('Pricing publishes one monthly plan with a written test and no invented proof', async () => {
-  const { $, text, metadata } = await page('/pricing');
-  assert.equal($('.cm-plan').length, 1);
-  assert.equal($('.cm-engagement').length, 3);
-  for (const price of ['$300', '₹30,000']) assert.ok(text.includes(price), price);
-  for (const old of ['$900', '$1,500', '₹90,000', '₹1,50,000']) assert.ok(!text.includes(old), old);
-  for (const name of ['Baseline audit', 'Implementation', 'Ongoing support']) assert.ok(text.includes(name));
-  assert.match(text, /\$300 a month/i);
-  assert.match(text, /cancel any time/i);
-  assert.match(text, /30&2 Guarantee/);
-  assert.match(text, /refund/i);
-  assert.ok($('a[href="/terms"]').length, 'terms linked from pricing');
-  assert.match(text, /do not guarantee/i);
-  assert.doesNotMatch(text, /Most popular|margin|guaranteed results/i);
-  assert.ok($('a[href="/contact"]').length);
-  assert.ok($('a[href="/partners"]').length);
-  assert.ok($('details > summary').length >= 3);
-  assert.equal($('h1').length, 1);
-  assert.equal(metadata('link[rel="canonical"]').attr('href'), 'https://qlavo.in/pricing');
-  assert.equal($('.bento-card, .glass-panel, [class*="emerald"]').length, 0);
+test('/pricing is retired: no Qlavo price anywhere in commercial pages', async () => {
+  const vercel = JSON.parse(await readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
+  assert.ok(vercel.redirects.some(r => r.source === '/pricing' && r.destination === '/contact' && r.permanent));
+  for (const path of ['/contact', '/about', '/hire-geo-agency', '/geo-agency-delhi-india', '/ai-visibility']) {
+    const { $, text } = await page(path);
+    assert.doesNotMatch(text, /\$300|₹30,000|300 a month/, path);
+    assert.equal($('a[href="/pricing"]').length, 0, path);
+  }
 });
 
 test('Hire GEO Agency gives a useful selection checklist and separates evidence from promises', async () => {
@@ -103,7 +91,6 @@ test('Hire GEO Agency gives a useful selection checklist and separates evidence 
   assert.match(text, /do not guarantee/i);
   assert.match(text, /quote/i);
   assert.match(text, /New Delhi/);
-  assert.ok($('a[href="/pricing"]').length);
   assert.ok($('a[href="/partners"]').length);
   assert.ok($('a[href^="mailto:ansh@qlavo.co.in"]').length);
   assert.equal($('h1').length, 1);
@@ -144,7 +131,7 @@ for (const route of ['/ai-visibility', '/geo-calculator']) {
     assert.equal($('form, input, output, progress, [role="meter"]').length, 0);
     assert.equal($('.bento-card, .glass-panel, [class*="gradient"], [class*="emerald"]').length, 0);
     assert.ok($('a[href^="mailto:ansh@qlavo.co.in"]').length);
-    for (const href of ['/pricing', '/partners']) assert.ok($(`a[href="${href}"]`).length);
+    for (const href of ['/terms', '/partners']) assert.ok($(`a[href="${href}"]`).length);
     assert.equal(metadata('link[rel="canonical"]').attr('href'), 'https://qlavo.in/ai-visibility');
   });
 }

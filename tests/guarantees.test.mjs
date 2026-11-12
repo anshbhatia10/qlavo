@@ -91,10 +91,10 @@ test('promises without a pass mark are five rows with Qlavo absent', () => {
   assert.ok(!headers.includes('AI platforms'));
 });
 
-test('paid before the verdict is four rows, cheapest first, Qlavo leading', () => {
+test('paid before the verdict lists published prices only, cheapest first, Qlavo absent', () => {
   const rows = paid.find('tbody tr').toArray();
-  assert.equal(rows.length, 4);
-  assert.equal(cells(rows[0])[0], 'Qlavo');
+  assert.equal(rows.length, 3);
+  assert.ok(!rows.some(row => cells(row)[0] === 'Qlavo'));
   assert.ok(!rows.some(row => cells(row)[0] === 'Ekamoira'));
   const amounts = rows.map(row => Number(cells(row)[1].match(/\$([\d,]+)/)[1].replace(/,/g, '')));
   assert.deepEqual(amounts, [...amounts].sort((a, b) => a - b));
@@ -106,7 +106,8 @@ test('the Qlavo row is built from the published offer, not typed', () => {
   assert.equal(row[2], 'ChatGPT');
   assert.equal(row[3], `${OFFER.windowDays} days`);
   assert.equal(row[4], `First month refunded within 7 days, plus up to ${OFFER.freeWorkDays} days of further work at no charge`);
-  assert.equal(row[5], `${OFFER.usd} ${OFFER.cadence}, cancel by email`);
+  assert.equal(row[5], 'Quoted on request, monthly, cancel by email');
+  assert.doesNotMatch(row[5], /\$|₹/);
 });
 
 test('every competitor links to the guarantee page it was quoted from', () => {
