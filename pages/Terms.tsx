@@ -11,7 +11,7 @@ const clauses = [
     title: 'The fee.',
     body: [
       'The fee is agreed in writing before work starts and invoiced monthly in advance. No minimum term and no lock-in: cancel any time before your next billing date and no further invoice is raised.',
-      'No setup fee and no success fee. Optional paid placements, such as sponsored listings or paid reviews, are never required, are paid by you directly only if you choose them, and do not change clause 06.',
+      'No setup fee and no success fee. Optional paid placements, such as sponsored listings or paid reviews, are never required and are paid by you directly only if you approve them.',
       'You keep all the work produced — pages, copy, listings and outreach results — during the engagement and after it ends.',
     ],
   },
@@ -20,7 +20,7 @@ const clauses = [
     title: 'The questions.',
     body: [
       'We agree ten buyer questions in writing before the first invoice. They are locked word for word.',
-      'A question can be swapped only by written agreement. A swapped question gets its own baseline, and the clock in clause 07 does not restart.',
+      'A question can be swapped only by written agreement. A swapped question gets its own baseline.',
     ],
   },
   {
@@ -28,63 +28,44 @@ const clauses = [
     title: 'The baseline.',
     body: [
       'Within five days of payment we run each question ten times: a fresh ChatGPT Temporary Chat, memory and personalisation off, from a US connection, the question pasted word for word, no follow-up messages.',
-      'A question you already win at baseline is excluded from the guarantee and replaced by agreement.',
       'Every raw answer is shared with you.',
     ],
   },
   {
     index: '04',
-    title: 'What counts as won.',
+    title: 'How progress is measured.',
     body: [
-      'A question is won when ChatGPT names you as a recommended or suitable option in at least five of ten runs made as described in clause 03, with no negative wording about you in those answers.',
-      'A passing mention with no recommendation does not count. We show you the answers either way.',
+      'Each month we re-run every question exactly as in clause 03 and report how often ChatGPT names you as a recommended or suitable option, with the raw answers.',
+      'A passing mention with no recommendation is reported as a mention, not a recommendation. You may watch the runs live.',
     ],
   },
   {
     index: '05',
-    title: 'The measurement.',
+    title: 'Your inputs.',
     body: [
-      'Measured once, between day 28 and day 30 of the period in clause 07: ten runs per question, made exactly as in clause 03.',
-      'All raw answers are shared, and you may watch the runs live.',
+      'In week one we need CMS or publishing access, or a named person who publishes approved pages.',
+      'Drafts are sent for approval. Anything not answered within three business days may be published as written.',
     ],
   },
   {
     index: '06',
-    title: 'The guarantee.',
-    body: [
-      `If at least two questions are won, the guarantee is met and billing continues monthly under clause 01.`,
-      'If fewer than two are won: we refund the first month within seven days; and, unless you choose to end the engagement after the refund, we keep working at no charge until two questions are won, for up to 60 further days, re-measured the same way at the end of each 30-day block. Billing resumes only from the month after two questions are won, and only if you choose to continue.',
-      'If two questions are still not won by the end of those 60 further days, the engagement ends with the refund already paid and nothing further owed by either side.',
-      'Each measurement stands on its own. Later movement in the answers, up or down, does not reopen a completed measurement.',
-    ],
-  },
-  {
-    index: '07',
-    title: 'The clock.',
-    body: [
-      'The 30-day period, and the free period in clause 06, starts on the later of two things: payment received, and your week-one inputs — CMS or publishing access, or a named person who publishes approved pages.',
-      'The clock pauses day for day while approved pages wait more than three business days on you for publishing or sign-off.',
-    ],
-  },
-  {
-    index: '08',
     title: 'What we do.',
     body: [
       'We write and place the pages ChatGPT reads when it answers the questions: pages on your site, third-party listings and editorial pitches. We report monthly with the raw answers and adjust the plan to what is moving.',
       'We work on ChatGPT only. We do not currently offer work on other assistants, and nothing here covers them.',
-      'We do not control ChatGPT. The only outcome commitment we make is clause 06.',
+      'We do not control ChatGPT and do not guarantee rankings, recommendations, citations or leads.',
     ],
   },
   {
-    index: '09',
+    index: '07',
     title: 'Ending it.',
     body: [
-      'Either side may end the engagement by email. Fees already paid for a month in progress are not refunded except under clause 06.',
+      'Either side may end the engagement by email. Fees already paid for a month in progress are not refunded.',
       'Before we invoice, we run all ten questions twice. If fewer than four look winnable, we tell you and decline the work.',
     ],
   },
   {
-    index: '10',
+    index: '08',
     title: 'The rest.',
     body: [
       'These terms, the ten agreed questions and the quote form the whole agreement between us. Paying the first invoice means accepting them.',
@@ -97,15 +78,15 @@ const clauses = [
 export default function Terms() {
   return <div className="cm-page">
     <SEOMeta
-      title={`Terms — the 30&2 Guarantee | Qlavo`}
-      description={`The exact terms behind Qlavo's monthly plan and the 30&2 Guarantee: ${OFFER.questions} agreed questions, how a question is won, the measurement, the refund and the free-work period.`}
+      title={`Terms of engagement | Qlavo`}
+      description={`The exact terms of a Qlavo engagement: the fee, the ${OFFER.questions} agreed questions, how progress is measured, your inputs and how to end it.`}
       path="/terms"
     />
     <section className="q-container cm-hero">
-      <p className="q-eyebrow">Terms / The 30&2 Guarantee</p>
+      <p className="q-eyebrow">Terms of engagement</p>
       <h1 className="q-title">The exact terms.<br /><span className="cm-muted">Not the summary.</span></h1>
       <div className="cm-hero-bottom">
-        <p className="q-lede">This is what we promise, how it is measured, and what happens if it is not met. The agreement you sign uses the same text.</p>
+        <p className="q-lede">This is what we do, how it is measured, and how either side can end it. The agreement you sign uses the same text.</p>
         <div className="cm-actions"><EnquireButton size={17} /><BookCallButton size={17} /></div>
       </div>
     </section>
@@ -113,7 +94,7 @@ export default function Terms() {
     <section className="q-container q-section q-rule" aria-labelledby="terms-heading">
       <div className="cm-section-intro">
         <p className="q-eyebrow">The agreement</p>
-        <h2 className="q-section-heading" id="terms-heading">Nine clauses.<br />One commitment.</h2>
+        <h2 className="q-section-heading" id="terms-heading">Eight clauses.<br />No small print.</h2>
         <p className="cm-muted">Last updated 1 November 2026. If anything here is unclear, ask before you pay — that is what the call is for.</p>
       </div>
       <div className="cm-terms">
@@ -122,7 +103,6 @@ export default function Terms() {
           <div>
             <h3>{clause.title}</h3>
             {clause.body.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
-            {clause.index === '06' && <p><Link to="/geo-agency-guarantees">How other GEO agencies' guarantees compare →</Link></p>}
           </div>
         </article>)}
       </div>

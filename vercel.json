@@ -113,14 +113,6 @@
       "destination": "/blog/top-geo-agencies-b2b-2026/index.html"
     },
     {
-      "source": "/geo-agency-guarantees",
-      "destination": "/geo-agency-guarantees/index.html"
-    },
-    {
-      "source": "/geo-agency-guarantees/",
-      "destination": "/geo-agency-guarantees/index.html"
-    },
-    {
       "source": "/blog/hubspot-geo-audit-2026",
       "destination": "/blog/hubspot-geo-audit-2026/index.html"
     },
@@ -276,6 +268,16 @@
     {
       "source": "/pricing/",
       "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/geo-agency-guarantees",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/geo-agency-guarantees/",
+      "destination": "/blog",
       "permanent": true
     }
   ]

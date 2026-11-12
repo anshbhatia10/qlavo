@@ -37,7 +37,6 @@ export const PRERENDER_ROUTES = [
   '/geo-pricing-cost-guide-2026',
   '/geo-vs-seo-vs-aeo-differences',
   '/geo-statistics-2026',
-  '/geo-agency-guarantees',
   '/reddit/best-geo-tools',
   '/reddit/geo-vs-seo',
   '/reddit/get-cited-chatgpt',

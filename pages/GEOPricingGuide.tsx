@@ -136,7 +136,7 @@ const GEOPricingGuide: React.FC = () => {
               The short answer
             </h2>
             <p className="text-zinc-300 font-light leading-relaxed mb-4">
-              Qlavo runs one monthly plan instead of tiers, <strong className="text-white">scoped and quoted in writing for each business</strong>, cancel any time. We agree ten buyer questions, and if ChatGPT is not naming you as a recommended or suitable option on two of them within 30 days, the first month is refunded and we keep working at no charge until it does. The fee and the questions are agreed in writing before work starts.
+              Qlavo runs one monthly plan instead of tiers, <strong className="text-white">scoped and quoted in writing for each business</strong>, cancel any time. We agree ten buyer questions and re-run them in fresh ChatGPT chats every month, with every answer shared. The fee and the questions are agreed in writing before work starts.
             </p>
             <p className="text-zinc-300 font-light leading-relaxed mb-4">
               Larger agencies quote monthly retainers that scale with content production, multi-region entity work and real-time monitoring. A fixed plan keeps the fee predictable while the scope stays explicit.
