@@ -5,19 +5,19 @@ import './Partners.css';
 
 const callUrl = 'https://calendly.com/anshnb07/30min';
 const workstreams = [
-  ['Baseline', 'Know what is actually showing up.', 'An evidence log of agreed AI-engine checks: prompts, dates, responses, cited sources and misses.'],
-  ['Prompt research', 'Start with the buyer’s questions.', 'A question set mapped to the client’s offer, audience and market, with testing conditions agreed before research.'],
-  ['Content', 'Give useful answers a clear home.', 'Source-backed content briefs or page revisions, using approved brand facts. Your team reviews and controls publication.'],
-  ['Entity', 'Make the business facts consistent.', 'A review of profiles, business information and structured data, with sourced corrections rather than invented authority signals.'],
-  ['Technical prioritization', 'Separate the blockers from the backlog.', 'A prioritized brief covering crawl, indexing and structured-data issues. Development is included only when explicitly scoped.'],
-  ['Reporting', 'Show the work, and its limits.', 'An editable work summary, evidence and next steps. Repeat checks and reporting cadence are agreed; observations stay separate from interpretation.'],
+  ['Baseline', 'See what is actually showing up.', 'A clean log of fresh ChatGPT checks: prompts, dates, full answers, cited links, and misses.'],
+  ['Prompt research', 'Start with real buyer questions.', 'A question set built around your client’s offer and market, agreed before testing begins.'],
+  ['Content', 'Give useful answers a clear home.', 'Plain, well-sourced briefs or page drafts using approved brand facts. Your team reviews and publishes.'],
+  ['Entity', 'Make the business facts match.', 'A check of profiles, company details, and structured data—fixing inconsistencies without inventing authority.'],
+  ['Technical prioritization', 'Separate real blockers from busywork.', 'A short, prioritized brief on crawl, Bing indexing, and page structure.'],
+  ['Reporting', 'Show the work, honestly.', 'An editable summary with the raw answers and next steps, ready for your brand.'],
 ];
 const faqs = [
-  ['Who owns the client relationship?', 'You own the client relationship, account strategy and commercial terms. No direct client contact without agency consent. Any client-facing involvement is agreed with you first.'],
-  ['Can we put our brand on the work?', 'Yes. You receive editable, unbranded deliverables. We agree file formats and handoff requirements in advance; your agency reviews, brands and approves what reaches the client.'],
-  ['Can we start with one project?', 'Discuss an optional paid pilot on the partner call. It is a private, separately scoped first project, not a mandatory package. Fees, timing, inputs and acceptance criteria are agreed before you decide.'],
-  ['What can we promise the client?', 'Promise the agreed work, not an engine’s decisions. We do not guarantee rankings, AI recommendations or editorial placements. AI responses can vary between runs; reports state methods, evidence and limitations.'],
-  ['Who handles publishing and implementation?', 'Your agency coordinates approvals and publication unless implementation is explicitly scoped. We agree access, confidentiality, revision rounds and responsibilities before work begins.'],
+  ['Who owns the client relationship?', 'You own the client relationship, strategy, and commercial terms. We never contact your client without your written consent.'],
+  ['Can we put our brand on the work?', 'Yes. You get editable, unbranded deliverables. Your team reviews, brands, and approves everything before the client sees it.'],
+  ['Can we start with one project?', 'Yes—we can discuss an optional paid pilot on the partner call. It is a private, separately scoped first project with fees and deliverables agreed up front.'],
+  ['What can we promise the client?', 'Promise the agreed work, not ChatGPT’s decisions. We do not guarantee rankings, AI recommendations or editorial placements. ChatGPT answers vary from run to run, so reports show the exact method and raw chats.'],
+  ['Who handles publishing and implementation?', 'Your agency coordinates approvals and publishing unless implementation is explicitly scoped. We agree access, revisions, and responsibilities before work starts.'],
 ];
 
 export default function Partners() {
@@ -25,15 +25,15 @@ export default function Partners() {
     <div className="pt-page">
       <SEOMeta
         title="White-label GEO for Agency Partners | Qlavo"
-        description="White-label GEO delivery for agencies. Keep the client relationship; get editable, unbranded research, content and reporting. Private, scope-based partner quotes."
+        description="White-label GEO delivery for agencies. Keep the client relationship; get editable, unbranded ChatGPT research, writing and reporting. Private, scope-based partner quotes."
         path="/partners"
       />
       <section aria-labelledby="partners-title" className="pt-hero q-container">
         <p className="q-eyebrow">Agency partnerships / White-label GEO</p>
         <div className="pt-hero-grid">
           <div>
-            <h1 id="partners-title" className="q-title">Add GEO delivery.<br /><span className="pt-muted">Keep the account.</span></h1>
-            <p className="q-lede">Your client is asking about AI search. Bring in a delivery partner, not another agency at the table.</p>
+            <h1 id="partners-title" className="q-title">Add ChatGPT delivery.<br /><span className="pt-muted">Keep the account.</span></h1>
+            <p className="q-lede">Your client is asking how to show up in ChatGPT. Bring in a quiet delivery partner, not another agency at the table.</p>
             <div className="pt-actions">
               <a href={callUrl} className="q-button">Discuss a client brief <span aria-hidden="true">↗</span></a>
               <Link to="/sample-deliverable" className="q-text-link">Inspect the sample handoff <span aria-hidden="true">→</span></Link>
@@ -50,7 +50,7 @@ export default function Partners() {
             <p className="pt-note">Qlavo is a GEO agency; white-label is one of our services. You lead the account. We do the agreed behind-the-scenes work.</p>
           </aside>
         </div>
-        <div className="pt-fitline"><span className="q-eyebrow">Built for</span><p>SEO, content and digital agencies that need delivery support—not another platform to manage.</p></div>
+        <div className="pt-fitline"><span className="q-eyebrow">Built for</span><p>SEO, content, and digital agencies that need specialist delivery—not another SaaS dashboard to manage.</p></div>
       </section>
 
       <section aria-labelledby="partner-services" className="q-section q-rule">
@@ -59,7 +59,7 @@ export default function Partners() {
             <p className="q-eyebrow">01 / The work</p>
             <h2 id="partner-services" className="q-section-heading">A delivery team.<br />Not a fixed bundle.</h2>
             <p>Bring us the gap in your team’s capacity. We scope the work around it.</p>
-            <p className="pt-note">Possible workstreams, not automatic inclusions. Deliverables, volume, markets, engines, review rounds and implementation are agreed per project.</p>
+            <p className="pt-note">Possible workstreams, not automatic inclusions. Deliverables, volume, markets, review rounds, and implementation are agreed per project.</p>
           </header>
           <div className="pt-workstreams">
             {workstreams.map(([title, lead, description]) => (
@@ -77,17 +77,17 @@ export default function Partners() {
           <header className="pt-section-intro">
             <p className="q-eyebrow">02 / The handoff</p>
             <h2 id="partner-handoff" className="q-section-heading">Ready for your review.<br />Then your brand.</h2>
-            <p>No dashboard subscription to resell. No Qlavo-branded report to explain. An editable handoff your team can interrogate, adapt and present.</p>
+            <p>No dashboard subscription to resell. No Qlavo-branded report to explain. Just an editable handoff your team can review, adapt, and present.</p>
             <Link to="/sample-deliverable" className="q-text-link">Open the illustrative sample <span aria-hidden="true">→</span></Link>
           </header>
           <div className="pt-document-index">
             <p className="pt-document-label">Anatomy of a handoff / Format preview</p>
             <dl>
-              <div><dt>Research record</dt><dd>Questions, method, source references and retained evidence—including misses.</dd></div>
-              <div><dt>Recommended work</dt><dd>Priorities, editable briefs or drafts, and factual questions marked for approval.</dd></div>
-              <div><dt>Agency review</dt><dd>Responsibilities, limitations, revision notes and an agreed next step.</dd></div>
+              <div><dt>Research record</dt><dd>Questions, method, source links, and saved ChatGPT answers—including misses.</dd></div>
+              <div><dt>Recommended work</dt><dd>Priorities, editable briefs or drafts, and factual questions flagged for approval.</dd></div>
+              <div><dt>Agency review</dt><dd>Responsibilities, limitations, revision notes, and the agreed next step.</dd></div>
             </dl>
-            <p className="pt-note">Illustrative components only. The agreed scope determines the actual files and work included.</p>
+            <p className="pt-note">Illustrative components only. The agreed scope determines the actual files included.</p>
           </div>
         </div>
       </section>
@@ -97,12 +97,12 @@ export default function Partners() {
           <header className="pt-section-intro">
             <p className="q-eyebrow">03 / Working together</p>
             <h2 id="partner-process" className="q-section-heading">Start with the brief.<br />Agree the boundaries.</h2>
-            <p>A useful fit when your team can provide approved brand information, coordinate reviews and arrange publishing.</p>
+            <p>A good fit when your team can share approved brand facts, coordinate reviews, and handle publishing.</p>
           </header>
           <ol className="pt-process">
-            <li><span className="q-kicker" aria-hidden="true">01</span><div><h3>Bring the client context</h3><p>Share the audience, market, site and objective. We clarify fit, access, confidentiality and what your team will handle.</p></div></li>
-            <li><span className="q-kicker" aria-hidden="true">02</span><div><h3>Agree the work in writing</h3><p>Confirm deliverables, exclusions, fees, timing, revision rounds and acceptance criteria. Changes to the scope need agreement.</p></div></li>
-            <li><span className="q-kicker" aria-hidden="true">03</span><div><h3>Review, brand, deliver</h3><p>We prepare the agreed work. You review the editable handoff, approve client communication and manage publication unless otherwise scoped.</p></div></li>
+            <li><span className="q-kicker" aria-hidden="true">01</span><div><h3>Bring the client context</h3><p>Share the audience, market, site, and goal. We clarify fit, access, confidentiality, and who handles what.</p></div></li>
+            <li><span className="q-kicker" aria-hidden="true">02</span><div><h3>Agree the work in writing</h3><p>Confirm deliverables, exclusions, fees, timing, and revision rounds before anything starts.</p></div></li>
+            <li><span className="q-kicker" aria-hidden="true">03</span><div><h3>Review, brand, deliver</h3><p>We prepare the agreed work. You review the editable handoff, approve client comms, and manage publishing.</p></div></li>
           </ol>
         </div>
       </section>
@@ -115,9 +115,9 @@ export default function Partners() {
           </header>
           <div className="pt-terms">
             <p className="pt-large-copy">Scope-based partner pricing. You decide what to charge your client.</p>
-            <p>Our fees reflect the deliverables, research depth, markets, technical involvement and reporting cadence. There is no blanket fixed-price package.</p>
-            <p>Want to test the working relationship first? Discuss an optional paid pilot on the partner call. We agree its scope and price separately before work starts.</p>
-            <p className="pt-note">A call is a scoping conversation, not a commitment to buy.</p>
+            <p>Our fees reflect the deliverables, research depth, markets, and reporting cadence—no blanket fixed-price package.</p>
+            <p>Want to test working together first? Discuss an optional paid pilot on the partner call. We agree its scope and price separately before work starts.</p>
+            <p className="pt-note">A call is a scoping chat, not a commitment to buy.</p>
           </div>
         </div>
       </section>
@@ -136,7 +136,7 @@ export default function Partners() {
       <section aria-labelledby="partner-call" className="q-container q-section q-rule pt-closing">
         <p className="q-eyebrow">Your next client brief</p>
         <h2 id="partner-call" className="q-section-heading">You bring the relationship.<br />Let’s scope the delivery.</h2>
-        <div className="pt-closing-bottom"><p>Bring the site, the market and the question your client is asking. We’ll work out whether there’s a fit.</p><a href={callUrl} className="q-button">Book a partner call <span aria-hidden="true">↗</span></a></div>
+        <div className="pt-closing-bottom"><p>Bring the site, the market, and the question your client is asking. We’ll work out whether there’s a fit.</p><a href={callUrl} className="q-button">Book a partner call <span aria-hidden="true">↗</span></a></div>
       </section>
     </div>
   );

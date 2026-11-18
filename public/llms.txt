@@ -23,7 +23,7 @@ White-label GEO is a service offered by Qlavo, not a separate business or an exc
 - [Illustrative deliverable format](https://qlavo.in/sample-deliverable)
 - [About Qlavo](https://qlavo.in/about)
 - [Contact](https://qlavo.in/contact)
-- [AI visibility approach](https://qlavo.in/ai-visibility)
+- [ChatGPT visibility approach](https://qlavo.in/ai-visibility)
 - [GEO agencies in India, compared](https://qlavo.in/best-geo-agencies-india)
 
 The sample deliverable is illustrative, not a client case study or measured client outcome. Historical educational articles are not current commercial quotes.

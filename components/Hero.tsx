@@ -9,8 +9,8 @@ const Hero: React.FC = () => (
       <div className="q-hero-composition">
         <div className="q-hero-copy">
           <h1 id="hero-heading">Be the brand<br /><span>in the answer.</span></h1>
-          <p className="q-hero-description">When buyers ask AI who to trust, your brand should be part of the conversation.</p>
-          <p className="q-hero-detail">Qlavo helps businesses improve how they’re found and represented in AI search through generative engine optimization.</p>
+          <p className="q-hero-description">When buyers ask ChatGPT who to go with, your brand should be in the answer.</p>
+          <p className="q-hero-detail">We help B2B companies show up in ChatGPT recommendations by writing and placing the pages it actually reads.</p>
           <div className="q-actions"><EnquireButton size={17} /><BookCallButton size={17} /></div>
         </div>
         <div className="q-hero-art" aria-hidden="true">
@@ -19,11 +19,11 @@ const Hero: React.FC = () => (
             <div className="q-signal-cross q-cross-x" /><div className="q-signal-cross q-cross-y" />
             <div className="q-signal-core"><Logo className="q-signal-logo" /></div>
             <span className="q-signal-point q-point-one" /><span className="q-signal-point q-point-two" /><span className="q-signal-point q-point-three" />
-            <span className="q-art-label q-label-one">A clear identity</span><span className="q-art-label q-label-two">Evidence that holds up</span><span className="q-art-coordinate">QL / GENERATIVE SEARCH</span>
+            <span className="q-art-label q-label-one">Clear positioning</span><span className="q-art-label q-label-two">Pages ChatGPT reads</span><span className="q-art-coordinate">QL / CHATGPT VISIBILITY</span>
           </div>
         </div>
       </div>
-      <div className="q-hero-bottom"><span>Built for the way discovery is changing.</span><span className="q-eyebrow">Clarity. Credibility. Discoverability.</span></div>
+      <div className="q-hero-bottom"><span>ChatGPT only. Measured in fresh chats.</span><span className="q-eyebrow">Agreed questions · Recorded answers</span></div>
     </div>
   </section>
 );
