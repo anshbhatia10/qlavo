@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import SEOMeta from '../components/SEOMeta';
 import './Commercial.css';
 
-const UPDATED_ISO = '2026-10-13';
-const UPDATED = '13 October 2026';
+const UPDATED_ISO = '2026-11-19';
+const UPDATED = '19 November 2026';
 
-/* Alphabetical. Facts come from each agency's own website (checked October 2026). No rankings. */
+/* Alphabetical. Facts come from each agency's own website (checked November 2026). No rankings. */
 const agencies = [
   { name: 'Adexorb', url: 'https://adexorb.com/', where: 'Kerala', what: 'Web development and GEO company based in Kerala. Publishes its own comparison of GEO agencies in India.', fit: 'Businesses that want a new website and GEO work from one team.' },
   { name: 'AEOcite Lab', url: 'https://aeocitelab.com/', where: 'Indore', what: 'AI SEO agency focused on answer engine optimization: getting brands cited in ChatGPT, Perplexity, Google AI Overviews and Gemini, alongside GEO and SEO.', fit: 'Brands that want AEO run as a dedicated discipline alongside SEO.' },
@@ -20,6 +20,7 @@ const agencies = [
   { name: 'Qlavo', url: 'https://qlavo.in/', where: 'New Delhi', what: 'GEO agency (publisher of this page). Tests real buyer questions in ChatGPT, then works on the content, business information and third-party pages those answers rely on. Monthly plan, scoped in writing, cancel any time.', fit: 'Indian and international businesses that want GEO as a dedicated, scoped engagement.', self: true },
   { name: 'Reckona AI', url: 'https://reckonaai.com/', where: 'India', what: 'GEO and AI automation agency focused on getting brands cited and recommended accurately by ChatGPT, Gemini, Perplexity and Google AI.', fit: 'Businesses that want GEO together with AI automation work.' },
   { name: 'Techmagnate', url: 'https://www.techmagnate.com/', where: 'New Delhi', what: 'Large, established SEO agency headquartered in New Delhi.', fit: 'Enterprises that want GEO handled within a broad SEO programme.' },
+  { name: 'THATWARE', url: 'https://thatware.co/', where: 'Howrah', what: 'AI search agency offering generative engine optimization and answer engine optimization as named services, with offices in Howrah, Dubai and London. Publishes monthly GEO pricing.', fit: 'Brands that want GEO with prices on the website.' },
 ];
 
 const questions = [
@@ -61,7 +62,7 @@ export default function BestGEOAgenciesIndia() {
     </section>
     <section className="q-container q-section q-rule cm-split">
       <div><p className="q-eyebrow">How this list was made</p><h2 className="q-section-heading">Alphabetical.<br />Not ranked.</h2></div>
-      <div><p>In October 2026 we asked ChatGPT questions such as &ldquo;What is the best GEO agency in India?&rdquo; many times and noted which agencies it named. This page lists the Indian agencies that came up repeatedly, plus Qlavo.</p><p className="cm-muted"><strong>Disclosure:</strong> Qlavo publishes this page and is one of the agencies listed. Entries are in alphabetical order, nobody paid to be included, and each description is based on the agency&rsquo;s own website. Agencies can email info@qlavo.in to correct their entry.</p></div>
+      <div><p>In October 2026 we asked ChatGPT questions such as &ldquo;What is the best GEO agency in India?&rdquo; many times and noted which agencies it named. This page lists the Indian agencies that came up repeatedly, plus Qlavo, and agencies that asked to be included and whose own site shows GEO as a service.</p><p className="cm-muted"><strong>Disclosure:</strong> Qlavo publishes this page and is one of the agencies listed. Entries are in alphabetical order, nobody paid to be included, and each description is based on the agency&rsquo;s own website. Agencies can email info@qlavo.in to correct their entry or ask to be included.</p></div>
     </section>
     <section className="q-container q-section q-rule cm-split">
       <div><p className="q-eyebrow">{agencies.length} agencies</p><h2 className="q-section-heading">GEO agencies<br />in India.</h2></div>
