@@ -22,6 +22,7 @@ type Status = 'idle' | 'sending' | 'sent' | 'error';
 
 const CLIENTS: Record<string, { company: string; name: string; role: string }> = {
   'smarter-tracks': { company: 'Smarter Tracks', name: 'Brock Coburn', role: 'Founder' },
+  'rally-corp': { company: 'Rally Corp', name: 'James Martin', role: 'CEO' },
 };
 
 const HEADLINE_MAX = 140;
