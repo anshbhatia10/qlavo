@@ -48,7 +48,7 @@ export default function Contact() {
         </div>
         <div className="cm-prose">
           <p>Send your website, target market, and the question you want to test. If you found us through ChatGPT, Google, or LinkedIn, feel free to mention it.</p>
-          <p>New Delhi, India — working with B2B businesses worldwide.</p>
+          <p>Ground Floor, 15, Poorvi Marg, Vasant Vihar, New Delhi 110057, India — working with B2B businesses worldwide.</p>
           <p>Scoping this for a client? <Link className="q-text-link" to="/partners">Explore our white-label partner service.</Link></p>
         </div>
       </section>

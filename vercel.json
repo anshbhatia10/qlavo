@@ -41,6 +41,22 @@
       "destination": "/terms/index.html"
     },
     {
+      "source": "/privacy",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/refund-policy",
+      "destination": "/refund-policy/index.html"
+    },
+    {
+      "source": "/refund-policy/",
+      "destination": "/refund-policy/index.html"
+    },
+    {
       "source": "/ai-visibility",
       "destination": "/ai-visibility/index.html"
     },

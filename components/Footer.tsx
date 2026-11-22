@@ -33,7 +33,7 @@ const Footer: React.FC = () => (
         <a className="q-geo-badge" href="https://geoagencies.com/agency/qlavo" target="_blank" rel="nofollow noopener noreferrer">
           <img src="https://geoagencies.com/badge/listed-dark.svg" alt="Listed on GEO Agencies" width="200" height="56" />
         </a>
-        <p>© 2026 Qlavo. All rights reserved. · <Link to="/terms">Terms</Link></p>
+        <p>© 2026 Qlavo. All rights reserved. · <Link to="/terms">Terms</Link> · <Link to="/privacy">Privacy</Link> · <Link to="/refund-policy">Refunds</Link></p>
         <div className="q-footer-social">
           <span>New Delhi · Worldwide</span>
           <a href="https://www.linkedin.com/company/qlavo/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>

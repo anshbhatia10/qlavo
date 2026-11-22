@@ -18,6 +18,8 @@ export const marketingRoutes = [
   ['/about', 'About'],
   ['/contact', 'Contact'],
   ['/terms', 'Terms'],
+  ['/privacy', 'Privacy'],
+  ['/refund-policy', 'RefundPolicy'],
   ['/partners', 'Partners'],
   ['/sample-deliverable', 'SampleDeliverable'],
   ['/ai-visibility', 'AIVisibility'],
