@@ -263,6 +263,14 @@
     {
       "source": "/case-studies/smarter-tracks/",
       "destination": "/case-studies/smarter-tracks/index.html"
+    },
+    {
+      "source": "/case-studies/rally-corp",
+      "destination": "/case-studies/rally-corp/index.html"
+    },
+    {
+      "source": "/case-studies/rally-corp/",
+      "destination": "/case-studies/rally-corp/index.html"
     }
   ],
   "redirects": [

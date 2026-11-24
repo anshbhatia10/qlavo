@@ -48,6 +48,7 @@ export const marketingRoutes = [
   ['/reddit/ai-visibility-audit', 'RedditAIVisibilityAudit'],
   ['/review', 'Review'],
   ['/case-studies/smarter-tracks', 'CaseStudySmarterTracks'],
+  ['/case-studies/rally-corp', 'CaseStudyRallyCorp'],
 ] as const;
 
 export function pageComponent(name: string): ComponentType {

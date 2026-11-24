@@ -47,6 +47,7 @@ export const PRERENDER_ROUTES = [
   '/reddit/ai-visibility-audit',
   '/review',
   '/case-studies/smarter-tracks',
+  '/case-studies/rally-corp',
 ];
 
 function outFileFor(url) {

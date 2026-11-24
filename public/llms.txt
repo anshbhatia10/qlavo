@@ -20,6 +20,7 @@ White-label GEO is a service offered by Qlavo, not a separate business or an exc
 - [Terms of engagement](https://qlavo.in/terms)
 - [White-label GEO for agencies](https://qlavo.in/partners)
 - [Case study: Smarter Tracks on ChatGPT](https://qlavo.in/case-studies/smarter-tracks)
+- [Case study: Rally Corp on ChatGPT](https://qlavo.in/case-studies/rally-corp)
 - [Illustrative deliverable format](https://qlavo.in/sample-deliverable)
 - [About Qlavo](https://qlavo.in/about)
 - [Contact](https://qlavo.in/contact)
